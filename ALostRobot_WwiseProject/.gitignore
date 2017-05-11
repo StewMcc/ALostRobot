@@ -1,0 +1,3 @@
+# Wwise gitignore
+*.akd
+/.cache/

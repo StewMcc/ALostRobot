@@ -1,0 +1,3 @@
+#Wwise gitignore
+# ignore auto genereated soundbanks, as just copied from wwise project.
+*.bnk

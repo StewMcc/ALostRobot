@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9281D267-38FB-4065-B8B3-7EF9D481695E}" SchemaVersion="75">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{9281D267-38FB-4065-B8B3-7EF9D481695E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Robot_Tracks" ID="{1A783940-A86C-4BD5-AE92-1852D9FF7F51}">
+					<ChildrenList>
+						<Switch Name="Rubble" ID="{8A4540B9-198B-4773-8BFA-D8CA2B47E83E}"/>
+						<Switch Name="Shuttle" ID="{80869438-2FF1-4192-89C9-4318F689F499}"/>
+						<Switch Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

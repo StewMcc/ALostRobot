@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 75d156e51bc9301439a7647572f80608
+timeCreated: 1489797119
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ST Cardassian
+  fontNames:
+  - ST Cardassian
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

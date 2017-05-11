@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AF77E1D6-6078-4AB8-979A-2FA2D2A75E66}" SchemaVersion="75">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{AF77E1D6-6078-4AB8-979A-2FA2D2A75E66}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Audio_Soundbank" ID="{4729DB33-366C-41FF-BAE1-E293EF56572F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Landscape_Planet" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_PopUp" ID="{47C4CAA5-89CF-44DF-BF1B-7CB3C02621CE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_PutDown" ID="{0B080191-8C5E-4565-8A8B-CE56C8F4D57E}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_Port_Positive" ID="{3FCA6D0D-4899-46A4-B470-49B3E03B2F20}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Level_Music" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_Port_Negative" ID="{166D9351-5D15-4A01-AA4C-01066FE41072}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Landscape_Shuttle" ID="{BB28812A-E59B-4A1B-92C7-2EB9120CAC17}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Menu_Music" ID="{02B69B78-A523-4A28-9172-06217DF96105}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Menu_Button_Select" ID="{612E6024-2036-4A9C-BFD3-06FC4C7C909D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player_Move_START" ID="{16B7FC00-8456-4C76-936A-7AD6C93D8969}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_PickUp" ID="{979DF678-7111-4D1C-9F8C-811A36F33EF4}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Item_PopDown" ID="{9730CCAD-5AED-4E41-BD94-89DB1931B162}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Broken_Room" ID="{65F95DCB-3220-4F33-A79B-81458E1857E6}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Craft_HydroDoor" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
