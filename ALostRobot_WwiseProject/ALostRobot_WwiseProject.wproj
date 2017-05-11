@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="Project" SchemaVersion="75" WwiseVersion="v2016.2.3" WwiseBuild="6077">
 	<ProjectInfo>
-		<Project Name="MorayGameJam17_WwiseProject" ID="{3B7C05D3-BE04-4779-A384-CA21988D6D49}">
+		<Project Name="ALostRobot_WwiseProject" ID="{3B7C05D3-BE04-4779-A384-CA21988D6D49}">
 			<Platforms>
 				<Platform Name="Android" ReferencePlatform="Android" ID="{16C08EE0-886D-4821-9F92-3A2259C31CE2}"/>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{A109496C-1A47-4E44-A23C-23D2CBD0E565}"/>
@@ -23,9 +23,16 @@
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="GlobalVoiceInstancesLimit" Type="int16">
+					<ValueList>
+						<Value Platform="Android">256</Value>
+						<Value Platform="Windows">256</Value>
+						<Value Platform="Mac">256</Value>
+					</ValueList>
+				</Property>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True"/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="D:\Source\Moray17\MorayGameJam17\Assets\StreamingAssets\Audio\GeneratedSoundBanks"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="..\Assets\StreamingAssets\Audio\GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
@@ -61,8 +68,19 @@
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
+				<Property Name="VolumeThreshold" Type="Real64">
+					<ValueList>
+						<Value Platform="Android">-80</Value>
+						<Value Platform="Windows">-80</Value>
+						<Value Platform="Mac">-80</Value>
+					</ValueList>
+				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2016.2|Build=5995|VersionName=v2016.2.1|Config=Release"/>
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
