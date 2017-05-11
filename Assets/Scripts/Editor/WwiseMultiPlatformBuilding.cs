@@ -47,9 +47,9 @@ public class WwiseSoundBankWindow : EditorWindow {
 		}
 		GUILayout.EndHorizontal();
 	}
-	#if UNITY_CLOUD_BUILD
-	public static void UcbTransferDefaultSoundBanks(UnityEngine.CloudBuild.BuildManifestObject manifest) {
-		
+#if UNITY_CLOUD_BUILD
+	public static void PreExport(UnityEngine.CloudBuild.BuildManifestObject manifest) {
+		GenerateSoundBanksFromWwise();
 		//get Wwise project file (.wproj) path
 		string wwiseProjFile = Path.Combine(Application.dataPath, WwiseSetupWizard.Settings.WwiseProjectPath).Replace('/', '\\');
 
@@ -107,6 +107,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 	/// <param name="autoRun"> With to launch the player after build finishes.</param>
 	/// <returns> True if succesfull.</returns>
 	private static bool BuildWwiseGame(bool autoRun) {
+		GenerateSoundBanksFromWwise();
 		//Choose app name and location
 		string appPath = EditorUtility.SaveFilePanel("Save Wwise Build",
 			Application.dataPath.Remove(Application.dataPath.LastIndexOf('/')),
@@ -253,4 +254,20 @@ public class WwiseSoundBankWindow : EditorWindow {
 		return "";
 	}
 
+	private static void GenerateSoundBanksFromWwise() {
+		if (AkUtilities.IsSoundbankGenerationAvailable()) {
+			AkUtilities.GenerateSoundbanks();
+		}
+		else {
+			string errorMessage;
+
+#if UNITY_EDITOR_WIN
+			errorMessage = "Access to Wwise is required to generate the SoundBanks. Please select the Wwise Windows Installation Path from the Edit > Wwise Settings... menu.";
+#elif UNITY_EDITOR_OSX
+				errorMessage = "Access to Wwise is required to generate the SoundBanks. Please select the Wwise Application from the Edit > Wwise Settings... menu.";
+#endif
+
+			Debug.LogError(errorMessage);
+		}
+	}
 }
