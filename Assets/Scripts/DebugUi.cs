@@ -66,7 +66,7 @@ public class DebugUi : MonoBehaviour {
 	/// </summary>
 	private void RestartGame() {
 		CloseDebugPanel();
-		SceneManager.LoadSceneAsync("Splash_Scene");
+		LoadingTransitionController.AnimatedLoadSceneAsync("Splash_Scene", "LoadingScene");
 	}
 
 	/// <summary>
@@ -74,7 +74,7 @@ public class DebugUi : MonoBehaviour {
 	/// </summary>
 	private void ReloadScene() {
 		CloseDebugPanel();
-		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+		LoadingTransitionController.AnimatedLoadSceneAsync(LoadingTransitionController.GetActiveScene(), "LoadingScene");		
 	}
 
 	/// <summary>

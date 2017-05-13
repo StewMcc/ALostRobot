@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Transition controller for Loading screens and fade screens.
+/// Will fade in a screenfader as it starts to load the loading scene which is used for the transition.
+/// See the LoadingTransitionController Prefab for an example.
 /// </summary>
 public class LoadingTransitionController : Singleton<LoadingTransitionController> {
 
@@ -13,11 +15,9 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 	[SerializeField]
 	float minDuration = 1.5f;
 
-	/// <summary>
-	/// Ensures the loading controller isnt destroyed on load.
-	/// </summary>
 	private void Start() {
-		DontDestroyOnLoad(gameObject);
+		// Ensures any final changes are made to the scene.
+		EventManagerLoadingSystem.FinishedLoading();
 	}
 
 	/// <summary>
@@ -38,16 +38,7 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 		return SceneManager.GetActiveScene().name;
 	}
 
-	/// <summary>
-	/// Loads the scene additively using the Loading System.
-	/// Uses the default LoadingScreen scene for transitions.
-	/// Falls back to Async load if the loading system doesn't exist.
-	/// </summary>
-	/// <param name="sceneName"> The name of the scene to load. </param>
-	public static void AnimatedLoadSceneAsync(string sceneName) {
-		AnimatedLoadSceneAsync(sceneName, "LoadingScreen");
-	}
-
+	
 	/// <summary>
 	/// Loads the scene additively using the Loading System.
 	/// Falls back to Async load if the loading system doesn't exist.

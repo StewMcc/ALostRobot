@@ -1,16 +1,9 @@
 ﻿using UnityEngine;
 
-public class SoundManager : MonoBehaviour {
-
-	[SerializeField]
-	private string soundbankName = "Soundbank1";
-
-	[SerializeField]
-	string backgroundMusic  = "Level_Music";
+public class SoundManager : Singleton<SoundManager> {
 
 	private void Start() {
 		Initialise();
-		PlayEvent(backgroundMusic, gameObject);
 	}
 
 	private void OnDestroy() {
@@ -18,22 +11,19 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Setup WWise and load Sound Banks.
+	/// Setup WWise and load Init Sound Bank.
 	/// </summary>
-	private void Initialise() {
-		uint bankID;
+	private void Initialise() {		
 		uint initBankID;
 
 		// Import Initialisation Soundbank
 		AkSoundEngine.LoadBank("Init", AkSoundEngine.AK_DEFAULT_POOL_ID, out initBankID);
-		// Import Soundbank
-		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
 	}
 
 	/// <summary>
 	/// Play Specific Event.
 	/// </summary>
-	/// <param name="eventName"> Name of the event to stop. </param>	
+	/// <param name="eventName"> Name of the event to start playing. </param>	
 	/// <param name="go"> GameObject assosciated to the event. </param>
 	public static void PlayEvent(string eventName, GameObject go) {
 		AkSoundEngine.PostEvent(eventName, go);
