@@ -1549,6 +1549,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1728945124559874, guid: 41731d89b510e264e8653e23c3b53901, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41731d89b510e264e8653e23c3b53901, type: 2}
   m_IsPrefabParent: 0
@@ -2184,6 +2188,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1240907360497786, guid: dbb9c76432848744e9a5f128e5f223e3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbb9c76432848744e9a5f128e5f223e3, type: 2}
   m_IsPrefabParent: 0
@@ -2464,6 +2472,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1274604084906138, guid: c3a3b1be8e193bc439e315f2e3f371d0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3a3b1be8e193bc439e315f2e3f371d0, type: 2}
   m_IsPrefabParent: 0
@@ -2563,6 +2575,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1314084554879268, guid: 378ff742b44d7e6429c8da3597ca05f1, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 378ff742b44d7e6429c8da3597ca05f1, type: 2}
   m_IsPrefabParent: 0
@@ -3231,6 +3247,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1360082454942872, guid: 010a7b06f5a29a448900c5fe2d377bdd, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 010a7b06f5a29a448900c5fe2d377bdd, type: 2}
   m_IsPrefabParent: 0
@@ -3457,6 +3477,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1220120424737438, guid: 9bbb3b82af534d2459f43bd5492a270d, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bbb3b82af534d2459f43bd5492a270d, type: 2}
   m_IsPrefabParent: 0

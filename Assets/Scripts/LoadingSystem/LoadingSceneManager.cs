@@ -6,7 +6,7 @@ using UnityEngine;
 /// Singleton LoadingSceneManager.
 /// Used for starting and finishing the loading animation.
 /// As well as destroying the instance of the LoadingSceneManager game object.
-/// Check the LoadingRoot Prefab for an example.
+/// Check the LoadingRoot Prefab for an example. Animation should have bool finishAnimation set.
 /// </summary>
 public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 
