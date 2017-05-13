@@ -6,7 +6,7 @@ public class DistressBeaconController : MonoBehaviour {
 	[SerializeField]
 	float waitForWinDelay = 4.0f;
 
-	ParticleSystem particleBeam = null;	
+	ParticleSystem particleBeam = null;
 
 	private void Start() {
 		particleBeam = GetComponent<ParticleSystem>();

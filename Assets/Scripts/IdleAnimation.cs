@@ -50,7 +50,7 @@ public class IdleAnimation : MonoBehaviour {
 	private bool wasAnimating_ = true;
 
 	private float initialHeight_ = 0.0f;
-	
+
 	/// <summary>
 	/// Store initial start and end points, and ensures tag is correctly set.
 	/// </summary>

@@ -33,7 +33,7 @@ public class HullController : MonoBehaviour {
 		hullModels.SetActive(false);
 		isUp_ = true;
 	}
-	
+
 	private void Update() {
 		if (isMoving_) {
 			hullModels.transform.position = MathUtil.SmoothLerp(
@@ -42,7 +42,7 @@ public class HullController : MonoBehaviour {
 				startTime_,
 				transitionTime,
 				out isMoving_);
-			if(isUp_ && !isMoving_) {
+			if (isUp_ && !isMoving_) {
 				hullModels.SetActive(false);
 			}
 		}

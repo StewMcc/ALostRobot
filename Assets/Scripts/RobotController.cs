@@ -68,12 +68,12 @@ public class RobotController : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 			// if its hit anything
-			if (Physics.Raycast(ray, out hit) && !IsOverUi()) {				
+			if (Physics.Raycast(ray, out hit) && !IsOverUi()) {
 				agent_.destination = hit.point;
 				if (!isMoving_) {
 					SoundManager.PlayEvent("Player_Move_START", gameObject);
 					isMoving_ = true;
-				}				
+				}
 			}
 		}
 
@@ -134,7 +134,7 @@ public class RobotController : MonoBehaviour {
 		}
 		else if (collidedGameObject.tag == "Port") {
 			// remove the popup and remove the link to it
-			if (currentItem_) {				
+			if (currentItem_) {
 				collidedGameObject.GetComponent<ServicePort>().HidePopUp();
 
 			}

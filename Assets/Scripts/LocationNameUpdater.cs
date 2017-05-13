@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
 public class LocationNameUpdater : MonoBehaviour {
-	
+
 	[SerializeField]
 	string shipName = "L.A.D.Ship";
 

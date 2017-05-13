@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour {
 
 	[SerializeField]
 	string backgroundMusic  = "Level_Music";
-	
+
 	private void Start() {
 		Initialise();
 		PlayEvent(backgroundMusic, gameObject);
@@ -29,7 +29,7 @@ public class SoundManager : MonoBehaviour {
 		// Import Soundbank
 		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
 	}
-	
+
 	/// <summary>
 	/// Play Specific Event.
 	/// </summary>

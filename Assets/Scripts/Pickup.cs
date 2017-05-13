@@ -10,7 +10,8 @@ public class Pickup : MonoBehaviour {
 
 	public enum ItemType {
 		tryytium, skudian, nusluathil, criasium, ublyx, zushese, vufrum, eshian, kreasten,
-		qostralt };
+		qostralt
+	};
 
 	[SerializeField]
 	IdleAnimation pickUpAnimation = null;
@@ -37,7 +38,7 @@ public class Pickup : MonoBehaviour {
 	Vector3 initialPosition_ = Vector3.zero;
 
 	Vector3 droppedTargetPosition_ = Vector3.zero;
-	
+
 	bool hasRespawned_ = false;
 
 	private ParticleSystem dropEffect_ = null;
@@ -79,7 +80,7 @@ public class Pickup : MonoBehaviour {
 		interactableCanvas.enabled = true;
 		if (hasRespawned_) {
 			itemNameText.enabled = true;
-		}		
+		}
 		iconModel.SetActive(true);
 		SoundManager.PlayEvent("Item_PopUp", gameObject);
 	}

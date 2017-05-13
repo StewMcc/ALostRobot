@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour {
 				transform.position.y + cameraOffset.y,
 				robot.transform.position.z + cameraOffset.z);
 		}
-		else if (isMovingToDistressBeacon_) {			
+		else if (isMovingToDistressBeacon_) {
 			transform.position = MathUtil.SmoothLerp(
 				lerpStartPosition_,
 				initialPosition_,
@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour {
 				transitionTime,
 				out isMovingToDistressBeacon_);
 
-			if (!isMovingToDistressBeacon_) {				
+			if (!isMovingToDistressBeacon_) {
 				EventManager.CameraInPosition();
 			}
 		}

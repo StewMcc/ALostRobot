@@ -24,7 +24,7 @@ public class EventManager : MonoBehaviour {
 	/// </summary>
 	public static event EventHandler OnShipFixed;
 
-	
+
 	public delegate void EventHandlerLocationName(NameUpdateType newNameType, string newName = "");
 
 	/// <summary>

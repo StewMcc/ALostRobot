@@ -43,7 +43,7 @@ public class Door : MonoBehaviour {
 			CloseDoor();
 		}
 	}
-	
+
 	/// <summary>
 	/// Starts the close door animation and plays the sound.
 	/// </summary>

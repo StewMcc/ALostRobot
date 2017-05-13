@@ -16,7 +16,7 @@ public class RoomControl : MonoBehaviour {
 
 	[SerializeField]
 	string roomName = "DefaultName";
-	
+
 	private List<ItemResponse> incorrectResponses = null;
 	private RoomManager roomManager = null;
 	private ServicePort servicePort = null;

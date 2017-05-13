@@ -13,16 +13,16 @@ public class DebugUi : MonoBehaviour {
 
 	[SerializeField]
 	GameObject debugPanel = null;
-	
+
 	[SerializeField]
 	Button restartGame = null;
 
 	[SerializeField]
 	Button reloadScene = null;
-	
+
 	[SerializeField]
 	Button fakeWin = null;
-	
+
 	[SerializeField]
 	Button closeDebug = null;
 
@@ -34,9 +34,9 @@ public class DebugUi : MonoBehaviour {
 	private void Start() {
 		debugPanel.SetActive(false);
 		restartGame.onClick.AddListener(RestartGame);
-		
+
 		reloadScene.onClick.AddListener(ReloadScene);
-				
+
 		fakeWin.onClick.AddListener(FakeWin);
 		closeDebug.onClick.AddListener(CloseDebugPanel);
 	}
@@ -46,7 +46,7 @@ public class DebugUi : MonoBehaviour {
 	/// </summary>
 	private void OnDestroy() {
 		restartGame.onClick.RemoveListener(RestartGame);
-		reloadScene.onClick.RemoveListener(ReloadScene);		
+		reloadScene.onClick.RemoveListener(ReloadScene);
 		fakeWin.onClick.RemoveListener(FakeWin);
 		closeDebug.onClick.RemoveListener(CloseDebugPanel);
 	}
@@ -91,5 +91,5 @@ public class DebugUi : MonoBehaviour {
 	private void FakeWin() {
 		CloseDebugPanel();
 		EventManager.ShipFixed();
-	}	
+	}
 }

@@ -16,9 +16,9 @@ public class ServicePort : MonoBehaviour {
 	private void Start() {
 		connectedRoom = GetComponentInParent<RoomControl>();
 		interactableCanvas.enabled = false;
-		iconObject.SetActive(false);		
+		iconObject.SetActive(false);
 	}
-	
+
 	/// <summary>
 	/// Checks to see if the connected room is fixed.
 	/// </summary>

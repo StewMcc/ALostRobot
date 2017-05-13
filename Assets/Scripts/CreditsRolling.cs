@@ -40,16 +40,17 @@ public class CreditsRolling : MonoBehaviour {
 					startTime_,
 					transitionTime_,
 					out isRollingCredits_);
+
 			if (!isRollingCredits_) {
 				currentCamera_++;
-				if(currentCamera_ < cameraPoints.Length) {
+				if (currentCamera_ < cameraPoints.Length) {
 					isRollingCredits_ = true;
 					startTime_ = Time.time;
 					transitionTime_ = cameraPoints[currentCamera_].transitionTime;
 					endPosition_ = cameraPoints[currentCamera_].cameraPosition.position;
 					startPosition_ = sceneCamera.transform.position;
 				}
-			}		
+			}
 		}
 	}
 
