@@ -97,15 +97,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.8
-    agentHeight: 2
+    agentRadius: 1
+    agentHeight: 1
     agentSlope: 36
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 8
-    manualCellSize: 1
-    cellSize: 0.2
+    manualCellSize: 0
+    cellSize: 0.33333334
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -3432,7 +3432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4855198635406794, guid: 57b0a0d3191521b4a873b9156d77a857, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.051
+      value: 0.801
       objectReference: {fileID: 0}
     - target: {fileID: 4855198635406794, guid: 57b0a0d3191521b4a873b9156d77a857, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3465,6 +3465,11 @@ Prefab:
       objectReference: {fileID: 1589532795}
     - target: {fileID: 114531791730286808, guid: 57b0a0d3191521b4a873b9156d77a857,
         type: 2}
+      propertyPath: inventoryUi
+      value: 
+      objectReference: {fileID: 505131824}
+    - target: {fileID: 114531791730286808, guid: 57b0a0d3191521b4a873b9156d77a857,
+        type: 2}
       propertyPath: currentItemAlienText
       value: 
       objectReference: {fileID: 1869190361}
@@ -3473,11 +3478,6 @@ Prefab:
       propertyPath: currentItemSensibleText
       value: 
       objectReference: {fileID: 1465758364}
-    - target: {fileID: 114531791730286808, guid: 57b0a0d3191521b4a873b9156d77a857,
-        type: 2}
-      propertyPath: inventoryUi
-      value: 
-      objectReference: {fileID: 505131824}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b0a0d3191521b4a873b9156d77a857, type: 2}
   m_IsPrefabParent: 0
