@@ -56,24 +56,24 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 8
     m_Resolution: 2
-    m_BakeResolution: 2
+    m_BakeResolution: 30
     m_TextureWidth: 1024
     m_TextureHeight: 1024
-    m_AO: 0
+    m_AO: 1
     m_AOMaxDistance: 2
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000,
       type: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 3
-    m_BakeBackend: 0
+    m_MixedBakeMode: 0
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 7a86681b292bb264d9ba021f0f36175a,
     type: 2}
-  m_ShadowMaskMode: 2
+  m_ShadowMaskMode: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -201,6 +201,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1074906405527222, guid: a22bc9401f4ab4f9a8e6e836d53afcd6, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22bc9401f4ab4f9a8e6e836d53afcd6, type: 2}
   m_IsPrefabParent: 0
@@ -693,13 +697,13 @@ Prefab:
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_LightmapParameters
       value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f0d4478efa70d418db1e9dbec80de8, type: 2}
   m_IsPrefabParent: 0
@@ -1075,13 +1079,18 @@ Prefab:
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
       propertyPath: m_LightmapParameters
       value: 
       objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
+        type: 2}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b, type: 2}
   m_IsPrefabParent: 0
@@ -1134,6 +1143,14 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1771359625}
+    - target: {fileID: 1045938682837798, guid: 88cb0d99cd9e0c940b7392a5cb63be37, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399445100164002, guid: 88cb0d99cd9e0c940b7392a5cb63be37, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88cb0d99cd9e0c940b7392a5cb63be37, type: 2}
   m_IsPrefabParent: 0
@@ -1169,7 +1186,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -1182,7 +1199,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -1343,10 +1360,6 @@ Prefab:
     - target: {fileID: 4848757143782558, guid: bb148276ea0ff0f4d8ef1282235ebbcc, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881625254053882, guid: bb148276ea0ff0f4d8ef1282235ebbcc, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb148276ea0ff0f4d8ef1282235ebbcc, type: 2}
@@ -1699,13 +1712,13 @@ Prefab:
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
       propertyPath: m_LightmapParameters
       value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b, type: 2}
   m_IsPrefabParent: 0
@@ -1998,20 +2011,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1952754301755920, guid: a2f0d4478efa70d418db1e9dbec80de8, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
-        type: 2}
-      propertyPath: m_ScaleInLightmap
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
-        type: 2}
-      propertyPath: m_LightmapParameters
-      value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f0d4478efa70d418db1e9dbec80de8, type: 2}
   m_IsPrefabParent: 0
@@ -2069,7 +2068,7 @@ Prefab:
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
         type: 2}
@@ -2185,22 +2184,6 @@ Prefab:
       propertyPath: dropButton
       value: 
       objectReference: {fileID: 1589532793}
-    - target: {fileID: 1251911331677142, guid: 75f4a2ef36cd61f4fb9d098d3ef33dd9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1843332797702420, guid: 75f4a2ef36cd61f4fb9d098d3ef33dd9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1999478341878660, guid: 75f4a2ef36cd61f4fb9d098d3ef33dd9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135175525807446, guid: 75f4a2ef36cd61f4fb9d098d3ef33dd9, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75f4a2ef36cd61f4fb9d098d3ef33dd9, type: 2}
   m_IsPrefabParent: 0
@@ -2649,13 +2632,13 @@ Prefab:
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_LightmapParameters
       value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f0d4478efa70d418db1e9dbec80de8, type: 2}
   m_IsPrefabParent: 0
@@ -2984,13 +2967,13 @@ Prefab:
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_ScaleInLightmap
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23722707289460366, guid: a2f0d4478efa70d418db1e9dbec80de8,
         type: 2}
       propertyPath: m_LightmapParameters
       value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f0d4478efa70d418db1e9dbec80de8, type: 2}
   m_IsPrefabParent: 0
@@ -3952,6 +3935,26 @@ Prefab:
       propertyPath: cameraPoints.Array.data[1].cameraPosition
       value: 
       objectReference: {fileID: 1582746653}
+    - target: {fileID: 1269395666866844, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990397118129562, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059586409730860, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542322114649360, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079342833826396, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
   m_IsPrefabParent: 0
@@ -4004,20 +4007,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1381344946486916, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
-        type: 2}
-      propertyPath: m_ScaleInLightmap
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23431521604057510, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b,
-        type: 2}
-      propertyPath: m_LightmapParameters
-      value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 208f4bb4c3ad55f46b3d1a5fbcee213b, type: 2}
   m_IsPrefabParent: 0
