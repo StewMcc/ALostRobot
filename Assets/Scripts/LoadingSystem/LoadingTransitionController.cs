@@ -56,13 +56,11 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 	}
 
 	/// <summary>
-	/// Coroutine IEnumerator for scene loading.
-	/// Fades in and out the fadescreeb, Loads the loading scene.
-	/// Plays the loading scene whilst the main scene is loading.
+	/// Fades in a loading scene then loads the real scene in the background, then fades back out again.
+	/// <seealso cref="LoadingSceneManager"/> is used to decide if it will wait for enter and exit animations to finish.
 	/// </summary>
 	/// <param name="sceneName"> The name of the scene to load. </param>
-	/// <param name="loadingScene"> The name of the loading scene to be used whuilst transitioning. </param>
-	/// <returns> IEnumerator for the time it takes for all the tasks to complete. </returns>
+	/// <param name="loadingScene"> The name of the loading scene to be used whilst transitioning. </param>
 	private IEnumerator LoadSceneAsync(string sceneName, string loadingScene) {
 		blackScreenCover.DisableInput();
 		// Fade to black
@@ -74,11 +72,8 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 		// Fade to loading screen
 		yield return StartCoroutine(blackScreenCover.FadeOut());
 
-		// wait for the initial loading animation to finish.
-		yield return LoadingSceneManager.WaitForInitialLoadingAnimation();
-
-		// ensure it w8ts minimum amount of time ( i.e. fast loads)
-		float endTime = Time.time + minDuration;
+		// ensure it waits minimum amount of time ( i.e. fast loads) + the enter animation time.
+		float endTime = Time.time + minDuration + LoadingSceneManager.EnterAnimationTime();
 
 		// Load level async
 		yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
@@ -86,8 +81,11 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 		while (Time.time < endTime)
 			yield return null;
 
-		// Start the exit animation for the loading screen.
-		yield return LoadingSceneManager.StartFinishLoadingAnimation();
+		// Start the exit animation for the loading screen, then wait for it to finish.
+		float exitTime = LoadingSceneManager.ExitAnimationTime();
+		if (exitTime > 0) {
+			yield return new WaitForSeconds(exitTime);
+		}
 
 		// Fade to black
 		yield return StartCoroutine(blackScreenCover.FadeIn());

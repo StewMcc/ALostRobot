@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222782177752837336}
   - component: {fileID: 114385845902213292}
   m_Layer: 8
-  m_Name: ScreenFader
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.25882354, g: 0.25882354, b: 0.25882354, a: 1}
+  m_BackGroundColor: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
+  m_Color: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ac50172389593469e619e5e79ec3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingAnimator: {fileID: 95024691486668894}
+  loadingAnimator: {fileID: 0}
   initialAnimationTime: 0.1
   finishAnimationTime: 0.1
 --- !u!114 &114609891825310562

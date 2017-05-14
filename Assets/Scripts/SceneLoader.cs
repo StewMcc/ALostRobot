@@ -8,6 +8,6 @@ public class SceneLoader : MonoBehaviour {
 	/// </summary>
 	/// <param name="sceneName"> Name of scene to load. </param>
 	public void LoadScene(string sceneName) {
-		LoadingTransitionController.AnimatedLoadSceneAsync(sceneName, "LoadingScene");
+		LoadingTransitionController.AnimatedLoadSceneAsync(sceneName, "LoadingSpinnerScene");
 	}
 }

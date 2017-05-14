@@ -9,13 +9,16 @@ using UnityEngine;
 /// Check the LoadingRoot Prefab for an example. Animation should have bool finishAnimation set.
 /// </summary>
 public class LoadingSceneManager : Singleton<LoadingSceneManager> {
-
+	
+	[Tooltip("Only required if it has an Enter and Exit Animation, if it does must have finishAnimation bool set in animator")]
 	[SerializeField]
 	Animator loadingAnimator = null;
 
+	[Tooltip("Ignored if no animator set.")]
 	[SerializeField]
 	float initialAnimationTime = 0.5f;
 
+	[Tooltip("Ignored if no animator set.")]
 	[SerializeField]
 	float finishAnimationTime = 1.0f;
 
@@ -28,23 +31,28 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 	}
 
 	/// <summary>
-	/// Waits for the Initial animation state to finish.
+	/// How long the Initial animation takes.
 	/// </summary>
-	/// <returns> IEnumerator WaitForSeconds, with the seconds of the Animation. </returns>
-	public static IEnumerator WaitForInitialLoadingAnimation() {
-		// wait for the initial animation sequence to finish.
-		yield return new WaitForSeconds(instance.initialAnimationTime);
+	public static float EnterAnimationTime() {	
+		if(instance.loadingAnimator) {
+			return instance.initialAnimationTime;
+		}else {
+			return 0.0f;
+		}		
 	}
 
 	/// <summary>
-	/// Starts the finish animation then waits for it to finish.
+	/// How long the exit animation takes.
 	/// </summary>
-	/// <returns> IEnumerator WaitForSeconds, with the seconds of the Animation. </returns>
-	public static IEnumerator StartFinishLoadingAnimation() {
-		// start the finish animation.
-		instance.loadingAnimator.SetBool("finishAnimation", true);
-
-		// wait for the animation finish.
-		yield return new WaitForSeconds(instance.finishAnimationTime);
+	public static float ExitAnimationTime() {		
+		if (instance.loadingAnimator) {
+			// start the finish animation.
+			instance.loadingAnimator.SetBool("finishAnimation", true);
+			return instance.finishAnimationTime;
+		}
+		else {
+			return 0.0f;
+		}
+		
 	}
 }
