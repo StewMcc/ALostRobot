@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8997811f019cb25419e63601afeefee8
-timeCreated: 1494470460
+timeCreated: 1494800567
 licenseType: Pro
 PluginImporter:
   serializedVersion: 2
@@ -19,9 +19,11 @@ PluginImporter:
       first:
         Editor: Editor
       second:
-        enabled: 0
+        enabled: 1
         settings:
+          CPU: X86
           DefaultValueInitialized: true
+          OS: Windows
     data:
       first:
         Facebook: Win
@@ -82,7 +84,7 @@ PluginImporter:
       first:
         Standalone: Win
       second:
-        enabled: 0
+        enabled: 1
         settings:
           CPU: AnyCPU
     data:

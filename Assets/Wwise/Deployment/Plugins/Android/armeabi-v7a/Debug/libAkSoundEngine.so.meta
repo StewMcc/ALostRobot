@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0288993d2e62a5d40adf259acf9af97e
-timeCreated: 1494470459
+timeCreated: 1494800567
 licenseType: Pro
 PluginImporter:
   serializedVersion: 2
@@ -13,7 +13,7 @@ PluginImporter:
       first:
         Android: Android
       second:
-        enabled: 0
+        enabled: 1
         settings:
           CPU: ARMv7
     data:

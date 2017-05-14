@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b7aec544d85a072488909ab09337bdb6
 folderAsset: yes
-timeCreated: 1489835583
+timeCreated: 1494800566
 licenseType: Pro
 PluginImporter:
   serializedVersion: 2
@@ -22,7 +22,9 @@ PluginImporter:
       second:
         enabled: 0
         settings:
+          CPU: AnyCPU
           DefaultValueInitialized: true
+          OS: OSX
     data:
       first:
         Facebook: Win
