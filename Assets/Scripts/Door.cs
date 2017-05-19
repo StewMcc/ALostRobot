@@ -5,7 +5,7 @@ public class Door : MonoBehaviour {
 	GameObject doorModel = null;
 
 	[SerializeField]
-	float transitionTime = 3;
+	float transitionTime = 0.2f;
 	[SerializeField]
 	Transform downTransform = null;
 

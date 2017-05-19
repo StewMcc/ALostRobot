@@ -76,15 +76,24 @@ public class RoomControl : MonoBehaviour {
 		foreach (Renderer r in rend) {
 			r.material.mainTexture = roomManager.whiteTex;
 		}
+		// Break room without audio
+		errorIcon.SetActive(true);
+		if (isFixed) {
+			EventManager.RoomBroken(roomName);
+		}
+		foreach (Renderer r in rend) {
+			r.material.mainTexture = roomManager.redTex;
+		}
+		isFixed = false;
 
-		if (roomID == 0) {
-			Break();
-		}
-		else {
-			errorIcon.SetActive(false);
-			// success the room is fixed
-			isFixed = true;
-		}
+		//if (roomID == 0) {
+		//	Break();
+		//}
+		//else {
+		//	errorIcon.SetActive(false);
+		//	// success the room is fixed
+		//	isFixed = true;
+		//}
 	}
 
 	public void CheckItem() {
@@ -116,7 +125,7 @@ public class RoomControl : MonoBehaviour {
 	/// <summary>
 	/// Breaks the room.
 	/// </summary>
-	public void Break() {
+	public void Break() {		
 		errorIcon.SetActive(true);
 		if (isFixed) {
 			EventManager.RoomBroken(roomName);
@@ -129,6 +138,9 @@ public class RoomControl : MonoBehaviour {
 	}
 
 	private void FixRoom() {
+		if(roomID == 0) {
+			EventManager.PowerRoomFixed();
+		}
 		errorIcon.SetActive(false);
 		// success the room is fixed
 		isFixed = true;

@@ -24,6 +24,11 @@ public class EventManager : MonoBehaviour {
 	/// </summary>
 	public static event EventHandler OnShipFixed;
 
+	/// <summary>
+	/// Should be called when the power room is fixed.
+	/// </summary>
+	public static event EventHandler OnPowerRoomFixed;
+
 
 	public delegate void EventHandlerLocationName(NameUpdateType newNameType, string newName = "");
 
@@ -77,6 +82,16 @@ public class EventManager : MonoBehaviour {
 		// notify all listeners to event.
 		if (OnShipFixed != null) {
 			OnShipFixed();
+		}
+	}
+
+	/// <summary>
+	/// Should be called when a the power room is fixed.
+	/// </summary>
+	public static void PowerRoomFixed() {
+		// notify all listeners to event.
+		if (OnPowerRoomFixed != null) {
+			OnPowerRoomFixed();
 		}
 	}
 

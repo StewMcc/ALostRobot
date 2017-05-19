@@ -173,8 +173,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450268242836304}
-  m_LocalRotation: {x: 0, y: 0.9659259, z: -0, w: -0.25881898}
-  m_LocalPosition: {x: 4.92, y: 1, z: 35.88}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: -37.28, y: 1.238, z: 49.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4038169717028300}
@@ -184,7 +184,7 @@ Transform:
   - {fileID: 4242866368772632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 210, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!4 &4861488544651628
 Transform:
   m_ObjectHideFlags: 1
@@ -263,7 +263,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.028283, y: 1.0778973, z: 1.2804337}
-  m_Center: {x: 0.025021732, y: 0.6110513, z: 0.0020866394}
+  m_Center: {x: 0.025021732, y: 0.52, z: 0.0020866394}
 --- !u!114 &114531791730286808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +297,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: -0.16
+  m_BaseOffset: -0.01
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!198 &198137320696237060
