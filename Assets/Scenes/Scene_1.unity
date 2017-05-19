@@ -4216,6 +4216,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114844923678638122, guid: 9e51482ad0ab30742b69d18f3f8b8c6b,
+        type: 2}
+      propertyPath: dropButton
+      value: 
+      objectReference: {fileID: 1589532793}
     - target: {fileID: 114302369762936100, guid: 9e51482ad0ab30742b69d18f3f8b8c6b,
         type: 2}
       propertyPath: player
