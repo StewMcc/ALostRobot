@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class ServicePort : MonoBehaviour {
+// TODO: Depreceated Remove completly.
+public class OldServicePort : MonoBehaviour {
 
 	[SerializeField]
 	Canvas interactableCanvas = null;

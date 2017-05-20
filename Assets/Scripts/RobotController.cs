@@ -105,9 +105,10 @@ public class RobotController : MonoBehaviour {
 			collidedItem_ = collidedGameObject.GetComponent<Pickup>();
 			collidedItem_.ShowPopUp();
 		}
+		// TODO: Depreceated Remove completly. now handled within service port.
 		else if (collidedGameObject.tag == "Port") {
 			if (currentItem_) {
-				ServicePort currentPort = collidedGameObject.GetComponent<ServicePort>();
+				OldServicePort currentPort = collidedGameObject.GetComponent<OldServicePort>();
 				if (!currentPort.IsFixed()) {
 					currentPort.ShowPopUp();
 				}
@@ -132,15 +133,21 @@ public class RobotController : MonoBehaviour {
 				}
 			}
 		}
+		// TODO: Depreceated Remove completly. now handled within service port.
 		else if (collidedGameObject.tag == "Port") {
 			// remove the popup and remove the link to it
 			if (currentItem_) {
-				collidedGameObject.GetComponent<ServicePort>().HidePopUp();
-
+				collidedGameObject.GetComponent<OldServicePort>().HidePopUp();
 			}
 		}
 	}
 
+	public bool HasItem() {
+		if (currentItem_) {
+			return true;
+		}
+		return false;
+	}
 	/// <summary>
 	/// Hides the collided items popup and sets it to the currently collected item
 	/// </summary>
@@ -251,7 +258,7 @@ public class RobotController : MonoBehaviour {
 	/// <summary>
 	/// Returns the current item in the inventory.
 	/// </summary>
-	/// <returns> Cna return null if not available. </returns>
+	/// <returns> Returns null if not available. </returns>
 	public Pickup CurrentItem() {
 		return currentItem_;
 	}

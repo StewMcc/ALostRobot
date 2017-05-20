@@ -37,14 +37,6 @@ public class EventManager : MonoBehaviour {
 	/// </summary>
 	public static event EventHandlerLocationName OnNameChanged;
 
-
-	public delegate void EventHandlerRoomError(string roomName);
-
-	/// <summary>
-	/// Event to listen to for when locationNameChanges.
-	/// </summary>
-	public static event EventHandlerRoomError OnRoomBroken;
-
 	/// <summary>
 	/// Should be called when a the ship might be fixed.
 	/// </summary>
@@ -112,16 +104,5 @@ public class EventManager : MonoBehaviour {
 			OnNameChanged(newNameType, newName);
 		}
 	}
-
-	/// <summary>
-	/// Should be called when a room is broken.
-	/// </summary>
-	/// <param name="roomName"> Name of the Room broken. </param>
-	public static void RoomBroken(string roomName) {
-		// notify all listeners to event.
-		if (OnRoomBroken != null) {
-			OnRoomBroken(roomName);
-		}
-	}
-
+	
 }

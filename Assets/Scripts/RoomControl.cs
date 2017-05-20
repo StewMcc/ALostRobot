@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: Depreceated Remove completly.
 public class RoomControl : MonoBehaviour {
 	[SerializeField]
 	GameObject errorIcon = null;
@@ -14,34 +15,18 @@ public class RoomControl : MonoBehaviour {
 	[SerializeField]
 	private Pickup.ItemType correctItem = Pickup.ItemType.tryytium;
 
-	[SerializeField]
-	string roomName = "DefaultName";
-
 	private List<ItemResponse> incorrectResponses = null;
-	private RoomManager roomManager = null;
-	private ServicePort servicePort = null;
+	private OldRoomManager roomManager = null;
+	private OldServicePort servicePort = null;
 	private bool isFixed = true;
 	int roomID;
 	private float greenTexDuration = 2.0f;
 
 	private Renderer[] rend = null;
 
-
-	private void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player") {
-			EventManager.NameChanged(EventManager.NameUpdateType.NewName, roomName);
-		}
-	}
-
-	private void OnTriggerExit(Collider other) {
-		if (other.tag == "Player") {
-			EventManager.NameChanged(EventManager.NameUpdateType.ShipName);
-		}
-	}
-
 	public void Initialise(int id) {
-		roomManager = GetComponentInParent<RoomManager>();
-		servicePort = GetComponentInChildren<ServicePort>();
+		roomManager = GetComponentInParent<OldRoomManager>();
+		servicePort = GetComponentInChildren<OldServicePort>();
 		roomID = id;
 		int iterator = 0;
 		int maxRooms = roomManager.NumberOfRooms();
@@ -78,9 +63,7 @@ public class RoomControl : MonoBehaviour {
 		}
 		// Break room without audio
 		errorIcon.SetActive(true);
-		if (isFixed) {
-			EventManager.RoomBroken(roomName);
-		}
+		
 		foreach (Renderer r in rend) {
 			r.material.mainTexture = roomManager.redTex;
 		}
@@ -128,7 +111,6 @@ public class RoomControl : MonoBehaviour {
 	public void Break() {		
 		errorIcon.SetActive(true);
 		if (isFixed) {
-			EventManager.RoomBroken(roomName);
 			SoundManager.PlayEvent("Broken_Room", gameObject);
 		}
 		foreach (Renderer r in rend) {

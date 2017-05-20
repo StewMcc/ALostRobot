@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class RoomManager : MonoBehaviour {
+// TODO: Depreceated Remove completly.
+public class OldRoomManager : MonoBehaviour {
 	private RoomControl[] rooms;
 
 	public Texture whiteTex;
