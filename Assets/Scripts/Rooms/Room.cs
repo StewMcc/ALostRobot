@@ -10,6 +10,9 @@ public class Room : MonoBehaviour {
 	[SerializeField]
 	private string roomName = "DefaultName";
 
+	[SerializeField]
+	private bool isFixed = true;
+
 	// this will be removed when the room meshes scales etc, are decided on, and we start merging things together.
 	// atm it is seperate to allow for easy modifying and testing of the room assets.
 	[SerializeField]
@@ -17,7 +20,7 @@ public class Room : MonoBehaviour {
 
 	private RoomManager roomManager = null;
 
-	private bool isFixed = false;
+	
 	private int roomId = -1;
 	private Renderer[] roomMeshParentRenderers = null;
 	private Renderer[] childrenRenderers = null;
@@ -36,8 +39,14 @@ public class Room : MonoBehaviour {
 		roomId = id;
 
 		childrenRenderers = GetComponentsInChildren<Renderer>();
-		roomMeshParentRenderers = roomMeshParent.GetComponentsInChildren<Renderer>();
-		if (!isFixed) {
+		if (roomMeshParent) {
+			roomMeshParentRenderers = roomMeshParent.GetComponentsInChildren<Renderer>();
+		}
+		if (isFixed) {
+			errorIcon.SetActive(false);
+			ChangeAllRenderersTextures(roomManager.DefaultTexture());
+		}
+		else {			
 			errorIcon.SetActive(true);
 			ChangeAllRenderersTextures(roomManager.ErrorTexture());
 		}
@@ -96,9 +105,10 @@ public class Room : MonoBehaviour {
 		foreach (Renderer rend in childrenRenderers) {
 			rend.material.mainTexture = newTexture;
 		}
-
-		foreach (Renderer rend in roomMeshParentRenderers) {
-			rend.material.mainTexture = newTexture;
+		if (roomMeshParent) {
+			foreach (Renderer rend in roomMeshParentRenderers) {
+				rend.material.mainTexture = newTexture;
+			}
 		}
 	}
 }

@@ -105,16 +105,6 @@ public class RobotController : MonoBehaviour {
 			collidedItem_ = collidedGameObject.GetComponent<Pickup>();
 			collidedItem_.ShowPopUp();
 		}
-		// TODO: Depreceated Remove completly. now handled within service port.
-		else if (collidedGameObject.tag == "Port") {
-			if (currentItem_) {
-				OldServicePort currentPort = collidedGameObject.GetComponent<OldServicePort>();
-				if (!currentPort.IsFixed()) {
-					currentPort.ShowPopUp();
-				}
-
-			}
-		}
 	}
 
 	/// <summary>
@@ -131,13 +121,6 @@ public class RobotController : MonoBehaviour {
 					collidedItem_.HidePopUp();
 					collidedItem_ = null;
 				}
-			}
-		}
-		// TODO: Depreceated Remove completly. now handled within service port.
-		else if (collidedGameObject.tag == "Port") {
-			// remove the popup and remove the link to it
-			if (currentItem_) {
-				collidedGameObject.GetComponent<OldServicePort>().HidePopUp();
 			}
 		}
 	}

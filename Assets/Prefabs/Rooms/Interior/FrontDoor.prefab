@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4990255695768558}
-  - component: {fileID: 114081081700888774}
   - component: {fileID: 65016934550064418}
+  - component: {fileID: 114081081700888774}
   m_Layer: 2
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -179,8 +179,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.4920673, y: 2.0525217, z: 8.971502}
-  m_Center: {x: 1.5656177, y: 1.4319825, z: 3.9852242}
+  m_Size: {x: 6.5, y: 2, z: 9}
+  m_Center: {x: 2, y: 1.5, z: 4}
 --- !u!114 &114081081700888774
 MonoBehaviour:
   m_ObjectHideFlags: 1

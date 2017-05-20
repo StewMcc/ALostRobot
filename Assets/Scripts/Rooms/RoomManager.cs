@@ -57,7 +57,7 @@ public class RoomManager : MonoBehaviour {
 			}
 		}
 		if (!hasBrokenRoom) {
-			//EventManager.ShipFixed();
+			EventManager.ShipFixed();
 		}
 	}
 }
