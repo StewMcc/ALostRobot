@@ -42,8 +42,19 @@ public class RoomManager : MonoBehaviour {
 		return successTexture;
 	}
 
-	public void BreakRoom(int roomNum) {
-		rooms[roomNum].Break();
+	/// <summary>
+	/// Tells the room manager to break some rooms.
+	/// 
+	/// Will not break room 0, or <seealso cref="callingRoomNumber"/>.
+	/// </summary>
+	/// <param name="callingRoomNumber"> The room id it is being called from.</param>
+	public void BreakRoom(int callingRoomNumber) {
+		int roomToBreak = Random.Range(0, rooms.Length);
+		while (roomToBreak == callingRoomNumber || roomToBreak == 0) {
+			roomToBreak = Random.Range(0, rooms.Length);
+		}
+		rooms[roomToBreak].Break();
+		Debug.Log("Break Other Rooms: " + roomToBreak);
 	}
 
 	/// <summary>

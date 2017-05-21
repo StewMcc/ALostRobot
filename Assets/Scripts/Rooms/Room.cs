@@ -87,7 +87,7 @@ public class Room : MonoBehaviour {
 	}
 
 	private void BreakOtherRooms() {
-		Debug.Log("Break Other Rooms");
+		roomManager.BreakRoom(roomId);		
 	}
 
 	private IEnumerator ShowSuccess() {
