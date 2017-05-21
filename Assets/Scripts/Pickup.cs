@@ -47,7 +47,9 @@ public class Pickup : MonoBehaviour {
 	/// Saves initial pos and disables Popup
 	/// </summary>
 	private void Start() {
-		HidePopUp();
+		interactableCanvas.enabled = false;
+		itemNameText.enabled = false;
+		iconModel.SetActive(false);
 		initialPosition_ = transform.position;
 		name = garbageName;
 		dropEffect_ = GetComponentInChildren<ParticleSystem>();
