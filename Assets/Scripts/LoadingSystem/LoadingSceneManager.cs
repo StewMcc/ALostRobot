@@ -9,7 +9,7 @@ using UnityEngine;
 /// Check the LoadingRoot Prefab for an example. Animation should have bool finishAnimation set.
 /// </summary>
 public class LoadingSceneManager : Singleton<LoadingSceneManager> {
-	
+
 	[Tooltip("Only required if it has an Enter and Exit Animation, if it does must have finishAnimation bool set in animator")]
 	[SerializeField]
 	private Animator loadingAnimator = null;
@@ -33,18 +33,19 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 	/// <summary>
 	/// How long the Initial animation takes.
 	/// </summary>
-	public static float EnterAnimationTime() {	
-		if(instance.loadingAnimator) {
+	public static float EnterAnimationTime() {
+		if (instance.loadingAnimator) {
 			return instance.initialAnimationTime;
-		}else {
+		}
+		else {
 			return 0.0f;
-		}		
+		}
 	}
 
 	/// <summary>
 	/// How long the exit animation takes.
 	/// </summary>
-	public static float ExitAnimationTime() {		
+	public static float ExitAnimationTime() {
 		if (instance.loadingAnimator) {
 			// start the finish animation.
 			instance.loadingAnimator.SetBool("finishAnimation", true);
@@ -53,6 +54,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 		else {
 			return 0.0f;
 		}
-		
+
 	}
 }

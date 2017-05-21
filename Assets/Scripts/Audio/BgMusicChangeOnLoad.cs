@@ -10,6 +10,6 @@ public class BgMusicChangeOnLoad : MonoBehaviour {
 	private void Start() {
 		SoundManager.StopAllEvents();
 		SoundManager.PlayEvent(backgroundMusic, gameObject);
-		
+
 	}
 }

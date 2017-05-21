@@ -13,7 +13,7 @@ public class SoundManager : Singleton<SoundManager> {
 	/// <summary>
 	/// Setup WWise and load Init Sound Bank.
 	/// </summary>
-	private void Initialise() {		
+	private void Initialise() {
 		uint initBankID;
 
 		// Import Initialisation Soundbank

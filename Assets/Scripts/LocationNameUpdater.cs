@@ -33,13 +33,13 @@ public class LocationNameUpdater : MonoBehaviour {
 		switch (newNameType) {
 			case EventManager.NameUpdateType.NewName:
 				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
-				//SoundManager.StopEvent("Landscape_Planet", 0, gameObject);
+				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
 				//SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = newName;
 				break;
 			case EventManager.NameUpdateType.ShipName:
 				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
-				SoundManager.StopEvent("Landscape_Planet", 0, gameObject);
+				SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
 				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
 				SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = shipName;
@@ -47,8 +47,8 @@ public class LocationNameUpdater : MonoBehaviour {
 			case EventManager.NameUpdateType.WorldName:
 				// SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Outside_State");
 				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
-				SoundManager.StopEvent("Landscape_Planet", 0, gameObject);
-				SoundManager.PlayEvent("Landscape_Planet", gameObject);
+				SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
+				SoundManager.PlayEvent("Landscape_Woodland", gameObject);
 				locationText_.text = worldName;
 				break;
 		}

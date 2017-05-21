@@ -103,5 +103,5 @@ public class EventManager : MonoBehaviour {
 			OnNameChanged(newNameType, newName);
 		}
 	}
-	
+
 }

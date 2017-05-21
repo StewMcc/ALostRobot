@@ -11,7 +11,7 @@ public class CorridorDoorLock : Door {
 	private void OnDisable() {
 		EventManager.OnPowerRoomFixed -= UnlockDoor;
 	}
-	
+
 	/// <summary>
 	/// Unlocks and opens the door, curently the door just stays open once opened.
 	/// </summary>
@@ -37,6 +37,6 @@ public class CorridorDoorLock : Door {
 	/// </summary>
 	/// <param name="other"></param>
 	private void OnTriggerExit(Collider other) {
-		
+
 	}
 }

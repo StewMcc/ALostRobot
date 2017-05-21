@@ -72,7 +72,7 @@ public class RoomManager : MonoBehaviour {
 		}
 		return false;
 	}
-	
+
 	/// <summary>
 	/// Checks if all the rooms_ are fixed, if they are fires the Ship Fixed message.
 	/// </summary>
