@@ -24,6 +24,11 @@ public class EventManager : MonoBehaviour {
 	/// </summary>
 	public static event EventHandler OnShipFixed;
 
+	/// <summary>
+	/// Event to listen to for when the power room is fixed.
+	/// </summary>
+	public static event EventHandler OnPowerRoomFixed;
+
 
 	public delegate void EventHandlerLocationName(NameUpdateType newNameType, string newName = "");
 
@@ -31,14 +36,6 @@ public class EventManager : MonoBehaviour {
 	/// Event to listen to for when locationNameChanges.
 	/// </summary>
 	public static event EventHandlerLocationName OnNameChanged;
-
-
-	public delegate void EventHandlerRoomError(string roomName);
-
-	/// <summary>
-	/// Event to listen to for when locationNameChanges.
-	/// </summary>
-	public static event EventHandlerRoomError OnRoomBroken;
 
 	/// <summary>
 	/// Should be called when a the ship might be fixed.
@@ -81,9 +78,18 @@ public class EventManager : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Should be called when a the power room is fixed.
+	/// </summary>
+	public static void PowerRoomFixed() {
+		// notify all listeners to event.
+		if (OnPowerRoomFixed != null) {
+			OnPowerRoomFixed();
+		}
+	}
+
+	/// <summary>
 	/// Should be called when wanting to change the location name.
 	/// Use NameUpdateType.NewName, in newNameType to allow newName it to be used instead. 
-	/// (default newName = "")
 	/// </summary>
 	/// <param name="newNameType">
 	/// NameUpdateType can be used to change to some default names, planet etc.
@@ -97,16 +103,5 @@ public class EventManager : MonoBehaviour {
 			OnNameChanged(newNameType, newName);
 		}
 	}
-
-	/// <summary>
-	/// Should be called when a room is broken.
-	/// </summary>
-	/// <param name="roomName"> Name of the Room broken. </param>
-	public static void RoomBroken(string roomName) {
-		// notify all listeners to event.
-		if (OnRoomBroken != null) {
-			OnRoomBroken(roomName);
-		}
-	}
-
+	
 }

@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash_Scene.unity
     guid: 53823cf707a05469484382dc2132e986
   - enabled: 1
-    path: Assets/Scenes/Scene_0.unity
-    guid: e3ffc01c3eda545f5bece7ad15ad1b32
+    path: Assets/Scenes/Scene_1.unity
+    guid: 67fd0637c6aa3f94ba73c4d4accdbff4
   - enabled: 1
     path: Assets/Scenes/LoadingSpinnerScene.unity
     guid: 231a1c9d6ef514b40af11c9b6bc68112
-  - enabled: 1
-    path: Assets/Scenes/EmptyLoadingScene.unity
-    guid: 00000000000000000000000000000000

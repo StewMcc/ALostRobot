@@ -2,14 +2,14 @@
 
 public class CameraController : MonoBehaviour {
 	[SerializeField]
-	RobotController robot =null;
+	private RobotController robot =null;
 
 	[Tooltip("Distance camera is offset from the bot.")]
 	[SerializeField]
-	Vector3 cameraOffset = Vector3.zero;
+	private Vector3 cameraOffset = Vector3.zero;
 
 	[SerializeField]
-	float transitionTime = 3;
+	private float transitionTime = 3;
 
 	private float startTime_ =0;
 
