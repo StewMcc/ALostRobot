@@ -39,7 +39,7 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 		return SceneManager.GetActiveScene().name;
 	}
 
-	
+
 	/// <summary>
 	/// Loads the scene additively using the Loading System.
 	/// Falls back to Async load if the loading system doesn't exist.

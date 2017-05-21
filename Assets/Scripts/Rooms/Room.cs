@@ -22,7 +22,7 @@ public class Room : MonoBehaviour {
 	private GameObject roomMeshParent =null;
 
 	private RoomManager roomManager_ = null;
-		
+
 	private int roomId_ = -1;
 	private Renderer[] roomMeshParentRenderers_ = null;
 	private Renderer[] childrenRenderers_ = null;
@@ -40,7 +40,7 @@ public class Room : MonoBehaviour {
 	/// Sets up the Room, and sets it and its children to the correct texture.
 	/// </summary>
 	/// <param name="id"> The position of this room in the room manager. </param>
-	public void Initialise(int id) {		
+	public void Initialise(int id) {
 		roomManager_ = GetComponentInParent<RoomManager>();
 		roomId_ = id;
 
@@ -52,7 +52,7 @@ public class Room : MonoBehaviour {
 			errorIcon.SetActive(false);
 			ChangeAllRenderersTextures(roomManager_.DefaultTexture());
 		}
-		else {			
+		else {
 			errorIcon.SetActive(true);
 			ChangeAllRenderersTextures(roomManager_.ErrorTexture());
 		}
@@ -68,7 +68,7 @@ public class Room : MonoBehaviour {
 			BreakOtherRooms();
 		}
 	}
-	
+
 	public void Break() {
 		if (isFixed) {
 			isFixed = false;
@@ -92,23 +92,23 @@ public class Room : MonoBehaviour {
 	}
 
 	private void BreakOtherRooms() {
-		roomManager_.BreakRandomRoom(roomId_);		
+		roomManager_.BreakRandomRoom(roomId_);
 	}
 
 	/// <summary>
 	/// Shows the success textue for the successDuration_.
 	/// </summary>
 	private IEnumerator ShowSuccess() {
-		
+
 		ChangeAllRenderersTextures(roomManager_.SuccessTexture());
 
 		yield return new WaitForSeconds(successDuration_);
 
 		ChangeAllRenderersTextures(roomManager_.DefaultTexture());
-		
+
 		yield return null;
 	}
-	
+
 	private void ChangeAllRenderersTextures(Texture newTexture) {
 		foreach (Renderer rend in childrenRenderers_) {
 			rend.material.mainTexture = newTexture;

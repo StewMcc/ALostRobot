@@ -9,7 +9,7 @@ public class LoadSoundBankOnLoad : MonoBehaviour {
 
 	uint bankId_;
 
-	private void Start () {
+	private void Start() {
 		// Import Soundbank
 		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankId_);
 	}
@@ -17,7 +17,7 @@ public class LoadSoundBankOnLoad : MonoBehaviour {
 	private void OnDestroy() {
 		if (onDestroyUnload) {
 			AkSoundEngine.StopAll();
-			AkSoundEngine.UnloadBank(bankId_,System.IntPtr.Zero);
+			AkSoundEngine.UnloadBank(bankId_, System.IntPtr.Zero);
 		}
 	}
 

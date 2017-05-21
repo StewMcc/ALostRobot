@@ -74,7 +74,7 @@ public class DebugUi : MonoBehaviour {
 	/// </summary>
 	private void ReloadScene() {
 		CloseDebugPanel();
-		LoadingTransitionController.AnimatedLoadSceneAsync(LoadingTransitionController.GetActiveScene(), "LoadingSpinnerScene");		
+		LoadingTransitionController.AnimatedLoadSceneAsync(LoadingTransitionController.GetActiveScene(), "LoadingSpinnerScene");
 	}
 
 	/// <summary>
