@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CorridorDoorLock : Door {
 
-	bool isDoorLocked = true;
+	private bool isDoorLocked_ = true;
 
 	private void OnEnable() {
 		EventManager.OnPowerRoomFixed += UnlockDoor;
@@ -17,7 +16,7 @@ public class CorridorDoorLock : Door {
 	/// Unlocks and opens the door, curently the door just stays open once opened.
 	/// </summary>
 	private void UnlockDoor() {
-		isDoorLocked = false;
+		isDoorLocked_ = false;
 		OpenDoor();
 	}
 
@@ -27,7 +26,7 @@ public class CorridorDoorLock : Door {
 	/// <param name="other"></param>
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			if (isDoorLocked) {
+			if (isDoorLocked_) {
 				SoundManager.PlayEvent("Item_Port_Negative", gameObject);
 			}
 		}

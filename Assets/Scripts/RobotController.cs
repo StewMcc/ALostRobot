@@ -7,16 +7,16 @@ using UnityEngine.EventSystems;
 public class RobotController : MonoBehaviour {
 
 	[SerializeField]
-	Button dropItem =null;
+	private Button dropItem =null;
 
 	[SerializeField]
 	private GameObject inventoryUi = null;
 
 	[SerializeField]
-	Text currentItemAlienText =null;
+	private Text currentItemAlienText =null;
 
 	[SerializeField]
-	Text currentItemSensibleText =null;
+	private Text currentItemSensibleText =null;
 
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;

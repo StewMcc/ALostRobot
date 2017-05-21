@@ -3,15 +3,16 @@
 [RequireComponent(typeof(Collider))]
 public class RoomZone : MonoBehaviour {
 	
-	private string roomName = "DefaultName";
+	private string roomName_ = "DefaultName";
 
 	private void Start() {
-		roomName =  GetComponentInParent<Room>().Name();		
+		// get the room name from its parents room.
+		roomName_ =  GetComponentInParent<Room>().Name();		
 	}
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			EventManager.NameChanged(EventManager.NameUpdateType.NewName, roomName);
+			EventManager.NameChanged(EventManager.NameUpdateType.NewName, roomName_);
 		}
 	}
 

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class ServicePort : MonoBehaviour {
 
 	[SerializeField]
-	GameObject useIcon = null;
+	private GameObject useIcon = null;
 
 	[SerializeField]
-	Button useButton = null;
+	private Button useButton = null;
 
-	private Room connectedRoom = null;
-	private RobotController robot = null;
+	private Room connectedRoom_ = null;
+	private RobotController robot_ = null;
 
 	private void OnEnable() {
 		useButton.onClick.AddListener(UseItem);
@@ -22,15 +22,15 @@ public class ServicePort : MonoBehaviour {
 	}
 
 	private void Start() {
-		connectedRoom = GetComponentInParent<Room>();
+		connectedRoom_ = GetComponentInParent<Room>();
 		useIcon.SetActive(false);
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player" && !connectedRoom.IsFixed()) {
-			robot = other.GetComponent<RobotController>();
-			if (robot) {
-				if (robot.HasItem()) {
+		if (other.tag == "Player" && !connectedRoom_.IsFixed()) {
+			robot_ = other.GetComponent<RobotController>();
+			if (robot_) {
+				if (robot_.HasItem()) {
 					ShowUseIcon();
 				}
 			}
@@ -40,7 +40,7 @@ public class ServicePort : MonoBehaviour {
 	private void OnTriggerExit(Collider other) {
 		if (other.tag == "Player") {
 			HideUseIcon();
-			robot = null;
+			robot_ = null;
 		}
 	}
 
@@ -57,9 +57,9 @@ public class ServicePort : MonoBehaviour {
 	}
 
 	private void UseItem() {
-		if (robot) {
-			connectedRoom.TryFixRoom(robot.CurrentItem());
-			robot.RespawnCurrentItem();
+		if (robot_) {
+			connectedRoom_.TryFix(robot_.CurrentItem());
+			robot_.RespawnCurrentItem();
 		}
 		HideUseIcon();
 	}

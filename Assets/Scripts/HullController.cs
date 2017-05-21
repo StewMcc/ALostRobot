@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class HullController : MonoBehaviour {
 
 	[SerializeField]
-	GameObject dropButton = null;
+	private GameObject dropButton = null;
 	
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {

@@ -12,15 +12,15 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 	
 	[Tooltip("Only required if it has an Enter and Exit Animation, if it does must have finishAnimation bool set in animator")]
 	[SerializeField]
-	Animator loadingAnimator = null;
+	private Animator loadingAnimator = null;
 
 	[Tooltip("Ignored if no animator set.")]
 	[SerializeField]
-	float initialAnimationTime = 0.5f;
+	private float initialAnimationTime = 0.5f;
 
 	[Tooltip("Ignored if no animator set.")]
 	[SerializeField]
-	float finishAnimationTime = 1.0f;
+	private float finishAnimationTime = 1.0f;
 
 
 	/// <summary>

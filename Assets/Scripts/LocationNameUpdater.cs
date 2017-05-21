@@ -5,12 +5,12 @@ using UnityEngine.UI;
 public class LocationNameUpdater : MonoBehaviour {
 
 	[SerializeField]
-	string shipName = "L.A.D.Ship";
+	private string shipName = "L.A.D.Ship";
 
 	[SerializeField]
-	string worldName = "New World Name";
+	private string worldName = "New World Name";
 
-	Text locationText_ = null;
+	private Text locationText_ = null;
 
 	private void Start() {
 		locationText_ = GetComponent<Text>();
@@ -40,12 +40,14 @@ public class LocationNameUpdater : MonoBehaviour {
 			case EventManager.NameUpdateType.ShipName:
 				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
 				SoundManager.StopEvent("Landscape_Planet", 0, gameObject);
+				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
 				SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = shipName;
 				break;
 			case EventManager.NameUpdateType.WorldName:
 				// SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Outside_State");
 				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
+				SoundManager.StopEvent("Landscape_Planet", 0, gameObject);
 				SoundManager.PlayEvent("Landscape_Planet", gameObject);
 				locationText_.text = worldName;
 				break;

@@ -8,9 +8,9 @@ class MovingCameraPoints {
 
 public class CreditsRolling : MonoBehaviour {
 	[SerializeField]
-	Camera sceneCamera = null;
+	private Camera sceneCamera = null;
 	[SerializeField]
-	MovingCameraPoints[] cameraPoints = null;
+	private MovingCameraPoints[] cameraPoints = null;
 
 	private Vector3 startPosition_ = Vector3.zero;
 	private Vector3 endPosition_ = Vector3.zero;

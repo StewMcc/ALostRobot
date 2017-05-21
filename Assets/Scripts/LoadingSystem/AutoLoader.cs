@@ -7,9 +7,9 @@ using UnityEngine;
 /// </summary>
 public class AutoLoader : MonoBehaviour {
 	[SerializeField]
-	string nextScene  = "Splash_Scene";
+	private string nextScene  = "Splash_Scene";
 	[SerializeField]
-	float delay = 2.0f;
+	private float delay = 2.0f;
 	
 	/// <summary>
 	/// Automatically loads the provided strings scene at the end of the frame.

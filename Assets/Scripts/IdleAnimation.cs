@@ -8,32 +8,32 @@ public class IdleAnimation : MonoBehaviour {
 
 	[SerializeField]
 	[Tooltip("Used for end rotation, position and scale values, Ensure rotation angles are positive...reasons.")]
-	Transform pingPongTarget = null;
+	private Transform pingPongTarget = null;
 
 	[Header("Animation")]
 	[SerializeField]
-	bool isAnimated = true;
+	private bool isAnimated = true;
 
 	[SerializeField]
-	bool isMoving = true;
+	private bool isMoving = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to move to the target.")]
-	float moveToTargetInterval =2.0f;
+	private float moveToTargetInterval =2.0f;
 
 	[SerializeField]
-	bool isScaling = true;
+	private bool isScaling = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to scale to the targets scale.")]
-	float scaleToTargetInterval =2.0f;
+	private float scaleToTargetInterval =2.0f;
 
 	[SerializeField]
-	bool isRotating = true;
+	private bool isRotating = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to rotate to the targets rotation.")]
-	float rotateToTargetInterval =2.0f;
+	private float rotateToTargetInterval =2.0f;
 
 	private Vector3 pingPongMoveTo_;
 

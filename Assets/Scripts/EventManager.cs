@@ -25,7 +25,7 @@ public class EventManager : MonoBehaviour {
 	public static event EventHandler OnShipFixed;
 
 	/// <summary>
-	/// Should be called when the power room is fixed.
+	/// Event to listen to for when the power room is fixed.
 	/// </summary>
 	public static event EventHandler OnPowerRoomFixed;
 
@@ -90,7 +90,6 @@ public class EventManager : MonoBehaviour {
 	/// <summary>
 	/// Should be called when wanting to change the location name.
 	/// Use NameUpdateType.NewName, in newNameType to allow newName it to be used instead. 
-	/// (default newName = "")
 	/// </summary>
 	/// <param name="newNameType">
 	/// NameUpdateType can be used to change to some default names, planet etc.

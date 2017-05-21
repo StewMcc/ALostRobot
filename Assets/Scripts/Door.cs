@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class Door : MonoBehaviour {
 	[SerializeField]
-	GameObject doorModel = null;
+	private GameObject doorModel = null;
 
 	[SerializeField]
-	float transitionTime = 0.2f;
+	private float transitionTime = 0.2f;
 	[SerializeField]
-	Transform downTransform = null;
+	private Transform downTransform = null;
 
 	[SerializeField]
-	Transform upTransform = null;
+	private Transform upTransform = null;
 
 	private float startTime_ = 0;
 
