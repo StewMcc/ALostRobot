@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Audio_Soundbank" ID="{4729DB33-366C-41FF-BAE1-E293EF56572F}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Landscape_Planet" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Item_PopUp" ID="{47C4CAA5-89CF-44DF-BF1B-7CB3C02621CE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>

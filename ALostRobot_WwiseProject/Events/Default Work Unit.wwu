@@ -157,13 +157,20 @@
 									</PropertyList>
 									<ElementList>
 										<Element ID="{AD51FEFF-12BA-4627-A9C7-37405B289C1D}" Global="false">
-											<ObjectRef Name="Planet_Ambience" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{49C76C53-7863-40D2-832F-50948CBC221E}" ShortID="210270398" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{691423E1-1357-4D18-AFDC-4304817093AB}" Global="false">
+											<ObjectRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Element>
 									</ElementList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Landscape_Planet" ID="{F59A789C-931D-405F-9D89-62FD28425385}">
+						<Event Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}">
 							<ChildrenList>
 								<Action Name="Play" ID="{42680900-AA98-4704-922E-F42FD6DD8B26}" ShortID="475152550" Type="Play" Scope="One" Global="false">
 									<PropertyList>
@@ -172,7 +179,7 @@
 									</PropertyList>
 									<ElementList>
 										<Element ID="{5A73C551-8757-44A9-B401-3F602889043C}" Global="false">
-											<ObjectRef Name="Planet_Ambience" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -184,6 +191,24 @@
 									<ElementList>
 										<Element ID="{B3EA0E2D-2266-47B0-8075-EE473BA7AB88}" Global="false">
 											<ObjectRef Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Landscape_Iceland" ID="{B41CAA85-1067-47A2-BD2B-62A84B6F4B12}">
+							<ChildrenList>
+								<Action Name="Play" ID="{C5201D3E-AAD5-484F-9F50-90B169F25C86}" ShortID="1069042510" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{3539F81C-E10F-43E8-8AC0-028B761FA5CD}" Global="false">
+											<ObjectRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{FB2DD743-6AA0-40FE-89D5-585526EF0CC8}" ShortID="563560843" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{65647867-C9DE-4CD9-88FA-AAB0851F4932}" Global="false">
+											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Element>
 									</ElementList>
 								</Action>

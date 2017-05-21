@@ -10,7 +10,7 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Landscape_Planet" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<ObjectRef Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
@@ -66,7 +66,12 @@
 							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}"/>
+							<Value>73.5449735449735</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>

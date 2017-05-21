@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" SchemaVersion="75">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
