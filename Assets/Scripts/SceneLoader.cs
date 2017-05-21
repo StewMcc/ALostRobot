@@ -3,7 +3,7 @@
 public class SceneLoader : MonoBehaviour {
 
 	/// <summary>
-	/// Loads the providied scene.
+	/// Loads the provided scene.
 	/// Ensure scene is added to build list.
 	/// </summary>
 	/// <param name="sceneName"> Name of scene to load. </param>

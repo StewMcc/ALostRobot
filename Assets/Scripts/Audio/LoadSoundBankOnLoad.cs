@@ -5,19 +5,19 @@ public class LoadSoundBankOnLoad : MonoBehaviour {
 	private string soundbankName = "Soundbank1";
 
 	[SerializeField]
-	bool onDestroyUnload = false;
+	private bool onDestroyUnload = false;
 
-	uint bankID;
+	uint bankId_;
 
 	private void Start () {
 		// Import Soundbank
-		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
+		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankId_);
 	}
 
 	private void OnDestroy() {
 		if (onDestroyUnload) {
 			AkSoundEngine.StopAll();
-			AkSoundEngine.UnloadBank(bankID,System.IntPtr.Zero);
+			AkSoundEngine.UnloadBank(bankId_,System.IntPtr.Zero);
 		}
 	}
 
