@@ -3,10 +3,10 @@
 public class WinScreen : MonoBehaviour {
 
 	[SerializeField]
-	GameObject winScreen = null;
+	private GameObject winScreen = null;
 
 	[SerializeField]
-	GameObject hud = null;
+	private GameObject hud = null;
 
 	private void Start() {
 		winScreen.SetActive(false);

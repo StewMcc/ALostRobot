@@ -14,32 +14,32 @@ public class Pickup : MonoBehaviour {
 	};
 
 	[SerializeField]
-	IdleAnimation pickUpAnimation = null;
+	private IdleAnimation pickUpAnimation = null;
 
 	[SerializeField]
-	string garbageName = "DefaultName";
+	private string garbageName = "DefaultName";
 
 	[SerializeField]
-	ItemType itemType = ItemType.tryytium;
+	private ItemType itemType = ItemType.tryytium;
 
 	[SerializeField]
-	string sensibleName = "DefaultName";
+	private string sensibleName = "DefaultName";
 
 	[SerializeField]
-	float itemHeightOffsetWhenPickedUp = 1.0f;
+	private float itemHeightOffsetWhenPickedUp = 1.0f;
 
 	[SerializeField]
-	Canvas interactableCanvas = null;
+	private Canvas interactableCanvas = null;
 	[SerializeField]
-	Text itemNameText =null;
+	private Text itemNameText =null;
 	[SerializeField]
-	GameObject iconModel = null;
+	private GameObject iconModel = null;
 
-	Vector3 initialPosition_ = Vector3.zero;
+	private Vector3 initialPosition_ = Vector3.zero;
 
-	Vector3 droppedTargetPosition_ = Vector3.zero;
+	private Vector3 droppedTargetPosition_ = Vector3.zero;
 
-	bool hasRespawned_ = false;
+	private bool hasRespawned_ = false;
 
 	private ParticleSystem dropEffect_ = null;
 
@@ -47,7 +47,9 @@ public class Pickup : MonoBehaviour {
 	/// Saves initial pos and disables Popup
 	/// </summary>
 	private void Start() {
-		HidePopUp();
+		interactableCanvas.enabled = false;
+		itemNameText.enabled = false;
+		iconModel.SetActive(false);
 		initialPosition_ = transform.position;
 		name = garbageName;
 		dropEffect_ = GetComponentInChildren<ParticleSystem>();

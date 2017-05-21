@@ -7,16 +7,16 @@ using UnityEngine.EventSystems;
 public class RobotController : MonoBehaviour {
 
 	[SerializeField]
-	Button dropItem =null;
+	private Button dropItem =null;
 
 	[SerializeField]
 	private GameObject inventoryUi = null;
 
 	[SerializeField]
-	Text currentItemAlienText =null;
+	private Text currentItemAlienText =null;
 
 	[SerializeField]
-	Text currentItemSensibleText =null;
+	private Text currentItemSensibleText =null;
 
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;
@@ -105,15 +105,6 @@ public class RobotController : MonoBehaviour {
 			collidedItem_ = collidedGameObject.GetComponent<Pickup>();
 			collidedItem_.ShowPopUp();
 		}
-		else if (collidedGameObject.tag == "Port") {
-			if (currentItem_) {
-				ServicePort currentPort = collidedGameObject.GetComponent<ServicePort>();
-				if (!currentPort.IsFixed()) {
-					currentPort.ShowPopUp();
-				}
-
-			}
-		}
 	}
 
 	/// <summary>
@@ -132,15 +123,14 @@ public class RobotController : MonoBehaviour {
 				}
 			}
 		}
-		else if (collidedGameObject.tag == "Port") {
-			// remove the popup and remove the link to it
-			if (currentItem_) {
-				collidedGameObject.GetComponent<ServicePort>().HidePopUp();
-
-			}
-		}
 	}
 
+	public bool HasItem() {
+		if (currentItem_) {
+			return true;
+		}
+		return false;
+	}
 	/// <summary>
 	/// Hides the collided items popup and sets it to the currently collected item
 	/// </summary>
@@ -251,7 +241,7 @@ public class RobotController : MonoBehaviour {
 	/// <summary>
 	/// Returns the current item in the inventory.
 	/// </summary>
-	/// <returns> Cna return null if not available. </returns>
+	/// <returns> Returns null if not available. </returns>
 	public Pickup CurrentItem() {
 		return currentItem_;
 	}

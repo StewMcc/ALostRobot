@@ -4,12 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystem))]
 public class DistressBeaconController : MonoBehaviour {
 	[SerializeField]
-	float waitForWinDelay = 4.0f;
+	private float waitForWinDelay = 4.0f;
 
-	ParticleSystem particleBeam = null;
+	ParticleSystem particleBeam_ = null;
 
 	private void Start() {
-		particleBeam = GetComponent<ParticleSystem>();
+		particleBeam_ = GetComponent<ParticleSystem>();
 
 	}
 	private void OnEnable() {
@@ -28,7 +28,7 @@ public class DistressBeaconController : MonoBehaviour {
 		// Removes the listener ensuring it doesnt accidentally get called twice.
 		EventManager.OnCameraInPosition -= OnCameraInPosition;
 
-		particleBeam.Play();
+		particleBeam_.Play();
 
 		// stops all other music before starting the beam audio.
 		SoundManager.StopAllEvents();

@@ -11,9 +11,10 @@ using UnityEngine.SceneManagement;
 public class LoadingTransitionController : Singleton<LoadingTransitionController> {
 
 	[SerializeField]
-	ScreenFader blackScreenCover = null;
+	private ScreenFader blackScreenCover = null;
+
 	[SerializeField]
-	float minDuration = 1.5f;
+	private float minDuration = 1.5f;
 
 	private void Start() {
 		// Ensures any final changes are made to the scene.

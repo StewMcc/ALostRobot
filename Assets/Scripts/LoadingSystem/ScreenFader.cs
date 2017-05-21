@@ -9,15 +9,15 @@ using UnityEngine.UI;
 public class ScreenFader : MonoBehaviour {
 
 	[SerializeField]
-	bool startsVisible = false;
+	private bool startsVisible = false;
 	[SerializeField]
-	bool fadeOnAwake = false;
+	private bool fadeOnAwake = false;
 	[SerializeField]
-	float fadeSpeed = 1.0f;
+	private float fadeSpeed = 1.0f;
 	[SerializeField]
-	float minAlpha = 0;
+	private float minAlpha = 0;
 	[SerializeField]
-	float maxAlpha = 1.0f;
+	private float maxAlpha = 1.0f;
 
 	private Image screen_;
 
