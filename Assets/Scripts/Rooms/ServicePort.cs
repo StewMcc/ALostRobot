@@ -59,7 +59,7 @@ public class ServicePort : MonoBehaviour {
 	private void UseItem() {
 		if (robot_) {
 			connectedRoom_.TryFix(robot_.CurrentItem());
-			robot_.RespawnCurrentItem();
+			robot_.RespawnCurrentPickup();
 		}
 		HideUseIcon();
 	}

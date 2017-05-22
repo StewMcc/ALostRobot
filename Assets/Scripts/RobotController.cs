@@ -7,25 +7,26 @@ using UnityEngine.EventSystems;
 public class RobotController : MonoBehaviour {
 
 	[SerializeField]
-	private Button dropItem =null;
-
-	[SerializeField]
 	private GameObject inventoryUi = null;
 
 	[SerializeField]
-	private Text currentItemAlienText =null;
+	private Button dropButton =null;
+	
+	[SerializeField]
+	private Text currentPickupNormalText =null;
+	
+	[SerializeField]
+	private Text currentPickupAlienText =null;
 
 	[SerializeField]
-	private Text currentItemSensibleText =null;
+	private Transform pickupPosition = null;
 
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;
 	private bool isMoving_ = false;
 	private float stopThreshold_ = 0.1f;
 
-	private Pickup currentItem_ = null;
-
-	private Pickup collidedItem_ = null;
+	private Pickup currentPickup_ = null;
 
 	/// <summary>
 	/// Sets up the navmeshagent and Hides the Inventory.
@@ -39,14 +40,14 @@ public class RobotController : MonoBehaviour {
 	/// Add dropitem to button OnClick.
 	/// </summary>
 	private void OnEnable() {
-		dropItem.onClick.AddListener(DropCurrentItem);
+		dropButton.onClick.AddListener(DropCurrentPickup);
 	}
 
 	/// <summary>
 	/// Removes listeners.
 	/// </summary>
 	private void OnDisable() {
-		dropItem.onClick.RemoveAllListeners();
+		dropButton.onClick.RemoveAllListeners();
 	}
 
 	/// <summary>
@@ -89,80 +90,51 @@ public class RobotController : MonoBehaviour {
 		Vector3 direction = transform.TransformDirection(Vector3.forward) * 4;
 		Gizmos.DrawRay(transform.position, direction);
 	}
-
-	/// <summary>
-	/// Updates the usable collided item of the player.	
-	/// </summary>
-	private void OnTriggerEnter(Collider collider) {
-		GameObject collidedGameObject = collider.gameObject;
-		// check valid item
-		if (collidedGameObject.tag == "Item") {
-			// remove the popup on the old item
-			if (collidedItem_) {
-				collidedItem_.HidePopUp();
-			}
-			// update and show new popup
-			collidedItem_ = collidedGameObject.GetComponent<Pickup>();
-			collidedItem_.ShowPopUp();
-		}
-	}
-
-	/// <summary>
-	/// Removes the current usable collidedItem
-	/// </summary>
-	/// <param name="collider"></param>
-	private void OnTriggerExit(Collider collider) {
-		GameObject collidedGameObject = collider.gameObject;
-		// check valid item
-		if (collidedGameObject.tag == "Item") {
-			// remove the popup and remove the link to it
-			if (collidedItem_) {
-				if (collidedGameObject.GetComponent<Pickup>() == collidedItem_) {
-					collidedItem_.HidePopUp();
-					collidedItem_ = null;
-				}
-			}
-		}
-	}
-
+	
 	public bool HasItem() {
-		if (currentItem_) {
+		if (currentPickup_) {
 			return true;
 		}
 		return false;
 	}
+
+	/// <summary>
+	/// Returns the current item in the inventory.
+	/// </summary>
+	/// <returns> Returns null if not available. </returns>
+	public Pickup CurrentItem() {
+		return currentPickup_;
+	}
+
 	/// <summary>
 	/// Hides the collided items popup and sets it to the currently collected item
 	/// </summary>
-	public void PickUpItem() {
-		if (collidedItem_) {
-			collidedItem_.HidePopUp();
-			collidedItem_.ItemPickedUp();
-			DropCurrentItem();
-			currentItem_ = collidedItem_;
-			SoundManager.PlayEvent("Item_PickUp", gameObject);
-		}
+	public void AddPickup(Pickup newPickup) {
+		DropCurrentPickup();
+		currentPickup_ = newPickup;
+		SoundManager.PlayEvent("Item_PickUp", gameObject);
+	
 		ShowInventory();
 	}
 
 	/// <summary>
 	/// Drop the current item in the inventory.
 	/// </summary>
-	public void DropCurrentItem() {
-		if (currentItem_) {
-			currentItem_.ItemDropped();
-			currentItem_ = null;
+	public void DropCurrentPickup() {
+		if (currentPickup_) {
+			currentPickup_.Drop();
+			currentPickup_ = null;
 		}
 		EmptyInventory();
 	}
 
 	/// <summary>
-	/// Drop the current item in the inventory.
+	/// Respawn the current item in the inventory.
 	/// </summary>
-	public void RespawnCurrentItem() {
-		if (currentItem_) {
-			currentItem_.Respawn();
-			currentItem_ = null;
+	public void RespawnCurrentPickup() {
+		if (currentPickup_) {
+			currentPickup_.Respawn();
+			currentPickup_ = null;
 		}
 		EmptyInventory();
 	}
@@ -196,11 +168,11 @@ public class RobotController : MonoBehaviour {
 	/// Update the items position to follow the player.
 	/// </summary>
 	private void UpdateCurrentItem() {
-		if (currentItem_) {
-			currentItem_.transform.position = new Vector3(
-				transform.position.x,
-				transform.position.y + currentItem_.ItemheightOffset(),
-				transform.position.z);
+		if (currentPickup_) {
+			currentPickup_.transform.position = new Vector3(
+				transform.position.x + pickupPosition.localPosition.x,
+				transform.position.y + pickupPosition.localPosition.y,
+				transform.position.z + pickupPosition.localPosition.z);
 		}
 	}
 
@@ -208,18 +180,18 @@ public class RobotController : MonoBehaviour {
 	/// Show the item in the inventory
 	/// </summary>
 	private void ShowInventory() {
-		if (currentItem_) {
+		if (currentPickup_) {
 			inventoryUi.SetActive(true);
-			dropItem.interactable = true;
-			if (currentItem_.HasRespawned()) {
-				currentItemAlienText.enabled = false;
-				currentItemSensibleText.enabled = true;
-				currentItemSensibleText.text = currentItem_.Name();
+			dropButton.interactable = true;
+			if (currentPickup_.HasNameDiscovered()) {
+				currentPickupAlienText.enabled = false;
+				currentPickupNormalText.enabled = true;
+				currentPickupNormalText.text = currentPickup_.Name();
 			}
 			else {
-				currentItemSensibleText.enabled = false;
-				currentItemAlienText.enabled = true;
-				currentItemAlienText.text = currentItem_.Name();
+				currentPickupNormalText.enabled = false;
+				currentPickupAlienText.enabled = true;
+				currentPickupAlienText.text = currentPickup_.Name();
 			}
 		}
 		else {
@@ -231,25 +203,17 @@ public class RobotController : MonoBehaviour {
 	/// disable and remove the item from the inventory UI.
 	/// </summary>
 	private void EmptyInventory() {
-		dropItem.interactable = false;
-		currentItemAlienText.enabled = false;
-		currentItemSensibleText.enabled = true;
-		currentItemSensibleText.text = "Empty";
+		dropButton.interactable = false;
+		currentPickupAlienText.enabled = false;
+		currentPickupNormalText.enabled = true;
+		currentPickupNormalText.text = "Empty";
 		inventoryUi.SetActive(false);
 	}
-
-	/// <summary>
-	/// Returns the current item in the inventory.
-	/// </summary>
-	/// <returns> Returns null if not available. </returns>
-	public Pickup CurrentItem() {
-		return currentItem_;
-	}
-
+	
 	/// <summary>
 	/// Hides the Inventory Ui fom the Hud.
 	/// </summary>
-	public void HideInventory() {
+	private void HideInventory() {
 		inventoryUi.SetActive(false);
 	}
 }

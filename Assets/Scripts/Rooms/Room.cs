@@ -7,7 +7,7 @@ public class Room : MonoBehaviour {
 	private GameObject errorIcon = null;
 
 	[SerializeField]
-	private Pickup.ItemType correctItem = Pickup.ItemType.tryytium;
+	private Pickup.PickupType correctItem = Pickup.PickupType.tryytium;
 
 	[SerializeField]
 	private string roomName = "DefaultName";
@@ -59,7 +59,7 @@ public class Room : MonoBehaviour {
 	}
 
 	public void TryFix(Pickup item) {
-		if (item.CheckItemType() == correctItem) {
+		if (item.CheckType() == correctItem) {
 			SoundManager.PlayEvent("Item_Port_Positive", gameObject);
 			Fix();
 		}

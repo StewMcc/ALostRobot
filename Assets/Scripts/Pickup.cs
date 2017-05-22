@@ -8,52 +8,59 @@ using UnityEditor;
 
 public class Pickup : MonoBehaviour {
 
-	public enum ItemType {
+	public enum PickupType {
 		tryytium, skudian, nusluathil, criasium, ublyx, zushese, vufrum, eshian, kreasten,
 		qostralt
 	};
 
 	[SerializeField]
-	private IdleAnimation pickUpAnimation = null;
+	private IdleAnimation pickupAnimation = null;
 
 	[SerializeField]
-	private string garbageName = "DefaultName";
+	private Text pickupText = null;
 
 	[SerializeField]
-	private ItemType itemType = ItemType.tryytium;
+	private GameObject grabIcon = null;
 
 	[SerializeField]
-	private string sensibleName = "DefaultName";
+	private Button grabButton = null;
 
 	[SerializeField]
-	private float itemHeightOffsetWhenPickedUp = 1.0f;
+	private ParticleSystem dropEffect = null;
+
+	[Header("Pickup Settings")]
+	[SerializeField]
+	private PickupType pickupType = PickupType.tryytium;
 
 	[SerializeField]
-	private Canvas interactableCanvas = null;
-	[SerializeField]
-	private Text itemNameText =null;
-	[SerializeField]
-	private GameObject iconModel = null;
-
-	private Vector3 initialPosition_ = Vector3.zero;
+	private string pickupName = "DefaultName";
+		
+	private Vector3 respawnPosition_ = Vector3.zero;
 
 	private Vector3 droppedTargetPosition_ = Vector3.zero;
 
 	private bool hasRespawned_ = false;
 
-	private ParticleSystem dropEffect_ = null;
+	private RobotController robot_ = null;
 
-	/// <summary>
-	/// Saves initial pos and disables Popup
-	/// </summary>
+	private void OnEnable() {
+		grabButton.onClick.AddListener(GrabPickup);
+	}
+
+	private void OnDisable() {
+		grabButton.onClick.RemoveListener(GrabPickup);
+	}
+
 	private void Start() {
-		interactableCanvas.enabled = false;
-		itemNameText.enabled = false;
-		iconModel.SetActive(false);
-		initialPosition_ = transform.position;
-		name = garbageName;
-		dropEffect_ = GetComponentInChildren<ParticleSystem>();
-		itemNameText.text = sensibleName;
+		// save original position.
+		respawnPosition_ = transform.position;		
+		
+		pickupText.text = pickupName;
+		
+		pickupText.enabled = false;
+
+		grabIcon.SetActive(false);
+
 	}
 
 #if UNITY_EDITOR
@@ -61,99 +68,84 @@ public class Pickup : MonoBehaviour {
 	/// Draws Gizmo of item name in editor.
 	/// </summary>
 	void OnValidate() {
-		if (itemNameText) {
-			itemNameText.text = sensibleName;
+		if (pickupText) {
+			pickupText.text = pickupName;
+			name = pickupName;		
 		}
 	}
 #endif
 
-	/// <summary>
-	/// Height Offset for position above player, to stop clipping.
-	/// </summary>
-	/// <returns></returns>
-	public float ItemheightOffset() {
-		return itemHeightOffsetWhenPickedUp;
-	}
-
-	/// <summary>
-	/// Enables the popup.
-	/// </summary>
-	public void ShowPopUp() {
-		interactableCanvas.enabled = true;
-		if (hasRespawned_) {
-			itemNameText.enabled = true;
+	private void OnTriggerEnter(Collider other) {
+		if (other.tag == "Player") {
+			robot_ = other.GetComponent<RobotController>();
+			if (robot_) {
+				ShowGrabIcon();
+			}
 		}
-		iconModel.SetActive(true);
-		SoundManager.PlayEvent("Item_PopUp", gameObject);
 	}
 
-	/// <summary>
-	/// Hides the popup.
-	/// </summary>
-	public void HidePopUp() {
-		interactableCanvas.enabled = false;
-		itemNameText.enabled = false;
-		iconModel.SetActive(false);
-		SoundManager.PlayEvent("Item_PopUp", gameObject);
+	private void OnTriggerExit(Collider other) {
+		if (other.tag == "Player") {
+			HideGrabIcon();
+			robot_ = null;
+		}
 	}
 
-	/// <summary>
-	/// Returns the currently available name.
-	/// Garbage name or variation, or the full name.
-	/// </summary>
-	/// <returns></returns>
 	public string Name() {
-		if (hasRespawned_) {
-			return sensibleName;
-		}
-		else {
-			return garbageName;
-		}
+		return pickupName;
+	}
+	
+	public PickupType CheckType() {
+		return pickupType;
 	}
 
-	/// <summary>
-	/// Pauses the animation of the pickup item.
-	/// </summary>
-	public void ItemPickedUp() {
-		pickUpAnimation.PauseAnimation();
+	public bool HasNameDiscovered() {
+		return hasRespawned_;
 	}
-
+	
 	/// <summary>
 	/// Drops the item at a random position near the player on the NavMesh.	
 	/// </summary>
-	public void ItemDropped() {
-		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
-			droppedTargetPosition_.y += initialPosition_.y;
+	public void Drop() {
+		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {			
 			transform.position = droppedTargetPosition_;
 		}
 
-		pickUpAnimation.ResumeAnimation();
-		dropEffect_.Play();
+		pickupAnimation.ResumeAnimation();
+		dropEffect.Play();
 		SoundManager.PlayEvent("Item_PutDown", gameObject);
+		ShowGrabIcon();
 	}
-
-	/// <summary>
-	/// Returns the type of the item	
-	/// </summary>
-	public ItemType CheckItemType() {
-		return itemType;
-	}
-
+	
 	/// <summary>
 	/// Respawns the item at its initial position.
 	/// </summary>
 	public void Respawn() {
-		transform.position = initialPosition_;
-		pickUpAnimation.ResumeAnimation();
+		transform.position = respawnPosition_;
+		pickupAnimation.ResumeAnimation();
 		hasRespawned_ = true;
+		dropEffect.Play();
 	}
 
-	/// <summary>
-	/// Wether the item has been respawned yet.
-	/// </summary>
-	/// <returns> True if it has. </returns>
-	public bool HasRespawned() {
-		return hasRespawned_;
+	private void ShowGrabIcon() {
+		if (hasRespawned_) {
+			pickupText.enabled = true;
+		}
+		grabIcon.SetActive(true);
+		SoundManager.PlayEvent("Item_PopUp", gameObject);
+	}
+
+	private void HideGrabIcon() {
+		grabIcon.SetActive(false);
+		SoundManager.PlayEvent("Item_PopUp", gameObject);
+	}
+
+	private void GrabPickup() {
+		pickupAnimation.PauseAnimation();
+		HideGrabIcon();
+		if (robot_) {
+			robot_.AddPickup(this);
+		}
 	}
 
 }
