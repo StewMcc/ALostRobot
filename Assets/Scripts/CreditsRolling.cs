@@ -6,6 +6,12 @@ class MovingCameraPoints {
 	public float transitionTime = 12.0f;
 }
 
+/// <summary>
+/// Moves the camera between the camera points for the credits.
+/// Credits will start rolling once the game is completed (camera in position and distreas beacon sent)
+/// Allows the camera to slow down and speed up after each credit section.
+/// i.e. so the camera stays on the logos for longer.
+/// </summary>
 public class CreditsRolling : MonoBehaviour {
 	[SerializeField]
 	private Camera sceneCamera = null;

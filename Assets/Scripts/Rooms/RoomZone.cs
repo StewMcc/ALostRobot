@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Handles showing the correct zone name for each of the Rooms.
+/// Gets room name from its parent, helps seperate out the colliders neatly.
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class RoomZone : MonoBehaviour {
 

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Sets the location of the robot in the HUD updating the music playing dependent on location.
+/// TODO: move over to more rebust system for when different zone music is added using switchs/rtspcs.
+/// </summary>
 [RequireComponent(typeof(Text))]
 public class LocationNameUpdater : MonoBehaviour {
 

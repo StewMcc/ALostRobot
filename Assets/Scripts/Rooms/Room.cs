@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Controls the breaking and fixing of rooms.
+/// Shows this by changing all the room textures dependent on state.
+/// Uses the parent RoomManager to get Textures and break other rooms when it fails to be fixed.
+/// </summary>
 public class Room : MonoBehaviour {
 
 	[SerializeField]
@@ -44,6 +49,7 @@ public class Room : MonoBehaviour {
 		roomManager_ = GetComponentInParent<RoomManager>();
 		roomId_ = id;
 
+		// Get all the renderers connected to this room and change their textures.
 		childrenRenderers_ = GetComponentsInChildren<Renderer>();
 		if (roomMeshParent) {
 			roomMeshParentRenderers_ = roomMeshParent.GetComponentsInChildren<Renderer>();

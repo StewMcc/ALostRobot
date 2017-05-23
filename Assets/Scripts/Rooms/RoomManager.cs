@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Sets up all child rooms, whilst handling the breaking of connetected.
+/// Also handles checking if all the rooms are fixed.
+/// </summary>
 public class RoomManager : MonoBehaviour {
 
 	[SerializeField]

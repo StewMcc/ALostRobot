@@ -3,6 +3,9 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Controls the movement of the robot and stores the collected pickups, and pickupUi
+/// </summary>
 [RequireComponent(typeof(NavMeshAgent))]
 public class RobotController : MonoBehaviour {
 

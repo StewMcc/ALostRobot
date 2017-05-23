@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Transition controller for Loading screens and fade screens.
 /// Will fade in a screenfader as it starts to load the loading scene which is used for the transition.
-/// See the LoadingTransitionController Prefab for an example.
+/// See the <seealso cref="LoadingTransitionController"/> Prefab for an example.
 /// </summary>
 public class LoadingTransitionController : Singleton<LoadingTransitionController> {
 

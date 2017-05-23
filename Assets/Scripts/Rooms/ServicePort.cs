@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// Handles user interaction allowing the robot to try and fix the room if it has an item.
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class ServicePort : MonoBehaviour {
 

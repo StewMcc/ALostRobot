@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// When the player enters the collider the doorModel will move towards the openTransform.
+/// On exit it moves to the closedTransform.
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class Door : MonoBehaviour {
 	[SerializeField]
@@ -8,10 +12,10 @@ public class Door : MonoBehaviour {
 	[SerializeField]
 	private float transitionTime = 0.2f;
 	[SerializeField]
-	private Transform downTransform = null;
+	private Transform openTransform = null;
 
 	[SerializeField]
-	private Transform upTransform = null;
+	private Transform closedTransform = null;
 
 	private float startTime_ = 0;
 
@@ -51,8 +55,8 @@ public class Door : MonoBehaviour {
 	public void CloseDoor() {
 		isMoving_ = true;
 		startTime_ = Time.time;
-		startPosition_ = downTransform.position;
-		endPosition_ = upTransform.position;
+		startPosition_ = openTransform.position;
+		endPosition_ = closedTransform.position;
 		SoundManager.PlayEvent("Craft_HydroDoor", gameObject);
 	}
 
@@ -62,8 +66,8 @@ public class Door : MonoBehaviour {
 	public void OpenDoor() {
 		isMoving_ = true;
 		startTime_ = Time.time;
-		startPosition_ = upTransform.position;
-		endPosition_ = downTransform.position;
+		startPosition_ = closedTransform.position;
+		endPosition_ = openTransform.position;
 		SoundManager.PlayEvent("Craft_HydroDoor", gameObject);
 	}
 }

@@ -5,7 +5,14 @@ using UnityEngine.UI;
 using UnityEditor;
 #endif
 
-
+/// <summary>
+/// Controls the UI for the pickups and adds the pickup to the collided <seealso cref="RobotController"/>.
+/// 
+/// Best to duplicate one of the PickUp prefabs for all the connected UI etc.
+/// Will show the Grabicon with its Canvas/Button, when a robot is within the collider.
+/// Also allows the Pickup to be respawned and dropped, but would require it to also be removed from the robots inventory.
+/// </summary>
+[RequireComponent(typeof(Collider))]
 public class Pickup : MonoBehaviour {
 
 	public enum PickupType {

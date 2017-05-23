@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Hides the drop button when inside the ship, and sets the ship name when inside.
+/// Will reset to world name on exit.
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class HullController : MonoBehaviour {
 

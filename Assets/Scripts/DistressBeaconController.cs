@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Once the camera is in position it will fire off the particle beam animation and fire the game compelted event.
+/// </summary>
 [RequireComponent(typeof(ParticleSystem))]
 public class DistressBeaconController : MonoBehaviour {
 	[SerializeField]

@@ -5,7 +5,7 @@ public class EventManager : MonoBehaviour {
 
 	public delegate void EventHandler();
 	/// <summary>
-	/// Event to listen to for when the game might have been complted.
+	/// Event to listen to for when the game might have been completed.
 	/// </summary>
 	public static event EventHandler OnPossibleGameCompletion;
 

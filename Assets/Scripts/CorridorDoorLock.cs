@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Locks the corridors until the powerRoom is fixed.
+/// Extends <seealso cref="Door"/> so that the door wont open unless unlocked.
+/// Doors unlock and open to stay open when the power room is fixed the first time.
+/// </summary>
 public class CorridorDoorLock : Door {
 
 	private bool isDoorLocked_ = true;
@@ -32,7 +37,7 @@ public class CorridorDoorLock : Door {
 		}
 	}
 	/// <summary>
-	/// Overriden as only what the doors to be opened, not closed atm.	
+	/// Overriden as only want the doors to be opened, not closed atm.	
 	/// Makes it more obvious when the corridors open up.
 	/// </summary>
 	/// <param name="other"></param>

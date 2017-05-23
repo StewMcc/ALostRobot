@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Loads a soundbank into memroy for Wwise, will unload itself when destroyed.
+/// </summary>
 public class LoadSoundBankOnLoad : MonoBehaviour {
 	[SerializeField]
 	private string soundbankName = "Soundbank1";

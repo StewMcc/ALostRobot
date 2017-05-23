@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Controls the movement of the camera folliwing the Robot.
+/// Also moves it to the distress beacon when the game is completed.
+/// </summary>
+[RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour {
 	[SerializeField]
 	private RobotController robot =null;

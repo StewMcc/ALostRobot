@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 
+
+/// <summary>
+/// Sets up basic Wwise settings, and exposes various controls for Wwise statically.
+/// Will stop all events, when destroyed. Use <seealso cref="DontDestroyOnLoad"/> 
+/// to esnure it is not destroyed uncessarily.
+/// </summary>
 public class SoundManager : Singleton<SoundManager> {
 
 	private void Start() {

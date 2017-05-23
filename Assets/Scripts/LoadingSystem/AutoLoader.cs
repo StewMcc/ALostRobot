@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Automatically loads the scene at the end of the frame.
+/// Automatically loads the scene at the end of the frame and after a set delay.
 /// </summary>
 public class AutoLoader : MonoBehaviour {
 	[SerializeField]
