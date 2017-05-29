@@ -35,6 +35,7 @@ public class ServicePort : MonoBehaviour {
 			robot_ = other.GetComponent<RobotController>();
 			if (robot_) {
 				if (robot_.HasItem()) {
+					robot_.DisableDropPickup();
 					ShowUseIcon();
 				}
 			}
@@ -43,8 +44,12 @@ public class ServicePort : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other) {
 		if (other.tag == "Player") {
+			
 			HideUseIcon();
-			robot_ = null;
+			if (robot_) {
+				robot_.EnableDropPickup();
+				robot_ = null;
+			}
 		}
 	}
 

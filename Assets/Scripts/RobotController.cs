@@ -142,6 +142,14 @@ public class RobotController : MonoBehaviour {
 		EmptyInventory();
 	}
 
+	public void DisableDropPickup() {
+		dropButton.interactable = false;
+	}
+
+	public void EnableDropPickup() {
+		dropButton.interactable = true;
+	}
+
 	/// <summary>
 	/// Checks for tap on screen.
 	/// Just Input.Mouse check.
@@ -184,8 +192,8 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	private void ShowInventory() {
 		if (currentPickup_) {
-			inventoryUi.SetActive(true);
 			dropButton.interactable = true;
+			inventoryUi.SetActive(true);
 			if (currentPickup_.HasNameDiscovered()) {
 				currentPickupAlienText.enabled = false;
 				currentPickupNormalText.enabled = true;
@@ -206,11 +214,11 @@ public class RobotController : MonoBehaviour {
 	/// disable and remove the item from the inventory UI.
 	/// </summary>
 	private void EmptyInventory() {
+		inventoryUi.SetActive(false);
 		dropButton.interactable = false;
 		currentPickupAlienText.enabled = false;
 		currentPickupNormalText.enabled = true;
 		currentPickupNormalText.text = "Empty";
-		inventoryUi.SetActive(false);
 	}
 	
 	/// <summary>
