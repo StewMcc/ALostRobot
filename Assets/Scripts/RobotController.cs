@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -30,6 +31,9 @@ public class RobotController : MonoBehaviour {
 	[SerializeField]
 	private ParticleSystem dustTrail =null;
 
+	[SerializeField]
+	private Animator teleporterAnimator =null;
+
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;
 	private bool isMoving_ = false;
@@ -38,6 +42,8 @@ public class RobotController : MonoBehaviour {
 	private Pickup currentPickup_ = null;
 
 	private Vector3 recallPosition_ = Vector3.zero;
+
+	private bool isTeleporting_ = false;
 
 	/// <summary>
 	/// Sets up the navmeshagent and Hides the Inventory.
@@ -69,31 +75,32 @@ public class RobotController : MonoBehaviour {
 	/// When the player taps the screen updates the target for the robot.	
 	/// </summary>
 	private void Update() {
-
-		if (isMoving_) {
-			if (agent_.velocity.magnitude < stopThreshold_) {
-				isMoving_ = false;
-				SoundManager.StopEvent("Player_Move_START", 1, gameObject);
-				SoundManager.PlayEvent("Player_Move_END", gameObject);
-			}
-		}
-
-		if (OnTap()) {
-			// ray trace to check if touching a navmesh.
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-			// if its hit anything
-			if (Physics.Raycast(ray, out hit) && !IsOverUi()) {
-				agent_.destination = hit.point;
-				if (!isMoving_) {
-					SoundManager.PlayEvent("Player_Move_START", gameObject);
-					isMoving_ = true;
+		if (!isTeleporting_) {
+			if (isMoving_) {
+				if (agent_.velocity.magnitude < stopThreshold_) {
+					isMoving_ = false;
+					SoundManager.StopEvent("Player_Move_START", 1, gameObject);
+					SoundManager.PlayEvent("Player_Move_END", gameObject);
 				}
 			}
-		}
 
-		UpdateCurrentItem();
+			if (OnTap()) {
+				// ray trace to check if touching a navmesh.
+				RaycastHit hit;
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+				// if its hit anything
+				if (Physics.Raycast(ray, out hit) && !IsOverUi()) {
+					agent_.destination = hit.point;
+					if (!isMoving_) {
+						SoundManager.PlayEvent("Player_Move_START", gameObject);
+						isMoving_ = true;
+					}
+				}
+			}
+
+			UpdateCurrentItem();
+		}
 	}
 
 	/// <summary>
@@ -111,6 +118,10 @@ public class RobotController : MonoBehaviour {
 			return true;
 		}
 		return false;
+	}
+
+	public bool IsTeleporting() {
+		return isTeleporting_;
 	}
 
 	/// <summary>
@@ -241,15 +252,38 @@ public class RobotController : MonoBehaviour {
 	}
 
 	private void Recall() {
+		isTeleporting_ = true;
+		// disable the particle trail whilst teleporting		
+		dustTrail.Stop(true);
+		// Disable player move audio if playing
+		SoundManager.StopEvent("Player_Move_START", 1, gameObject);
 
-		// disable the particle trail whilst teleporting
-		dustTrail.Pause(true);
+		
+		
+		StartCoroutine(TeleportHome());
+	}
+
+	
+	private IEnumerator TeleportHome() {
+		teleporterAnimator.SetTrigger("TeleportUp");
+
+		// wait for teleport up animation to finish
+		yield return new WaitForSeconds(2.0f);
 		if (agent_.Warp(recallPosition_)) {
 			// returns true if succesful
-		}else {
+		}
+		else {
 			Debug.LogWarning("Invalid Recall position, Initial position not on valid navmesh point!");
 		}
+
+		// wait for teleport down animation to finish
+		yield return new WaitForSeconds(1.4f);
+
+		// teleporter animation has finished
+		isTeleporting_ = false;
 		// finished teleporting so resume.
 		dustTrail.Play(true);
+
+		yield return null;
 	}
 }
