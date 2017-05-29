@@ -47,6 +47,8 @@ public class CameraController : MonoBehaviour {
 				robot.transform.position.x + cameraOffset.x,
 				transform.position.y + cameraOffset.y,
 				robot.transform.position.z + cameraOffset.z);
+			
+
 		}
 		else if (isMovingToDistressBeacon_) {
 			transform.position = MathUtil.SmoothLerp(

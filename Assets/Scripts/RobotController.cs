@@ -23,6 +23,12 @@ public class RobotController : MonoBehaviour {
 
 	[SerializeField]
 	private Transform pickupPosition = null;
+	
+	[SerializeField]
+	private Button recallButton =null;
+
+	[SerializeField]
+	private ParticleSystem dustTrail =null;
 
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;
@@ -31,12 +37,15 @@ public class RobotController : MonoBehaviour {
 
 	private Pickup currentPickup_ = null;
 
+	private Vector3 recallPosition_ = Vector3.zero;
+
 	/// <summary>
 	/// Sets up the navmeshagent and Hides the Inventory.
 	/// </summary>
 	private void Start() {
 		agent_ = GetComponent<NavMeshAgent>();
 		EmptyInventory();
+		recallPosition_ = transform.position;
 	}
 
 	/// <summary>
@@ -44,13 +53,16 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	private void OnEnable() {
 		dropButton.onClick.AddListener(DropCurrentPickup);
+		recallButton.onClick.AddListener(Recall);
+		
 	}
 
 	/// <summary>
 	/// Removes listeners.
 	/// </summary>
 	private void OnDisable() {
-		dropButton.onClick.RemoveAllListeners();
+		dropButton.onClick.RemoveListener(DropCurrentPickup);
+		recallButton.onClick.RemoveListener(Recall);
 	}
 
 	/// <summary>
@@ -226,5 +238,18 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	private void HideInventory() {
 		inventoryUi.SetActive(false);
+	}
+
+	private void Recall() {
+
+		// disable the particle trail whilst teleporting
+		dustTrail.Pause(true);
+		if (agent_.Warp(recallPosition_)) {
+			// returns true if succesful
+		}else {
+			Debug.LogWarning("Invalid Recall position, Initial position not on valid navmesh point!");
+		}
+		// finished teleporting so resume.
+		dustTrail.Play(true);
 	}
 }
