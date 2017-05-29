@@ -258,17 +258,15 @@ public class RobotController : MonoBehaviour {
 		// Disable player move audio if playing
 		SoundManager.StopEvent("Player_Move_START", 1, gameObject);
 
+		// Must ensure connected animation has an event connected to TeleportUpFinished.
+		teleporterAnimator.SetTrigger("TeleportUp");
 		
-		
-		StartCoroutine(TeleportHome());
 	}
 
-	
-	private IEnumerator TeleportHome() {
-		teleporterAnimator.SetTrigger("TeleportUp");
-
-		// wait for teleport up animation to finish
-		yield return new WaitForSeconds(2.0f);
+	/// <summary>
+	/// Called at the end of the teleport up event in the animation, to notify the robot that it has finished teleportUp Animation.
+	/// </summary>
+	private void TeleportUpFinished() {
 		if (agent_.Warp(recallPosition_)) {
 			// returns true if succesful
 		}
@@ -276,14 +274,16 @@ public class RobotController : MonoBehaviour {
 			Debug.LogWarning("Invalid Recall position, Initial position not on valid navmesh point!");
 		}
 
-		// wait for teleport down animation to finish
-		yield return new WaitForSeconds(1.4f);
+		teleporterAnimator.SetTrigger("TeleportDown");
+	}
 
+	/// <summary>
+	/// Called at the end of the teleport down event in the animation, to notify the robot that it has finished teleportUp Animation.
+	/// </summary>
+	private void TeleportDownFinished() {
 		// teleporter animation has finished
 		isTeleporting_ = false;
 		// finished teleporting so resume.
 		dustTrail.Play(true);
-
-		yield return null;
 	}
 }

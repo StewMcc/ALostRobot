@@ -2430,16 +2430,6 @@ Prefab:
       propertyPath: recallButton
       value: 
       objectReference: {fileID: 165912705}
-    - target: {fileID: 198053861331934522, guid: 57b0a0d3191521b4a873b9156d77a857,
-        type: 2}
-      propertyPath: simulationSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198063098313022248, guid: 57b0a0d3191521b4a873b9156d77a857,
-        type: 2}
-      propertyPath: simulationSpeed
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b0a0d3191521b4a873b9156d77a857, type: 2}
   m_IsPrefabParent: 0
