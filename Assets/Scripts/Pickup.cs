@@ -44,9 +44,13 @@ public class Pickup : MonoBehaviour {
 		
 	private Vector3 respawnPosition_ = Vector3.zero;
 
+	private Quaternion initialRotation_;
+	
 	private Vector3 droppedTargetPosition_ = Vector3.zero;
 
 	private bool hasRespawned_ = false;
+
+	private bool isPickedUp_ = false;
 
 	private RobotController robot_ = null;
 
@@ -60,8 +64,9 @@ public class Pickup : MonoBehaviour {
 
 	private void Start() {
 		// save original position.
-		respawnPosition_ = transform.position;		
-		
+		respawnPosition_ = transform.position;
+		initialRotation_ = transform.rotation;
+
 		pickupText.text = pickupName;
 		
 		pickupText.enabled = false;
@@ -83,7 +88,7 @@ public class Pickup : MonoBehaviour {
 #endif
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && !isPickedUp_) {
 			robot_ = other.GetComponent<RobotController>();
 			if (robot_) {
 				ShowGrabIcon();
@@ -92,7 +97,7 @@ public class Pickup : MonoBehaviour {
 	}
 
 	private void OnTriggerExit(Collider other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && !isPickedUp_) {
 			HideGrabIcon();
 			robot_ = null;
 		}
@@ -110,27 +115,43 @@ public class Pickup : MonoBehaviour {
 		return hasRespawned_;
 	}
 	
+	public void PackForTeleport(Transform animationAnchor) {
+		transform.parent = animationAnchor;
+	}
+
+	public void UnpackFromTeleport() {
+		transform.parent = null;
+	}
+
 	/// <summary>
 	/// Drops the item at a random position near the player on the NavMesh.	
 	/// </summary>
 	public void Drop() {
+		// drop it if it can find a valid point on the navmesh
 		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {			
-			transform.position = droppedTargetPosition_;
-		}
+			
+			transform.SetPositionAndRotation(droppedTargetPosition_, initialRotation_);
 
-		pickupAnimation.ResumeAnimation();
-		dropEffect.Play();
-		SoundManager.PlayEvent("Item_PutDown", gameObject);
-		ShowGrabIcon();
+			pickupAnimation.ResumeAnimation();
+			dropEffect.Play();
+			SoundManager.PlayEvent("Item_PutDown", gameObject);
+			ShowGrabIcon();
+			isPickedUp_ = false;
+		} else {
+			SoundManager.PlayEvent("Item_Port_Negative", gameObject);
+		}
+		
 	}
 	
 	/// <summary>
 	/// Respawns the item at its initial position.
 	/// </summary>
 	public void Respawn() {
-		transform.position = respawnPosition_;
+		transform.SetPositionAndRotation(respawnPosition_, initialRotation_);
+		
 		pickupAnimation.ResumeAnimation();
 		hasRespawned_ = true;
+		isPickedUp_ = false;
 		dropEffect.Play();
 	}
 
@@ -150,6 +171,7 @@ public class Pickup : MonoBehaviour {
 	private void GrabPickup() {
 		pickupAnimation.PauseAnimation();
 		HideGrabIcon();
+		isPickedUp_ = true;
 		if (robot_) {
 			robot_.AddPickup(this);
 		}

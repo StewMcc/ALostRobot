@@ -1,10 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// Controls the movement of the robot and stores the collected pickups, and pickupUi
+/// Controls the movement of the robot and stores the collected pickups, and the recall ability.
+/// Ensure Teleport animation has TeleportUp and TeleportDown trigggers, and when each animation
+/// finishes it fires an event to call <see cref="TeleportUpFinished"/> or <see cref="TeleportDownFinished"/>
+/// When setting up animator for teleport must ensure transitions between events happen with no overlap,
+/// this will ensure events are called properly.
 /// </summary>
 [RequireComponent(typeof(NavMeshAgent))]
 public class RobotController : MonoBehaviour {
@@ -23,6 +28,15 @@ public class RobotController : MonoBehaviour {
 
 	[SerializeField]
 	private Transform pickupPosition = null;
+	
+	[SerializeField]
+	private Button recallButton =null;
+
+	[SerializeField]
+	private ParticleSystem dustTrail =null;
+
+	[SerializeField]
+	private Animator teleporterAnimator =null;
 
 	// Controls the navigation of the bot on the navmesh
 	private NavMeshAgent agent_ = null;
@@ -31,12 +45,17 @@ public class RobotController : MonoBehaviour {
 
 	private Pickup currentPickup_ = null;
 
+	private Vector3 recallPosition_ = Vector3.zero;
+
+	private bool isTeleporting_ = false;
+
 	/// <summary>
 	/// Sets up the navmeshagent and Hides the Inventory.
 	/// </summary>
 	private void Start() {
 		agent_ = GetComponent<NavMeshAgent>();
 		EmptyInventory();
+		recallPosition_ = transform.position;
 	}
 
 	/// <summary>
@@ -44,44 +63,47 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	private void OnEnable() {
 		dropButton.onClick.AddListener(DropCurrentPickup);
+		recallButton.onClick.AddListener(Recall);
+		
 	}
 
 	/// <summary>
 	/// Removes listeners.
 	/// </summary>
 	private void OnDisable() {
-		dropButton.onClick.RemoveAllListeners();
+		dropButton.onClick.RemoveListener(DropCurrentPickup);
+		recallButton.onClick.RemoveListener(Recall);
 	}
 
 	/// <summary>
 	/// When the player taps the screen updates the target for the robot.	
 	/// </summary>
 	private void Update() {
-
-		if (isMoving_) {
-			if (agent_.velocity.magnitude < stopThreshold_) {
-				isMoving_ = false;
-				SoundManager.StopEvent("Player_Move_START", 1, gameObject);
-				SoundManager.PlayEvent("Player_Move_END", gameObject);
-			}
-		}
-
-		if (OnTap()) {
-			// ray trace to check if touching a navmesh.
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-			// if its hit anything
-			if (Physics.Raycast(ray, out hit) && !IsOverUi()) {
-				agent_.destination = hit.point;
-				if (!isMoving_) {
-					SoundManager.PlayEvent("Player_Move_START", gameObject);
-					isMoving_ = true;
+		if (!isTeleporting_) {
+			if (isMoving_) {
+				if (agent_.velocity.magnitude < stopThreshold_) {
+					isMoving_ = false;
+					SoundManager.StopEvent("Player_Move_START", 1, gameObject);
+					SoundManager.PlayEvent("Player_Move_END", gameObject);
 				}
 			}
-		}
 
-		UpdateCurrentItem();
+			if (OnTap()) {
+				// ray trace to check if touching a navmesh.
+				RaycastHit hit;
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+				// if its hit anything
+				if (Physics.Raycast(ray, out hit) && !IsOverUi()) {
+					agent_.destination = hit.point;
+					if (!isMoving_) {
+						SoundManager.PlayEvent("Player_Move_START", gameObject);
+						isMoving_ = true;
+					}
+				}
+			}
+			UpdateCurrentItem();
+		}
 	}
 
 	/// <summary>
@@ -101,6 +123,10 @@ public class RobotController : MonoBehaviour {
 		return false;
 	}
 
+	public bool IsTeleporting() {
+		return isTeleporting_;
+	}
+
 	/// <summary>
 	/// Returns the current item in the inventory.
 	/// </summary>
@@ -115,8 +141,7 @@ public class RobotController : MonoBehaviour {
 	public void AddPickup(Pickup newPickup) {
 		DropCurrentPickup();
 		currentPickup_ = newPickup;
-		SoundManager.PlayEvent("Item_PickUp", gameObject);
-	
+		SoundManager.PlayEvent("Item_PickUp", gameObject);		
 		ShowInventory();
 	}
 
@@ -124,7 +149,7 @@ public class RobotController : MonoBehaviour {
 	/// Drop the current item in the inventory.
 	/// </summary>
 	public void DropCurrentPickup() {
-		if (currentPickup_) {
+		if (currentPickup_) {			
 			currentPickup_.Drop();
 			currentPickup_ = null;
 		}
@@ -140,6 +165,14 @@ public class RobotController : MonoBehaviour {
 			currentPickup_ = null;
 		}
 		EmptyInventory();
+	}
+
+	public void DisableDropPickup() {
+		dropButton.interactable = false;
+	}
+
+	public void EnableDropPickup() {
+		dropButton.interactable = true;
 	}
 
 	/// <summary>
@@ -184,8 +217,8 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	private void ShowInventory() {
 		if (currentPickup_) {
-			inventoryUi.SetActive(true);
 			dropButton.interactable = true;
+			inventoryUi.SetActive(true);
 			if (currentPickup_.HasNameDiscovered()) {
 				currentPickupAlienText.enabled = false;
 				currentPickupNormalText.enabled = true;
@@ -206,11 +239,11 @@ public class RobotController : MonoBehaviour {
 	/// disable and remove the item from the inventory UI.
 	/// </summary>
 	private void EmptyInventory() {
+		inventoryUi.SetActive(false);
 		dropButton.interactable = false;
 		currentPickupAlienText.enabled = false;
 		currentPickupNormalText.enabled = true;
 		currentPickupNormalText.text = "Empty";
-		inventoryUi.SetActive(false);
 	}
 	
 	/// <summary>
@@ -219,4 +252,50 @@ public class RobotController : MonoBehaviour {
 	private void HideInventory() {
 		inventoryUi.SetActive(false);
 	}
+
+	private void Recall() {
+		isTeleporting_ = true;
+		// disable the particle trail whilst teleporting		
+		dustTrail.Stop(true);
+		// Disable player move audio if playing
+		SoundManager.StopEvent("Player_Move_START", 1, gameObject);
+
+		// Must ensure connected animation has an event connected to TeleportUpFinished.
+		teleporterAnimator.SetTrigger("TeleportUp");
+
+		recallButton.interactable = false;
+		if (currentPickup_) {
+			currentPickup_.PackForTeleport(pickupPosition);
+		}
+	}
+
+	/// <summary>
+	/// Called at the end of the teleport up event in the animation, to notify the robot that it has finished teleportUp Animation.
+	/// </summary>
+	private void TeleportUpFinished() {
+		if (agent_.Warp(recallPosition_)) {
+			// returns true if succesful
+		}
+		else {
+			Debug.LogWarning("Invalid Recall position, Initial position not on valid navmesh point!");
+		}
+
+		teleporterAnimator.SetTrigger("TeleportDown");
+	}
+
+	/// <summary>
+	/// Called at the end of the teleport down event in the animation, to notify the robot that it has finished teleportUp Animation.
+	/// </summary>
+	private void TeleportDownFinished() {
+		// teleporter animation has finished
+		isTeleporting_ = false;
+		// finished teleporting so resume.
+		dustTrail.Play(true);
+
+		recallButton.interactable = true;
+		if (currentPickup_) {
+			currentPickup_.UnpackFromTeleport();
+		}
+	}
+
 }

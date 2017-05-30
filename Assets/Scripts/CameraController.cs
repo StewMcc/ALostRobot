@@ -43,10 +43,13 @@ public class CameraController : MonoBehaviour {
 	/// </summary>
 	private void LateUpdate() {
 		if (isFollowingRobot_) {
+
 			transform.position = new Vector3(
 				robot.transform.position.x + cameraOffset.x,
 				transform.position.y + cameraOffset.y,
 				robot.transform.position.z + cameraOffset.z);
+
+
 		}
 		else if (isMovingToDistressBeacon_) {
 			transform.position = MathUtil.SmoothLerp(
