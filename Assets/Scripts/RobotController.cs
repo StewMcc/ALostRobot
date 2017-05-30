@@ -264,7 +264,9 @@ public class RobotController : MonoBehaviour {
 		teleporterAnimator.SetTrigger("TeleportUp");
 
 		recallButton.interactable = false;
-		currentPickup_.PackForTeleport(pickupPosition);
+		if (currentPickup_) {
+			currentPickup_.PackForTeleport(pickupPosition);
+		}
 	}
 
 	/// <summary>
@@ -291,7 +293,9 @@ public class RobotController : MonoBehaviour {
 		dustTrail.Play(true);
 
 		recallButton.interactable = true;
-		currentPickup_.UnpackFromTeleport();
+		if (currentPickup_) {
+			currentPickup_.UnpackFromTeleport();
+		}
 	}
 
 }
