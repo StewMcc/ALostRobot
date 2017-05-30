@@ -5,7 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// Controls the movement of the robot and stores the collected pickups, and pickupUi
+/// Controls the movement of the robot and stores the collected pickups, and the recall ability.
+/// Ensure Teleport animation has TeleportUp and TeleportDown trigggers, and when each animation
+/// finishes it fires an event to call <see cref="TeleportUpFinished"/> or <see cref="TeleportDownFinished"/>
+/// When setting up animator for teleport must ensure transitions between events happen with no overlap,
+/// this will ensure events are called properly.
 /// </summary>
 [RequireComponent(typeof(NavMeshAgent))]
 public class RobotController : MonoBehaviour {
@@ -98,7 +102,6 @@ public class RobotController : MonoBehaviour {
 					}
 				}
 			}
-
 			UpdateCurrentItem();
 		}
 	}
@@ -138,8 +141,7 @@ public class RobotController : MonoBehaviour {
 	public void AddPickup(Pickup newPickup) {
 		DropCurrentPickup();
 		currentPickup_ = newPickup;
-		SoundManager.PlayEvent("Item_PickUp", gameObject);
-	
+		SoundManager.PlayEvent("Item_PickUp", gameObject);		
 		ShowInventory();
 	}
 
@@ -147,7 +149,7 @@ public class RobotController : MonoBehaviour {
 	/// Drop the current item in the inventory.
 	/// </summary>
 	public void DropCurrentPickup() {
-		if (currentPickup_) {
+		if (currentPickup_) {			
 			currentPickup_.Drop();
 			currentPickup_ = null;
 		}
@@ -260,7 +262,9 @@ public class RobotController : MonoBehaviour {
 
 		// Must ensure connected animation has an event connected to TeleportUpFinished.
 		teleporterAnimator.SetTrigger("TeleportUp");
-		
+
+		recallButton.interactable = false;
+		currentPickup_.PackForTeleport(pickupPosition);
 	}
 
 	/// <summary>
@@ -285,5 +289,9 @@ public class RobotController : MonoBehaviour {
 		isTeleporting_ = false;
 		// finished teleporting so resume.
 		dustTrail.Play(true);
+
+		recallButton.interactable = true;
+		currentPickup_.UnpackFromTeleport();
 	}
+
 }
