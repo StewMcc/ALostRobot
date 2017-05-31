@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreenCover: {fileID: 114715118069272918}
-  minDuration: 0.2
+  minDuration: 0.6
 --- !u!114 &114151715873234680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c57e972be58b854192e35a93d137431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startsVisible: 1
+  startsVisible: 0
   fadeOnAwake: 0
   fadeSpeed: 4
   minAlpha: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 1}
+  m_Color: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
