@@ -34,6 +34,9 @@ public class LocationNameUpdater : MonoBehaviour {
 	/// <param name="newNameType"> Type of name to change to. </param>
 	/// <param name="newName"> Name to be used if NameUpdateType.NewName. </param>
 	private void OnNameChange(EventManager.NameUpdateType newNameType, string newName) {
+		if (!locationText_) {
+			locationText_ = GetComponent<Text>();
+		}
 		switch (newNameType) {
 			case EventManager.NameUpdateType.NewName:
 				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
