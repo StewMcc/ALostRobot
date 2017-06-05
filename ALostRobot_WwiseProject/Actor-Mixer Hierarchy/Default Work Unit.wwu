@@ -759,6 +759,7 @@
 										<AudioFileSource Name="SFX_ROBOTIC_VOICE_02" ID="{200A2D3B-F7D5-4806-8957-E10FF544D974}" ShortID="999974056">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="4.49047619047619E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.09999999999998E-02"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>SFX_ROBOTIC_VOICE_02.wav</AudioFile>
@@ -996,7 +997,7 @@
 				</Folder>
 				<Folder Name="Ambient_States" ID="{FCFB35EA-CFC0-45DC-BBBD-280E5D1D42AF}" ShortID="304998546">
 					<ChildrenList>
-						<SwitchContainer Name="Landscape_Outside_Planet" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" ShortID="52156446">
+						<SwitchContainer Name="Landscapes" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" ShortID="52156446">
 							<PropertyList>
 								<Property Name="PositioningType" Type="int16" Value="1"/>
 							</PropertyList>
@@ -1018,7 +1019,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Landscape_Emitter_Large" ID="{7F4ED8EE-72A5-4184-814F-2DF7020B3AC0}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+											<ObjectRef Name="Forestry" ID="{8AC723DD-6182-4897-8318-DE71A229B81F}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2331,6 +2332,11 @@
 									<PropertyList>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -2369,6 +2375,11 @@
 										<Sound Name="BG_BLIZZARD_03" ID="{182AD297-4FBB-4719-BB99-5B8C4A077BF6}" ShortID="671635235" Type="SoundFX">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2380,6 +2391,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="BG_OUTDOORS_BLIZZARD_03" ID="{26AD8DAF-591D-4764-8E0B-4393EA13EFDB}" ShortID="286303479">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.33033635602679"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.94433775111607"/>
+														<Property Name="TrimEnd" Type="Real64" Value="88.4162008928571"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>BG_OUTDOORS_BLIZZARD_03.wav</AudioFile>
 												</AudioFileSource>
@@ -2391,6 +2407,11 @@
 										<Sound Name="BG_BLIZZARD_02" ID="{971E71F6-8675-40E1-B237-4ABF9541690B}" ShortID="845557991" Type="SoundFX">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2402,6 +2423,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="BG_OUTDOORS_BLIZZARD_02" ID="{A14FEE6D-FB3A-43A0-AF10-FE909F811A35}" ShortID="694677908">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.671077566964286"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>BG_OUTDOORS_BLIZZARD_02.wav</AudioFile>
 												</AudioFileSource>
@@ -2465,65 +2489,104 @@
 										</BlendTrack>
 									</BlendTrackList>
 								</BlendContainer>
-								<BlendContainer Name="Ambience_Fireland" ID="{018B4EF1-EC37-4B2B-AA79-41A35341822E}" ShortID="896305462">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Ambience_Sandland" ID="{6A403FA7-3174-41B4-A4EC-804702EE60EF}" ShortID="6063415">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupRef Name="Landscape_States" ID="{A200A14F-10A9-4EFC-958E-808EE37D33CA}"/>
-								<DefaultSwitchRef Name="Landscape_Outside_State" ID="{58615684-7FC8-4A61-89F0-3C730311D312}"/>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Ambience_Sandland" ID="{6A403FA7-3174-41B4-A4EC-804702EE60EF}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Ambience_Fireland" ID="{018B4EF1-EC37-4B2B-AA79-41A35341822E}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="Landscape_Inside_Shuttle" ID="{ABCA3B40-4F9D-4BB0-BD61-7CD6180DF07D}" ShortID="370047855">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
 								<BlendContainer Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}" ShortID="882871277">
 									<PropertyList>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{F263C255-7A0D-4732-9926-10B78EC3CF6C}" ShortID="988072828">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{62DBB09F-8594-4BAD-9941-622F7387530A}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>SCurve</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{34279EBA-4508-49B5-A1BE-C9CE3D5A4FD7}" ShortID="790602659">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{20F2CBE6-1F8F-486E-83C2-93E874DAD729}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-21</Value>
 											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{A1F80E51-E12D-4B1B-BE1E-37BAF884A6F3}" ShortID="963473579">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{EE9C75E7-F23D-435D-AEE7-C25F9FDC7FFD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Landscape_Emitter_ShuttleRoom" ID="{DCCF6B36-230B-44EA-B0E0-DD821D44953F}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
 										</Reference>
@@ -2667,6 +2730,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="220181__gameaudio__computer-beep-1" ID="{5F50C4A0-9B24-41E6-AE59-43C3D459EE2B}" ShortID="392895659" Type="SoundFX">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2779,146 +2849,349 @@
 										</BlendTrack>
 									</BlendTrackList>
 								</BlendContainer>
+								<Sound Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" ShortID="1046198277" Type="SoundFX">
+									<PropertyList>
+										<Property Name="EnablePanner" Type="bool" Value="True"/>
+										<Property Name="Highpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{3A191899-18A5-49B1-8B1F-4C8ACDD71979}" ShortID="178645046">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_MainHall" ID="{A3B42B73-B8E6-4C0D-973B-788C02E04B2D}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{91916DCF-C6F3-45D3-8A2E-520845C7BD49}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{8893430E-CCB3-4C8B-B5CC-5EE4CD3C078B}" ShortID="182969362">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_MainHall" ID="{A3B42B73-B8E6-4C0D-973B-788C02E04B2D}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{8286E40E-DE2F-4679-B088-F29AF55C14E3}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{D15B77CA-3147-428F-89CB-0015BC83298D}" ShortID="25211707">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Shuttle_MainHall" ID="{A3B42B73-B8E6-4C0D-973B-788C02E04B2D}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{ED8B1F13-8348-4A65-B148-11B0A33F8D59}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Landscape_Emitter_Small" ID="{35DC75C6-5C45-42E7-A07A-4E8B5CDE63EC}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PowerBattery" ID="{F377A666-EBCE-48F7-A700-09DF5FED6ABA}" ShortID="415517030">
+											<Language>SFX</Language>
+											<AudioFile>SFX_PowerBattery.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{87D1A520-354E-4EA7-B7CF-246C1E579E85}"/>
+										<Position Name="" ID="{8A1B78C5-904F-4658-9D5F-D46FBAF56A44}"/>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PowerBattery" ID="{F377A666-EBCE-48F7-A700-09DF5FED6ABA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<GroupingInfo>
-								<GroupRef Name="Landscape_States" ID="{A200A14F-10A9-4EFC-958E-808EE37D33CA}"/>
-								<DefaultSwitchRef Name="Landscape_Shuttle_State" ID="{EDBB5A31-0037-41AB-B84C-EBC534B2E6C1}"/>
+								<GroupRef Name="Environments_Switches" ID="{44861289-97A6-434B-8B4B-560AD00B5939}"/>
+								<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}"/>
+									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Shuttle_PowerRoom" ID="{4C631057-5C8E-4370-9314-6EF49F59256E}"/>
+										<ItemList>
+											<ItemRef Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Woodland" ID="{C78639B5-4DC8-40F8-ACE8-61C4E994254A}"/>
+										<ItemList>
+											<ItemRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Iceland" ID="{455FF1CC-7FAD-4C44-A59B-82D648DC6A12}"/>
+										<ItemList>
+											<ItemRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Shuttle_ComputerRoom" ID="{6B7D8FFB-1960-414A-8D98-B5C8B4AEEB2D}"/>
+										<ItemList>
+											<ItemRef Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<Sound Name="Lava" ID="{D18305F4-EE46-4379-A89C-39FC5FFDC8D4}" ShortID="855910091" Type="SoundFX">
-							<PropertyList>
-								<Property Name="EnablePanner" Type="bool" Value="True"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-							</PropertyList>
+						<ActorMixer Name="Water" ID="{0FCDB3B7-447A-4C91-B61D-2F4F44076986}" ShortID="95011588">
 							<ReferenceList>
-								<Reference Name="Attenuation">
-									<Custom CreatedFrom="{93616A2C-BC88-4E1D-8E6E-4B7812EC60BB}">
-										<Attenuation Name="LAVA (Custom)" ID="{AECCD4B5-8061-4542-9F6C-F59F2DCB7B30}" ShortID="510056642">
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" ShortID="704418868" Type="SoundFX">
+									<PropertyList>
+										<Property Name="EnablePanner" Type="bool" Value="True"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Landscape_Emitter_River" ID="{7F4ED8EE-72A5-4184-814F-2DF7020B3AC0}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_RIVER-STREAM_01" ID="{9ADEFA79-0978-4E8E-8B40-531335D2675A}" ShortID="319493209">
+											<Language>SFX</Language>
+											<AudioFile>SFX_RIVER-STREAM_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{01CFDF95-E6F0-4F6D-A51F-59929A60167D}"/>
+										<Position Name="" ID="{C76D549B-1733-49FD-B2B8-BA994B4ADBBE}"/>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_RIVER-STREAM_01" ID="{9ADEFA79-0978-4E8E-8B40-531335D2675A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Ocean-Outskirts" ID="{D05B73E0-1044-4ECE-9A25-E111E9E2FFCC}" ShortID="276998233">
+									<PropertyList>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Landscape_Emitter_Ocean" ID="{0A12C644-DFC3-4E95-B53D-FB9018021E5B}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_WATER_AB" ID="{3EBBF45E-8041-4A8F-979D-2A5529CED4BC}" ShortID="1068557432" Type="SoundFX">
 											<PropertyList>
-												<Property Name="ConeUse" Type="bool">
+												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>True</Value>
+														<Value>6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
-											<CurveUsageInfoList>
-												<VolumeDryUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{C54F9E91-EF00-4EFA-963C-5688716F2ABA}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="3"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</VolumeDryUsage>
-												<VolumeWetGameUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetGameUsage>
-												<VolumeWetUserUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetUserUsage>
-												<LowPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="LowPassFilter" ID="{DF26E8C9-80AF-404C-BAE9-2EE6879F2C8C}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="65537"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>60</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>23.65079</XPos>
-																	<YPos>64</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>31.90476</XPos>
-																	<YPos>70</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>57.14286</XPos>
-																	<YPos>100</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>100</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</LowPassFilterUsage>
-												<HighPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None">
-														<Curve Name="HighPassFilter" ID="{3786F516-D11C-4DEB-BA32-FF53DF809BC7}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="65537"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>100</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</HighPassFilterUsage>
-												<SpreadUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="Spread" ID="{1E4ABF3E-0502-4162-8C07-7DFB25E17907}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="1"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>51.14942</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>52.87356</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</SpreadUsage>
-												<FocusUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</FocusUsage>
-											</CurveUsageInfoList>
-										</Attenuation>
-									</Custom>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_WATER_AB" ID="{9EE21DC3-4635-403B-9DDF-90F75CBAB86E}" ShortID="987040243">
+													<Language>SFX</Language>
+													<AudioFile>SFX_WATER_AB.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_WATER_AB" ID="{9EE21DC3-4635-403B-9DDF-90F75CBAB86E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_WATER_XY" ID="{8031C846-E456-4199-B57A-170B010E13F1}" ShortID="1071602648" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_WATER_XY" ID="{8556E40F-3CAF-46BA-9FC8-6ECBAAC37816}" ShortID="91939210">
+													<Language>SFX</Language>
+													<AudioFile>SFX_WATER_XY.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_WATER_XY" ID="{8556E40F-3CAF-46BA-9FC8-6ECBAAC37816}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{91A7D696-AC8E-4EBC-A1E9-ABE3DF7D59E3}"/>
+									</PositioningInfo>
+								</RandomSequenceContainer>
+								<Sound Name="Waterfall" ID="{CB150BB3-1F06-4F68-AA44-B9CAB29B7333}" ShortID="714249857" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Landmark_Emitter_Waterfall" ID="{F3C72B8D-4AE0-463E-83C2-67A3C061E1D0}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Waterfall" ID="{A06E4A4B-68D6-4D44-BFA1-CBD6CB0465B3}" ShortID="501794555">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.03395400855655"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.54738741629464"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.304104120163691"/>
+												<Property Name="TrimEnd" Type="Real64" Value="54.0697125651042"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Waterfall.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{F4FFCC6C-D4D7-4D93-AACF-9695289537B4}"/>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Waterfall" ID="{A06E4A4B-68D6-4D44-BFA1-CBD6CB0465B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<Sound Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" ShortID="34912394" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Landscape_Emitter_Alarm" ID="{CE077A5F-2D71-4F51-A4D8-1BA94248EA8A}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2928,42 +3201,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_RIVER-STREAM_01" ID="{3C39A2CA-994A-42DC-B41D-4F6D1C06B793}" ShortID="855144614">
+								<AudioFileSource Name="SFX_ALARM" ID="{B16D30BD-648D-476C-B2D6-CA026272B691}" ShortID="764942037">
 									<Language>SFX</Language>
-									<AudioFile>SFX_RIVER-STREAM_01.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="319493209"/>
-									</ConvertedFileIDList>
+									<AudioFile>SFX_ALARM.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<PositioningInfo>
-								<Panner Name="" ID="{88934ABF-8A37-4A2B-B0CB-4C8F7A9341F2}"/>
-								<Position Name="" ID="{A6118077-0C4D-488C-A08C-6CE818133B03}"/>
+								<Position Name="" ID="{0F394EDA-46E3-432A-866C-2F9C0415901D}"/>
 							</PositioningInfo>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_RIVER-STREAM_01" ID="{3C39A2CA-994A-42DC-B41D-4F6D1C06B793}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" ShortID="704418868" Type="SoundFX">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_RIVER-STREAM_01" ID="{9ADEFA79-0978-4E8E-8B40-531335D2675A}" ShortID="319493209">
-									<Language>SFX</Language>
-									<AudioFile>SFX_RIVER-STREAM_01.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_RIVER-STREAM_01" ID="{9ADEFA79-0978-4E8E-8B40-531335D2675A}" Platform="Linked"/>
+								<ActiveSource Name="SFX_ALARM" ID="{B16D30BD-648D-476C-B2D6-CA026272B691}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -3034,32 +3281,6 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
-						<Sound Name="Craft_HydroDoor" ID="{01F1EBFC-C93F-463D-BF4F-48556F1FF249}" ShortID="523062556" Type="SoundFX">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-11</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SCI-FI_HYDRO_DOOR_01" ID="{624A53DC-A0DB-44CD-9E1B-0F27D7B5033E}" ShortID="65014031">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SCI-FI_HYDRO_DOOR_01.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SCI-FI_HYDRO_DOOR_01" ID="{624A53DC-A0DB-44CD-9E1B-0F27D7B5033E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Sonar_Beamer" ID="{C0D06441-A434-4EBE-A5DB-1A2C3DD36F5A}" ShortID="96347848" Type="SoundFX">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
@@ -3142,6 +3363,138 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="321215__hybrid-v__sci-fi-weapons-deploy" ID="{D09CF9D5-3C61-487C-89BA-A09F4153BE34}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<ActorMixer Name="Teleport" ID="{25DB8B21-3A3A-4879-8DA2-C910CC4C653A}" ShortID="895988941">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Teleport" ID="{CB05C855-AA5B-4769-8206-19CB6F881C16}" ShortID="193313814" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_TELEPORT_01_2" ID="{2FBD77EB-6619-450E-8997-5A139CE28E1D}" ShortID="1005330563">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.18846958705359E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_TELEPORT_01.2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="1071729811"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_TELEPORT_01_3" ID="{6C23BE7E-0B59-499F-8142-5479ACFD52E3}" ShortID="214509794">
+											<Language>SFX</Language>
+											<AudioFile>SFX_TELEPORT_01.3.wav</AudioFile>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_TELEPORT" ID="{1E1710C2-198C-4EB6-92EF-3DDDAE2085EE}" ShortID="100426267">
+											<Language>SFX</Language>
+											<AudioFile>SFX_TELEPORT.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_TELEPORT" ID="{1E1710C2-198C-4EB6-92EF-3DDDAE2085EE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<Sound Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" ShortID="283089568" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_DOOR-AccessDenied" ID="{84F324AE-CCF1-4BB9-8213-34F63DEE4B6C}" ShortID="401334734">
+									<Language>SFX</Language>
+									<AudioFile>SFX_DOOR-AccessDenied.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_DOOR-AccessDenied" ID="{84F324AE-CCF1-4BB9-8213-34F63DEE4B6C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_DOOR-HYDRAULIC-Up" ID="{E256C570-C4D1-477A-A1CF-93A9C1A20624}" ShortID="413482424" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_DOOR-HYDRAULIC" ID="{32668751-6CEA-4179-9CEE-287B321BE2C8}" ShortID="341277011">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.219122023809524"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.92113095238095E-02"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.779613095238094"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SFX_DOOR-HYDRAULIC.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="844204257"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_DOOR-HYDRAULIC" ID="{32668751-6CEA-4179-9CEE-287B321BE2C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_DOOR-HYDRAULIC-Down" ID="{162ADE31-A9E2-4788-BFDB-9AF8B8F1D1F6}" ShortID="509829341" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_DOOR-HYDRAULIC" ID="{877EDBE6-9D89-488C-B44D-E1137A23D728}" ShortID="844204257">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.18452380952381"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.08407738095238"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.76450892857143"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SFX_DOOR-HYDRAULIC.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="341277011"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_DOOR-HYDRAULIC" ID="{877EDBE6-9D89-488C-B44D-E1137A23D728}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

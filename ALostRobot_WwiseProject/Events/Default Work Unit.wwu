@@ -122,12 +122,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Craft_HydroDoor" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}">
+						<Event Name="Craft_HydroDoor_Open" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}">
 							<ChildrenList>
 								<Action Name="Play" ID="{62573613-F3F8-4343-856A-89463A673F9D}" ShortID="27032722" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{96495C2B-DA36-4B0E-922A-4F835CAA146F}" Global="false">
-											<ObjectRef Name="Craft_HydroDoor" ID="{01F1EBFC-C93F-463D-BF4F-48556F1FF249}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+											<ObjectRef Name="SFX_DOOR-HYDRAULIC-Up" ID="{E256C570-C4D1-477A-A1CF-93A9C1A20624}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Teleport" ID="{9E15B431-DB65-4695-884E-1164C083FB56}">
+							<ChildrenList>
+								<Action Name="Play" ID="{CEB70E1A-CA16-4C2F-810C-DC1431D15C95}" ShortID="511233" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A3D8851E-F3E5-4C5E-A59C-1AFD474778E9}" Global="false">
+											<ObjectRef Name="Teleport" ID="{CB05C855-AA5B-4769-8206-19CB6F881C16}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Door_Locked" ID="{59228A7A-72A5-44D1-B8CD-CDFCBC26F44E}">
+							<ChildrenList>
+								<Action Name="Play" ID="{58581843-4EC9-4558-A0B4-5F23999DCEE3}" ShortID="448980318" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5DDAF5ED-29E4-41E4-88CC-7FA7065562F6}" Global="false">
+											<ObjectRef Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Craft_HydroDoor_Close" ID="{499167B1-4141-4EE8-8C3F-BDD5E86545C9}">
+							<ChildrenList>
+								<Action Name="Play" ID="{2460E22C-ADAC-439B-A986-663468714A5E}" ShortID="517162285" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{7007590B-5C1B-4FEA-A674-2F4B737F1A8A}" Global="false">
+											<ObjectRef Name="SFX_DOOR-HYDRAULIC-Down" ID="{162ADE31-A9E2-4788-BFDB-9AF8B8F1D1F6}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -150,24 +183,6 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{7635FEB5-822D-48A3-99EE-60AB4FDBFD85}" ShortID="390466670" Type="Stop" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="FadeCurve" Type="int16" Value="3"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{AD51FEFF-12BA-4627-A9C7-37405B289C1D}" Global="false">
-											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{49C76C53-7863-40D2-832F-50948CBC221E}" ShortID="210270398" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{691423E1-1357-4D18-AFDC-4304817093AB}" Global="false">
-											<ObjectRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}">
@@ -183,17 +198,6 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{ECBF1CB3-84CE-445C-BACE-3A0E5EC71FE9}" ShortID="507176497" Type="Stop" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="FadeCurve" Type="int16" Value="3"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{B3EA0E2D-2266-47B0-8075-EE473BA7AB88}" Global="false">
-											<ObjectRef Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscape_Iceland" ID="{B41CAA85-1067-47A2-BD2B-62A84B6F4B12}">
@@ -205,10 +209,76 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Play" ID="{FB2DD743-6AA0-40FE-89D5-585526EF0CC8}" ShortID="563560843" Type="Play" Scope="One" Global="false">
+							</ChildrenList>
+						</Event>
+						<Event Name="Landscape_Ocean" ID="{96B91828-719D-43F5-83F4-7894AE233A5F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{3CE879A4-7CD6-4C5B-B65A-A2D71A5CAC6D}" ShortID="936577056" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{65647867-C9DE-4CD9-88FA-AAB0851F4932}" Global="false">
-											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										<Element ID="{A08D741C-F6A1-486E-B1AA-C26F55A93A45}" Global="false">
+											<ObjectRef Name="Ocean-Outskirts" ID="{D05B73E0-1044-4ECE-9A25-E111E9E2FFCC}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Landmark_River" ID="{CBB6CA47-0FBF-43BB-9139-ED2694E039BE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{467F65C8-7A25-414A-9738-4AAF32D35674}" ShortID="936290698" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{D7974B5B-1772-4ECA-BBD7-58BE884DDE6D}" Global="false">
+											<ObjectRef Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{BE259528-B4C2-41D5-99B9-A28DE1F14DC6}" ShortID="186087983" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{AA8D75AD-DCAE-47A6-844F-6ED55E8FD73F}" Global="false">
+											<ObjectRef Name="Waterfall" ID="{CB150BB3-1F06-4F68-AA44-B9CAB29B7333}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Craft_Alarm" ID="{E78C1939-A151-498F-B5F7-D9133FBA2C57}">
+							<ChildrenList>
+								<Action Name="Play" ID="{0A177920-8A72-4AF1-92C2-E7CD9FAD5F88}" ShortID="925163685" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{02A0FE5F-AEE2-4A20-B7CC-017F2CC2BB05}" Global="false">
+											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Craft_PowerBattery" ID="{572EF65A-BBD9-4A60-B863-F9536C87F210}">
+							<ChildrenList>
+								<Action Name="Play" ID="{2854094F-E2EC-428B-94F8-256EC30AEDAC}" ShortID="395658365" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{87D6099A-03AB-4D05-803C-DA9203E77C38}" Global="false">
+											<ObjectRef Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{0E250476-12B9-4862-BCD4-97ADA84CEDCA}" ShortID="958678885" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{9139CCE2-94BF-478F-9378-DF3E799C4663}" Global="false">
+											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Landscapes_Soundscapes" ID="{D269C596-CA5D-4C4E-8CD7-036E8BF5D55C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{39560FE2-B708-4392-BB27-FF183601CF04}" ShortID="982666012" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A5CA75A9-14D6-414D-8E60-BF1D2993D654}" Global="false">
+											<ObjectRef Name="Landscapes" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -273,6 +343,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Menu_Pause" ID="{9A578D53-FB4C-4669-A92A-E176E3C74008}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{AA1CE2EF-4F0B-4965-AFBA-4641FAABE693}" ShortID="225707705">

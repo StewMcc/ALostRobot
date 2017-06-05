@@ -10,6 +10,14 @@
 						<Switch Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Environments_Switches" ID="{44861289-97A6-434B-8B4B-560AD00B5939}">
+					<ChildrenList>
+						<Switch Name="Shuttle_ComputerRoom" ID="{6B7D8FFB-1960-414A-8D98-B5C8B4AEEB2D}"/>
+						<Switch Name="Woodland" ID="{C78639B5-4DC8-40F8-ACE8-61C4E994254A}"/>
+						<Switch Name="Iceland" ID="{455FF1CC-7FAD-4C44-A59B-82D648DC6A12}"/>
+						<Switch Name="Shuttle_PowerRoom" ID="{4C631057-5C8E-4370-9314-6EF49F59256E}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

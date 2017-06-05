@@ -43,16 +43,16 @@ public class LocationNameUpdater : MonoBehaviour {
 				break;
 			case EventManager.NameUpdateType.ShipName:
 				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
-				SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
-				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
-				SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
+				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
+				//SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
+				//SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = shipName;
 				break;
 			case EventManager.NameUpdateType.WorldName:
 				// SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Outside_State");
-				SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
-				SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
-				SoundManager.PlayEvent("Landscape_Woodland", gameObject);
+				//SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
+				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
+				//SoundManager.PlayEvent("Landscape_Woodland", gameObject);
 				locationText_.text = worldName;
 				break;
 		}

@@ -152,7 +152,8 @@ public class RobotController : MonoBehaviour {
 		if (currentPickup_) {			
 			currentPickup_.Drop();
 			currentPickup_ = null;
-		}
+            SoundManager.PlayEvent("Item_PutDown", gameObject);
+        }
 		EmptyInventory();
 	}
 
@@ -262,8 +263,9 @@ public class RobotController : MonoBehaviour {
 
 		// Must ensure connected animation has an event connected to TeleportUpFinished.
 		teleporterAnimator.SetTrigger("TeleportUp");
+        SoundManager.PlayEvent("Teleport", gameObject);
 
-		recallButton.interactable = false;
+        recallButton.interactable = false;
 		if (currentPickup_) {
 			currentPickup_.PackForTeleport(pickupPosition);
 		}

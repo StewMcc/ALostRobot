@@ -23,7 +23,9 @@ public class CorridorDoorLock : Door {
 	private void UnlockDoor() {
 		isDoorLocked_ = false;
 		OpenDoor();
-	}
+        SoundManager.PlayEvent("Craft_PowerBattery", gameObject);
+        //SoundManager.StopEvent("Craft_Alarm", gameObject);
+    }
 
 	/// <summary>
 	/// Override so negative noise plays when they can't open the door.
@@ -32,7 +34,7 @@ public class CorridorDoorLock : Door {
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
 			if (isDoorLocked_) {
-				SoundManager.PlayEvent("Item_Port_Negative", gameObject);
+				SoundManager.PlayEvent("Door_Locked", gameObject);
 			}
 		}
 	}

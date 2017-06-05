@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Landscape_Ocean" ID="{96B91828-719D-43F5-83F4-7894AE233A5F}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -34,16 +38,16 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Craft_HydroDoor" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Item_Port_Positive" ID="{3FCA6D0D-4899-46A4-B470-49B3E03B2F20}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Item_Port_Negative" ID="{166D9351-5D15-4A01-AA4C-01066FE41072}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Landmark_River" ID="{CBB6CA47-0FBF-43BB-9139-ED2694E039BE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Item_PopUp" ID="{47C4CAA5-89CF-44DF-BF1B-7CB3C02621CE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
@@ -58,22 +62,67 @@
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Craft_HydroDoor_Close" ID="{499167B1-4141-4EE8-8C3F-BDD5E86545C9}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Broken_Room" ID="{65F95DCB-3220-4F33-A79B-81458E1857E6}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_Locked" ID="{59228A7A-72A5-44D1-B8CD-CDFCBC26F44E}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="4" Y="2"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Craft_HydroDoor_Open" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="4" Y="3"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Distance_to_Player" ID="{0375F609-9F47-405F-BC07-5E068B7D8837}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Blizzard" ID="{A2AD5E75-5B87-436D-AC90-D3CFE6AE4DAA}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Slider_SoundFX_Mix" ID="{BC6DCD76-CEDC-44C5-961B-F87055ABCBD9}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Slider_Music_Mix" ID="{AB8A3CC5-DD74-455B-A6F7-C745B908A7AC}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Slider_Ambience_Mix" ID="{CEF5D3AF-3C43-4A42-B287-6DC768FF51A2}"/>
+							<Value>23.0263157894737</Value>
+						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}"/>
 							<Value>73.5449735449735</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Shuttle_MainHall" ID="{A3B42B73-B8E6-4C0D-973B-788C02E04B2D}"/>
+							<Value>13.9802631578947</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Forestry" ID="{FB516E1B-D337-4F67-910F-AE2CAAA72750}"/>
+							<Value>100</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Iceland" ID="{455FF1CC-7FAD-4C44-A59B-82D648DC6A12}"/>
 						<CurrentSwitchRef Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

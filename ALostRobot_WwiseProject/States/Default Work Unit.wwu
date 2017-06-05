@@ -17,6 +17,13 @@
 						<State Name="BrokenRoom" ID="{5052BF8C-4CC4-4F2F-8097-11A7E51D70A5}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}">
+					<ChildrenList>
+						<State Name="None" ID="{B48AFE37-07EE-41AE-999E-5A2CD1919BD4}"/>
+						<State Name="Paused_NO" ID="{DBFE7477-2CBB-4914-9F5C-F28421CD3B62}"/>
+						<State Name="Paused_YES" ID="{B7BF2CD3-F5E4-4CB7-A904-B6ACA2873F86}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

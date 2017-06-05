@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: dd7fa22e996c4674aba67670e130cfd7
-timeCreated: 1494800143
-licenseType: Pro
+timeCreated: 1496242626
+licenseType: Free
 PluginImporter:
   serializedVersion: 2
   iconMap: {}
@@ -13,7 +13,7 @@ PluginImporter:
       first:
         Android: Android
       second:
-        enabled: 0
+        enabled: 1
         settings:
           CPU: ARMv7
     data:

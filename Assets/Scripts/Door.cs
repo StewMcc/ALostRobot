@@ -57,7 +57,7 @@ public class Door : MonoBehaviour {
 		startTime_ = Time.time;
 		startPosition_ = openTransform.position;
 		endPosition_ = closedTransform.position;
-		SoundManager.PlayEvent("Craft_HydroDoor", gameObject);
+		SoundManager.PlayEvent("Craft_HydroDoor_Close", gameObject);
 	}
 
 	/// <summary>
@@ -68,6 +68,6 @@ public class Door : MonoBehaviour {
 		startTime_ = Time.time;
 		startPosition_ = closedTransform.position;
 		endPosition_ = openTransform.position;
-		SoundManager.PlayEvent("Craft_HydroDoor", gameObject);
+		SoundManager.PlayEvent("Craft_HydroDoor_Open", gameObject);
 	}
 }
