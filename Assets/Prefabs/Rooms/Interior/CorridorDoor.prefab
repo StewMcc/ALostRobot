@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4346080680761838}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: OpenTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4967063183739646}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ClosedTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4460093777655516}
   - component: {fileID: 65366191503885914}
   - component: {fileID: 114952018070196476}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CorridorDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 33079003377005904}
   - component: {fileID: 23912264827053288}
   - component: {fileID: 208545526101280748}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,9 +82,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134050680576660}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 2.49, y: -8.1, z: 4.91}
-  m_LocalScale: {x: 0.10995554, y: 0.07297311, z: 0.100000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.98, y: -5.67, z: 0.02}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 4460093777655516}
   m_RootOrder: 2
@@ -95,8 +95,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590873847475312}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 380.6, y: 2.1, z: -506.6}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 377.7, y: 2.1, z: -506.6}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4926691191960944}
@@ -104,16 +104,16 @@ Transform:
   - {fileID: 4346080680761838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4926691191960944
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677175252547388}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 2.49, y: -0.05, z: 4.91}
-  m_LocalScale: {x: 0.10995554, y: 0.07297311, z: 0.100000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.98, y: -0.31, z: 0.02}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 4460093777655516}
   m_RootOrder: 0
@@ -124,9 +124,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304934863637330}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 2.49, y: -0.05, z: 4.91}
-  m_LocalScale: {x: 0.10995554, y: 0.07297311, z: 0.100000024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.98, y: -0.08, z: 0.02}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 4460093777655516}
   m_RootOrder: 1
@@ -169,7 +169,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677175252547388}
-  m_Mesh: {fileID: 4300000, guid: 0357f29490bf54d8d9c4f7e464fb8264, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 772adeab5ef056948a35755a808ce983, type: 3}
 --- !u!65 &65366191503885914
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -180,7 +180,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5, y: 2, z: 9}
+  m_Size: {x: 9, y: 2, z: 6.5}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &114952018070196476
 MonoBehaviour:
@@ -206,9 +206,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 24.500002, y: 38, z: 1}
+  m_Extents: {x: 2, y: 54.500004, z: 57.000004}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 21.500002, y: 38, z: 49.000004}
+  m_Center: {x: -60.000004, y: 59.500004, z: 0}
   m_TimeToStationary: 0.5
