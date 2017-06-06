@@ -13,8 +13,9 @@
 				<StateGroup Name="Music_States" ID="{9F71CB85-4EDC-4C28-BC57-717FF69325BC}">
 					<ChildrenList>
 						<State Name="None" ID="{3DAC41D6-8AC5-4DA4-AC42-623628B570A4}"/>
-						<State Name="Level" ID="{BF698294-C4D2-4737-AC6E-6598978FE2B7}"/>
-						<State Name="BrokenRoom" ID="{5052BF8C-4CC4-4F2F-8097-11A7E51D70A5}"/>
+						<State Name="Level_BrokenBattery" ID="{BF698294-C4D2-4737-AC6E-6598978FE2B7}"/>
+						<State Name="Menu" ID="{5052BF8C-4CC4-4F2F-8097-11A7E51D70A5}"/>
+						<State Name="Leve_FixedBattery" ID="{E34DAA7B-9A25-4166-BEEF-B804B0449990}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}">

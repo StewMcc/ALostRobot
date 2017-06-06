@@ -6,6 +6,7 @@
 				<SoundBank Name="Audio_Soundbank" ID="{4729DB33-366C-41FF-BAE1-E293EF56572F}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Level_Music_02" ID="{946841C8-105C-41BE-BD51-33E5E302BD80}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Landmark_Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
@@ -16,7 +17,7 @@
 						<ObjectRef Name="Item_PutDown" ID="{0B080191-8C5E-4565-8A8B-CE56C8F4D57E}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Teleport" ID="{9E15B431-DB65-4695-884E-1164C083FB56}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Item_Port_Positive" ID="{3FCA6D0D-4899-46A4-B470-49B3E03B2F20}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Level_Music" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Level_Music_01" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Craft_Alarm" ID="{E78C1939-A151-498F-B5F7-D9133FBA2C57}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Item_Port_Negative" ID="{166D9351-5D15-4A01-AA4C-01066FE41072}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Landscape_Shuttle" ID="{BB28812A-E59B-4A1B-92C7-2EB9120CAC17}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>

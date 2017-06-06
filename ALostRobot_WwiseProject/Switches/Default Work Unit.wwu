@@ -18,6 +18,13 @@
 						<Switch Name="Shuttle_PowerRoom" ID="{4C631057-5C8E-4370-9314-6EF49F59256E}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Music_Switches" ID="{4BFEF23A-618E-418F-9B92-2CDAA86AB093}">
+					<ChildrenList>
+						<Switch Name="Menu_MusicSwitch" ID="{2EFA96FD-96B0-42E8-8D10-413AE9CA0AC2}"/>
+						<Switch Name="Broken_Battery_MusicSwitch" ID="{45614DEB-B0A2-4DA0-AF56-438F58BFF8EB}"/>
+						<Switch Name="FixedBattery_MusicSwitch" ID="{B2B4D8DD-9746-46E1-A04E-32278FF5BD9E}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

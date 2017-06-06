@@ -26,16 +26,20 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Level_Music" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<ObjectRef Name="Level_Music_01" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Menu_Music" ID="{02B69B78-A523-4A28-9172-06217DF96105}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<ObjectRef Name="Level_Music_02" ID="{946841C8-105C-41BE-BD51-33E5E302BD80}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Menu_Button_Select" ID="{612E6024-2036-4A9C-BFD3-06FC4C7C909D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<ObjectRef Name="Menu_Music" ID="{02B69B78-A523-4A28-9172-06217DF96105}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Menu_Button_Select" ID="{612E6024-2036-4A9C-BFD3-06FC4C7C909D}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Item_Port_Positive" ID="{3FCA6D0D-4899-46A4-B470-49B3E03B2F20}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
@@ -124,8 +128,11 @@
 							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Menu" ID="{5052BF8C-4CC4-4F2F-8097-11A7E51D70A5}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Menu_MusicSwitch" ID="{2EFA96FD-96B0-42E8-8D10-413AE9CA0AC2}"/>
 						<CurrentSwitchRef Name="Iceland" ID="{455FF1CC-7FAD-4C44-A59B-82D648DC6A12}"/>
 						<CurrentSwitchRef Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
 					</CurrentSwitchList>

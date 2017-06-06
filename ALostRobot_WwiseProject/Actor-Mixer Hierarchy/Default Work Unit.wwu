@@ -3288,6 +3288,7 @@
 								<Sound Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" ShortID="34912394" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
