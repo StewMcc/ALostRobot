@@ -7,7 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Landmark_Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Landmark_River" ID="{CBB6CA47-0FBF-43BB-9139-ED2694E039BE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Landscape_Ocean" ID="{96B91828-719D-43F5-83F4-7894AE233A5F}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" Filter="7" Origin="Manual"/>

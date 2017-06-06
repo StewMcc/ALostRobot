@@ -50,6 +50,10 @@
 							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Landmark_Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Item_PopUp" ID="{47C4CAA5-89CF-44DF-BF1B-7CB3C02621CE}" WorkUnitID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}"/>
 							<Position X="3" Y="0"/>
 						</Module>

@@ -16,7 +16,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+							<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -747,6 +747,13 @@
 					</TransitionList>
 				</MusicSwitchContainer>
 				<MusicSwitchContainer Name="BrokenRoom_Music" ID="{B748225E-EC68-4A18-BAD7-DCEA3641915F}" ShortID="147125116">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -843,7 +850,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+							<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

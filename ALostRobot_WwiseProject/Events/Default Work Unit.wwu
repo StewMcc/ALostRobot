@@ -153,6 +153,16 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{A0A972FD-6D81-44BD-92B6-29875FD578DA}" ShortID="461874849" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{C2688608-CE6E-4298-BDDB-8C656DC43E67}" Global="false">
+											<ObjectRef Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Craft_HydroDoor_Close" ID="{499167B1-4141-4EE8-8C3F-BDD5E86545C9}">
@@ -233,7 +243,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}">
+						<Event Name="Landmark_Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}">
 							<ChildrenList>
 								<Action Name="Play" ID="{BE259528-B4C2-41D5-99B9-A28DE1F14DC6}" ShortID="186087983" Type="Play" Scope="One" Global="false">
 									<ElementList>
@@ -343,7 +353,53 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Menu_Pause" ID="{9A578D53-FB4C-4669-A92A-E176E3C74008}"/>
+						<Event Name="Menu_Pause" ID="{9A578D53-FB4C-4669-A92A-E176E3C74008}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{556A776D-AFA0-4DD9-84D8-E2403F901649}" ShortID="551604594" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4DC9816F-001D-4C40-870C-9B0451C97899}" Global="false">
+											<ObjectRef Name="Sound_FX" ID="{25DB8B21-3A3A-4879-8DA2-C910CC4C653A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{D2EB59C0-ACEE-47B0-A284-4D255A0F75AE}" ShortID="773410010" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0DFB87FA-CF72-42D5-8FF3-A7C52CE43A3A}" Global="false">
+											<ObjectRef Name="BG_Ambient" ID="{A7A048C4-C37E-4FD0-AAC3-52658B7A8357}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{4E065C66-4584-4118-9B47-70C86835BE3F}" ShortID="516113238" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6E33CA89-ADAB-4C66-BFB5-826EC2D8338F}" Global="false">
+											<ObjectRef Name="Player_GP_Interaction" ID="{7B07514C-D86D-4C98-B1A0-EE442BEF9CA1}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{39184852-968C-4BD6-B37B-6F38E5DA87FB}" ShortID="351165415" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8308B2B4-FC59-4817-AF94-C3715480E83A}" Global="false">
+											<ObjectRef Name="UserInterface" ID="{19F3F9CE-3B96-40E4-B30E-6345F6284855}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Pause" ID="{D467AB57-AC89-4C71-9432-10FCD8001A7A}" ShortID="1034250056" Type="Pause" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{D1142AB6-78F5-4643-A9C5-EBE056EB08F1}" Global="false">
+											<ObjectRef Name="Level_Music" ID="{777B445D-692A-49CC-97FE-88C1B4798A33}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{679BCF3D-3197-4F7B-95BA-C5E29FC079BF}" ShortID="423647017" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6910C693-15B8-49AD-93E1-6D22DB5B8E37}" Global="false">
+											<ObjectRef Name="Menu_Music" ID="{77C14086-DAB1-4E59-A4AD-5460D1F6D75C}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Resume" ID="{85FBA05D-0E7E-488B-8D69-326F9FBEB049}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{AA1CE2EF-4F0B-4965-AFBA-4641FAABE693}" ShortID="225707705">
