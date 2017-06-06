@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+ 
 
 /// <summary>
 /// Controls the movement of the robot and stores the collected pickups, and the recall ability.
@@ -149,6 +150,7 @@ public class RobotController : MonoBehaviour {
 	/// Drop the current item in the inventory.
 	/// </summary>
 	public void DropCurrentPickup() {
+
 		if (currentPickup_) {			
 			currentPickup_.Drop();
 			currentPickup_ = null;
@@ -253,7 +255,8 @@ public class RobotController : MonoBehaviour {
 		inventoryUi.SetActive(false);
 	}
 
-	private void Recall() {
+	private void Recall() {		
+		
 		isTeleporting_ = true;
 		// disable the particle trail whilst teleporting		
 		dustTrail.Stop(true);
@@ -293,6 +296,9 @@ public class RobotController : MonoBehaviour {
 		dustTrail.Play(true);
 
 		recallButton.interactable = true;
+		// Ensures the highlight is removed.
+		recallButton.enabled = false;
+		recallButton.enabled = true;
 		if (currentPickup_) {
 			currentPickup_.UnpackFromTeleport();
 		}

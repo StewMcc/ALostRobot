@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4021878336579838}
   - component: {fileID: 33626105471007100}
   - component: {fileID: 23834836151842476}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222036483170451432}
   - component: {fileID: 114040024340903466}
   - component: {fileID: 114091424862263540}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4276087097205698}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: MusicOffIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4052026786637476}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuNoAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4636719160414062}
   - component: {fileID: 114474186557868274}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 4325197198699216}
   - component: {fileID: 33159101059959366}
   - component: {fileID: 23907218798055186}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 222147067877073808}
   - component: {fileID: 114627749171116776}
   - component: {fileID: 114125462560343178}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4038556553467486}
   - component: {fileID: 33572379851445698}
   - component: {fileID: 23747960436679722}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 4709399582700380}
   - component: {fileID: 33816082378863108}
   - component: {fileID: 23149490267429894}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4717786061616372}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: SfxOffIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4698769465308298}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: PauseMenuBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 224690590767526490}
   - component: {fileID: 222905886942088580}
   - component: {fileID: 114422590181239886}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 4395638466586754}
   - component: {fileID: 33786718398094662}
   - component: {fileID: 23331721660195252}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4777886964706428}
   - component: {fileID: 20344852821937970}
   - component: {fileID: 92791592018637998}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4905321773122764}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: MenuBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 223902616099418842}
   - component: {fileID: 114916976282191866}
   - component: {fileID: 114422642488398686}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 32
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
