@@ -12,6 +12,7 @@
 *.meta merge=unityyamlmerge eol=lf
 *.controller merge=unityyamlmerge eol=lf
 *.pdf binary
+NavMesh.asset binary
 ## git-lfs ##
 #Image
 *.jpg filter=lfs diff=lfs merge=lfs -text
