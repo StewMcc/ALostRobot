@@ -13,9 +13,14 @@ public class RoomManager : MonoBehaviour {
 	[SerializeField]
 	private Texture successTexture = null;
 
+	[SerializeField]
+	private int numberOfRoomsToBreak = 2;
+
 	private Room[] rooms_ = null;
 
 	private int maxAttempts_ =6;
+
+	
 
 	private void Start() {
 		rooms_ = GetComponentsInChildren<Room>();
@@ -52,15 +57,23 @@ public class RoomManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="callingRoomNumber"> The room id it is being called from, i.e. room not worth breaking again.</param>
 	public void BreakRandomRoom(int callingRoomNumber) {
-		int attempt = 0;
-		int roomToBreak = Random.Range(1, rooms_.Length);
+		Random.InitState(System.DateTime.Now.Millisecond);
 
-		// keeps looping until it runs out of attempts or gets a valid number.
-		while (roomToBreak == callingRoomNumber && attempt < maxAttempts_) {
+		int attempt = 0;
+		int roomToBreak = callingRoomNumber;
+
+		for (int i = 0; i < numberOfRoomsToBreak; i++) {
 			roomToBreak = Random.Range(1, rooms_.Length);
-			attempt++;
+			attempt = 0;
+			// keeps looping until it runs out of attempts or gets a valid number.
+			while (roomToBreak == callingRoomNumber && attempt < maxAttempts_) {
+				roomToBreak = Random.Range(1, rooms_.Length);
+				attempt++;
+			}
+			Debug.Log(roomToBreak);
+			BreakRoom(roomToBreak);
 		}
-		BreakRoom(roomToBreak);
+		
 	}
 
 	/// <summary>
