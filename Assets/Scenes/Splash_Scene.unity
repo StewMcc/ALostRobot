@@ -6591,7 +6591,7 @@ Prefab:
     - target: {fileID: 2300000, guid: ab72d1e00e5cb4ffa80748359bf9d471, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 527284fbce4f84219ba0650aa665d60b, type: 2}
+      objectReference: {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab72d1e00e5cb4ffa80748359bf9d471, type: 3}
   m_IsPrefabParent: 0
@@ -13060,7 +13060,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 7e2821dc0c648457482b264a56c8886d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 527284fbce4f84219ba0650aa665d60b, type: 2}
+      objectReference: {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
     - target: {fileID: 2300000, guid: 7e2821dc0c648457482b264a56c8886d, type: 3}
       propertyPath: m_CastShadows
       value: 2
@@ -13080,6 +13080,10 @@ Prefab:
     - target: {fileID: 2300000, guid: 7e2821dc0c648457482b264a56c8886d, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7e2821dc0c648457482b264a56c8886d, type: 3}
+      propertyPath: m_Name
+      value: PlayButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e2821dc0c648457482b264a56c8886d, type: 3}
@@ -16298,7 +16302,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 0357f29490bf54d8d9c4f7e464fb8264, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 527284fbce4f84219ba0650aa665d60b, type: 2}
+      objectReference: {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0357f29490bf54d8d9c4f7e464fb8264, type: 3}
   m_IsPrefabParent: 0
