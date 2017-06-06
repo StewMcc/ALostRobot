@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreenCover: {fileID: 114715118069272918}
-  minDuration: 0.6
+  minDuration: 1.4
 --- !u!114 &114151715873234680
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2000,6 +2000,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbd19f986a6f2e04ba5592e0190658fe, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &896114829
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636719160414062, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &930679017 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4875519117221096, guid: 3206947c72b112c418a556b15372a0e0,
