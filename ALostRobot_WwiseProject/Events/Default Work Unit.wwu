@@ -357,7 +357,7 @@
 							<ChildrenList>
 								<Action Name="Pause All Except" ID="{5D420A60-6C87-4F07-A7F2-2C8AFF442A6B}" ShortID="94021665" Type="Pause" Scope="AllExcept" Global="true">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{DBDB6902-A3BD-40C7-8EBD-A923177E253A}" Global="true">

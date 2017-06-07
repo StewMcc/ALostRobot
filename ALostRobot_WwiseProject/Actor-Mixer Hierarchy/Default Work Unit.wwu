@@ -1054,7 +1054,7 @@
 												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>1</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1229,7 +1229,6 @@
 										<RandomSequenceContainer Name="Wildlife_Birds_01" ID="{E8300154-E140-402E-A7B0-3539ED5E9797}" ShortID="643610021">
 											<PropertyList>
 												<Property Name="3DPositionSource" Type="int16" Value="0"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1689,7 +1688,6 @@
 										<RandomSequenceContainer Name="Wildlife_Birds_02" ID="{4C492BAA-33B6-4C94-AF93-256A111C568A}" ShortID="452674672">
 											<PropertyList>
 												<Property Name="3DPositionSource" Type="int16" Value="0"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1903,7 +1901,6 @@
 										<RandomSequenceContainer Name="Wildlife_Birds_03" ID="{901BA2EB-A1DB-4D2A-8619-CFACF2F52B04}" ShortID="462478507">
 											<PropertyList>
 												<Property Name="3DPositionSource" Type="int16" Value="0"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>

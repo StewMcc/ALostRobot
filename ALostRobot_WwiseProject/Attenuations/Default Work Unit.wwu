@@ -527,6 +527,9 @@
 					</CurveUsageInfoList>
 				</Attenuation>
 				<Attenuation Name="Forestry" ID="{8AC723DD-6182-4897-8318-DE71A229B81F}" ShortID="1037072255">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="60"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -541,7 +544,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>60</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -569,7 +572,7 @@
 											<SegmentShape>Exp3</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>60</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -578,7 +581,7 @@
 							</CurveUsageInfo>
 						</LowPassFilterUsage>
 						<HighPassFilterUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="None">
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
 								<Curve Name="HighPassFilter" ID="{87A42CA2-E0D2-465D-AEF0-CB9E0A3A0546}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="65537"/>
@@ -591,7 +594,7 @@
 											<SegmentShape>Exp2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>60</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>
