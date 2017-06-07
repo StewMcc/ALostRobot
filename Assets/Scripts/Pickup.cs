@@ -45,6 +45,8 @@ public class Pickup : MonoBehaviour {
 	private Vector3 respawnPosition_ = Vector3.zero;
 
 	private Quaternion initialRotation_;
+
+	private Vector3 initialScale_ = Vector3.zero;
 			
 	private Vector3 droppedTargetPosition_ = Vector3.zero;
 
@@ -66,7 +68,7 @@ public class Pickup : MonoBehaviour {
 		// save original position.
 		respawnPosition_ = transform.position;
 		initialRotation_ = transform.rotation;
-
+		initialScale_ = transform.localScale;
 		pickupText.text = pickupName;
 		
 		pickupText.enabled = false;
@@ -131,7 +133,7 @@ public class Pickup : MonoBehaviour {
 		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {			
 			
 			transform.SetPositionAndRotation(droppedTargetPosition_, initialRotation_);
-			transform.localScale = new Vector3 (1, 1, 1);
+
 			pickupAnimation.ResumeAnimation();
 			dropEffect.Play();
 			SoundManager.PlayEvent("Item_PutDown", gameObject);
@@ -141,6 +143,7 @@ public class Pickup : MonoBehaviour {
 			SoundManager.PlayEvent("Item_Port_Negative", gameObject);
 		}
 		transform.parent = null;
+		transform.localScale = initialScale_;
 	}
 	
 	/// <summary>
@@ -148,12 +151,13 @@ public class Pickup : MonoBehaviour {
 	/// </summary>
 	public void Respawn() {
 		transform.SetPositionAndRotation(respawnPosition_, initialRotation_);
-		transform.localScale = new Vector3 (1, 1, 1);
+
 		pickupAnimation.ResumeAnimation();
 		hasRespawned_ = true;
 		isPickedUp_ = false;
 		dropEffect.Play();
 		transform.parent = null;
+		transform.localScale = initialScale_;
 	}
 
 	private void ShowGrabIcon() {
