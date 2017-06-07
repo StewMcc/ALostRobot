@@ -372,6 +372,31 @@
 								<Action Name="Resume All" ID="{BA5B10A6-FAAC-4504-9A03-4E3D3F6D112A}" ShortID="1040272026" Type="Resume" Scope="All" Global="true"/>
 							</ChildrenList>
 						</Event>
+						<Event Name="Music_Mute" ID="{936F3A25-307B-42E2-A15C-585CC42BA6F8}">
+							<ChildrenList>
+								<Action Name="Set Bus Volume" ID="{DBEE01F9-2EB9-4014-B501-85CEFA424239}" ShortID="64115322" Type="ChangeBusVolume" Scope="One" Global="true">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{AE319657-D56A-4794-8B00-1C814F0A7109}" Global="true">
+											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Reset" ID="{DEB2D2F0-A308-428A-B572-F89EA4FB7420}">
+							<ChildrenList>
+								<Action Name="Reset Bus Volume" ID="{0A98AC82-06BE-40EE-A404-115C66E12F7A}" ShortID="367246698" Type="ResetBusVolume" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{57DA9C48-F875-4D7F-8CDA-AE8A0AA38813}" Global="true">
+											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{AA1CE2EF-4F0B-4965-AFBA-4641FAABE693}" ShortID="225707705">
