@@ -65,9 +65,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_01_Chorus" ID="{CBE08473-D7F2-4DE0-8630-ABCB65775237}" ShortID="673397962">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_01_Chorus.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="947226133"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -75,6 +72,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -127,9 +125,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_01_Verse" ID="{4547873F-FB15-407B-B947-B859FAB9D621}" ShortID="960952488">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_01_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="740622898"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -137,6 +132,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -189,9 +185,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_02_Verse" ID="{86780106-8EA3-4A55-B535-12D80A803943}" ShortID="86818417">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_02_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="500354840"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -199,6 +192,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -251,9 +245,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_03_Verse" ID="{268BD9FC-CCE2-4C82-BE94-8305041E0872}" ShortID="367950745">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_03_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="981535778"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -261,6 +252,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -313,9 +305,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_04_Verse" ID="{6FE5712E-37E1-47E0-BB4E-7D98AA1C8456}" ShortID="803358938">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_04_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="58685706"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -323,6 +312,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -375,9 +365,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_05_Verse" ID="{0BDD6C61-12AB-49F8-85B3-B0E7718995FA}" ShortID="1003361969">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_05_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="413136043"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -385,6 +372,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -437,9 +425,6 @@
 												<AudioFileSource Name="Music_Layer_Melody_06_Verse" ID="{C0173F43-BFE1-4EEB-B0F4-A7B9A8BD6971}" ShortID="30413454">
 													<Language>SFX</Language>
 													<AudioFile>Music_Layer_Melody_06_Verse.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="115856118"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -447,6 +432,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -482,8 +468,10 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{C1E40673-BF06-4350-9E03-CA18871BA41B}">
+											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -600,6 +588,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -642,6 +631,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -677,6 +667,7 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -712,8 +703,10 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{7EB010C0-1766-4AF9-A2EE-835CA150D875}">
+											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>

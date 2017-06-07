@@ -406,7 +406,7 @@
 								<Action Name="Play" ID="{B0D83519-1FA9-432F-A120-C6FEBEF0B025}" ShortID="513629527" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{A7B052AF-E3BD-48EC-AC11-3A54D415BF97}" Global="false">
-											<ObjectRef Name="Menu_Segment_2" ID="{B21C17E3-0B87-42FC-9C0D-A5ED92DCC52E}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
+											<ObjectRef Name="Menu_Music" ID="{BE6538C3-3BA2-4826-9CBD-56D0861979FE}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
 										</Element>
 									</ElementList>
 								</Action>
