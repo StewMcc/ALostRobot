@@ -344,7 +344,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 4, z: 6}
+  m_Size: {x: 10.16, y: 4, z: 11.97}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114151198431099230
 MonoBehaviour:
@@ -361,6 +361,8 @@ MonoBehaviour:
   correctItem: 8
   roomName: Kreaston Kloset
   isFixed: 1
+  fixedAmbient: Landscape_Shuttle
+  brokenAmbient: 
   roomMeshParent: {fileID: 0}
 --- !u!114 &114305586860244242
 MonoBehaviour:

@@ -509,6 +509,8 @@ MonoBehaviour:
   correctItem: 5
   roomName: Zushee Ziggurat
   isFixed: 0
+  fixedAmbient: Craft_PowerBattery
+  brokenAmbient: Craft_Alarm
   roomMeshParent: {fileID: 0}
 --- !u!222 &222570615715845454
 CanvasRenderer:

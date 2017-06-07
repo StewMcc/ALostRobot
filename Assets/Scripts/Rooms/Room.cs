@@ -20,6 +20,11 @@ public class Room : MonoBehaviour {
 	[SerializeField]
 	private bool isFixed = true;
 
+	[SerializeField]
+	string fixedAmbient = "";
+
+	[SerializeField]
+	string brokenAmbient = "";
 	
 	[Tooltip("Object that contains all meshes we wish to show error and success textures on.")]
 	[SerializeField]
@@ -55,8 +60,14 @@ public class Room : MonoBehaviour {
 		if (isFixed) {
 			errorIcon.SetActive(false);
 			ChangeAllRenderersTextures(roomManager_.DefaultTexture());
+			if (fixedAmbient != "") {
+				SoundManager.PlayEvent (fixedAmbient, gameObject);
+			}
 		}
 		else {
+			if (brokenAmbient != "") {
+				SoundManager.PlayEvent (brokenAmbient, gameObject);
+			}
 			errorIcon.SetActive(true);
 			ChangeAllRenderersTextures(roomManager_.ErrorTexture());
 		}
@@ -65,6 +76,12 @@ public class Room : MonoBehaviour {
 	public void TryFix(Pickup item) {
 		if (item.CheckType() == correctItem) {
 			SoundManager.PlayEvent("Item_Port_Positive", gameObject);
+			if (fixedAmbient != "") {
+				SoundManager.PlayEvent (fixedAmbient, gameObject);
+			}
+			if (brokenAmbient != "") {
+				SoundManager.StopEvent (brokenAmbient, 100, gameObject);
+			}
 			Fix();
 		}
 		else {
@@ -77,6 +94,12 @@ public class Room : MonoBehaviour {
 		if (isFixed) {
 			isFixed = false;
 			SoundManager.PlayEvent("Broken_Room", gameObject);
+			if (fixedAmbient != "") {
+				SoundManager.StopEvent (fixedAmbient, 100, gameObject);
+			}
+			if (brokenAmbient != "") {
+				SoundManager.PlayEvent (brokenAmbient, gameObject);
+			}
 			errorIcon.SetActive(true);
 
 			ChangeAllRenderersTextures(roomManager_.ErrorTexture());

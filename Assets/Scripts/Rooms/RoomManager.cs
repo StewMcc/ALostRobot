@@ -70,7 +70,6 @@ public class RoomManager : MonoBehaviour {
 				roomToBreak = Random.Range(1, rooms_.Length);
 				attempt++;
 			}
-			Debug.Log(roomToBreak);
 			BreakRoom(roomToBreak);
 		}
 		

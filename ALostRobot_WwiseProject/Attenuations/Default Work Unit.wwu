@@ -161,7 +161,7 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
-						<Property Name="RadiusMax" Type="Real64" Value="45"/>
+						<Property Name="RadiusMax" Type="Real64" Value="30"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -177,7 +177,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>45</XPos>
+											<XPos>30</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -205,7 +205,7 @@
 											<SegmentShape>InvertedSCurve</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>45</XPos>
+											<XPos>30</XPos>
 											<YPos>98</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -227,13 +227,13 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>26.35711875</XPos>
+											<XPos>17.5714125</XPos>
 											<YPos>32</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>45</XPos>
+											<XPos>30</XPos>
 											<YPos>67</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -254,7 +254,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>45</XPos>
+											<XPos>30</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>

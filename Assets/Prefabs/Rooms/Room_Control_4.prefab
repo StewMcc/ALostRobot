@@ -320,7 +320,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 4, z: 6}
+  m_Size: {x: 10.16, y: 4, z: 11.97}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65382370135262126
 BoxCollider:
@@ -420,6 +420,8 @@ MonoBehaviour:
   correctItem: 9
   roomName: Qostralt Quantum Computer
   isFixed: 1
+  fixedAmbient: 
+  brokenAmbient: 
   roomMeshParent: {fileID: 0}
 --- !u!114 &114383352611231676
 MonoBehaviour:
