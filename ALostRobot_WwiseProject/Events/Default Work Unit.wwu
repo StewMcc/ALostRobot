@@ -355,51 +355,23 @@
 						</Event>
 						<Event Name="Menu_Pause" ID="{9A578D53-FB4C-4669-A92A-E176E3C74008}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{556A776D-AFA0-4DD9-84D8-E2403F901649}" ShortID="551604594" Type="Stop" Scope="One" Global="false">
+								<Action Name="Pause All Except" ID="{5D420A60-6C87-4F07-A7F2-2C8AFF442A6B}" ShortID="94021665" Type="Pause" Scope="AllExcept" Global="true">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ElementList>
-										<Element ID="{4DC9816F-001D-4C40-870C-9B0451C97899}" Global="false">
-											<ObjectRef Name="Sound_FX" ID="{25DB8B21-3A3A-4879-8DA2-C910CC4C653A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{D2EB59C0-ACEE-47B0-A284-4D255A0F75AE}" ShortID="773410010" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{0DFB87FA-CF72-42D5-8FF3-A7C52CE43A3A}" Global="false">
-											<ObjectRef Name="BG_Ambient" ID="{A7A048C4-C37E-4FD0-AAC3-52658B7A8357}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{4E065C66-4584-4118-9B47-70C86835BE3F}" ShortID="516113238" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{6E33CA89-ADAB-4C66-BFB5-826EC2D8338F}" Global="false">
-											<ObjectRef Name="Player_GP_Interaction" ID="{7B07514C-D86D-4C98-B1A0-EE442BEF9CA1}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{39184852-968C-4BD6-B37B-6F38E5DA87FB}" ShortID="351165415" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{8308B2B4-FC59-4817-AF94-C3715480E83A}" Global="false">
-											<ObjectRef Name="UserInterface" ID="{19F3F9CE-3B96-40E4-B30E-6345F6284855}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Pause" ID="{D467AB57-AC89-4C71-9432-10FCD8001A7A}" ShortID="1034250056" Type="Pause" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{D1142AB6-78F5-4643-A9C5-EBE056EB08F1}" Global="false">
-											<ObjectRef Name="Level_Music_OLD" ID="{777B445D-692A-49CC-97FE-88C1B4798A33}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{679BCF3D-3197-4F7B-95BA-C5E29FC079BF}" ShortID="423647017" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{6910C693-15B8-49AD-93E1-6D22DB5B8E37}" Global="false">
-											<ObjectRef Name="Menu_Music" ID="{77C14086-DAB1-4E59-A4AD-5460D1F6D75C}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
+										<Element ID="{DBDB6902-A3BD-40C7-8EBD-A923177E253A}" Global="true">
+											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
 										</Element>
 									</ElementList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Menu_Resume" ID="{85FBA05D-0E7E-488B-8D69-326F9FBEB049}"/>
+						<Event Name="Menu_Resume" ID="{85FBA05D-0E7E-488B-8D69-326F9FBEB049}">
+							<ChildrenList>
+								<Action Name="Resume All" ID="{BA5B10A6-FAAC-4504-9A03-4E3D3F6D112A}" ShortID="1040272026" Type="Resume" Scope="All" Global="true"/>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{AA1CE2EF-4F0B-4965-AFBA-4641FAABE693}" ShortID="225707705">

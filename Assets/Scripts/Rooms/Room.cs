@@ -20,17 +20,15 @@ public class Room : MonoBehaviour {
 	[SerializeField]
 	private bool isFixed = true;
 
-	// TODO: this will be removed when the room meshes scales etc, are decided on, and we start merging things together.
-	// atm it is seperate to allow for easy modifying and testing of the room assets.
-	[Tooltip("Other object that contains all meshes we wish to show error and success textures on. (Temporary, to be removed)")]
+	
+	[Tooltip("Object that contains all meshes we wish to show error and success textures on.")]
 	[SerializeField]
 	private GameObject roomMeshParent =null;
 
 	private RoomManager roomManager_ = null;
 
 	private int roomId_ = -1;
-	private Renderer[] roomMeshParentRenderers_ = null;
-	private Renderer[] childrenRenderers_ = null;
+	private Renderer[] roomMeshParentRenderers_ = null;	
 	private float successDuration_ = 2.0f;
 
 	public bool IsFixed() {
@@ -50,7 +48,7 @@ public class Room : MonoBehaviour {
 		roomId_ = id;
 
 		// Get all the renderers connected to this room and change their textures.
-		childrenRenderers_ = GetComponentsInChildren<Renderer>();
+		
 		if (roomMeshParent) {
 			roomMeshParentRenderers_ = roomMeshParent.GetComponentsInChildren<Renderer>();
 		}
@@ -116,9 +114,7 @@ public class Room : MonoBehaviour {
 	}
 
 	private void ChangeAllRenderersTextures(Texture newTexture) {
-		foreach (Renderer rend in childrenRenderers_) {
-			rend.material.mainTexture = newTexture;
-		}
+		
 		if (roomMeshParent) {
 			foreach (Renderer rend in roomMeshParentRenderers_) {
 				rend.material.mainTexture = newTexture;
