@@ -1810,6 +1810,10 @@ Prefab:
       propertyPath: openPauseMenu
       value: 
       objectReference: {fileID: 1391592864}
+    - target: {fileID: 1217405247007836, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7ace74fce27dd7418169cecac5ad7c6, type: 2}
   m_IsPrefabParent: 0
@@ -4187,6 +4191,10 @@ Prefab:
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 1227326101}
+    - target: {fileID: 1079342833826396, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8157cfae34e77d54a83f762e4f17c78a, type: 2}
   m_IsPrefabParent: 0

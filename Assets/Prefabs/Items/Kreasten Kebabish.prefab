@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4709031190972614}
   - component: {fileID: 33000436767766340}
   - component: {fileID: 23260080452377194}
+  - component: {fileID: 64028591680344180}
   m_Layer: 0
   m_Name: GrabIcon
   m_TagString: Untagged
@@ -170,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1912495704433784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.7, y: 1, z: 5}
+  m_LocalPosition: {x: -51.5, y: 1, z: -50.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4176234517466356}
@@ -298,6 +299,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1604947668005690}
   m_Mesh: {fileID: 4300000, guid: 7e0bf473d1f3bfe4fa691f1a102b648d, type: 3}
+--- !u!64 &64028591680344180
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803257940911340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 1aff5d326b830c945a5c0d54fef16a83, type: 3}
 --- !u!64 &64395773364176476
 MeshCollider:
   m_ObjectHideFlags: 1
