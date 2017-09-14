@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
- 
+
 
 /// <summary>
 /// Controls the movement of the robot and stores the collected pickups, and the recall ability.
@@ -20,16 +20,16 @@ public class RobotController : MonoBehaviour {
 
 	[SerializeField]
 	private Button dropButton =null;
-	
+
 	[SerializeField]
 	private Text currentPickupNormalText =null;
-	
+
 	[SerializeField]
 	private Text currentPickupAlienText =null;
 
 	[SerializeField]
 	private Transform pickupPosition = null;
-	
+
 	[SerializeField]
 	private Button recallButton =null;
 
@@ -65,7 +65,7 @@ public class RobotController : MonoBehaviour {
 	private void OnEnable() {
 		dropButton.onClick.AddListener(DropCurrentPickup);
 		recallButton.onClick.AddListener(Recall);
-		
+
 	}
 
 	/// <summary>
@@ -116,7 +116,7 @@ public class RobotController : MonoBehaviour {
 		Vector3 direction = transform.TransformDirection(Vector3.forward) * 4;
 		Gizmos.DrawRay(transform.position, direction);
 	}
-	
+
 	public bool HasItem() {
 		if (currentPickup_) {
 			return true;
@@ -142,7 +142,7 @@ public class RobotController : MonoBehaviour {
 	public void AddPickup(Pickup newPickup) {
 		DropCurrentPickup();
 		currentPickup_ = newPickup;
-		SoundManager.PlayEvent("Item_PickUp", gameObject);		
+		SoundManager.PlayEvent("Item_PickUp", gameObject);
 		ShowInventory();
 	}
 
@@ -151,11 +151,11 @@ public class RobotController : MonoBehaviour {
 	/// </summary>
 	public void DropCurrentPickup() {
 
-		if (currentPickup_) {			
+		if (currentPickup_) {
 			currentPickup_.Drop();
 			currentPickup_ = null;
-            SoundManager.PlayEvent("Item_PutDown", gameObject);
-        }
+			SoundManager.PlayEvent("Item_PutDown", gameObject);
+		}
 		EmptyInventory();
 	}
 
@@ -248,7 +248,7 @@ public class RobotController : MonoBehaviour {
 		currentPickupNormalText.enabled = true;
 		currentPickupNormalText.text = "Empty";
 	}
-	
+
 	/// <summary>
 	/// Hides the Inventory Ui fom the Hud.
 	/// </summary>
@@ -256,8 +256,8 @@ public class RobotController : MonoBehaviour {
 		inventoryUi.SetActive(false);
 	}
 
-	private void Recall() {		
-		
+	private void Recall() {
+
 		isTeleporting_ = true;
 		// disable the particle trail whilst teleporting		
 		dustTrail.Stop(true);
@@ -266,9 +266,9 @@ public class RobotController : MonoBehaviour {
 
 		// Must ensure connected animation has an event connected to TeleportUpFinished.
 		teleporterAnimator.SetTrigger("TeleportUp");
-        SoundManager.PlayEvent("Teleport", gameObject);
+		SoundManager.PlayEvent("Teleport", gameObject);
 
-        recallButton.interactable = false;
+		recallButton.interactable = false;
 		if (currentPickup_) {
 			currentPickup_.PackForTeleport(pickupPosition);
 		}

@@ -44,7 +44,7 @@ public class ServicePort : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other) {
 		if (other.tag == "Player") {
-			
+
 			HideUseIcon();
 			if (robot_) {
 				robot_.EnableDropPickup();

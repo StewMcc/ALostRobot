@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class RobotHud : MonoBehaviour {
-			
+
 	private void Start() {
 		UiEventManager.OnHideHud += DisableHud;
 		UiEventManager.OnShowHud += ShowHud;
@@ -12,14 +12,14 @@ public class RobotHud : MonoBehaviour {
 		UiEventManager.OnHideHud -= DisableHud;
 		UiEventManager.OnShowHud -= ShowHud;
 		EventManager.OnShipFixed -= DisableHud;
-		
+
 	}
-		
+
 	/// <summary>
 	/// Enables the robots HUD.	
 	/// </summary>
 	private void ShowHud() {
-		gameObject.SetActive(true);		
+		gameObject.SetActive(true);
 	}
 
 	/// <summary>

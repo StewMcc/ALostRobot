@@ -14,12 +14,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 	/// </summary>
 	private void OnGUI() {
 		titleContent.text = "Wwise Soundbank Selection";
-
-
-		GUILayout.Label("InvalidOperationException: Operation is not valid due to the current state of the object...");
-
-		GUILayout.Label("Error caused but can be ignored. Unity implementation of mono Error.");
-
+		
 		if (GUILayout.Button("Add Default Sound Banks")) {
 			AddDefaultSoundBanks();
 		}
