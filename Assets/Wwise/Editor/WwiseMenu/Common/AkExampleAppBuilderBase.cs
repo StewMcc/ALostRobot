@@ -106,7 +106,7 @@ public class AkExampleAppBuilderBase : MonoBehaviour
 #if UNITY_5
         else if (unityPlatormString == BuildTarget.iOS.ToString())
 #else
-		else if(unityPlatormString == BuildTarget.iPhone.ToString())
+		else if(unityPlatormString == BuildTarget.iOS.ToString())
 #endif
             return "iOS";
 #if !UNITY_5_5_OR_NEWER
@@ -139,7 +139,7 @@ public class AkExampleAppBuilderBase : MonoBehaviour
 #if UNITY_5
         else if (unityPlatormString == BuildTarget.iOS.ToString())
 #else
-		else if(unityPlatormString == BuildTarget.iPhone.ToString())
+		else if(unityPlatormString == BuildTarget.iOS.ToString())
 #endif
             return "ipa";
 
