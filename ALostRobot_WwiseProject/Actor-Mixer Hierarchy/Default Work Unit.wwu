@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}" SchemaVersion="80">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}" PersistMode="Standalone">
 			<ChildrenList>
@@ -32,7 +32,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="SFX_ROBOTIC_VOICE_01" ID="{A91F51E4-8853-4706-B353-2507725E9CA0}" ShortID="995731420" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_01" ID="{A91F51E4-8853-4706-B353-2507725E9CA0}" ShortID="995731420">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -55,7 +55,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_01" ID="{0B26F876-508E-44CE-B94F-6ED7D232F6B9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_02" ID="{0D8DCF9A-207D-4F8C-BF27-8ABE754F4943}" ShortID="978268566" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_02" ID="{0D8DCF9A-207D-4F8C-BF27-8ABE754F4943}" ShortID="978268566">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -78,7 +78,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_02" ID="{200A2D3B-F7D5-4806-8957-E10FF544D974}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_03" ID="{0DC61881-5035-4D33-AD86-9864DB0CC356}" ShortID="959591255" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_03" ID="{0DC61881-5035-4D33-AD86-9864DB0CC356}" ShortID="959591255">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -104,7 +104,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_03" ID="{6597F4C5-107B-4404-8649-DFD1576EA6BE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_04" ID="{0D9E426A-593E-42D0-B366-9A65C0C04C3A}" ShortID="1050243515" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_04" ID="{0D9E426A-593E-42D0-B366-9A65C0C04C3A}" ShortID="1050243515">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -127,7 +127,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_04" ID="{58681339-1AA4-4F9F-B204-D3F281A63BE4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_05" ID="{BE30F5D4-366D-4AC7-8106-C0F7169CF3E6}" ShortID="87927047" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_05" ID="{BE30F5D4-366D-4AC7-8106-C0F7169CF3E6}" ShortID="87927047">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -146,7 +146,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_05" ID="{F6F8E015-9CE9-4079-BC8D-5632A10E86BA}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_06" ID="{32D114BC-01B8-494C-9E36-CA2F8C9EED48}" ShortID="358207981" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_06" ID="{32D114BC-01B8-494C-9E36-CA2F8C9EED48}" ShortID="358207981">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -165,7 +165,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_06" ID="{C7173920-05B5-4BCF-A1A3-CEF222956366}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_07" ID="{8699F6AA-59B7-42EF-A329-1870BB4C53B7}" ShortID="538790487" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_07" ID="{8699F6AA-59B7-42EF-A329-1870BB4C53B7}" ShortID="538790487">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -190,7 +190,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_07" ID="{5AB177C7-9598-4AA4-B1BA-0421E46021BE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_08" ID="{C80DA677-FC4E-4F42-8003-6C0E2A98681D}" ShortID="260702964" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_08" ID="{C80DA677-FC4E-4F42-8003-6C0E2A98681D}" ShortID="260702964">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -217,7 +217,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_03" ID="{974272D0-7801-43F9-88E2-8025FB89B29E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_09" ID="{4B3AF0BB-EB81-426E-99D3-0661664898A2}" ShortID="392313915" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_09" ID="{4B3AF0BB-EB81-426E-99D3-0661664898A2}" ShortID="392313915">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -244,7 +244,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_03" ID="{546E0C47-D2BB-48AF-B5AB-4E363B38CEC0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_10" ID="{5C18417D-1CF2-41FD-AB9B-689EAEF8A678}" ShortID="906367669" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_10" ID="{5C18417D-1CF2-41FD-AB9B-689EAEF8A678}" ShortID="906367669">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -272,7 +272,7 @@
 												<ActiveSource Name="SFX_ROBOTIC_VOICE_07" ID="{67959624-1AC4-46E7-AFF6-E75F92CF5794}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="SFX_ROBOTIC_VOICE_11" ID="{02A88EBA-5008-4807-B79D-6D66154D7724}" ShortID="180616816" Type="SoundFX">
+										<Sound Name="SFX_ROBOTIC_VOICE_11" ID="{02A88EBA-5008-4807-B79D-6D66154D7724}" ShortID="180616816">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -322,7 +322,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Robot_Movement_TRACKS_L" ID="{FC35CE93-1135-49F2-A40C-619EF3FBD496}" ShortID="23267577" Type="SoundFX">
+												<Sound Name="Robot_Movement_TRACKS_L" ID="{FC35CE93-1135-49F2-A40C-619EF3FBD496}" ShortID="23267577">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="Pitch" Type="int32">
@@ -361,7 +361,7 @@
 														<ActiveSource Name="Robot_Movement_TRACKS_L" ID="{80C7C3B9-1C7B-4F5E-BED8-1E48653CA029}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="TracksLayer_Rubble" ID="{406F8920-00DB-4D87-9158-8FEABE13D34C}" ShortID="625699486" Type="SoundFX">
+												<Sound Name="TracksLayer_Rubble" ID="{406F8920-00DB-4D87-9158-8FEABE13D34C}" ShortID="625699486">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 													</PropertyList>
@@ -408,7 +408,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{36688F42-6403-49F9-94CF-A42F93157D5F}" ShortID="139187021" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{36688F42-6403-49F9-94CF-A42F93157D5F}" ShortID="139187021">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -433,7 +433,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{95EBB50E-9D3A-4A4C-92D1-8691CD611275}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{45B5ABC5-8182-44A5-8D49-19F04EFD6E26}" ShortID="428199750" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{45B5ABC5-8182-44A5-8D49-19F04EFD6E26}" ShortID="428199750">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -457,7 +457,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{320F2C79-EB61-48E5-A468-8CFFA2E06905}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{70C61A9A-6D10-489D-9F14-A31CEAF4F327}" ShortID="156893077" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{70C61A9A-6D10-489D-9F14-A31CEAF4F327}" ShortID="156893077">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -481,7 +481,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{501E9F68-6F7A-4D35-B245-D955C9818E57}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{43709D8E-EEE2-4924-8CCB-7E9D6AEF36D7}" ShortID="868527776" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{43709D8E-EEE2-4924-8CCB-7E9D6AEF36D7}" ShortID="868527776">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -506,7 +506,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{7E4DC989-03F1-41FF-84B1-A7F6F14BF05C}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{BF04F97F-6BF3-4DD4-A7B7-6957FF92B90A}" ShortID="382168136" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{BF04F97F-6BF3-4DD4-A7B7-6957FF92B90A}" ShortID="382168136">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -531,7 +531,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{6C35ABC5-2D15-408C-8536-978210F2EE0F}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{7CCF6A84-6C61-4A50-A40E-CF7217860A42}" ShortID="994085526" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{7CCF6A84-6C61-4A50-A40E-CF7217860A42}" ShortID="994085526">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -556,7 +556,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{AAD58D71-A74F-45AB-A4FE-6445B0086284}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{7EC7BF6E-C547-476B-9497-3BE9B93DAB8E}" ShortID="715466632" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{7EC7BF6E-C547-476B-9497-3BE9B93DAB8E}" ShortID="715466632">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -579,7 +579,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{8A0D3357-0456-4620-BB7F-7070502FB77C}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="Robot_Movement_END_L" ID="{FD8C4A2F-B70B-4B68-8C99-2BC57F45733B}" ShortID="197414519" Type="SoundFX">
+														<Sound Name="Robot_Movement_END_L" ID="{FD8C4A2F-B70B-4B68-8C99-2BC57F45733B}" ShortID="197414519">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -603,7 +603,7 @@
 																<ActiveSource Name="Robot_Movement_END_L" ID="{05C91AB4-D682-4F83-9C6A-1A2C229AF2D7}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="Robot_Movement_START_L" ID="{947BD706-ED87-4D46-B164-1A9021C68947}" ShortID="771432348" Type="SoundFX">
+														<Sound Name="Robot_Movement_START_L" ID="{947BD706-ED87-4D46-B164-1A9021C68947}" ShortID="771432348">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -657,7 +657,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Robot_Movement_TRACKS_L" ID="{2A74BD2E-4C44-49A5-A75B-5E129AB90513}" ShortID="805559582" Type="SoundFX">
+												<Sound Name="Robot_Movement_TRACKS_L" ID="{2A74BD2E-4C44-49A5-A75B-5E129AB90513}" ShortID="805559582">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="Pitch" Type="int32">
@@ -724,7 +724,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{CB2A22D5-98FB-495C-9D28-8AA424EB1CF4}" ShortID="189951792" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{CB2A22D5-98FB-495C-9D28-8AA424EB1CF4}" ShortID="189951792">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -752,7 +752,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{4CE22D90-06A6-44B7-92BB-19E5AA308A91}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{A2AAD02D-9CBF-4085-81AC-6614099B521F}" ShortID="933248255" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{A2AAD02D-9CBF-4085-81AC-6614099B521F}" ShortID="933248255">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -779,7 +779,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{6E615BB1-1635-4AF1-BDD9-B4A056100BB0}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{22D9DD99-D42B-4CCF-A240-C0644CF28E91}" ShortID="617894318" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{22D9DD99-D42B-4CCF-A240-C0644CF28E91}" ShortID="617894318">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -806,7 +806,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{1D281904-F643-4F0E-853D-CD6CBC9C3791}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{8A78F3CC-0E81-4E50-A47F-3F434AD4D20C}" ShortID="179119567" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{8A78F3CC-0E81-4E50-A47F-3F434AD4D20C}" ShortID="179119567">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -834,7 +834,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{D789AFCC-0FE4-479C-86A1-116747CFD301}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{E151847A-FA42-4345-9262-E080CA23B3F4}" ShortID="894865973" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{E151847A-FA42-4345-9262-E080CA23B3F4}" ShortID="894865973">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -862,7 +862,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{B67995BD-3627-4338-B3FB-A1846AC67E4A}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{50B0A2BB-A2C4-4133-94E9-C961C8DE422A}" ShortID="576296293" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{50B0A2BB-A2C4-4133-94E9-C961C8DE422A}" ShortID="576296293">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -890,7 +890,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{2CB27582-0D03-4167-907E-BD0084E0AB97}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{03FD5F58-B899-4FE5-A2B6-F830B705BEDE}" ShortID="901652927" Type="SoundFX">
+														<Sound Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{03FD5F58-B899-4FE5-A2B6-F830B705BEDE}" ShortID="901652927">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -916,7 +916,7 @@
 																<ActiveSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{B3E7C338-C69D-4FFC-9937-55AD335BCC75}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="Robot_Movement_END_L" ID="{DE0DC8F8-BF1F-4909-B1A8-9D8B1FABCF96}" ShortID="249195347" Type="SoundFX">
+														<Sound Name="Robot_Movement_END_L" ID="{DE0DC8F8-BF1F-4909-B1A8-9D8B1FABCF96}" ShortID="249195347">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -943,7 +943,7 @@
 																<ActiveSource Name="Robot_Movement_END_L" ID="{7D1419AA-B103-46CA-B609-C342E34F163A}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="Robot_Movement_START_L" ID="{FDBABC8C-5057-4354-8D6A-D62BA47206DD}" ShortID="453456620" Type="SoundFX">
+														<Sound Name="Robot_Movement_START_L" ID="{FDBABC8C-5057-4354-8D6A-D62BA47206DD}" ShortID="453456620">
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -1046,7 +1046,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" ShortID="704418868" Type="SoundFX">
+										<Sound Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" ShortID="704418868">
 											<PropertyList>
 												<Property Name="EnablePanner" Type="bool" Value="True"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -1107,7 +1107,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="SFX_WATER_AB" ID="{3EBBF45E-8041-4A8F-979D-2A5529CED4BC}" ShortID="1068557432" Type="SoundFX">
+												<Sound Name="SFX_WATER_AB" ID="{3EBBF45E-8041-4A8F-979D-2A5529CED4BC}" ShortID="1068557432">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1133,7 +1133,7 @@
 														<ActiveSource Name="SFX_WATER_AB" ID="{9EE21DC3-4635-403B-9DDF-90F75CBAB86E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="SFX_WATER_XY" ID="{8031C846-E456-4199-B57A-170B010E13F1}" ShortID="1071602648" Type="SoundFX">
+												<Sound Name="SFX_WATER_XY" ID="{8031C846-E456-4199-B57A-170B010E13F1}" ShortID="1071602648">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1164,7 +1164,7 @@
 												<Position Name="" ID="{91A7D696-AC8E-4EBC-A1E9-ABE3DF7D59E3}"/>
 											</PositioningInfo>
 										</RandomSequenceContainer>
-										<Sound Name="Waterfall" ID="{CB150BB3-1F06-4F68-AA44-B9CAB29B7333}" ShortID="714249857" Type="SoundFX">
+										<Sound Name="Waterfall" ID="{CB150BB3-1F06-4F68-AA44-B9CAB29B7333}" ShortID="714249857">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -1270,7 +1270,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="ANIMALS_BIRD_TYPE_01_01" ID="{35285D75-82B5-4551-8E2E-CAE2F4EBE300}" ShortID="448370753" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_01_01" ID="{35285D75-82B5-4551-8E2E-CAE2F4EBE300}" ShortID="448370753">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1296,7 +1296,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_01_01" ID="{8F517BEA-A24A-4038-8F32-6DCB6DB6C2BC}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_01_02" ID="{D3210AF1-D9DD-4E43-BBBA-CD78DD020876}" ShortID="598996938" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_01_02" ID="{D3210AF1-D9DD-4E43-BBBA-CD78DD020876}" ShortID="598996938">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1333,7 +1333,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_01_02" ID="{A063F740-3075-4894-81B9-F6DB9EE7C185}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{C114B56E-7B56-4045-B329-652DCB803C67}" ShortID="529106373" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{C114B56E-7B56-4045-B329-652DCB803C67}" ShortID="529106373">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -1361,7 +1361,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{FDF682D7-C5D6-4AAB-93DC-41EF0D9B722F}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_02" ID="{209F4CF8-67CB-4B42-9DCE-0EFC236CE6E3}" ShortID="772468427" Type="SoundFX">
+												<Sound Name="Silence_02" ID="{209F4CF8-67CB-4B42-9DCE-0EFC236CE6E3}" ShortID="772468427">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -1390,7 +1390,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{849ACB4A-B072-467B-B396-960A3DFFF6A0}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_03" ID="{EDA044B1-A3F5-4BDE-A133-A9EB8D498CFA}" ShortID="368102534" Type="SoundFX">
+												<Sound Name="Silence_03" ID="{EDA044B1-A3F5-4BDE-A133-A9EB8D498CFA}" ShortID="368102534">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -1419,7 +1419,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{9143A3F3-B90B-4010-9A07-43CC2AE11E39}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_01_03" ID="{F02A1CCD-E686-4930-963A-C6254DA6804F}" ShortID="246157358" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_01_03" ID="{F02A1CCD-E686-4930-963A-C6254DA6804F}" ShortID="246157358">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1449,7 +1449,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_01_01" ID="{9EF3B1B6-2575-4084-862A-28449B762919}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_01_04" ID="{20461C1F-6A59-4F57-A6D5-122B577DFB35}" ShortID="725063079" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_01_04" ID="{20461C1F-6A59-4F57-A6D5-122B577DFB35}" ShortID="725063079">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1728,7 +1728,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Silence_01" ID="{D0A77D2C-22C3-4662-BD95-56B36F5F33DE}" ShortID="611339988" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{D0A77D2C-22C3-4662-BD95-56B36F5F33DE}" ShortID="611339988">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -1756,7 +1756,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{3A312FD2-4E08-4F4E-9A53-27980C4DDEF6}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_02" ID="{FE7AAC8B-0025-4655-BB55-55663315D858}" ShortID="472095936" Type="SoundFX">
+												<Sound Name="Silence_02" ID="{FE7AAC8B-0025-4655-BB55-55663315D858}" ShortID="472095936">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -1777,7 +1777,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{29776133-BF65-4BAF-A25E-BF7C5DF1478B}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_03" ID="{082257A1-7C86-417B-AE76-99B50097C788}" ShortID="968912878" Type="SoundFX">
+												<Sound Name="Silence_03" ID="{082257A1-7C86-417B-AE76-99B50097C788}" ShortID="968912878">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -1942,7 +1942,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_01" ID="{ADF40FAE-4412-4C9F-A9C3-C63C1EE380E8}" ShortID="45210508" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_03_01" ID="{ADF40FAE-4412-4C9F-A9C3-C63C1EE380E8}" ShortID="45210508">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1968,7 +1968,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_01" ID="{E7665058-7FB3-4D9A-8715-6DE2EF77CF35}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_02" ID="{260EB7E9-CBB5-4541-A80A-A1E8361D33F2}" ShortID="501558237" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_03_02" ID="{260EB7E9-CBB5-4541-A80A-A1E8361D33F2}" ShortID="501558237">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -1994,7 +1994,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_02" ID="{0CBE38E1-C81A-4131-8C16-80838E8C6AEB}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_03" ID="{0B4B849F-2BB2-490A-943B-AB370174B42A}" ShortID="889820217" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_03_03" ID="{0B4B849F-2BB2-490A-943B-AB370174B42A}" ShortID="889820217">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2035,7 +2035,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_03" ID="{06F0DEEA-A1A1-4F22-A3EA-6710D601D86C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{114B1961-48DB-42A2-863E-4D52F0B87C8C}" ShortID="225308299" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{114B1961-48DB-42A2-863E-4D52F0B87C8C}" ShortID="225308299">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2063,7 +2063,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{58481641-6F55-4D21-A19B-34AF752B3587}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_02" ID="{E3F57CDB-FE7B-4AB2-83A7-E51475EFFE62}" ShortID="939453971" Type="SoundFX">
+												<Sound Name="Silence_02" ID="{E3F57CDB-FE7B-4AB2-83A7-E51475EFFE62}" ShortID="939453971">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2092,7 +2092,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{019A8137-806B-495F-A8C9-3C05281D9C73}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_03" ID="{78319034-9F25-45A3-B854-63B5EB9093F2}" ShortID="700176933" Type="SoundFX">
+												<Sound Name="Silence_03" ID="{78319034-9F25-45A3-B854-63B5EB9093F2}" ShortID="700176933">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2121,7 +2121,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{8EA5879D-569F-4BA5-B2B8-F3604B98A4B4}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_04" ID="{C2DD2114-A549-4254-971C-91FDE1A4E09A}" ShortID="698799127" Type="SoundFX">
+												<Sound Name="ANIMALS_BIRD_TYPE_03_04" ID="{C2DD2114-A549-4254-971C-91FDE1A4E09A}" ShortID="698799127">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2339,7 +2339,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="WILDLIFE_INSECT_TYPE_01" ID="{732336B9-B913-4DEB-BE6F-55B21A6C7E52}" ShortID="781111288" Type="SoundFX">
+												<Sound Name="WILDLIFE_INSECT_TYPE_01" ID="{732336B9-B913-4DEB-BE6F-55B21A6C7E52}" ShortID="781111288">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2358,7 +2358,7 @@
 														<ActiveSource Name="WILDLIFE_INSECT_TYPE_01" ID="{05436E9E-8754-4C66-B120-A02EEBE5E252}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="WILDLIFE_INSECT_TYPE_02" ID="{708B623C-042B-437C-BE48-B927E2B0934E}" ShortID="671890586" Type="SoundFX">
+												<Sound Name="WILDLIFE_INSECT_TYPE_02" ID="{708B623C-042B-437C-BE48-B927E2B0934E}" ShortID="671890586">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2377,7 +2377,7 @@
 														<ActiveSource Name="WILDLIFE_INSECT_TYPE_02" ID="{CD684E0E-4FD0-4E6B-967D-A0F9D3E8EEE8}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{6298B362-63B6-4B99-9A3A-AEA1BE861689}" ShortID="739328390" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{6298B362-63B6-4B99-9A3A-AEA1BE861689}" ShortID="739328390">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2402,7 +2402,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{E6BE1972-84DD-47AA-9D7E-AD6AEEF9D17D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_02" ID="{5A1BCE36-3C0B-4547-83EC-237D160B1E3F}" ShortID="712382977" Type="SoundFX">
+												<Sound Name="Silence_02" ID="{5A1BCE36-3C0B-4547-83EC-237D160B1E3F}" ShortID="712382977">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2427,7 +2427,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{CBBC5330-F5A7-40BD-A634-F839CDD3D60B}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_03" ID="{B907675F-2D77-446F-9059-137DF9E644D7}" ShortID="780630624" Type="SoundFX">
+												<Sound Name="Silence_03" ID="{B907675F-2D77-446F-9059-137DF9E644D7}" ShortID="780630624">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2454,7 +2454,7 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
-										<Sound Name="Forest_Ambient" ID="{10D43690-F1EE-485C-9947-64B9B50D4CA4}" ShortID="982702128" Type="SoundFX">
+										<Sound Name="Forest_Ambient" ID="{10D43690-F1EE-485C-9947-64B9B50D4CA4}" ShortID="982702128">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
@@ -2642,7 +2642,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{41AB4BE2-BD04-4E7D-A9B7-FC9B577BFF0F}" ShortID="1067922346" Type="SoundFX">
+												<Sound Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{41AB4BE2-BD04-4E7D-A9B7-FC9B577BFF0F}" ShortID="1067922346">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -2668,7 +2668,7 @@
 														<ActiveSource Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{74ADBD6E-46E7-468A-BB42-36F092608BE2}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence" ID="{857DDAA0-A99F-461A-8EFD-39865DD2E066}" ShortID="817554429" Type="SoundFX">
+												<Sound Name="Silence" ID="{857DDAA0-A99F-461A-8EFD-39865DD2E066}" ShortID="817554429">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2697,7 +2697,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{05D0CC7D-7AAB-451B-80A6-7FEAB1477616}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{7236E9B9-E1DF-45CE-9C7B-2BF158C58EA1}" ShortID="1010104074" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{7236E9B9-E1DF-45CE-9C7B-2BF158C58EA1}" ShortID="1010104074">
 													<PropertyList>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
@@ -2726,7 +2726,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{D5F4BA39-6FCC-432E-8940-40309BEB6871}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_02" ID="{5E55844A-F3A1-4DB9-BE3A-4E9132E08A3E}" ShortID="153156979" Type="SoundFX">
+												<Sound Name="Silence_02" ID="{5E55844A-F3A1-4DB9-BE3A-4E9132E08A3E}" ShortID="153156979">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2748,7 +2748,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{7D48EB88-6EAF-4C1C-AC5E-0C9D823B535D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="SFX_Blip_Sweep_01" ID="{E8FAF91A-21F4-4B3C-A156-D221F59E0A70}" ShortID="833258003" Type="SoundFX">
+												<Sound Name="SFX_Blip_Sweep_01" ID="{E8FAF91A-21F4-4B3C-A156-D221F59E0A70}" ShortID="833258003">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2782,7 +2782,7 @@
 														<ActiveSource Name="SFX_Blip_Sweep_01" ID="{B9310E35-C2A7-45F9-B2E1-ADFCE18EB86A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="SFX_Blip_Sweep_02" ID="{D6E84A56-00A5-443F-B0BA-7C9651D1180C}" ShortID="3095322" Type="SoundFX">
+												<Sound Name="SFX_Blip_Sweep_02" ID="{D6E84A56-00A5-443F-B0BA-7C9651D1180C}" ShortID="3095322">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2816,7 +2816,7 @@
 														<ActiveSource Name="SFX_Blip_Sweep_02" ID="{9C4D9229-6047-4EB2-A023-A15B6427278B}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="SFX_Blip_Sweep_08" ID="{8B95354E-E5F1-4CBF-A05E-25AC95EBAAD9}" ShortID="30223923" Type="SoundFX">
+												<Sound Name="SFX_Blip_Sweep_08" ID="{8B95354E-E5F1-4CBF-A05E-25AC95EBAAD9}" ShortID="30223923">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2871,7 +2871,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="220181__gameaudio__computer-beep-1" ID="{5F50C4A0-9B24-41E6-AE59-43C3D459EE2B}" ShortID="392895659" Type="SoundFX">
+												<Sound Name="220181__gameaudio__computer-beep-1" ID="{5F50C4A0-9B24-41E6-AE59-43C3D459EE2B}" ShortID="392895659">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -2910,7 +2910,7 @@
 														<ActiveSource Name="220181__gameaudio__computer-beep-1" ID="{A4DEB320-B2FC-402C-B1DA-53ADABA9E1EA}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence" ID="{BD209BDE-02C2-43D3-8A3F-7277488BDBBF}" ShortID="296570686" Type="SoundFX">
+												<Sound Name="Silence" ID="{BD209BDE-02C2-43D3-8A3F-7277488BDBBF}" ShortID="296570686">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2932,7 +2932,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{05DB6D73-C4BA-441E-9EE3-1F5FE45C7C50}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{8929BDF2-9E46-49F4-BA8F-5B57714D5DB1}" ShortID="352279707" Type="SoundFX">
+												<Sound Name="Silence_01" ID="{8929BDF2-9E46-49F4-BA8F-5B57714D5DB1}" ShortID="352279707">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -2954,7 +2954,7 @@
 														<ActiveSource Name="Wwise Silence" ID="{E4CD0F64-C226-47B0-856B-D122DD31E861}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="sci fi_digital_beep 1" ID="{85A0D00D-1D8D-4D64-BF0B-9ED48DD983A1}" ShortID="1059924945" Type="SoundFX">
+												<Sound Name="sci fi_digital_beep 1" ID="{85A0D00D-1D8D-4D64-BF0B-9ED48DD983A1}" ShortID="1059924945">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -2980,7 +2980,7 @@
 														<ActiveSource Name="sci fi_digital_beep 1" ID="{5FE2D03F-ED0A-4AE2-86CE-0972F3D9C5A1}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="sci fi_digital_beep 2" ID="{2950ACA7-CBFA-49F8-B8F9-D0115ED7B32A}" ShortID="770556375" Type="SoundFX">
+												<Sound Name="sci fi_digital_beep 2" ID="{2950ACA7-CBFA-49F8-B8F9-D0115ED7B32A}" ShortID="770556375">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -3030,7 +3030,7 @@
 														<ActiveSource Name="sci fi_digital_beep 2" ID="{7A6B8620-4EE0-430B-A9B0-3B42B7F0AF36}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="sci fi_digital_beep 3" ID="{5D3A9086-190B-41BA-9AAD-BBB0D997B23A}" ShortID="852456477" Type="SoundFX">
+												<Sound Name="sci fi_digital_beep 3" ID="{5D3A9086-190B-41BA-9AAD-BBB0D997B23A}" ShortID="852456477">
 													<PropertyList>
 														<Property Name="Pitch" Type="int32">
 															<ModifierList>
@@ -3111,7 +3111,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Wind" ID="{6992A298-1EA1-4B29-9C43-B8AB2476AED3}" ShortID="434479117" Type="SoundFX">
+										<Sound Name="Wind" ID="{6992A298-1EA1-4B29-9C43-B8AB2476AED3}" ShortID="434479117">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
@@ -3133,7 +3133,7 @@
 												<ActiveSource Name="Ambience_Wind_layer_02" ID="{8FB2F5E2-5371-47C4-AA5E-BBA10B4FAB5D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="BG_BLIZZARD_03" ID="{182AD297-4FBB-4719-BB99-5B8C4A077BF6}" ShortID="671635235" Type="SoundFX">
+										<Sound Name="BG_BLIZZARD_03" ID="{182AD297-4FBB-4719-BB99-5B8C4A077BF6}" ShortID="671635235">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
@@ -3165,7 +3165,7 @@
 												<ActiveSource Name="BG_OUTDOORS_BLIZZARD_03" ID="{26AD8DAF-591D-4764-8E0B-4393EA13EFDB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="BG_BLIZZARD_02" ID="{971E71F6-8675-40E1-B237-4ABF9541690B}" ShortID="845557991" Type="SoundFX">
+										<Sound Name="BG_BLIZZARD_02" ID="{971E71F6-8675-40E1-B237-4ABF9541690B}" ShortID="845557991">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
@@ -3250,7 +3250,7 @@
 										</BlendTrack>
 									</BlendTrackList>
 								</BlendContainer>
-								<Sound Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" ShortID="1046198277" Type="SoundFX">
+								<Sound Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" ShortID="1046198277">
 									<PropertyList>
 										<Property Name="EnablePanner" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -3282,7 +3282,7 @@
 										<ActiveSource Name="SFX_PowerBattery" ID="{F377A666-EBCE-48F7-A700-09DF5FED6ABA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" ShortID="34912394" Type="SoundFX">
+								<Sound Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" ShortID="34912394">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -3333,7 +3333,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Teleport" ID="{CB05C855-AA5B-4769-8206-19CB6F881C16}" ShortID="193313814" Type="SoundFX">
+								<Sound Name="Teleport" ID="{CB05C855-AA5B-4769-8206-19CB6F881C16}" ShortID="193313814">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -3376,7 +3376,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Item_Positive" ID="{68316CC4-C929-4149-828D-557C441069AC}" ShortID="884144215" Type="SoundFX">
+										<Sound Name="Item_Positive" ID="{68316CC4-C929-4149-828D-557C441069AC}" ShortID="884144215">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3402,7 +3402,7 @@
 												<ActiveSource Name="SFX_UI_VICTORY_2" ID="{1D67E5C9-012E-41F0-8068-B3F6121A7917}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Item_Negative" ID="{E3709F92-DA38-4DBA-BB34-1A2B666402FE}" ShortID="524190122" Type="SoundFX">
+										<Sound Name="Item_Negative" ID="{E3709F92-DA38-4DBA-BB34-1A2B666402FE}" ShortID="524190122">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3430,7 +3430,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<Sound Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" ShortID="283089568" Type="SoundFX">
+								<Sound Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" ShortID="283089568">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3456,7 +3456,7 @@
 										<ActiveSource Name="SFX_SCIFI_BEEP_NO_ACCESS" ID="{7DE9AEC2-7E83-4A35-AD68-9C96B8D7AFFF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Broken_Room" ID="{199043B1-BC4D-494B-B191-9697208B45D3}" ShortID="268002240" Type="SoundFX">
+								<Sound Name="Broken_Room" ID="{199043B1-BC4D-494B-B191-9697208B45D3}" ShortID="268002240">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3482,7 +3482,7 @@
 										<ActiveSource Name="SFX_ROOM_ERROR_01" ID="{BA4167B8-F255-4F5B-A24F-B662C8B6E321}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="SFX_DOOR-HYDRAULIC-Up" ID="{E256C570-C4D1-477A-A1CF-93A9C1A20624}" ShortID="413482424" Type="SoundFX">
+								<Sound Name="SFX_DOOR-HYDRAULIC-Up" ID="{E256C570-C4D1-477A-A1CF-93A9C1A20624}" ShortID="413482424">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3516,7 +3516,7 @@
 										<ActiveSource Name="SFX_DOOR-HYDRAULIC" ID="{32668751-6CEA-4179-9CEE-287B321BE2C8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="SFX_DOOR-HYDRAULIC-Down" ID="{162ADE31-A9E2-4788-BFDB-9AF8B8F1D1F6}" ShortID="509829341" Type="SoundFX">
+								<Sound Name="SFX_DOOR-HYDRAULIC-Down" ID="{162ADE31-A9E2-4788-BFDB-9AF8B8F1D1F6}" ShortID="509829341">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3550,7 +3550,7 @@
 										<ActiveSource Name="SFX_DOOR-HYDRAULIC" ID="{877EDBE6-9D89-488C-B44D-E1137A23D728}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="All_Rooms_Fixed" ID="{ABAFFD2B-1844-488A-8F0C-E67DA849E36C}" ShortID="540567476" Type="SoundFX">
+								<Sound Name="All_Rooms_Fixed" ID="{ABAFFD2B-1844-488A-8F0C-E67DA849E36C}" ShortID="540567476">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3582,7 +3582,7 @@
 										<ActiveSource Name="321215__hybrid-v__sci-fi-weapons-deploy" ID="{D09CF9D5-3C61-487C-89BA-A09F4153BE34}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Sonar_Beamer" ID="{C0D06441-A434-4EBE-A5DB-1A2C3DD36F5A}" ShortID="96347848" Type="SoundFX">
+								<Sound Name="Sonar_Beamer" ID="{C0D06441-A434-4EBE-A5DB-1A2C3DD36F5A}" ShortID="96347848">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3608,7 +3608,7 @@
 										<ActiveSource Name="SFX_SCI-FI_BEAM_BLAST_W-SONAR" ID="{7E14F932-5245-4E30-A178-6DEBA79CDF25}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" ShortID="131185130" Type="SoundFX">
+								<Sound Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" ShortID="131185130">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3650,7 +3650,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Menu_Button_Select" ID="{9CFAADE9-73AC-4F65-AFF0-DD76B791B36D}" ShortID="915303609" Type="SoundFX">
+								<Sound Name="Menu_Button_Select" ID="{9CFAADE9-73AC-4F65-AFF0-DD76B791B36D}" ShortID="915303609">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3688,7 +3688,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="PutDown_Item" ID="{467AEA69-A90E-4C89-AD78-92F869CEF656}" ShortID="821409500" Type="SoundFX">
+								<Sound Name="PutDown_Item" ID="{467AEA69-A90E-4C89-AD78-92F869CEF656}" ShortID="821409500">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3718,7 +3718,7 @@
 										<ActiveSource Name="SFX_SCI-FI_Something_01_L" ID="{CB0169F6-364C-4461-A4DC-6D3E6272045F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="PopUp_Item" ID="{FC2F8D42-B54B-4BA9-8229-5A3000EF0899}" ShortID="222721174" Type="SoundFX">
+								<Sound Name="PopUp_Item" ID="{FC2F8D42-B54B-4BA9-8229-5A3000EF0899}" ShortID="222721174">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3744,7 +3744,7 @@
 										<ActiveSource Name="SFX_SCI-FI_ITEM_PopUp" ID="{B35489CB-65D2-4A67-9ACF-ACD5A1DB4968}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="PopDown_Item" ID="{08AA810D-4DC9-467A-9838-6050E9BB96CE}" ShortID="535551291" Type="SoundFX">
+								<Sound Name="PopDown_Item" ID="{08AA810D-4DC9-467A-9838-6050E9BB96CE}" ShortID="535551291">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>

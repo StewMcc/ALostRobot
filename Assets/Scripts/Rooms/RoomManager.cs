@@ -20,7 +20,7 @@ public class RoomManager : MonoBehaviour {
 
 	private int maxAttempts_ =6;
 
-	
+
 
 	private void Start() {
 		rooms_ = GetComponentsInChildren<Room>();
@@ -72,7 +72,7 @@ public class RoomManager : MonoBehaviour {
 			}
 			BreakRoom(roomToBreak);
 		}
-		
+
 	}
 
 	/// <summary>

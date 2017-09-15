@@ -25,7 +25,7 @@ public class Room : MonoBehaviour {
 
 	[SerializeField]
 	string brokenAmbient = "";
-	
+
 	[Tooltip("Object that contains all meshes we wish to show error and success textures on.")]
 	[SerializeField]
 	private GameObject roomMeshParent =null;
@@ -33,7 +33,7 @@ public class Room : MonoBehaviour {
 	private RoomManager roomManager_ = null;
 
 	private int roomId_ = -1;
-	private Renderer[] roomMeshParentRenderers_ = null;	
+	private Renderer[] roomMeshParentRenderers_ = null;
 	private float successDuration_ = 2.0f;
 
 	public bool IsFixed() {
@@ -53,7 +53,7 @@ public class Room : MonoBehaviour {
 		roomId_ = id;
 
 		// Get all the renderers connected to this room and change their textures.
-		
+
 		if (roomMeshParent) {
 			roomMeshParentRenderers_ = roomMeshParent.GetComponentsInChildren<Renderer>();
 		}
@@ -61,12 +61,12 @@ public class Room : MonoBehaviour {
 			errorIcon.SetActive(false);
 			ChangeAllRenderersTextures(roomManager_.DefaultTexture());
 			if (fixedAmbient != "") {
-				SoundManager.PlayEvent (fixedAmbient, gameObject);
+				SoundManager.PlayEvent(fixedAmbient, gameObject);
 			}
 		}
 		else {
 			if (brokenAmbient != "") {
-				SoundManager.PlayEvent (brokenAmbient, gameObject);
+				SoundManager.PlayEvent(brokenAmbient, gameObject);
 			}
 			errorIcon.SetActive(true);
 			ChangeAllRenderersTextures(roomManager_.ErrorTexture());
@@ -77,10 +77,10 @@ public class Room : MonoBehaviour {
 		if (item.CheckType() == correctItem) {
 			SoundManager.PlayEvent("Item_Port_Positive", gameObject);
 			if (fixedAmbient != "") {
-				SoundManager.PlayEvent (fixedAmbient, gameObject);
+				SoundManager.PlayEvent(fixedAmbient, gameObject);
 			}
 			if (brokenAmbient != "") {
-				SoundManager.StopEvent (brokenAmbient, 100, gameObject);
+				SoundManager.StopEvent(brokenAmbient, 100, gameObject);
 			}
 			Fix();
 		}
@@ -95,10 +95,10 @@ public class Room : MonoBehaviour {
 			isFixed = false;
 			SoundManager.PlayEvent("Broken_Room", gameObject);
 			if (fixedAmbient != "") {
-				SoundManager.StopEvent (fixedAmbient, 100, gameObject);
+				SoundManager.StopEvent(fixedAmbient, 100, gameObject);
 			}
 			if (brokenAmbient != "") {
-				SoundManager.PlayEvent (brokenAmbient, gameObject);
+				SoundManager.PlayEvent(brokenAmbient, gameObject);
 			}
 			errorIcon.SetActive(true);
 
@@ -137,7 +137,7 @@ public class Room : MonoBehaviour {
 	}
 
 	private void ChangeAllRenderersTextures(Texture newTexture) {
-		
+
 		if (roomMeshParent) {
 			foreach (Renderer rend in roomMeshParentRenderers_) {
 				rend.material.mainTexture = newTexture;

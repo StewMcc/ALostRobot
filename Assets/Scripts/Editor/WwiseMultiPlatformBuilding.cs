@@ -14,12 +14,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 	/// </summary>
 	private void OnGUI() {
 		titleContent.text = "Wwise Soundbank Selection";
-
-
-		GUILayout.Label("InvalidOperationException: Operation is not valid due to the current state of the object...");
-
-		GUILayout.Label("Error caused but can be ignored. Unity implementation of mono Error.");
-
+		
 		if (GUILayout.Button("Add Default Sound Banks")) {
 			AddDefaultSoundBanks();
 		}
@@ -207,7 +202,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 #if UNITY_5
 		else if (unityPlatormString == BuildTarget.iOS.ToString())
 #else
-		else if (unityPlatormString == BuildTarget.iPhone.ToString())
+		else if (unityPlatormString == BuildTarget.iOS.ToString())
 #endif
 			return "iOS";
 #if !UNITY_5_5_OR_NEWER
@@ -239,7 +234,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 #if UNITY_5
 		else if (unityPlatormString == BuildTarget.iOS.ToString())
 #else
-		else if (unityPlatormString == BuildTarget.iPhone.ToString())
+		else if (unityPlatormString == BuildTarget.iOS.ToString())
 #endif
 			return "ipa";
 

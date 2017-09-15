@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" SchemaVersion="80">
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" PersistMode="Standalone">
 			<ChildrenList>
@@ -9,80 +9,93 @@
 							<ChildrenList>
 								<Event Name="Player_Move_END" ID="{26484614-7E7A-43AD-9BE8-71237EFD39B1}">
 									<ChildrenList>
-										<Action Name="Play" ID="{0152CE4E-D196-4C4E-80A6-7B5A646672FA}" ShortID="196409628" Type="Play" Scope="One" Global="false">
+										<Action Name="" ID="{0152CE4E-D196-4C4E-80A6-7B5A646672FA}" ShortID="196409628">
 											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
 												<Property Name="FadeCurve" Type="int16" Value="3"/>
 											</PropertyList>
-											<ElementList>
-												<Element ID="{D6CD2587-82DC-49BE-B12C-C18CA8BA312D}" Global="false">
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="Robot_IN-OUT_Movement" ID="{9E04F7F5-AEC3-493E-8A49-6B553EBE9614}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
-										<Action Name="Stop" ID="{27F8EFE9-4D86-4BD0-8AB6-E62BECAC761D}" ShortID="66558207" Type="Stop" Scope="One" Global="false">
+										<Action Name="" ID="{27F8EFE9-4D86-4BD0-8AB6-E62BECAC761D}" ShortID="66558207">
 											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
 												<Property Name="FadeCurve" Type="int16" Value="5"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.25"/>
 											</PropertyList>
-											<ElementList>
-												<Element ID="{C92BB3D5-06A0-45BA-815C-CCE41B7AAA79}" Global="false">
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="Robot_Movement_TRACKS_L" ID="{FC35CE93-1135-49F2-A40C-619EF3FBD496}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
-										<Action Name="Stop" ID="{969499FA-D724-409C-A1E8-BF9218EBCD3F}" ShortID="829188510" Type="Stop" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{F1DF029C-5E1F-4E0C-ADD9-F54EA9B47FED}" Global="false">
+										<Action Name="" ID="{969499FA-D724-409C-A1E8-BF9218EBCD3F}" ShortID="829188510">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="TracksLayer_Rubble" ID="{406F8920-00DB-4D87-9158-8FEABE13D34C}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Player_Move_START" ID="{16B7FC00-8456-4C76-936A-7AD6C93D8969}">
 									<ChildrenList>
-										<Action Name="Play" ID="{1ABEA88D-8681-48C7-80A5-68B975AEA4BC}" ShortID="818734884" Type="Play" Scope="One" Global="false">
+										<Action Name="" ID="{1ABEA88D-8681-48C7-80A5-68B975AEA4BC}" ShortID="818734884">
 											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
 												<Property Name="FadeCurve" Type="int16" Value="1"/>
 											</PropertyList>
-											<ElementList>
-												<Element ID="{152D1792-630C-47E9-AAD5-E56C391F4C62}" Global="false">
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="Robot_IN-OUT_Movement" ID="{9E04F7F5-AEC3-493E-8A49-6B553EBE9614}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
-										<Action Name="Play" ID="{2161D298-AC60-46DE-B712-B7463BF1BED2}" ShortID="460517271" Type="Play" Scope="One" Global="false">
+										<Action Name="" ID="{2161D298-AC60-46DE-B712-B7463BF1BED2}" ShortID="460517271">
 											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
 												<Property Name="FadeCurve" Type="int16" Value="3"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 											</PropertyList>
-											<ElementList>
-												<Element ID="{2DED11E1-3D69-4C3A-8F91-A0A22D47CAC6}" Global="false">
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="Robot_Movement_TRACKS_L" ID="{FC35CE93-1135-49F2-A40C-619EF3FBD496}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Item_PickUp" ID="{979DF678-7111-4D1C-9F8C-811A36F33EF4}">
 									<ChildrenList>
-										<Action Name="Play" ID="{AE79BCAE-E013-4894-97DC-07C525C09D45}" ShortID="566153070" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{33989C45-F214-412B-B75E-2EBCEA9C514C}" Global="false">
+										<Action Name="" ID="{AE79BCAE-E013-4894-97DC-07C525C09D45}" ShortID="566153070">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="PickUp_Item_Robot_Lingo" ID="{EB8AD9A3-8273-4602-B326-BF574F4A2BDB}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Item_PutDown" ID="{0B080191-8C5E-4565-8A8B-CE56C8F4D57E}">
 									<ChildrenList>
-										<Action Name="Play" ID="{40E4E978-9130-40E5-9390-584434A5AE62}" ShortID="843214082" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{BDDB02F0-167F-4BCB-B22A-8D8F0BAD3D69}" Global="false">
+										<Action Name="" ID="{40E4E978-9130-40E5-9390-584434A5AE62}" ShortID="843214082">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
 													<ObjectRef Name="PutDown_Item" ID="{467AEA69-A90E-4C89-AD78-92F869CEF656}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-												</Element>
-											</ElementList>
+												</Reference>
+											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
@@ -90,89 +103,109 @@
 						</Folder>
 						<Event Name="Sonar_Beam" ID="{E625C589-3ECD-4261-B8A2-115F58EC292C}">
 							<ChildrenList>
-								<Action Name="Play" ID="{3AF378EE-F8A1-4663-B2D0-076E8C265379}" ShortID="658410610" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{92068B74-0CB0-4C3F-A132-041705E77B5E}" Global="false">
-											<ObjectRef Name="All_Rooms_Fixed" ID="{ABAFFD2B-1844-488A-8F0C-E67DA849E36C}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{4E529C49-0FBB-43BC-9EB4-A691FBEC574C}" ShortID="814385617" Type="Play" Scope="One" Global="false">
+								<Action Name="" ID="{3AF378EE-F8A1-4663-B2D0-076E8C265379}" ShortID="658410610">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="All_Rooms_Fixed" ID="{ABAFFD2B-1844-488A-8F0C-E67DA849E36C}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4E529C49-0FBB-43BC-9EB4-A691FBEC574C}" ShortID="814385617">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="Delay" Type="Real64" Value="1"/>
 										<Property Name="FadeCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{B58B1110-D59C-40ED-93B0-EDAAC4EB3FB6}" Global="false">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Sonar_Beamer" ID="{C0D06441-A434-4EBE-A5DB-1A2C3DD36F5A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Broken_Room" ID="{65F95DCB-3220-4F33-A79B-81458E1857E6}">
 							<ChildrenList>
-								<Action Name="Play" ID="{BDFC0E4F-D9D0-49D0-84BA-125A9361E053}" ShortID="803460315" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{75C8E38C-35F2-4437-BC1A-08BCB250A124}" Global="false">
+								<Action Name="" ID="{BDFC0E4F-D9D0-49D0-84BA-125A9361E053}" ShortID="803460315">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Broken_Room" ID="{199043B1-BC4D-494B-B191-9697208B45D3}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Craft_HydroDoor_Open" ID="{DE248C87-1DA9-4F8B-A8EF-54D6F160443D}">
 							<ChildrenList>
-								<Action Name="Play" ID="{62573613-F3F8-4343-856A-89463A673F9D}" ShortID="27032722" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{96495C2B-DA36-4B0E-922A-4F835CAA146F}" Global="false">
+								<Action Name="" ID="{62573613-F3F8-4343-856A-89463A673F9D}" ShortID="27032722">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="SFX_DOOR-HYDRAULIC-Up" ID="{E256C570-C4D1-477A-A1CF-93A9C1A20624}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Teleport" ID="{9E15B431-DB65-4695-884E-1164C083FB56}">
 							<ChildrenList>
-								<Action Name="Play" ID="{CEB70E1A-CA16-4C2F-810C-DC1431D15C95}" ShortID="511233" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A3D8851E-F3E5-4C5E-A59C-1AFD474778E9}" Global="false">
+								<Action Name="" ID="{CEB70E1A-CA16-4C2F-810C-DC1431D15C95}" ShortID="511233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Teleport" ID="{CB05C855-AA5B-4769-8206-19CB6F881C16}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Door_Locked" ID="{59228A7A-72A5-44D1-B8CD-CDFCBC26F44E}">
 							<ChildrenList>
-								<Action Name="Play" ID="{58581843-4EC9-4558-A0B4-5F23999DCEE3}" ShortID="448980318" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{5DDAF5ED-29E4-41E4-88CC-7FA7065562F6}" Global="false">
-											<ObjectRef Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{A0A972FD-6D81-44BD-92B6-29875FD578DA}" ShortID="461874849" Type="Play" Scope="One" Global="false">
+								<Action Name="" ID="{58581843-4EC9-4558-A0B4-5F23999DCEE3}" ShortID="448980318">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A0A972FD-6D81-44BD-92B6-29875FD578DA}" ShortID="461874849">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="Delay" Type="Real64" Value="0.25"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{C2688608-CE6E-4298-BDDB-8C656DC43E67}" Global="false">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Craft_HydroDoor_Close" ID="{499167B1-4141-4EE8-8C3F-BDD5E86545C9}">
 							<ChildrenList>
-								<Action Name="Play" ID="{2460E22C-ADAC-439B-A986-663468714A5E}" ShortID="517162285" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{7007590B-5C1B-4FEA-A674-2F4B737F1A8A}" Global="false">
+								<Action Name="" ID="{2460E22C-ADAC-439B-A986-663468714A5E}" ShortID="517162285">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="SFX_DOOR-HYDRAULIC-Down" ID="{162ADE31-A9E2-4788-BFDB-9AF8B8F1D1F6}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -182,115 +215,141 @@
 					<ChildrenList>
 						<Event Name="Landscape_Shuttle" ID="{BB28812A-E59B-4A1B-92C7-2EB9120CAC17}">
 							<ChildrenList>
-								<Action Name="Play" ID="{44A781B6-2592-4227-BE68-0545020F0CE6}" ShortID="903470882" Type="Play" Scope="One" Global="false">
+								<Action Name="" ID="{44A781B6-2592-4227-BE68-0545020F0CE6}" ShortID="903470882">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="FadeCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{30033E90-5DF2-49B1-A8DC-C9B0371543A2}" Global="false">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscape_Woodland" ID="{F59A789C-931D-405F-9D89-62FD28425385}">
 							<ChildrenList>
-								<Action Name="Play" ID="{42680900-AA98-4704-922E-F42FD6DD8B26}" ShortID="475152550" Type="Play" Scope="One" Global="false">
+								<Action Name="" ID="{42680900-AA98-4704-922E-F42FD6DD8B26}" ShortID="475152550">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="FadeCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{5A73C551-8757-44A9-B401-3F602889043C}" Global="false">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Ambience_Woodland" ID="{1A6AE88B-E32F-40EE-B4EE-62DC2B1F2585}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscape_Iceland" ID="{B41CAA85-1067-47A2-BD2B-62A84B6F4B12}">
 							<ChildrenList>
-								<Action Name="Play" ID="{C5201D3E-AAD5-484F-9F50-90B169F25C86}" ShortID="1069042510" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{3539F81C-E10F-43E8-8AC0-028B761FA5CD}" Global="false">
+								<Action Name="" ID="{C5201D3E-AAD5-484F-9F50-90B169F25C86}" ShortID="1069042510">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscape_Ocean" ID="{96B91828-719D-43F5-83F4-7894AE233A5F}">
 							<ChildrenList>
-								<Action Name="Play" ID="{3CE879A4-7CD6-4C5B-B65A-A2D71A5CAC6D}" ShortID="936577056" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A08D741C-F6A1-486E-B1AA-C26F55A93A45}" Global="false">
+								<Action Name="" ID="{3CE879A4-7CD6-4C5B-B65A-A2D71A5CAC6D}" ShortID="936577056">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Ocean-Outskirts" ID="{D05B73E0-1044-4ECE-9A25-E111E9E2FFCC}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landmark_River" ID="{CBB6CA47-0FBF-43BB-9139-ED2694E039BE}">
 							<ChildrenList>
-								<Action Name="Play" ID="{467F65C8-7A25-414A-9738-4AAF32D35674}" ShortID="936290698" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{D7974B5B-1772-4ECA-BBD7-58BE884DDE6D}" Global="false">
+								<Action Name="" ID="{467F65C8-7A25-414A-9738-4AAF32D35674}" ShortID="936290698">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="River" ID="{FE0E5CC8-AA19-4B3C-A9FC-DC08E6BBB989}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landmark_Waterfall" ID="{7D7D65FF-3A03-42BC-9DE1-B5DC1F69A03C}">
 							<ChildrenList>
-								<Action Name="Play" ID="{BE259528-B4C2-41D5-99B9-A28DE1F14DC6}" ShortID="186087983" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{AA8D75AD-DCAE-47A6-844F-6ED55E8FD73F}" Global="false">
+								<Action Name="" ID="{BE259528-B4C2-41D5-99B9-A28DE1F14DC6}" ShortID="186087983">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Waterfall" ID="{CB150BB3-1F06-4F68-AA44-B9CAB29B7333}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Craft_Alarm" ID="{E78C1939-A151-498F-B5F7-D9133FBA2C57}">
 							<ChildrenList>
-								<Action Name="Play" ID="{0A177920-8A72-4AF1-92C2-E7CD9FAD5F88}" ShortID="925163685" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{02A0FE5F-AEE2-4A20-B7CC-017F2CC2BB05}" Global="false">
+								<Action Name="" ID="{0A177920-8A72-4AF1-92C2-E7CD9FAD5F88}" ShortID="925163685">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Craft_PowerBattery" ID="{572EF65A-BBD9-4A60-B863-F9536C87F210}">
 							<ChildrenList>
-								<Action Name="Play" ID="{2854094F-E2EC-428B-94F8-256EC30AEDAC}" ShortID="395658365" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{87D6099A-03AB-4D05-803C-DA9203E77C38}" Global="false">
+								<Action Name="" ID="{2854094F-E2EC-428B-94F8-256EC30AEDAC}" ShortID="395658365">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Stop" ID="{0E250476-12B9-4862-BCD4-97ADA84CEDCA}" ShortID="958678885" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{9139CCE2-94BF-478F-9378-DF3E799C4663}" Global="false">
+								<Action Name="" ID="{0E250476-12B9-4862-BCD4-97ADA84CEDCA}" ShortID="958678885">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Landscapes_Soundscapes" ID="{D269C596-CA5D-4C4E-8CD7-036E8BF5D55C}">
 							<ChildrenList>
-								<Action Name="Play" ID="{39560FE2-B708-4392-BB27-FF183601CF04}" ShortID="982666012" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A5CA75A9-14D6-414D-8E60-BF1D2993D654}" Global="false">
+								<Action Name="" ID="{39560FE2-B708-4392-BB27-FF183601CF04}" ShortID="982666012">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Landscapes" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -300,100 +359,134 @@
 					<ChildrenList>
 						<Event Name="Item_Port_Negative" ID="{166D9351-5D15-4A01-AA4C-01066FE41072}">
 							<ChildrenList>
-								<Action Name="Play" ID="{1EEDE4D5-68CA-43BF-9362-EC3D5E45BC69}" ShortID="228051281" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{E6765C13-BA4E-4A7E-8522-F6F8E95FC07E}" Global="false">
+								<Action Name="" ID="{1EEDE4D5-68CA-43BF-9362-EC3D5E45BC69}" ShortID="228051281">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Item_Negative" ID="{E3709F92-DA38-4DBA-BB34-1A2B666402FE}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Item_Port_Positive" ID="{3FCA6D0D-4899-46A4-B470-49B3E03B2F20}">
 							<ChildrenList>
-								<Action Name="Play" ID="{9BD2AC23-0DDA-40E1-98D9-389218B7C1E3}" ShortID="307111757" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{925A604D-58A1-40B7-BF99-054EA2EFCD37}" Global="false">
+								<Action Name="" ID="{9BD2AC23-0DDA-40E1-98D9-389218B7C1E3}" ShortID="307111757">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Item_Positive" ID="{68316CC4-C929-4149-828D-557C441069AC}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Item_PopUp" ID="{47C4CAA5-89CF-44DF-BF1B-7CB3C02621CE}">
 							<ChildrenList>
-								<Action Name="Play" ID="{9BDFBA60-0201-4EE4-B6D9-E0E4D177720C}" ShortID="796067259" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{30C09D15-A2F7-48DB-946B-FF2236CEF7C7}" Global="false">
+								<Action Name="" ID="{9BDFBA60-0201-4EE4-B6D9-E0E4D177720C}" ShortID="796067259">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="PopUp_Item" ID="{FC2F8D42-B54B-4BA9-8229-5A3000EF0899}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Item_PopDown" ID="{9730CCAD-5AED-4E41-BD94-89DB1931B162}">
 							<ChildrenList>
-								<Action Name="Play" ID="{1B0737C0-1330-4C7E-B437-300125BDC77D}" ShortID="346040929" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A1FBA2EA-CCD7-44AF-807D-4063944967ED}" Global="false">
+								<Action Name="" ID="{1B0737C0-1330-4C7E-B437-300125BDC77D}" ShortID="346040929">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="PopDown_Item" ID="{08AA810D-4DC9-467A-9838-6050E9BB96CE}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Menu_Button_Select" ID="{612E6024-2036-4A9C-BFD3-06FC4C7C909D}">
 							<ChildrenList>
-								<Action Name="Play" ID="{157BD604-038C-4EC4-AA06-3FC93866565D}" ShortID="739858264" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{66338B67-B06B-496E-A705-F99392DA17B6}" Global="false">
+								<Action Name="" ID="{157BD604-038C-4EC4-AA06-3FC93866565D}" ShortID="739858264">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Menu_Button_Select" ID="{9CFAADE9-73AC-4F65-AFF0-DD76B791B36D}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Menu_Pause" ID="{9A578D53-FB4C-4669-A92A-E176E3C74008}">
 							<ChildrenList>
-								<Action Name="Pause All Except" ID="{5D420A60-6C87-4F07-A7F2-2C8AFF442A6B}" ShortID="94021665" Type="Pause" Scope="AllExcept" Global="true">
+								<Action Name="" ID="{5D420A60-6C87-4F07-A7F2-2C8AFF442A6B}" ShortID="94021665">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="8"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{DBDB6902-A3BD-40C7-8EBD-A923177E253A}" Global="true">
-											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Element>
-									</ElementList>
+									<ReferenceList/>
+									<ChildrenList>
+										<EventActionException Name="" ID="{FB0B10F0-EDFE-4A0C-AD88-53B28116B541}">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+												</Reference>
+											</ReferenceList>
+										</EventActionException>
+									</ChildrenList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Menu_Resume" ID="{85FBA05D-0E7E-488B-8D69-326F9FBEB049}">
 							<ChildrenList>
-								<Action Name="Resume All" ID="{BA5B10A6-FAAC-4504-9A03-4E3D3F6D112A}" ShortID="1040272026" Type="Resume" Scope="All" Global="true"/>
+								<Action Name="" ID="{BA5B10A6-FAAC-4504-9A03-4E3D3F6D112A}" ShortID="1040272026">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="10"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Music_Mute" ID="{936F3A25-307B-42E2-A15C-585CC42BA6F8}">
 							<ChildrenList>
-								<Action Name="Set Bus Volume" ID="{DBEE01F9-2EB9-4014-B501-85CEFA424239}" ShortID="64115322" Type="ChangeBusVolume" Scope="One" Global="true">
+								<Action Name="" ID="{DBEE01F9-2EB9-4014-B501-85CEFA424239}" ShortID="64115322">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64" Value="-96"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{AE319657-D56A-4794-8B00-1C814F0A7109}" Global="true">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Music_Reset" ID="{DEB2D2F0-A308-428A-B572-F89EA4FB7420}">
 							<ChildrenList>
-								<Action Name="Reset Bus Volume" ID="{0A98AC82-06BE-40EE-A404-115C66E12F7A}" ShortID="367246698" Type="ResetBusVolume" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{57DA9C48-F875-4D7F-8CDA-AE8A0AA38813}" Global="true">
+								<Action Name="" ID="{0A98AC82-06BE-40EE-A404-115C66E12F7A}" ShortID="367246698">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="14"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
@@ -403,83 +496,107 @@
 					<ChildrenList>
 						<Event Name="Level_Music_01" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}">
 							<ChildrenList>
-								<Action Name="Play" ID="{C27FFC6A-2860-43E0-AEAC-7E3ED35917A3}" ShortID="685444381" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{DD6DE324-BF8D-4DF5-A49E-28949027913C}" Global="false">
+								<Action Name="" ID="{C27FFC6A-2860-43E0-AEAC-7E3ED35917A3}" ShortID="685444381">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music_01" ID="{AFEC8D22-2C4A-4468-8009-A10B99F16845}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Stop" ID="{77B7968D-75DE-4C67-895C-EA0FFD4A876C}" ShortID="802497042" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{997D0A39-FE97-4B4A-AD5C-3443FD5B026E}" Global="false">
+								<Action Name="" ID="{77B7968D-75DE-4C67-895C-EA0FFD4A876C}" ShortID="802497042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Menu_Segment_2" ID="{B21C17E3-0B87-42FC-9C0D-A5ED92DCC52E}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Stop" ID="{6953B648-603A-4C8D-AB7E-E820FC2BC3EB}" ShortID="884572243" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{419DA95C-F5FD-4A15-B01C-7836874249AC}" Global="false">
+								<Action Name="" ID="{6953B648-603A-4C8D-AB7E-E820FC2BC3EB}" ShortID="884572243">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music_02" ID="{B7408AEF-7A1D-4E3C-98E2-57E482DD8DAA}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Menu_Music" ID="{02B69B78-A523-4A28-9172-06217DF96105}">
 							<ChildrenList>
-								<Action Name="Play" ID="{B0D83519-1FA9-432F-A120-C6FEBEF0B025}" ShortID="513629527" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A7B052AF-E3BD-48EC-AC11-3A54D415BF97}" Global="false">
+								<Action Name="" ID="{B0D83519-1FA9-432F-A120-C6FEBEF0B025}" ShortID="513629527">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Menu_Music" ID="{BE6538C3-3BA2-4826-9CBD-56D0861979FE}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Stop" ID="{F57801A9-8507-4B1F-9589-236F06F376EC}" ShortID="663266525" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{296168AD-9DD4-4FE4-B775-B347BA5BD4A6}" Global="false">
+								<Action Name="" ID="{F57801A9-8507-4B1F-9589-236F06F376EC}" ShortID="663266525">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music" ID="{757F63EE-878E-4120-A6F2-F3F464CB8B6A}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Stop" ID="{E8C67C36-3234-475A-AF24-CBACA6C2010C}" ShortID="801509503" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{49B6AB25-756E-4BAF-8721-AA432D6A905C}" Global="false">
+								<Action Name="" ID="{E8C67C36-3234-475A-AF24-CBACA6C2010C}" ShortID="801509503">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music_Layer" ID="{646627D7-09EC-4D55-AC37-D6E7EB929A55}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Level_Music_02" ID="{946841C8-105C-41BE-BD51-33E5E302BD80}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{FF21E7B8-DD6A-4C42-9C0C-A0BB91F2AE09}" ShortID="1063164657" Type="Stop" Scope="One" Global="true">
+								<Action Name="" ID="{FF21E7B8-DD6A-4C42-9C0C-A0BB91F2AE09}" ShortID="1063164657">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{80804CA1-1ED8-44CF-AA20-0E382B064868}" Global="true">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music_01" ID="{AFEC8D22-2C4A-4468-8009-A10B99F16845}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
-								<Action Name="Play" ID="{B0B2A97E-EA14-4078-AC39-5BD5553D8D4E}" ShortID="63869329" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{ADC4D19E-3EA6-4EF8-91DB-0A780E818580}" Global="false">
-											<ObjectRef Name="Transition" ID="{21E27027-C78C-4B7C-A6B8-F7B07C39D14C}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{65A9AC13-5122-4253-ACA1-5C2BDF155F9A}" ShortID="701396388" Type="Play" Scope="One" Global="false">
+								<Action Name="" ID="{B0B2A97E-EA14-4078-AC39-5BD5553D8D4E}" ShortID="63869329">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Transition" ID="{21E27027-C78C-4B7C-A6B8-F7B07C39D14C}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65A9AC13-5122-4253-ACA1-5C2BDF155F9A}" ShortID="701396388">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="Delay" Type="Real64" Value="3.5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
-									<ElementList>
-										<Element ID="{52AD204A-966B-46DE-BF69-95B05F9F0EB8}" Global="false">
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="Level_Music_02" ID="{B7408AEF-7A1D-4E3C-98E2-57E482DD8DAA}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Element>
-									</ElementList>
+										</Reference>
+									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>

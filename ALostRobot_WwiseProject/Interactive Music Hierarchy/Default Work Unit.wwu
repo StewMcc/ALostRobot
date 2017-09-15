@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" SchemaVersion="80">
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" PersistMode="Standalone">
 			<ChildrenList>
@@ -72,7 +72,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -132,7 +131,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -192,7 +190,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -252,7 +249,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -312,7 +308,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -372,7 +367,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -432,7 +426,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -468,10 +461,8 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
-									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{C1E40673-BF06-4350-9E03-CA18871BA41B}">
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -588,7 +579,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -631,7 +621,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -667,7 +656,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -703,10 +691,8 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
-									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{7EB010C0-1766-4AF9-A2EE-835CA150D875}">
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -1821,6 +1807,7 @@
 								<StateGroupRef Name="Music_States" ID="{9F71CB85-4EDC-4C28-BC57-717FF69325BC}"/>
 							</StateGroupInfo>
 						</StateGroupList>
+						<CustomStateList/>
 					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{FDECA758-1790-4B4B-AB37-B62F85FB8F55}">

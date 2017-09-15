@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" SchemaVersion="80">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ChildrenList>
 						<Bus Name="Ambience_Bus" ID="{766711DE-C270-460F-ACDD-558C9F20B7E6}">
 							<PropertyList>
@@ -35,6 +42,11 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="DivergenceCenter" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<StateInfo>
 								<StateGroupList>
@@ -42,6 +54,7 @@
 										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
 									</StateGroupInfo>
 								</StateGroupList>
+								<CustomStateList/>
 							</StateInfo>
 						</Bus>
 						<Bus Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}">
@@ -74,6 +87,11 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="DivergenceCenter" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<StateInfo>
 								<StateGroupList>
@@ -81,6 +99,7 @@
 										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
 									</StateGroupInfo>
 								</StateGroupList>
+								<CustomStateList/>
 							</StateInfo>
 						</Bus>
 						<Bus Name="SoundFX_Bus" ID="{38C02774-A1E4-49FE-9541-FD5EBADAB484}">
@@ -113,6 +132,11 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="DivergenceCenter" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<StateInfo>
 								<StateGroupList>
@@ -120,11 +144,20 @@
 										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
 									</StateGroupInfo>
 								</StateGroupList>
+								<CustomStateList/>
 							</StateInfo>
 						</Bus>
 					</ChildrenList>
 				</Bus>
-				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}">
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</Bus>
 				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
 			</ChildrenList>
 		</WorkUnit>

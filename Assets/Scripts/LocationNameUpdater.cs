@@ -2,8 +2,7 @@
 using UnityEngine.UI;
 
 /// <summary>
-/// Sets the location of the robot in the HUD updating the music playing dependent on location.
-/// TODO: move over to more rebust system for when different zone music is added using switchs/rtspcs.
+/// Sets the location of the robot in the HUD.
 /// </summary>
 [RequireComponent(typeof(Text))]
 public class LocationNameUpdater : MonoBehaviour {
@@ -39,23 +38,12 @@ public class LocationNameUpdater : MonoBehaviour {
 		}
 		switch (newNameType) {
 			case EventManager.NameUpdateType.NewName:
-				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
-				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
-				//SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = newName;
 				break;
 			case EventManager.NameUpdateType.ShipName:
-				//SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Shuttle_State");
-				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
-				//SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
-				//SoundManager.PlayEvent("Landscape_Shuttle", gameObject);
 				locationText_.text = shipName;
 				break;
 			case EventManager.NameUpdateType.WorldName:
-				// SoundManager.SetSwitch(gameObject, "Landscape_States", "Landscape_Outside_State");
-				//SoundManager.StopEvent("Landscape_Shuttle", 0, gameObject);
-				//SoundManager.StopEvent("Landscape_Woodland", 0, gameObject);
-				//SoundManager.PlayEvent("Landscape_Woodland", gameObject);
 				locationText_.text = worldName;
 				break;
 		}

@@ -23,9 +23,9 @@ public class CorridorDoorLock : Door {
 	private void UnlockDoor() {
 		isDoorLocked_ = false;
 		OpenDoor();
-        SoundManager.PlayEvent("Craft_PowerBattery", gameObject);
-        //SoundManager.StopEvent("Craft_Alarm", gameObject);
-    }
+		SoundManager.PlayEvent("Craft_PowerBattery", gameObject);
+		//SoundManager.StopEvent("Craft_Alarm", gameObject);
+	}
 
 	/// <summary>
 	/// Override so negative noise plays when they can't open the door.

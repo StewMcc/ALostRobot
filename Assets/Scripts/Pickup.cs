@@ -41,13 +41,13 @@ public class Pickup : MonoBehaviour {
 
 	[SerializeField]
 	private string pickupName = "DefaultName";
-		
+
 	private Vector3 respawnPosition_ = Vector3.zero;
 
 	private Quaternion initialRotation_;
 
 	private Vector3 initialScale_ = Vector3.zero;
-			
+
 	private Vector3 droppedTargetPosition_ = Vector3.zero;
 
 	private bool hasRespawned_ = false;
@@ -70,7 +70,7 @@ public class Pickup : MonoBehaviour {
 		initialRotation_ = transform.rotation;
 		initialScale_ = transform.localScale;
 		pickupText.text = pickupName;
-		
+
 		pickupText.enabled = false;
 
 		grabIcon.SetActive(false);
@@ -84,7 +84,7 @@ public class Pickup : MonoBehaviour {
 	void OnValidate() {
 		if (pickupText) {
 			pickupText.text = pickupName;
-			name = pickupName;		
+			name = pickupName;
 		}
 	}
 #endif
@@ -108,7 +108,7 @@ public class Pickup : MonoBehaviour {
 	public string Name() {
 		return pickupName;
 	}
-	
+
 	public PickupType CheckType() {
 		return pickupType;
 	}
@@ -116,7 +116,7 @@ public class Pickup : MonoBehaviour {
 	public bool HasNameDiscovered() {
 		return hasRespawned_;
 	}
-	
+
 	public void PackForTeleport(Transform animationAnchor) {
 		transform.parent = animationAnchor;
 	}
@@ -130,8 +130,8 @@ public class Pickup : MonoBehaviour {
 	/// </summary>
 	public void Drop() {
 		// drop it if it can find a valid point on the navmesh
-		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {			
-			
+		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
+
 			transform.SetPositionAndRotation(droppedTargetPosition_, initialRotation_);
 
 			pickupAnimation.ResumeAnimation();
@@ -139,13 +139,14 @@ public class Pickup : MonoBehaviour {
 			SoundManager.PlayEvent("Item_PutDown", gameObject);
 			ShowGrabIcon();
 			isPickedUp_ = false;
-		} else {
+		}
+		else {
 			SoundManager.PlayEvent("Item_Port_Negative", gameObject);
 		}
 		transform.parent = null;
 		transform.localScale = initialScale_;
 	}
-	
+
 	/// <summary>
 	/// Respawns the item at its initial position.
 	/// </summary>
