@@ -31,10 +31,6 @@ namespace DigitalOpus.MB.Core{
 			    ){
 				return "Standalone";	
 			}
-			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer ||
-			    EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayerStreamed){
-				return "Web";
-			}
 			return null;
 		}
 
