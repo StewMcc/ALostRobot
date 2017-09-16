@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9281D267-38FB-4065-B8B3-7EF9D481695E}" SchemaVersion="80">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{9281D267-38FB-4065-B8B3-7EF9D481695E}" PersistMode="Standalone">
-			<ChildrenList>
-				<SwitchGroup Name="Robot_Tracks" ID="{1A783940-A86C-4BD5-AE92-1852D9FF7F51}">
-					<ChildrenList>
-						<Switch Name="Rubble" ID="{8A4540B9-198B-4773-8BFA-D8CA2B47E83E}"/>
-						<Switch Name="Shuttle" ID="{80869438-2FF1-4192-89C9-4318F689F499}"/>
-						<Switch Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
-					</ChildrenList>
-				</SwitchGroup>
-				<SwitchGroup Name="Environments_Switches" ID="{44861289-97A6-434B-8B4B-560AD00B5939}">
-					<ChildrenList>
-						<Switch Name="Shuttle_ComputerRoom" ID="{6B7D8FFB-1960-414A-8D98-B5C8B4AEEB2D}"/>
-						<Switch Name="Woodland" ID="{C78639B5-4DC8-40F8-ACE8-61C4E994254A}"/>
-						<Switch Name="Iceland" ID="{455FF1CC-7FAD-4C44-A59B-82D648DC6A12}"/>
-						<Switch Name="Shuttle_PowerRoom" ID="{4C631057-5C8E-4370-9314-6EF49F59256E}"/>
-					</ChildrenList>
-				</SwitchGroup>
-				<SwitchGroup Name="Music_Switches" ID="{4BFEF23A-618E-418F-9B92-2CDAA86AB093}">
-					<ChildrenList>
-						<Switch Name="Menu_MusicSwitch" ID="{2EFA96FD-96B0-42E8-8D10-413AE9CA0AC2}"/>
-						<Switch Name="Broken_Battery_MusicSwitch" ID="{45614DEB-B0A2-4DA0-AF56-438F58BFF8EB}"/>
-						<Switch Name="FixedBattery_MusicSwitch" ID="{B2B4D8DD-9746-46E1-A04E-32278FF5BD9E}"/>
-					</ChildrenList>
-				</SwitchGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{9281D267-38FB-4065-B8B3-7EF9D481695E}" PersistMode="Standalone"/>
 	</Switches>
 </WwiseDocument>

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 95559933352979044}
   - component: {fileID: 114786652279136882}
   - component: {fileID: 114531791730286808}
+  - component: {fileID: 114953734750672750}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Player
@@ -572,6 +573,19 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114953734750672750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450268242836304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f691e5d9bd766648b2a25fbf25e679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!195 &195473776087720608
 NavMeshAgent:
   m_ObjectHideFlags: 1
