@@ -12,3 +12,8 @@ Requires:
  - Rebecca Roe
  - Jacob Naylor
 
+## Note
+This repo uses [git-lfs](https://git-lfs.github.com/) for large files therefore Githubs Download Zip button won't produce a usable download. 
+If you are using 'Github for windows' or 'Sourcetree' download via cloning will work fine and pull all the required files from the github lfs server.
+Theres are precompiled versions of the game in the releases tab. 
+
