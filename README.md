@@ -1,5 +1,6 @@
 # A Lost Robot
 Moray Game Jam 2017 - A Game About A Lost Robot
+Requires:
  - Unity 2017.1.1f1
  - Wwise 2017.1.1.6340
 ## Code
