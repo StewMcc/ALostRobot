@@ -373,8 +373,8 @@ namespace DigitalOpus.MB.Core{
                 Debug.LogError("Texture Bake Result asset must be set before using this operation.");
                 return;
             }
-            Dictionary<Shader, List<List<Material>>> shader2Material_map = new Dictionary<Shader, List<List<Material>>>();
-            Dictionary<Material, Mesh> obUVobject2material_map = new Dictionary<Material, Mesh>();
+            //Dictionary<Shader, List<List<Material>>> shader2Material_map = new Dictionary<Shader, List<List<Material>>>();
+            //Dictionary<Material, Mesh> obUVobject2material_map = new Dictionary<Material, Mesh>();
 
             //validate that the objects to be combined are valid
             for (int i = 0; i < mom.GetObjectsToCombine().Count; i++)
@@ -418,7 +418,7 @@ namespace DigitalOpus.MB.Core{
             int totalVerts = 0;
             for (int i = 0; i < gameObjects.Count; i++)
             {
-                string rpt = String.Format("Processing {0} [{1} of {2}]", gameObjects[i].go.name, i, gameObjects.Count);
+                //string rpt = String.Format("Processing {0} [{1} of {2}]", gameObjects[i].go.name, i, gameObjects.Count);
                 //EditorUtility.DisplayProgressBar("Analysing Scene", rpt + " A", .6f);
                 Mesh mm = MB_Utility.GetMesh(gameObjects[i].go);
                 int nVerts = 0;
@@ -478,8 +478,8 @@ namespace DigitalOpus.MB.Core{
                 mm.combinedMaterial = (Material)AssetDatabase.LoadAssetAtPath(matName, typeof(Material));
                 k++;
             }
-            
-            textureBaker.UpdateIfDirtyOrScript();
+
+			textureBaker.UpdateIfRequiredOrScript();
         }
 
         public class MultiMatSubmeshInfo{
@@ -655,7 +655,7 @@ namespace DigitalOpus.MB.Core{
 				mm.combinedMaterial = (Material) AssetDatabase.LoadAssetAtPath(matName,typeof(Material));
 				k++;
 			}
-			textureBaker.UpdateIfDirtyOrScript();
+			textureBaker.UpdateIfRequiredOrScript();
 		}
 	
 	public static void CreateCombinedMaterialAssets(MB3_TextureBaker target, string pth){

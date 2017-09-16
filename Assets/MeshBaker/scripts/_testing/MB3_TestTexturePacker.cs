@@ -87,8 +87,8 @@ public class MB3_TestTexturePacker : MonoBehaviour {
                 {
                     Rect r = rs[i].rects[j];
                     Gizmos.color = new Color(Random.value, Random.value, Random.value);
-                    float paddX = ((float)padding) / rs[i].atlasX;
-                    float paddY = ((float)padding) / rs[i].atlasY;
+                    //float paddX = ((float)padding) / rs[i].atlasX;
+                    //float paddY = ((float)padding) / rs[i].atlasY;
                     center = new Vector2(offset.x + (r.x + r.width / 2f) * rs[i].atlasX, offset.y + (r.y + r.height / 2f) * rs[i].atlasY);
                     Vector2 szz = new Vector2(r.width * rs[i].atlasX, r.height * rs[i].atlasY);
                     Gizmos.DrawCube(center, szz);
