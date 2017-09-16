@@ -24,7 +24,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1113963598336652
 GameObject:
@@ -41,7 +41,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1361599574551162
 GameObject:
@@ -58,7 +58,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1488858914568346
 GameObject:
@@ -75,7 +75,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1769574456129200
 GameObject:
@@ -92,7 +92,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1934569525322848
 GameObject:
@@ -109,7 +109,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4050131142685534
 Transform:
@@ -188,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488858914568346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.584259, y: 0.5, z: 21.9599}
+  m_LocalPosition: {x: 19.7, y: 0.5, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4050131142685534}
@@ -200,16 +200,16 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488858914568346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_positionOffsetData:
-    positionOffset: {x: -17.523598, y: 0, z: -15.275642}
+    positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
-  isStaticObject: 0
+  isStaticObject: 1
   m_listeners:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769574456129200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
   m_Name: 
@@ -229,7 +229,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
-  isStaticObject: 0
+  isStaticObject: 1
   m_listeners:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361599574551162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
   m_Name: 
@@ -276,7 +276,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
-  isStaticObject: 0
+  isStaticObject: 1
   m_listeners:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   triggerList: f7e1664c
   useOtherObject: 0
   valueGuid: 47cab6cbbf0fbb439139ed2694e039be
-  eventID: -290900906
+  eventID: 1923990202
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
   triggerList: f7e1664c
   useOtherObject: 0
   valueGuid: 9c789af51d935f409d8962fd28425385
-  eventID: -290900906
+  eventID: 1084345483
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -341,10 +341,12 @@ MonoBehaviour:
   playingId: 0
   multiPositionTypeLabel: 1
   multiPositionArray:
-  - {x: 24.593891, y: 0, z: -39.166855}
-  - {x: 76.43124, y: 0, z: -23.690987}
-  - {x: 71.86642, y: 19.198254, z: -24.059708}
-  - {x: 55.9449, y: 0, z: -39.70584}
+  - {x: 11.447826, y: 0, z: 13.639471}
+  - {x: 15.088749, y: 0, z: -1.9215508}
+  - {x: 0.6285839, y: 0, z: -20.773375}
+  - {x: -53.07984, y: 0, z: -25.227932}
+  - {x: -22.476318, y: 0, z: -20.875917}
+  - {x: 0, y: 0, z: 0}
 --- !u!114 &114407828094881920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,7 +361,7 @@ MonoBehaviour:
   triggerList: f7e1664c
   useOtherObject: 0
   valueGuid: 2818b9969d71f54383f47894ae233a5f
-  eventID: -290900906
+  eventID: 906407167
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -386,7 +388,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1934569525322848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
   m_Name: 
@@ -395,7 +397,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
-  isStaticObject: 0
+  isStaticObject: 1
   m_listeners:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
@@ -414,7 +416,7 @@ MonoBehaviour:
   triggerList: f7e1664c
   useOtherObject: 0
   valueGuid: ff657d7d033abc429de1b5dc1f69a03c
-  eventID: -290900906
+  eventID: -1818794122
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -433,7 +435,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113963598336652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
   m_Name: 
@@ -442,7 +444,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
-  isStaticObject: 0
+  isStaticObject: 1
   m_listeners:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}

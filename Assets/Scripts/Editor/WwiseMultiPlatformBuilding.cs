@@ -9,6 +9,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 
 	static List<string> defaultSoundBanks = new List<string>(new string[]{ "Init.bnk", "Audio_Soundbank.bnk" });
 
+	const string kDefaultName = "ALostRobot";
 	/// <summary>
 	/// Renders a custom editor window to expose certain settings.
 	/// </summary>
@@ -106,7 +107,7 @@ public class WwiseSoundBankWindow : EditorWindow {
 		//Choose app name and location
 		string appPath = EditorUtility.SaveFilePanel("Save Wwise Build",
 			Application.dataPath.Remove(Application.dataPath.LastIndexOf('/')),
-			"WwiseBuild",
+			kDefaultName,
 			getPlatFormExtension()
 			);
 

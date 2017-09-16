@@ -632,8 +632,8 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 											<GroupingInfo>
-												<GroupRef Name="Robot_Tracks" ID="{1A783940-A86C-4BD5-AE92-1852D9FF7F51}"/>
-												<DefaultSwitchRef Name="Rubble" ID="{8A4540B9-198B-4773-8BFA-D8CA2B47E83E}"/>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
 														<ItemRef Name="TracksLayer_Rubble" ID="{406F8920-00DB-4D87-9158-8FEABE13D34C}"/>
@@ -975,8 +975,8 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 											<GroupingInfo>
-												<GroupRef Name="Robot_Tracks" ID="{1A783940-A86C-4BD5-AE92-1852D9FF7F51}"/>
-												<DefaultSwitchRef Name="Shuttle" ID="{80869438-2FF1-4192-89C9-4318F689F499}"/>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
 														<ItemRef Name="Robot_Movement_TRACKS_L" ID="{2A74BD2E-4C44-49A5-A75B-5E129AB90513}"/>
@@ -997,8 +997,8 @@
 												</Reference>
 											</ReferenceList>
 											<GroupingInfo>
-												<GroupRef Name="Robot_Tracks" ID="{1A783940-A86C-4BD5-AE92-1852D9FF7F51}"/>
-												<DefaultSwitchRef Name="Grass" ID="{7546CFE3-9C44-4D06-8C3D-A13403434008}"/>
+												<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+												<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 											</GroupingInfo>
 										</SwitchContainer>
 									</ChildrenList>
@@ -1009,23 +1009,6 @@
 				</Folder>
 				<Folder Name="Ambient_States" ID="{FCFB35EA-CFC0-45DC-BBBD-280E5D1D42AF}" ShortID="304998546">
 					<ChildrenList>
-						<SwitchContainer Name="Landscapes" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" ShortID="52156446">
-							<PropertyList>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-								</Reference>
-							</ReferenceList>
-							<GroupingInfo>
-								<GroupRef Name="Environments_Switches" ID="{44861289-97A6-434B-8B4B-560AD00B5939}"/>
-								<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-							</GroupingInfo>
-						</SwitchContainer>
 						<ActorMixer Name="BG_Ambient" ID="{A7A048C4-C37E-4FD0-AAC3-52658B7A8357}" ShortID="819686305">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1226,7 +1209,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="Wildlife_Birds_01" ID="{E8300154-E140-402E-A7B0-3539ED5E9797}" ShortID="643610021">
+										<RandomSequenceContainer Name="Wildlife_Birds" ID="{E8300154-E140-402E-A7B0-3539ED5E9797}" ShortID="643610021">
 											<PropertyList>
 												<Property Name="3DPositionSource" Type="int16" Value="0"/>
 												<Property Name="Pitch" Type="int32">
@@ -1247,7 +1230,7 @@
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-5</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -1275,6 +1258,11 @@
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>-3</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Weight" Type="Real64">
+															<ValueList>
+																<Value>20</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1305,7 +1293,7 @@
 														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
-																<Value>16</Value>
+																<Value>20</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1333,42 +1321,7 @@
 														<ActiveSource Name="ANIMALS_BIRD_TYPE_01_02" ID="{A063F740-3075-4894-81B9-F6DB9EE7C185}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="Silence_01" ID="{C114B56E-7B56-4045-B329-652DCB803C67}" ShortID="529106373">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>70</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{FDF682D7-C5D6-4AAB-93DC-41EF0D9B722F}" ShortID="881506886" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="LengthMax" Type="Real32" Value="1"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{FDF682D7-C5D6-4AAB-93DC-41EF0D9B722F}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="Silence_02" ID="{209F4CF8-67CB-4B42-9DCE-0EFC236CE6E3}" ShortID="772468427">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>70</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -1391,13 +1344,6 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="Silence_03" ID="{EDA044B1-A3F5-4BDE-A133-A9EB8D498CFA}" ShortID="368102534">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>70</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
@@ -1424,6 +1370,11 @@
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>-3</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Weight" Type="Real64">
+															<ValueList>
+																<Value>20</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1456,6 +1407,11 @@
 																<Value>-3</Value>
 															</ValueList>
 														</Property>
+														<Property Name="Weight" Type="Real64">
+															<ValueList>
+																<Value>20</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -1470,6 +1426,7 @@
 															<PropertyList>
 																<Property Name="FadeInDuration" Type="Real64" Value="1.32857142857143E-02"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="4.98214285714286E-02"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimBegin" Type="Real64" Value="0.687535714285714"/>
 																<Property Name="TrimEnd" Type="Real64" Value="0.901767857142856"/>
 															</PropertyList>
@@ -1685,775 +1642,6 @@
 												</Position>
 											</PositioningInfo>
 										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Wildlife_Birds_02" ID="{4C492BAA-33B6-4C94-AF93-256A111C568A}" ShortID="452674672">
-											<PropertyList>
-												<Property Name="3DPositionSource" Type="int16" Value="0"/>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{11BF4C4A-C192-49CC-8954-52B32AC36D3C}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-783"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-6</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6DCC8446-DEF9-47BC-8887-1FBA76CC7330}">
-																<PropertyList>
-																	<Property Name="Min" Type="Real64" Value="-48"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Silence_01" ID="{D0A77D2C-22C3-4662-BD95-56B36F5F33DE}" ShortID="611339988">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>66</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{3A312FD2-4E08-4F4E-9A53-27980C4DDEF6}" ShortID="467334507" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="LengthMax" Type="Real32" Value="10"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{3A312FD2-4E08-4F4E-9A53-27980C4DDEF6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_02" ID="{FE7AAC8B-0025-4655-BB55-55663315D858}" ShortID="472095936">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{29776133-BF65-4BAF-A25E-BF7C5DF1478B}" ShortID="344999526" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="LengthMax" Type="Real32" Value="2"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{29776133-BF65-4BAF-A25E-BF7C5DF1478B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_03" ID="{082257A1-7C86-417B-AE76-99B50097C788}" ShortID="968912878">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>60</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{CB1DFDA5-FF17-4DE1-A79B-30F08FD75758}" ShortID="687363353" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="LengthMax" Type="Real32" Value="3"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{CB1DFDA5-FF17-4DE1-A79B-30F08FD75758}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<PositioningInfo>
-												<Position Name="" ID="{14FFE810-59A1-4D64-B6D1-5D8844BC7C7B}">
-													<PropertyList>
-														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
-														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-														<Property Name="PlayMechanismTransitionTime" Type="Real64" Value="7.5"/>
-													</PropertyList>
-													<ChildrenList>
-														<Path2D Name="Wildlife_Birds_02_Path" ID="{AA59A6CD-C976-4D70-BC96-E099DE604BA4}">
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>50</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_01" ID="{2A23D4C7-B82A-4615-BFF4-4DC7630B0668}">
-															<PointList>
-																<Point>
-																	<XPos>-82.91139</XPos>
-																	<YPos>0.95541</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_02" ID="{2C3A97FE-3B5F-4F1D-9153-FF2B86427A1E}">
-															<PointList>
-																<Point>
-																	<XPos>75.31646</XPos>
-																	<YPos>-1.59236</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_03" ID="{85837B34-FA3B-4E4A-80C8-EE51AFF0C49C}">
-															<PointList>
-																<Point>
-																	<XPos>3.16456</XPos>
-																	<YPos>-71.01911</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_04" ID="{CBA3A967-2590-41F5-A670-EE57AC4E9FB6}">
-															<PointList>
-																<Point>
-																	<XPos>-62.65823</XPos>
-																	<YPos>-78.66242</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_05" ID="{C7E392B4-CDC9-499F-9E66-B4BF6F540E12}">
-															<PointList>
-																<Point>
-																	<XPos>80.37975</XPos>
-																	<YPos>53.82166</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_06" ID="{9D6BAAC5-E471-4319-94F9-7E9B8912745F}">
-															<PointList>
-																<Point>
-																	<XPos>-52.53165</XPos>
-																	<YPos>50.63694</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_02_Path_07" ID="{7CF36E0A-69D0-4F0C-855E-E2CB3D390751}">
-															<PointList>
-																<Point>
-																	<XPos>87.97468</XPos>
-																	<YPos>-55.09554</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-													</ChildrenList>
-												</Position>
-											</PositioningInfo>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Wildlife_Birds_03" ID="{901BA2EB-A1DB-4D2A-8619-CFACF2F52B04}" ShortID="462478507">
-											<PropertyList>
-												<Property Name="3DPositionSource" Type="int16" Value="0"/>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{82C7752E-C0AC-4BB2-9A68-0560CCD842F3}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="606"/>
-																	<Property Name="Min" Type="Real64" Value="-657"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-4</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{4614E63B-997F-4EF8-BFDA-A886E6478513}">
-																<PropertyList>
-																	<Property Name="Min" Type="Real64" Value="-32"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_01" ID="{ADF40FAE-4412-4C9F-A9C3-C63C1EE380E8}" ShortID="45210508">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-17</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ANIMALS_BIRD_TYPE_03_01" ID="{E7665058-7FB3-4D9A-8715-6DE2EF77CF35}" ShortID="854862663">
-															<Language>SFX</Language>
-															<AudioFile>ANIMALS_BIRD_TYPE_03_01.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_01" ID="{E7665058-7FB3-4D9A-8715-6DE2EF77CF35}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_02" ID="{260EB7E9-CBB5-4541-A80A-A1E8361D33F2}" ShortID="501558237">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-19</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ANIMALS_BIRD_TYPE_03_02" ID="{0CBE38E1-C81A-4131-8C16-80838E8C6AEB}" ShortID="775344646">
-															<Language>SFX</Language>
-															<AudioFile>ANIMALS_BIRD_TYPE_03_02.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_02" ID="{0CBE38E1-C81A-4131-8C16-80838E8C6AEB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_03" ID="{0B4B849F-2BB2-490A-943B-AB370174B42A}" ShortID="889820217">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{984C516C-FBFF-46D5-A043-5C37B6152113}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Min" Type="Real64" Value="-404"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-20</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ANIMALS_BIRD_TYPE_03_03" ID="{06F0DEEA-A1A1-4F22-A3EA-6710D601D86C}" ShortID="531884815">
-															<PropertyList>
-																<Property Name="TrimEnd" Type="Real64" Value="1.27501339285714"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ANIMALS_BIRD_TYPE_03_03.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_03" ID="{06F0DEEA-A1A1-4F22-A3EA-6710D601D86C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_01" ID="{114B1961-48DB-42A2-863E-4D52F0B87C8C}" ShortID="225308299">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>82</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{58481641-6F55-4D21-A19B-34AF752B3587}" ShortID="938200169" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="LengthMax" Type="Real32" Value="10"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{58481641-6F55-4D21-A19B-34AF752B3587}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_02" ID="{E3F57CDB-FE7B-4AB2-83A7-E51475EFFE62}" ShortID="939453971">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>70</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{019A8137-806B-495F-A8C9-3C05281D9C73}" ShortID="535453447" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="2"/>
-																<Property Name="LengthMax" Type="Real32" Value="2"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{019A8137-806B-495F-A8C9-3C05281D9C73}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_03" ID="{78319034-9F25-45A3-B854-63B5EB9093F2}" ShortID="700176933">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>75</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{8EA5879D-569F-4BA5-B2B8-F3604B98A4B4}" ShortID="685875291" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="3"/>
-																<Property Name="LengthMax" Type="Real32" Value="3"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{8EA5879D-569F-4BA5-B2B8-F3604B98A4B4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="ANIMALS_BIRD_TYPE_03_04" ID="{C2DD2114-A549-4254-971C-91FDE1A4E09A}" ShortID="698799127">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{55620108-978D-408F-98F6-129B5BBB77AE}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Min" Type="Real64" Value="-404"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-20</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="ANIMALS_BIRD_TYPE_03_03" ID="{666F4858-C81F-442D-B91E-FBF32D1BDDE2}" ShortID="731228424">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.952419642857143"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.128013392857143"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.3620625"/>
-																<Property Name="TrimEnd" Type="Real64" Value="4.58287946428571"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>ANIMALS_BIRD_TYPE_03_03.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="ANIMALS_BIRD_TYPE_03_03" ID="{666F4858-C81F-442D-B91E-FBF32D1BDDE2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<PositioningInfo>
-												<Position Name="" ID="{0E7603A2-C7F9-4116-9AAB-E9AB58877BF0}">
-													<PropertyList>
-														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
-														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-													</PropertyList>
-													<ChildrenList>
-														<Path2D Name="Wildlife_Birds_03_Path" ID="{FD558ED5-0AAD-43D6-8F77-4DBE99943D6A}">
-															<PointList>
-																<Point>
-																	<XPos>-79.74684</XPos>
-																	<YPos>68.47134</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_01" ID="{05FAA49C-5F4E-472A-BA4A-21E3E483E76E}">
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>50</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_02" ID="{2562E9CF-A3FD-47AD-A800-7196D5AEB2E6}">
-															<PointList>
-																<Point>
-																	<XPos>72.1519</XPos>
-																	<YPos>-78.66242</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_03" ID="{10F81748-4D98-4C35-A2A5-9555FEB394D9}">
-															<PointList>
-																<Point>
-																	<XPos>-17.72152</XPos>
-																	<YPos>-87.57962</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_04" ID="{E52A8B48-C00D-42BC-9472-2D038F9B4F48}">
-															<PointList>
-																<Point>
-																	<XPos>54.43038</XPos>
-																	<YPos>83.75796</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_05" ID="{7D5309EF-CA9D-4691-851B-7FA403B74FD2}">
-															<PointList>
-																<Point>
-																	<XPos>-83.5443</XPos>
-																	<YPos>-21.97452</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-																<Point>
-																	<XPos>-70.253164556962</XPos>
-																	<YPos>-59.8726114649681</YPos>
-																	<Flags>0</Flags>
-																	<Time>5000</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_06" ID="{4F4F6ED1-5D22-494E-BC5B-ABC0073CEA1D}">
-															<PointList>
-																<Point>
-																	<XPos>-55.06329</XPos>
-																	<YPos>69.74522</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-																<Point>
-																	<XPos>-12.0253164556962</XPos>
-																	<YPos>81.5286624203822</YPos>
-																	<Flags>0</Flags>
-																	<Time>5000</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_07" ID="{83C92D36-56D6-4E63-B6AA-6C35E6AA8D61}">
-															<PointList>
-																<Point>
-																	<XPos>76.58228</XPos>
-																	<YPos>6.6879</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-																<Point>
-																	<XPos>57.5949367088608</XPos>
-																	<YPos>-42.0382165605095</YPos>
-																	<Flags>0</Flags>
-																	<Time>5000</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-														<Path2D Name="Wildlife_Birds_03_Path_08" ID="{F8036BC5-6BEA-4122-A044-0B0908B06CA2}">
-															<PointList>
-																<Point>
-																	<XPos>-35.44304</XPos>
-																	<YPos>-77.38854</YPos>
-																	<Flags>12</Flags>
-																	<Time>0</Time>
-																</Point>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>-65.6050955414013</YPos>
-																	<Flags>0</Flags>
-																	<Time>2500</Time>
-																</Point>
-																<Point>
-																	<XPos>-29.1139240506329</XPos>
-																	<YPos>-56.0509554140127</YPos>
-																	<Flags>0</Flags>
-																	<Time>5000</Time>
-																</Point>
-															</PointList>
-														</Path2D>
-													</ChildrenList>
-												</Position>
-											</PositioningInfo>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Wildlife_Insects" ID="{F1804069-081A-46BE-85D6-54DDBB3D424E}" ShortID="430669567">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{36909264-CCE8-4361-98AF-E69C2EC72D24}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-480"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-12</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{E1018FE6-252C-437B-A097-556C19633956}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-126"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="WILDLIFE_INSECT_TYPE_01" ID="{732336B9-B913-4DEB-BE6F-55B21A6C7E52}" ShortID="781111288">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="WILDLIFE_INSECT_TYPE_01" ID="{05436E9E-8754-4C66-B120-A02EEBE5E252}" ShortID="485844429">
-															<Language>SFX</Language>
-															<AudioFile>WILDLIFE_INSECT_TYPE_01.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="WILDLIFE_INSECT_TYPE_01" ID="{05436E9E-8754-4C66-B120-A02EEBE5E252}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="WILDLIFE_INSECT_TYPE_02" ID="{708B623C-042B-437C-BE48-B927E2B0934E}" ShortID="671890586">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="WILDLIFE_INSECT_TYPE_02" ID="{CD684E0E-4FD0-4E6B-967D-A0F9D3E8EEE8}" ShortID="607721200">
-															<Language>SFX</Language>
-															<AudioFile>WILDLIFE_INSECT_TYPE_02.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="WILDLIFE_INSECT_TYPE_02" ID="{CD684E0E-4FD0-4E6B-967D-A0F9D3E8EEE8}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_01" ID="{6298B362-63B6-4B99-9A3A-AEA1BE861689}" ShortID="739328390">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>67</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{E6BE1972-84DD-47AA-9D7E-AD6AEEF9D17D}" ShortID="477559628" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{E6BE1972-84DD-47AA-9D7E-AD6AEEF9D17D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_02" ID="{5A1BCE36-3C0B-4547-83EC-237D160B1E3F}" ShortID="712382977">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>65</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{CBBC5330-F5A7-40BD-A634-F839CDD3D60B}" ShortID="463226827" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{CBBC5330-F5A7-40BD-A634-F839CDD3D60B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_03" ID="{B907675F-2D77-446F-9059-137DF9E644D7}" ShortID="780630624">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>63</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{F257C3BC-F6B1-4083-A8C2-4226A35D73F7}" ShortID="566060972" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{F257C3BC-F6B1-4083-A8C2-4226A35D73F7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
 										<Sound Name="Forest_Ambient" ID="{10D43690-F1EE-485C-9947-64B9B50D4CA4}" ShortID="982702128">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -2496,23 +1684,11 @@
 											</PropertyList>
 											<BlendTrackAssocList>
 												<BlendTrackAssoc>
-													<ItemRef Name="Wildlife_Birds_01" ID="{E8300154-E140-402E-A7B0-3539ED5E9797}"/>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="Wildlife_Birds_02" ID="{4C492BAA-33B6-4C94-AF93-256A111C568A}"/>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="Wildlife_Birds_03" ID="{901BA2EB-A1DB-4D2A-8619-CFACF2F52B04}"/>
+													<ItemRef Name="Wildlife_Birds" ID="{E8300154-E140-402E-A7B0-3539ED5E9797}"/>
 												</BlendTrackAssoc>
 											</BlendTrackAssocList>
 										</BlendTrack>
-										<BlendTrack Name="Insects" ID="{849CD16A-8D2D-4F83-8C3F-78029B1D037C}" ShortID="689065231">
-											<BlendTrackAssocList>
-												<BlendTrackAssoc>
-													<ItemRef Name="Wildlife_Insects" ID="{F1804069-081A-46BE-85D6-54DDBB3D424E}"/>
-												</BlendTrackAssoc>
-											</BlendTrackAssocList>
-										</BlendTrack>
+										<BlendTrack Name="Insects" ID="{849CD16A-8D2D-4F83-8C3F-78029B1D037C}" ShortID="689065231"/>
 										<BlendTrack Name="Forest" ID="{4CAAAA4E-1033-4C90-B94E-8A23570A6A95}" ShortID="498273897">
 											<BlendTrackAssocList>
 												<BlendTrackAssoc>
@@ -2524,97 +1700,8 @@
 								</BlendContainer>
 								<BlendContainer Name="Computer_Room" ID="{D339C6D5-C395-4825-B8BC-117D6DBA54E2}" ShortID="882871277">
 									<PropertyList>
-										<Property Name="OutputBusHighpass" Type="int16">
-											<RTPCList>
-												<RTPC Name="" ID="{F263C255-7A0D-4732-9926-10B78EC3CF6C}" ShortID="988072828">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{62DBB09F-8594-4BAD-9941-622F7387530A}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="65537"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-100</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>SCurve</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
-										<Property Name="OutputBusLowpass" Type="int16">
-											<RTPCList>
-												<RTPC Name="" ID="{34279EBA-4508-49B5-A1BE-C9CE3D5A4FD7}" ShortID="790602659">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{20F2CBE6-1F8F-486E-83C2-93E874DAD729}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="65537"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-100</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-21</Value>
-											</ValueList>
-											<RTPCList>
-												<RTPC Name="" ID="{A1F80E51-E12D-4B1B-BE1E-37BAF884A6F3}" ShortID="963473579">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{EE9C75E7-F23D-435D-AEE7-C25F9FDC7FFD}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-200</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -2628,239 +1715,15 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="Sweeps" ID="{6AFF21E6-5F00-432A-A498-0D4816C59CA4}" ShortID="6063157">
-											<PropertyList>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{41AB4BE2-BD04-4E7D-A9B7-FC9B577BFF0F}" ShortID="1067922346">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-8</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{74ADBD6E-46E7-468A-BB42-36F092608BE2}" ShortID="153577514">
-															<Language>SFX</Language>
-															<AudioFile>363251_josepharaoh99_beeping-robot-or-machine.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{74ADBD6E-46E7-468A-BB42-36F092608BE2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence" ID="{857DDAA0-A99F-461A-8EFD-39865DD2E066}" ShortID="817554429">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>60</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{05D0CC7D-7AAB-451B-80A6-7FEAB1477616}" ShortID="990170307" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="2.5"/>
-																<Property Name="LengthMax" Type="Real32" Value="4"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{05D0CC7D-7AAB-451B-80A6-7FEAB1477616}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_01" ID="{7236E9B9-E1DF-45CE-9C7B-2BF158C58EA1}" ShortID="1010104074">
-													<PropertyList>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>60</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{D5F4BA39-6FCC-432E-8940-40309BEB6871}" ShortID="421114298" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="4.5"/>
-																<Property Name="LengthMax" Type="Real32" Value="3"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{D5F4BA39-6FCC-432E-8940-40309BEB6871}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_02" ID="{5E55844A-F3A1-4DB9-BE3A-4E9132E08A3E}" ShortID="153156979">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{7D48EB88-6EAF-4C1C-AC5E-0C9D823B535D}" ShortID="281203126" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="2"/>
-																<Property Name="LengthMax" Type="Real32" Value="4.5"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{7D48EB88-6EAF-4C1C-AC5E-0C9D823B535D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="SFX_Blip_Sweep_01" ID="{E8FAF91A-21F4-4B3C-A156-D221F59E0A70}" ShortID="833258003">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{DFF669CD-3056-4C35-8A4C-ACD9AE33C26D}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="379"/>
-																			<Property Name="Min" Type="Real64" Value="-328"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_Blip_Sweep_01" ID="{B9310E35-C2A7-45F9-B2E1-ADFCE18EB86A}" ShortID="836112062">
-															<Language>SFX</Language>
-															<AudioFile>SFX_Blip_Sweep_01.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_Blip_Sweep_01" ID="{B9310E35-C2A7-45F9-B2E1-ADFCE18EB86A}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="SFX_Blip_Sweep_02" ID="{D6E84A56-00A5-443F-B0BA-7C9651D1180C}" ShortID="3095322">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{5F68374E-60D7-4AA4-A658-2421596D7317}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="935"/>
-																			<Property Name="Min" Type="Real64" Value="-657"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_Blip_Sweep_02" ID="{9C4D9229-6047-4EB2-A023-A15B6427278B}" ShortID="1029103823">
-															<Language>SFX</Language>
-															<AudioFile>SFX_Blip_Sweep_02.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_Blip_Sweep_02" ID="{9C4D9229-6047-4EB2-A023-A15B6427278B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="SFX_Blip_Sweep_08" ID="{8B95354E-E5F1-4CBF-A05E-25AC95EBAAD9}" ShortID="30223923">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{C840C66E-0545-4FEB-A64B-6954D7D529C3}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="632"/>
-																			<Property Name="Min" Type="Real64" Value="-1112"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SFX_Blip_Sweep_08" ID="{CCC277D6-EE84-4CB2-A616-8C6BC559E502}" ShortID="703514984">
-															<Language>SFX</Language>
-															<AudioFile>SFX_Blip_Sweep_08.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="SFX_Blip_Sweep_08" ID="{CCC277D6-EE84-4CB2-A616-8C6BC559E502}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Beeps" ID="{8EA6D9ED-4C13-45E9-81FC-4E6259377895}" ShortID="643326957">
 											<PropertyList>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2888,7 +1751,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-5</Value>
+																<Value>-10</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -2908,50 +1771,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="220181__gameaudio__computer-beep-1" ID="{A4DEB320-B2FC-402C-B1DA-53ADABA9E1EA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence" ID="{BD209BDE-02C2-43D3-8A3F-7277488BDBBF}" ShortID="296570686">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{05DB6D73-C4BA-441E-9EE3-1F5FE45C7C50}" ShortID="657601576" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="3"/>
-																<Property Name="LengthMax" Type="Real32" Value="5"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{05DB6D73-C4BA-441E-9EE3-1F5FE45C7C50}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Silence_01" ID="{8929BDF2-9E46-49F4-BA8F-5B57714D5DB1}" ShortID="352279707">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Wwise Silence" ID="{E4CD0F64-C226-47B0-856B-D122DD31E861}" ShortID="1031395752" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-															<PropertyList>
-																<Property Name="Length" Type="Real32" Value="2.5"/>
-																<Property Name="LengthMax" Type="Real32" Value="3.5"/>
-															</PropertyList>
-															<Language>SFX</Language>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Wwise Silence" ID="{E4CD0F64-C226-47B0-856B-D122DD31E861}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="sci fi_digital_beep 1" ID="{85A0D00D-1D8D-4D64-BF0B-9ED48DD983A1}" ShortID="1059924945">
@@ -2978,56 +1797,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="sci fi_digital_beep 1" ID="{5FE2D03F-ED0A-4AE2-86CE-0972F3D9C5A1}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="sci fi_digital_beep 2" ID="{2950ACA7-CBFA-49F8-B8F9-D0115ED7B32A}" ShortID="770556375">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{DC4DB403-206C-41B9-8C9A-8741A18AC8E6}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="808"/>
-																			<Property Name="Min" Type="Real64" Value="-1061"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>12</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Weight" Type="Real64">
-															<ValueList>
-																<Value>20.001</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="sci fi_digital_beep 2" ID="{7A6B8620-4EE0-430B-A9B0-3B42B7F0AF36}" ShortID="91082429">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.046875"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.247767857142857"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.973214285714286"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.65401785714286"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>sci fi_digital_beep 2.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="sci fi_digital_beep 2" ID="{7A6B8620-4EE0-430B-A9B0-3B42B7F0AF36}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="sci fi_digital_beep 3" ID="{5D3A9086-190B-41BA-9AAD-BBB0D997B23A}" ShortID="852456477">
@@ -3069,6 +1838,36 @@
 														<ActiveSource Name="sci fi_digital_beep 3" ID="{C9F59517-48D4-4CC5-9DB3-249412F55DBB}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<Sound Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{41AB4BE2-BD04-4E7D-A9B7-FC9B577BFF0F}" ShortID="1067922346">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-18</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Landscape_Emitter_ShuttleRoom" ID="{DCCF6B36-230B-44EA-B0E0-DD821D44953F}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambience_Bus" ID="{766711DE-C270-460F-ACDD-558C9F20B7E6}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{74ADBD6E-46E7-468A-BB42-36F092608BE2}" ShortID="153577514">
+															<Language>SFX</Language>
+															<AudioFile>363251_josepharaoh99_beeping-robot-or-machine.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="363251_josepharaoh99_beeping-robot-or-machine" ID="{74ADBD6E-46E7-468A-BB42-36F092608BE2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
 									</ChildrenList>
@@ -3080,24 +1879,13 @@
 												</BlendTrackAssoc>
 											</BlendTrackAssocList>
 										</BlendTrack>
-										<BlendTrack Name="Sweeps" ID="{9F826673-3BA3-4F08-BE4C-D4B7DEFDE49C}" ShortID="509908159">
-											<BlendTrackAssocList>
-												<BlendTrackAssoc>
-													<ItemRef Name="Sweeps" ID="{6AFF21E6-5F00-432A-A498-0D4816C59CA4}"/>
-												</BlendTrackAssoc>
-											</BlendTrackAssocList>
-										</BlendTrack>
+										<BlendTrack Name="Sweeps" ID="{9F826673-3BA3-4F08-BE4C-D4B7DEFDE49C}" ShortID="509908159"/>
 									</BlendTrackList>
 								</BlendContainer>
 								<BlendContainer Name="Ambience_Iceland" ID="{166FED5D-F160-4A7C-97CF-774A350C41B7}" ShortID="360079702">
 									<PropertyList>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-12</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -3114,6 +1902,11 @@
 										<Sound Name="Wind" ID="{6992A298-1EA1-4B29-9C43-B8AB2476AED3}" ShortID="434479117">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3133,118 +1926,16 @@
 												<ActiveSource Name="Ambience_Wind_layer_02" ID="{8FB2F5E2-5371-47C4-AA5E-BBA10B4FAB5D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="BG_BLIZZARD_03" ID="{182AD297-4FBB-4719-BB99-5B8C4A077BF6}" ShortID="671635235">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="BG_OUTDOORS_BLIZZARD_03" ID="{26AD8DAF-591D-4764-8E0B-4393EA13EFDB}" ShortID="286303479">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="1.33033635602679"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.94433775111607"/>
-														<Property Name="TrimEnd" Type="Real64" Value="88.4162008928571"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>BG_OUTDOORS_BLIZZARD_03.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="BG_OUTDOORS_BLIZZARD_03" ID="{26AD8DAF-591D-4764-8E0B-4393EA13EFDB}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="BG_BLIZZARD_02" ID="{971E71F6-8675-40E1-B237-4ABF9541690B}" ShortID="845557991">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="BG_OUTDOORS_BLIZZARD_02" ID="{A14FEE6D-FB3A-43A0-AF10-FE909F811A35}" ShortID="694677908">
-													<PropertyList>
-														<Property Name="TrimBegin" Type="Real64" Value="0.671077566964286"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>BG_OUTDOORS_BLIZZARD_02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="BG_OUTDOORS_BLIZZARD_02" ID="{A14FEE6D-FB3A-43A0-AF10-FE909F811A35}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
 										<BlendTrack Name="Wind-Intensity-Level" ID="{D388D057-03F2-492D-94E1-C9F238093212}" ShortID="231108466">
-											<PropertyList>
-												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="LayerCrossFadeControlInput">
-													<ObjectRef Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-												</Reference>
-											</ReferenceList>
-											<BlendTrackAssocList>
-												<BlendTrackAssoc>
-													<ItemRef Name="BG_BLIZZARD_02" ID="{971E71F6-8675-40E1-B237-4ABF9541690B}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>28.8359788359788</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>70.8069408068783</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="BG_BLIZZARD_03" ID="{182AD297-4FBB-4719-BB99-5B8C4A077BF6}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>59.2729242724868</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>100</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-											</BlendTrackAssocList>
+											<ReferenceList/>
 										</BlendTrack>
 										<BlendTrack Name="Wind-Level" ID="{0D7E6358-BDD5-44BD-B2C2-C220F9D0C5A8}" ShortID="888991913">
-											<PropertyList>
-												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="LayerCrossFadeControlInput">
-													<ObjectRef Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-												</Reference>
-											</ReferenceList>
+											<ReferenceList/>
 											<BlendTrackAssocList>
 												<BlendTrackAssoc>
 													<ItemRef Name="Wind" ID="{6992A298-1EA1-4B29-9C43-B8AB2476AED3}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>0</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>100</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
 												</BlendTrackAssoc>
 											</BlendTrackAssocList>
 										</BlendTrack>
@@ -3280,41 +1971,6 @@
 									</PositioningInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="SFX_PowerBattery" ID="{F377A666-EBCE-48F7-A700-09DF5FED6ABA}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" ShortID="34912394">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>12</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Landscape_Emitter_Alarm" ID="{CE077A5F-2D71-4F51-A4D8-1BA94248EA8A}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
-										</Reference>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_ALARM" ID="{B16D30BD-648D-476C-B2D6-CA026272B691}" ShortID="764942037">
-											<Language>SFX</Language>
-											<AudioFile>SFX_ALARM.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<PositioningInfo>
-										<Position Name="" ID="{0F394EDA-46E3-432A-866C-2F9C0415901D}"/>
-									</PositioningInfo>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_ALARM" ID="{B16D30BD-648D-476C-B2D6-CA026272B691}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -3430,32 +2086,6 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<Sound Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" ShortID="283089568">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_SCIFI_BEEP_NO_ACCESS" ID="{7DE9AEC2-7E83-4A35-AD68-9C96B8D7AFFF}" ShortID="689489004">
-											<Language>SFX</Language>
-											<AudioFile>SFX_SCIFI_BEEP_NO_ACCESS.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_SCIFI_BEEP_NO_ACCESS" ID="{7DE9AEC2-7E83-4A35-AD68-9C96B8D7AFFF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Broken_Room" ID="{199043B1-BC4D-494B-B191-9697208B45D3}" ShortID="268002240">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -3606,32 +2236,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="SFX_SCI-FI_BEAM_BLAST_W-SONAR" ID="{7E14F932-5245-4E30-A178-6DEBA79CDF25}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" ShortID="131185130">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Access_Denied" ID="{30C0908F-5EEC-4BCD-B3E0-961EB6C36B01}" ShortID="701336263">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Access_Denied.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Access_Denied" ID="{30C0908F-5EEC-4BCD-B3E0-961EB6C36B01}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

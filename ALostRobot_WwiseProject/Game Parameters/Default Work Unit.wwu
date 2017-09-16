@@ -1,58 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" SchemaVersion="80">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" PersistMode="Standalone">
-			<ChildrenList>
-				<Folder Name="Environment_Parameters" ID="{4A9A6982-471A-43F5-A46D-5AA95D71E4A9}" ShortID="423797061">
-					<ChildrenList>
-						<GameParameter Name="Blizzard_Intensity" ID="{065F872B-03F8-4B2F-8413-80E30DE923CB}">
-							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="0"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Blizzard" ID="{A2AD5E75-5B87-436D-AC90-D3CFE6AE4DAA}">
-							<PropertyList>
-								<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
-								<Property Name="InitialValue" Type="Real64" Value="0"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Forestry" ID="{FB516E1B-D337-4F67-910F-AE2CAAA72750}">
-							<PropertyList>
-								<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
-								<Property Name="InitialValue" Type="Real64" Value="0"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Shuttle_MainHall" ID="{A3B42B73-B8E6-4C0D-973B-788C02E04B2D}">
-							<PropertyList>
-								<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
-								<Property Name="InitialValue" Type="Real64" Value="0"/>
-								<Property Name="RTPCRamping" Type="int16" Value="2"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Shuttle_ComputerRoom" ID="{41CB5105-9121-4B61-AB31-E03CAE1646C9}"/>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="MasterAudioMix_Parameters" ID="{B067B703-D840-4A1C-8255-9BFC24FB761A}" ShortID="995792004">
-					<ChildrenList>
-						<GameParameter Name="Slider_Music_Mix" ID="{AB8A3CC5-DD74-455B-A6F7-C745B908A7AC}">
-							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="60"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Slider_Ambience_Mix" ID="{CEF5D3AF-3C43-4A42-B287-6DC768FF51A2}">
-							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="60"/>
-							</PropertyList>
-						</GameParameter>
-						<GameParameter Name="Slider_SoundFX_Mix" ID="{BC6DCD76-CEDC-44C5-961B-F87055ABCBD9}">
-							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="60"/>
-							</PropertyList>
-						</GameParameter>
-					</ChildrenList>
-				</Folder>
-				<GameParameter Name="Distance_to_Player" ID="{0375F609-9F47-405F-BC07-5E068B7D8837}"/>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{B4216428-6A2B-4F73-A520-E94B441A56BD}" PersistMode="Standalone"/>
 	</GameParameters>
 </WwiseDocument>

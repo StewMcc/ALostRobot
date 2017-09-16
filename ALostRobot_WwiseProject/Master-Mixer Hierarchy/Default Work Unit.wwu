@@ -14,138 +14,30 @@
 					<ChildrenList>
 						<Bus Name="Ambience_Bus" ID="{766711DE-C270-460F-ACDD-558C9F20B7E6}">
 							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{555C9E2D-6FB7-4B37-8F10-4C03CEABE81C}" ShortID="1041444353">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Slider_Ambience_Mix" ID="{CEF5D3AF-3C43-4A42-B287-6DC768FF51A2}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{A4016EE2-6584-42EF-868C-1959884F3A2B}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
 								<Property Name="DivergenceCenter" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList/>
-							</StateInfo>
 						</Bus>
 						<Bus Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}">
 							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{8185C538-1601-473C-929C-036197645775}" ShortID="201147128">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Slider_Music_Mix" ID="{AB8A3CC5-DD74-455B-A6F7-C745B908A7AC}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{624D9324-A8E1-4E19-BB03-E6C358D9D031}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
 								<Property Name="DivergenceCenter" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList/>
-							</StateInfo>
 						</Bus>
 						<Bus Name="SoundFX_Bus" ID="{38C02774-A1E4-49FE-9541-FD5EBADAB484}">
 							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{238291EC-FA7E-4656-9E8E-7639357162D4}" ShortID="40015967">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Slider_SoundFX_Mix" ID="{BC6DCD76-CEDC-44C5-961B-F87055ABCBD9}" WorkUnitID="{B4216428-6A2B-4F73-A520-E94B441A56BD}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{4FA0F22F-5568-4478-BD13-60748F6D2BC7}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
 								<Property Name="DivergenceCenter" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList/>
-							</StateInfo>
 						</Bus>
 					</ChildrenList>
 				</Bus>

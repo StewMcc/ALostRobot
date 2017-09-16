@@ -97,7 +97,6 @@ public class AkBankInspector : AkBaseInspector
 				return bank.Name;
 			}
 		}
-
 		return string.Empty;
 	}
 }
