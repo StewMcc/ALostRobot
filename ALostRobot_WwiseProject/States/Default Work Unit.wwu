@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A4A958E0-86C6-43C1-ADA9-43C41C3AA034}" SchemaVersion="80">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A4A958E0-86C6-43C1-ADA9-43C41C3AA034}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="Landscape_States" ID="{A200A14F-10A9-4EFC-958E-808EE37D33CA}">
-					<ChildrenList>
-						<State Name="None" ID="{FF456936-A168-4CE9-AF58-202163F8604E}"/>
-						<State Name="Landscape_Shuttle_State" ID="{EDBB5A31-0037-41AB-B84C-EBC534B2E6C1}"/>
-						<State Name="Landscape_Outside_State" ID="{58615684-7FC8-4A61-89F0-3C730311D312}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="Music_States" ID="{9F71CB85-4EDC-4C28-BC57-717FF69325BC}">
-					<ChildrenList>
-						<State Name="None" ID="{3DAC41D6-8AC5-4DA4-AC42-623628B570A4}"/>
-						<State Name="Level_BrokenBattery" ID="{BF698294-C4D2-4737-AC6E-6598978FE2B7}"/>
-						<State Name="Menu" ID="{5052BF8C-4CC4-4F2F-8097-11A7E51D70A5}"/>
-						<State Name="Leve_FixedBattery" ID="{E34DAA7B-9A25-4166-BEEF-B804B0449990}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="MenuScreen" ID="{3F345396-2D67-40B2-B803-84937624E036}">
-					<ChildrenList>
-						<State Name="None" ID="{B48AFE37-07EE-41AE-999E-5A2CD1919BD4}"/>
-						<State Name="Paused_NO" ID="{DBFE7477-2CBB-4914-9F5C-F28421CD3B62}"/>
-						<State Name="Paused_YES" ID="{B7BF2CD3-F5E4-4CB7-A904-B6ACA2873F86}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{A4A958E0-86C6-43C1-ADA9-43C41C3AA034}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

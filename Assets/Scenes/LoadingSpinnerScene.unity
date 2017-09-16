@@ -226,7 +226,7 @@ Prefab:
     - target: {fileID: 108222338156239698, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80,
         type: 2}
       propertyPath: m_Shadows.m_Bias
-      value: 0.05
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 108222338156239698, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80,
         type: 2}
@@ -275,6 +275,11 @@ Prefab:
         type: 2}
       propertyPath: m_ReceiveShadows
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108222338156239698, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80,
+        type: 2}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 92049716174245154, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80, type: 2}

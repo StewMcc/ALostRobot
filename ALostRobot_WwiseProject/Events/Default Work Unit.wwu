@@ -170,31 +170,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Door_Locked" ID="{59228A7A-72A5-44D1-B8CD-CDFCBC26F44E}">
-							<ChildrenList>
-								<Action Name="" ID="{58581843-4EC9-4558-A0B4-5F23999DCEE3}" ShortID="448980318">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="DoorIsLocked" ID="{8F71E778-95CC-4CA8-9DFB-3D8DC0669946}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{A0A972FD-6D81-44BD-92B6-29875FD578DA}" ShortID="461874849">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="0.25"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="AccessDenied" ID="{51009D72-1BE6-4312-89AA-69AEB087925A}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Craft_HydroDoor_Close" ID="{499167B1-4141-4EE8-8C3F-BDD5E86545C9}">
 							<ChildrenList>
 								<Action Name="" ID="{2460E22C-ADAC-439B-A986-663468714A5E}" ShortID="517162285">
@@ -301,20 +276,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Craft_Alarm" ID="{E78C1939-A151-498F-B5F7-D9133FBA2C57}">
-							<ChildrenList>
-								<Action Name="" ID="{0A177920-8A72-4AF1-92C2-E7CD9FAD5F88}" ShortID="925163685">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Craft_PowerBattery" ID="{572EF65A-BBD9-4A60-B863-F9536C87F210}">
 							<ChildrenList>
 								<Action Name="" ID="{2854094F-E2EC-428B-94F8-256EC30AEDAC}" ShortID="395658365">
@@ -324,30 +285,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Craft_PowerBattery" ID="{F31F1382-B2C6-4AAF-A8C9-50BDA19DEEFD}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{0E250476-12B9-4862-BCD4-97ADA84CEDCA}" ShortID="958678885">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Craft_Broken_Alarm" ID="{0E72EA13-B57A-4A63-AC25-AE9DF8AEDD0B}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Landscapes_Soundscapes" ID="{D269C596-CA5D-4C4E-8CD7-036E8BF5D55C}">
-							<ChildrenList>
-								<Action Name="" ID="{39560FE2-B708-4392-BB27-FF183601CF04}" ShortID="982666012">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Landscapes" ID="{942B59FA-C890-4242-81E1-BCDD065F958E}" WorkUnitID="{03E817AD-851D-4544-9CE9-9CC3560E5AD5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -494,40 +431,6 @@
 				</Folder>
 				<Folder Name="Music" ID="{AA1CE2EF-4F0B-4965-AFBA-4641FAABE693}" ShortID="225707705">
 					<ChildrenList>
-						<Event Name="Level_Music_01" ID="{F7099DB9-80E2-47B7-A535-48E5B15B4E95}">
-							<ChildrenList>
-								<Action Name="" ID="{C27FFC6A-2860-43E0-AEAC-7E3ED35917A3}" ShortID="685444381">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music_01" ID="{AFEC8D22-2C4A-4468-8009-A10B99F16845}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{77B7968D-75DE-4C67-895C-EA0FFD4A876C}" ShortID="802497042">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Menu_Segment_2" ID="{B21C17E3-0B87-42FC-9C0D-A5ED92DCC52E}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{6953B648-603A-4C8D-AB7E-E820FC2BC3EB}" ShortID="884572243">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music_02" ID="{B7408AEF-7A1D-4E3C-98E2-57E482DD8DAA}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Menu_Music" ID="{02B69B78-A523-4A28-9172-06217DF96105}">
 							<ChildrenList>
 								<Action Name="" ID="{B0D83519-1FA9-432F-A120-C6FEBEF0B025}" ShortID="513629527">
@@ -537,64 +440,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Menu_Music" ID="{BE6538C3-3BA2-4826-9CBD-56D0861979FE}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{F57801A9-8507-4B1F-9589-236F06F376EC}" ShortID="663266525">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music" ID="{757F63EE-878E-4120-A6F2-F3F464CB8B6A}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{E8C67C36-3234-475A-AF24-CBACA6C2010C}" ShortID="801509503">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music_Layer" ID="{646627D7-09EC-4D55-AC37-D6E7EB929A55}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Level_Music_02" ID="{946841C8-105C-41BE-BD51-33E5E302BD80}">
-							<ChildrenList>
-								<Action Name="" ID="{FF21E7B8-DD6A-4C42-9C0C-A0BB91F2AE09}" ShortID="1063164657">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music_01" ID="{AFEC8D22-2C4A-4468-8009-A10B99F16845}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{B0B2A97E-EA14-4078-AC39-5BD5553D8D4E}" ShortID="63869329">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Transition" ID="{21E27027-C78C-4B7C-A6B8-F7B07C39D14C}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{65A9AC13-5122-4253-ACA1-5C2BDF155F9A}" ShortID="701396388">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="3.5"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Level_Music_02" ID="{B7408AEF-7A1D-4E3C-98E2-57E482DD8DAA}" WorkUnitID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
