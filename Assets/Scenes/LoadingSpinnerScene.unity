@@ -281,6 +281,11 @@ Prefab:
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 23890574657777716, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
     m_RemovedComponents:
     - {fileID: 92049716174245154, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80, type: 2}
     - {fileID: 124168733764953196, guid: 0c6f5efb2de9e0d4dbb8ae213ea83f80, type: 2}
