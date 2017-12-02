@@ -7,20 +7,18 @@
 public class RoomManager : MonoBehaviour {
 
 	[SerializeField]
-	private Texture defaultTexture = null;
+	private Material defaultMaterial = null;
 	[SerializeField]
-	private Texture errorTexture = null;
+	private Material errorMaterial = null;
 	[SerializeField]
-	private Texture successTexture = null;
-
-	[SerializeField]
+	private Material successMaterial = null;
+    
+    [SerializeField]
 	private int numberOfRoomsToBreak = 2;
 
 	private Room[] rooms_ = null;
 
 	private int maxAttempts_ =6;
-
-
 
 	private void Start() {
 		rooms_ = GetComponentsInChildren<Room>();
@@ -38,16 +36,16 @@ public class RoomManager : MonoBehaviour {
 		EventManager.OnPossibleGameCompletion -= CheckShipFixed;
 	}
 
-	public Texture DefaultTexture() {
-		return defaultTexture;
+	public Material DefaultMaterial() {
+		return defaultMaterial;
 	}
 
-	public Texture ErrorTexture() {
-		return errorTexture;
+	public Material ErrorMaterial() {
+		return errorMaterial;
 	}
 
-	public Texture SuccessTexture() {
-		return successTexture;
+	public Material SuccessMaterial() {
+		return successMaterial;
 	}
 
 	/// <summary>
