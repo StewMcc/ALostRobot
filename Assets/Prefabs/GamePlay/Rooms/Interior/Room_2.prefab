@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4718447610649074}
   - component: {fileID: 33548255888316006}
   - component: {fileID: 23900456568617984}
-  - component: {fileID: 64596701954737408}
   m_Layer: 0
   m_Name: Prop_ControlPanel_Screen_default
   m_TagString: Untagged
@@ -39,7 +38,6 @@ GameObject:
   - component: {fileID: 4685225524706628}
   - component: {fileID: 33646026727139102}
   - component: {fileID: 23285919923339936}
-  - component: {fileID: 64512722328601284}
   m_Layer: 0
   m_Name: Prop_ControlPanel (2)_default
   m_TagString: Untagged
@@ -57,7 +55,6 @@ GameObject:
   - component: {fileID: 4351073847236600}
   - component: {fileID: 33328484718074216}
   - component: {fileID: 23345557046467886}
-  - component: {fileID: 64432161187533634}
   m_Layer: 2
   m_Name: Room_2_FullWall_default
   m_TagString: Untagged
@@ -124,7 +121,6 @@ GameObject:
   - component: {fileID: 4351206803886672}
   - component: {fileID: 33798316468294090}
   - component: {fileID: 23735058137962824}
-  - component: {fileID: 64388900076875100}
   m_Layer: 2
   m_Name: Room_2_Door_default
   m_TagString: Untagged
@@ -142,7 +138,6 @@ GameObject:
   - component: {fileID: 4168013765888988}
   - component: {fileID: 33692024185988084}
   - component: {fileID: 23950971860851716}
-  - component: {fileID: 64608172416495650}
   m_Layer: 2
   m_Name: Room_2_HalfWall_default
   m_TagString: Untagged
@@ -177,7 +172,6 @@ GameObject:
   - component: {fileID: 4635946798041050}
   - component: {fileID: 33684488263245908}
   - component: {fileID: 23562405091166096}
-  - component: {fileID: 64469445065826306}
   m_Layer: 0
   m_Name: FullWall Corner Rooms 2+4+6_default
   m_TagString: Untagged
@@ -745,87 +739,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1857982044015322}
   m_Mesh: {fileID: 4300000, guid: d1b29259d482f2549a75dd051046348b, type: 3}
---- !u!64 &64388900076875100
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1424998319247650}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 245ee55d5c5399847adf7a8652587af5, type: 3}
---- !u!64 &64432161187533634
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1260006922601794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 1
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 50656942920bf6d44ba6be3c0e3b7537, type: 3}
---- !u!64 &64469445065826306
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1862683838132606}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 8560f11ceac1dc9478cfccf88f3db50b, type: 3}
---- !u!64 &64512722328601284
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212654313210602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: d1b29259d482f2549a75dd051046348b, type: 3}
---- !u!64 &64596701954737408
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033370906988492}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: a4f5ee3b05ab65649a3a4354536586f5, type: 3}
---- !u!64 &64608172416495650
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1792024595638460}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 22a8cc77ce2de3a438f28f7c683308b7, type: 3}

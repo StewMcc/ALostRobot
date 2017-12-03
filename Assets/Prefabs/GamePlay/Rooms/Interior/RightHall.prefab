@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4962708617014024}
   - component: {fileID: 33755089798513862}
   - component: {fileID: 23421777533074640}
-  - component: {fileID: 64003743598642816}
   m_Layer: 0
   m_Name: HallWays_Floor_Full (4)_default
   m_TagString: Untagged
@@ -39,7 +38,6 @@ GameObject:
   - component: {fileID: 4332735053921676}
   - component: {fileID: 33265985556590298}
   - component: {fileID: 23536006103457154}
-  - component: {fileID: 64493277732245066}
   m_Layer: 0
   m_Name: HallWays_Floor_Full (3)_default
   m_TagString: Untagged
@@ -57,7 +55,6 @@ GameObject:
   - component: {fileID: 4923041668850442}
   - component: {fileID: 33147766410635940}
   - component: {fileID: 23885421051052066}
-  - component: {fileID: 64344445178815334}
   m_Layer: 0
   m_Name: RightHall_EndPiece_01_default
   m_TagString: Untagged
@@ -75,7 +72,6 @@ GameObject:
   - component: {fileID: 4188977298430388}
   - component: {fileID: 33665527787408708}
   - component: {fileID: 23896253177993460}
-  - component: {fileID: 64034026158209634}
   m_Layer: 0
   m_Name: HallWays_Floor_Half (2)_default
   m_TagString: Untagged
@@ -93,7 +89,6 @@ GameObject:
   - component: {fileID: 4153075815255946}
   - component: {fileID: 33634761265341138}
   - component: {fileID: 23321184197814040}
-  - component: {fileID: 64535946043462346}
   m_Layer: 0
   m_Name: HallWays_Floor_Full (2)_default
   m_TagString: Untagged
@@ -111,7 +106,6 @@ GameObject:
   - component: {fileID: 4282432265279782}
   - component: {fileID: 33008074461425816}
   - component: {fileID: 23387921327837500}
-  - component: {fileID: 64653232963695986}
   m_Layer: 0
   m_Name: HallWays_Floor_Half (3)_default
   m_TagString: Untagged
@@ -129,7 +123,6 @@ GameObject:
   - component: {fileID: 4086085147096304}
   - component: {fileID: 33120955510524204}
   - component: {fileID: 23831214527111440}
-  - component: {fileID: 64468578455612578}
   m_Layer: 0
   m_Name: HallWays_Floor_Half (4)_default
   m_TagString: Untagged
@@ -162,7 +155,6 @@ GameObject:
   - component: {fileID: 4603561234143148}
   - component: {fileID: 33489335710326714}
   - component: {fileID: 23720104506249234}
-  - component: {fileID: 64269345987557000}
   m_Layer: 0
   m_Name: RightHall_EndPiece_02_default
   m_TagString: Untagged
@@ -607,115 +599,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067229695424258}
   m_Mesh: {fileID: 4300000, guid: c25ce9d721d7dd945807ae5f07d304de, type: 3}
---- !u!64 &64003743598642816
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1067229695424258}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: c25ce9d721d7dd945807ae5f07d304de, type: 3}
---- !u!64 &64034026158209634
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375988087916410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 97b72f8c35eaf8f418145b90a7111611, type: 3}
---- !u!64 &64269345987557000
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1838919179205318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 8699513f84c277749be20cb82bba0271, type: 3}
---- !u!64 &64344445178815334
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1295983266144128}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: f34700e8904ed0d45b276103ed76917a, type: 3}
---- !u!64 &64468578455612578
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1695239102068668}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 97b72f8c35eaf8f418145b90a7111611, type: 3}
---- !u!64 &64493277732245066
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1141391037987140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: c25ce9d721d7dd945807ae5f07d304de, type: 3}
---- !u!64 &64535946043462346
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654598500530004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: c25ce9d721d7dd945807ae5f07d304de, type: 3}
---- !u!64 &64653232963695986
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1674617809320022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 97b72f8c35eaf8f418145b90a7111611, type: 3}

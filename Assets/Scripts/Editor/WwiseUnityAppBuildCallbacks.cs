@@ -16,6 +16,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
     private static string destinationSoundBankFolder = "";
 
     public int callbackOrder { get { return 0; } }
+
     public void OnPreprocessBuild(BuildTarget target, string path) {
 
         PopulateSourceAndDestinationFolderPaths();
