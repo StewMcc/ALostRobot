@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4854837849010302}
   - component: {fileID: 33996571795622430}
   - component: {fileID: 23533116727606680}
-  - component: {fileID: 64646543842956150}
   m_Layer: 0
   m_Name: Prop_Shelves_01 (1)_default
   m_TagString: Untagged
@@ -107,7 +106,6 @@ GameObject:
   - component: {fileID: 4770990715191384}
   - component: {fileID: 33718583056069892}
   - component: {fileID: 23024041379605048}
-  - component: {fileID: 64183572465495354}
   m_Layer: 0
   m_Name: Prop_Shelves_01 (4)_default
   m_TagString: Untagged
@@ -208,7 +206,6 @@ GameObject:
   - component: {fileID: 4177926076746378}
   - component: {fileID: 33883244717161842}
   - component: {fileID: 23563213076591556}
-  - component: {fileID: 64563385597109522}
   m_Layer: 2
   m_Name: Room_4_HalfWall_default
   m_TagString: Untagged
@@ -243,7 +240,6 @@ GameObject:
   - component: {fileID: 4607082428969546}
   - component: {fileID: 33932856525392626}
   - component: {fileID: 23355190174328932}
-  - component: {fileID: 64276552322003188}
   m_Layer: 0
   m_Name: Prop_Shelves_default
   m_TagString: Untagged
@@ -432,7 +428,6 @@ GameObject:
   - component: {fileID: 4165998347409918}
   - component: {fileID: 33662080180758346}
   - component: {fileID: 23001545013751888}
-  - component: {fileID: 64692254384791170}
   m_Layer: 0
   m_Name: Prop_Shelves (1)_default
   m_TagString: Untagged
@@ -484,7 +479,6 @@ GameObject:
   - component: {fileID: 4322548885700980}
   - component: {fileID: 33159208814087246}
   - component: {fileID: 23485743433946584}
-  - component: {fileID: 64508765879479256}
   m_Layer: 0
   m_Name: FullWall Corner Rooms 2+4+6_default
   m_TagString: Untagged
@@ -587,7 +581,6 @@ GameObject:
   - component: {fileID: 4447345185290072}
   - component: {fileID: 33660912278600288}
   - component: {fileID: 23431063280241330}
-  - component: {fileID: 64032859150675336}
   m_Layer: 0
   m_Name: Door For Room 3 and 4_default
   m_TagString: Untagged
@@ -622,7 +615,6 @@ GameObject:
   - component: {fileID: 4558247290824410}
   - component: {fileID: 33755556470812594}
   - component: {fileID: 23681328857193646}
-  - component: {fileID: 64729415057486268}
   m_Layer: 2
   m_Name: Room_4_Full+HalfWall_default
   m_TagString: Untagged
@@ -2568,118 +2560,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1064856114550682}
   m_Mesh: {fileID: 4300000, guid: 4fa82598302b65841a89cef970bed32d, type: 3}
---- !u!64 &64032859150675336
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929216258675026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 055ad06d464a4ce4f89b7d40151f3d96, type: 3}
---- !u!64 &64183572465495354
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117438032127744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 4fa82598302b65841a89cef970bed32d, type: 3}
---- !u!64 &64276552322003188
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1459148804072924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: dd7177bcbb258c04394fb318a0dc9dbb, type: 3}
---- !u!64 &64508765879479256
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745567797171266}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 8560f11ceac1dc9478cfccf88f3db50b, type: 3}
---- !u!64 &64563385597109522
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1366365991699058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3b24db6c27f4b3e479108186136c1967, type: 3}
---- !u!64 &64646543842956150
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064856114550682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 4fa82598302b65841a89cef970bed32d, type: 3}
---- !u!64 &64692254384791170
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1703703800260452}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: dd7177bcbb258c04394fb318a0dc9dbb, type: 3}
---- !u!64 &64729415057486268
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1958811053612600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: d6627da6d99c4844ea63ddcca1c9b649, type: 3}
 --- !u!65 &65948438322772636
 BoxCollider:
   m_ObjectHideFlags: 1
