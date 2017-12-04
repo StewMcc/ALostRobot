@@ -26,7 +26,10 @@ public class DebugUi : MonoBehaviour {
 	[SerializeField]
 	private Button closeDebug = null;
 
-	bool isPanelVisible_ = false;
+    [SerializeField]
+    private Text version = null;
+
+    bool isPanelVisible_ = false;
 
 	/// <summary>
 	/// Adds the listeners to the buttons.
@@ -39,7 +42,10 @@ public class DebugUi : MonoBehaviour {
 
 		fakeWin.onClick.AddListener(FakeWin);
 		closeDebug.onClick.AddListener(CloseDebugPanel);
-	}
+
+        version.text = Application.version;
+
+    }
 
 	/// <summary>
 	/// Make Sure all Event Listeners have been removed when destroying.
