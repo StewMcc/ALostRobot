@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 1771359625}
-  followSpeed: 4
+  followSpeed: 0.1
   cameraOffset: {x: 0, y: 0, z: -40}
   logoTransitionTime: 3
 --- !u!4 &1244993914 stripped
