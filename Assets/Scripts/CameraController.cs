@@ -25,6 +25,8 @@ public class CameraController : MonoBehaviour {
 
     private Vector3 lerpStartPosition_ = Vector3.zero;
 
+    private Vector3 cameraVelocity_ = Vector3.zero;
+
     private bool isFollowingRobot_ = true;
 
     private bool isMovingToDistressBeacon_ = true;
@@ -52,12 +54,13 @@ public class CameraController : MonoBehaviour {
         if (isFollowingRobot_) {
 
             // lerped animation between 2 points.
-            transform.position = Vector3.Lerp(transform.position, 
+            transform.position = Vector3.SmoothDamp(transform.position, 
                 new Vector3(
                 robot.transform.position.x + cameraOffset.x,
                 transform.position.y + cameraOffset.y,
-                robot.transform.position.z + cameraOffset.z), 
-                Time.deltaTime * followSpeed
+                robot.transform.position.z + cameraOffset.z),
+                ref cameraVelocity_,
+                followSpeed
             );
         }
         else if (isMovingToDistressBeacon_) {
