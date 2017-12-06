@@ -36,11 +36,16 @@ sysinfo.txt
 # Wwise project stuff
 .cache/
 *.validationcache
+*.akd
 *.wproj_migration.log
 *.wsettings
-Assets/WwiseSettings.xml
-Assets/WwiseSettings.xml.meta
-ALostRobot_WwiseProject/IncrementalSoundBankData.xml
+WwiseSettings.xml
+WwiseSettings.xml.meta
+IncrementalSoundBankData.xml
+
+GeneratedSoundBanks/
+
+
 
 # Mac stuff
 .DS_Store

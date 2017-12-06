@@ -1,4 +1,0 @@
-# Wwise Asset gitignore
-# Temp cache not need just generate soundbanks
-/Editor/ProjectData/
-/Editor/ProjectData.meta
