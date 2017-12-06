@@ -43,11 +43,24 @@ WwiseSettings.xml
 WwiseSettings.xml.meta
 IncrementalSoundBankData.xml
 
-GeneratedSoundBanks/
+## Ignores wwise project files
+*/GeneratedSoundBanks/iOS/
+*/GeneratedSoundBanks/Android/
+*/GeneratedSoundBanks/Mac/
+*/GeneratedSoundBanks/Windows/
 
+## ignores any generated/copied file in streaming assets
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Android/
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Android\.meta
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac\.meta
+Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows\.meta
 
 
 # Mac stuff
 .DS_Store
 .bak
 .BAK
+
+

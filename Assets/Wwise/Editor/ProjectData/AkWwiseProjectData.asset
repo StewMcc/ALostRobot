@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d599c66e39cb8489b436cff1051ce7, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: Profile
+  CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -390,7 +390,11 @@ MonoBehaviour:
     m_lastTimePsrt1: 868398753
     m_lastTimePart2: -1999302609
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /ALostRobot_WwiseProject
+  - /ALostRobot_WwiseProject/Events
+  - /ALostRobot_WwiseProject/Events/Default Work Unit
+  - /ALostRobot_WwiseProject/Events/Default Work Unit/Music
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

@@ -2398,6 +2398,8 @@ public partial class AkSoundEngine {
     return ret;
   }
 
+  public static string GetCurrentLanguage() { return AkSoundEngine.StringFromIntPtrOSString(AkSoundEnginePINVOKE.CSharp_GetCurrentLanguage()); }
+
   public static AKRESULT UnloadFilePackage(uint in_uPackageID) {
     AKRESULT ret = (AKRESULT)AkSoundEnginePINVOKE.CSharp_UnloadFilePackage(in_uPackageID);
 
