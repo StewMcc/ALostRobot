@@ -19,6 +19,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
     public void OnPreprocessBuild(BuildTarget target, string path) {
 
         PopulateSourceAndDestinationFolderPaths();
+        UnityEngine.Debug.Log("Copying "+sourceSoundBankFolder+ "\nTo "+destinationSoundBankFolder);
 
         //Copy the soundbank from the Wwise project to the unity project (Inside the StreamingAssets folder as defined in Window->Wwise Settings)
         if (!AkUtilities.DirectoryCopy(sourceSoundBankFolder, 	//source folder
@@ -35,31 +36,24 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
 
         PopulateSourceAndDestinationFolderPaths();
 
+        UnityEngine.Debug.Log("Deleting "+destinationSoundBankFolder);
         //Delete the soundbank from the unity project so they don't get copied in the game folder of future builds
         Directory.Delete(destinationSoundBankFolder, true);
     }
 
-    private void PopulateSourceAndDestinationFolderPaths() {
+    [MenuItem("Tools/Test-Source")]
+    private static void PopulateSourceAndDestinationFolderPaths() {
         if (!(sourceSoundBankFolder == "" && destinationSoundBankFolder == "")) {
-
             return;
-        }
-        //get Wwise project file (.wproj) path
-        string wwiseProjFile = Path.Combine(Application.dataPath, WwiseSetupWizard.Settings.WwiseProjectPath).Replace('/', '\\');
-
-        int removeIndex = wwiseProjFile.LastIndexOf(Path.DirectorySeparatorChar);
+        }        
         
-        string wwiseProjectFolder = wwiseProjFile;
-        if (removeIndex >= 0) {
-            //get Wwise project root folder path
-            wwiseProjectFolder = wwiseProjFile.Remove(wwiseProjFile.LastIndexOf(Path.DirectorySeparatorChar));
-        }
-
         //get Wwise platform string (the string isn't the same as unity for some platforms)
         string wwisePlatformString = UnityToWwisePlatformString(EditorUserBuildSettings.activeBuildTarget.ToString());
-
-        //get soundbank location in the Wwise project for the current platform target
-        sourceSoundBankFolder = Path.Combine(wwiseProjectFolder, AkBasePathGetter.GetPlatformBasePath());
+        
+        // Get the soureSoundbank folder, and trim the incorrect OS off (will give you editor source)
+        sourceSoundBankFolder = AkBasePathGetter.GetPlatformBasePath().TrimEnd(Path.DirectorySeparatorChar,Path.AltDirectorySeparatorChar);
+        sourceSoundBankFolder = sourceSoundBankFolder.Remove(sourceSoundBankFolder.LastIndexOf(Path.DirectorySeparatorChar));
+        sourceSoundBankFolder = Path.Combine(sourceSoundBankFolder,wwisePlatformString+Path.DirectorySeparatorChar);
 
         //get soundbank destination in the Unity project for the current platform target
         destinationSoundBankFolder = Path.Combine(Application.dataPath + Path.DirectorySeparatorChar + "StreamingAssets",    //Soundbank must be inside the StreamingAssets folder
@@ -88,7 +82,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         return unityPlatormString;
     }
 
-    [MenuItem("Tools/TestTerminal")]
+    [MenuItem("Tools/Test-Git")]
     private static string RetrieveCommitShortHash() {
         string output = "no-git";
 

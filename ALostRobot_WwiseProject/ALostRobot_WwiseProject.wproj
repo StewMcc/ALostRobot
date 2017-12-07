@@ -4,6 +4,7 @@
 		<Project Name="ALostRobot_WwiseProject" ID="{3B7C05D3-BE04-4779-A384-CA21988D6D49}">
 			<Platforms>
 				<Platform Name="Android" ReferencePlatform="Android" ID="{16C08EE0-886D-4821-9F92-3A2259C31CE2}"/>
+				<Platform Name="iOS" ReferencePlatform="iOS" ID="{76F27F0D-55E6-4DD6-BD5C-A67FA51D6C64}"/>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{A109496C-1A47-4E44-A23C-23D2CBD0E565}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{7EBA4EA1-4F50-4B76-9E00-F232B6EBFFBA}"/>
 			</Platforms>
@@ -18,6 +19,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -25,6 +27,7 @@
 					<ValueList>
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
@@ -32,6 +35,7 @@
 					<ValueList>
 						<Value Platform="Android">256</Value>
 						<Value Platform="Windows">256</Value>
+						<Value Platform="iOS">256</Value>
 						<Value Platform="Mac">256</Value>
 					</ValueList>
 				</Property>
@@ -42,6 +46,7 @@
 					<ValueList>
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
@@ -49,6 +54,7 @@
 					<ValueList>
 						<Value Platform="Android">Copy Streamed Files</Value>
 						<Value Platform="Windows">Copy Streamed Files</Value>
+						<Value Platform="iOS">Copy Streamed Files</Value>
 						<Value Platform="Mac">Copy Streamed Files</Value>
 					</ValueList>
 				</Property>
@@ -56,6 +62,7 @@
 					<ValueList>
 						<Value Platform="Android">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 						<Value Platform="Windows">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="iOS">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 						<Value Platform="Mac">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 					</ValueList>
 				</Property>
@@ -63,6 +70,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -70,6 +78,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -77,6 +86,7 @@
 					<ValueList>
 						<Value Platform="Android">-80</Value>
 						<Value Platform="Windows">-80</Value>
+						<Value Platform="iOS">-80</Value>
 						<Value Platform="Mac">-80</Value>
 					</ValueList>
 				</Property>
@@ -628,7 +638,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="2">
+				<SharedPropertyList ClassName="iZotope Hybrid Reverb" PluginType="3" CompanyID="259" PluginID="2">
 					<PropertyList>
 						<Property Name="DecayHighFrequency" Type="Real32">
 							<ValueList>
@@ -940,7 +950,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="3">
+				<SharedPropertyList ClassName="iZotope Trash Distortion" PluginType="3" CompanyID="259" PluginID="3">
 					<PropertyList>
 						<Property Name="Distortion1InputGain" Type="Real32">
 							<ValueList>
@@ -1074,7 +1084,7 @@
 					</PropertyList>
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="Event" PluginType="0" CompanyID="1" PluginID="4"/>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="4">
+				<SharedPropertyList ClassName="iZotope Trash Delay" PluginType="3" CompanyID="259" PluginID="4">
 					<PropertyList>
 						<Property Name="DelayType" Type="int32">
 							<ValueList>
@@ -1277,7 +1287,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="5">
+				<SharedPropertyList ClassName="iZotope Trash Dynamics Mono" PluginType="3" CompanyID="259" PluginID="5">
 					<PropertyList>
 						<Property Name="Bypass" Type="int32">
 							<ValueList>
@@ -1337,7 +1347,7 @@
 					</PropertyList>
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="State" PluginType="0" CompanyID="1" PluginID="6"/>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="6">
+				<SharedPropertyList ClassName="iZotope Trash Filters" PluginType="3" CompanyID="259" PluginID="6">
 					<PropertyList>
 						<Property Name="Filter1Frequency" Type="Real32">
 							<ValueList>
@@ -1535,7 +1545,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="7">
+				<SharedPropertyList ClassName="iZotope Trash Box Modeler" PluginType="3" CompanyID="259" PluginID="7">
 					<PropertyList>
 						<Property Name="BoxModel" Type="int32">
 							<ValueList>
@@ -2407,7 +2417,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="259" PluginID="9">
+				<SharedPropertyList ClassName="iZotope Trash Multiband Distortion" PluginType="3" CompanyID="259" PluginID="9">
 					<PropertyList>
 						<Property Name="Distortion1Band1InputGain" Type="Real32">
 							<ValueList>
@@ -7071,7 +7081,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="256" PluginID="103">
+				<SharedPropertyList ClassName="McDSP ML1" PluginType="3" CompanyID="256" PluginID="103">
 					<PropertyList>
 						<Property Name="Ceiling" Type="Real32">
 							<ValueList>
@@ -7370,7 +7380,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="256" PluginID="110">
+				<SharedPropertyList ClassName="McDSP FutzBox" PluginType="3" CompanyID="256" PluginID="110">
 					<PropertyList>
 						<Property Name="Balance" Type="Real32">
 							<ValueList>
@@ -9216,7 +9226,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="0" PluginID="171">
+				<SharedPropertyList ClassName="Wwise Reflect" PluginType="3" CompanyID="0" PluginID="171">
 					<PropertyList>
 						<Property Name="BaseTextureFrequency" Type="Real32">
 							<ValueList>
@@ -9531,7 +9541,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="263" PluginID="1100">
+				<SharedPropertyList ClassName="Auro Headphone" PluginType="3" CompanyID="263" PluginID="1100">
 					<PropertyList>
 						<Property Name="Bypass" Type="bool">
 							<ValueList>
@@ -9635,7 +9645,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="6" CompanyID="263" PluginID="1101">
+				<SharedPropertyList ClassName="Auro Panner" PluginType="6" CompanyID="263" PluginID="1101">
 					<PropertyList>
 						<Property Name="EnableDefaultSpatialization" Type="bool">
 							<ValueList>
@@ -9654,7 +9664,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="263" PluginID="1102">
+				<SharedPropertyList ClassName="AttachableMixerInput" PluginType="3" CompanyID="263" PluginID="1102">
 					<PropertyList>
 						<Property Name="CenterFactorFC" Type="Real32">
 							<ValueList>

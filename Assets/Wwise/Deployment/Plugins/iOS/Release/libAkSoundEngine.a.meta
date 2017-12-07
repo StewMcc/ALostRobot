@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6aef7da6cf34ca64e999099a8ef881b1
-timeCreated: 1512587654
+timeCreated: 1512664166
 licenseType: Pro
 PluginImporter:
   serializedVersion: 2
@@ -22,6 +22,12 @@ PluginImporter:
         enabled: 0
         settings:
           DefaultValueInitialized: true
+    data:
+      first:
+        iPhone: iOS
+      second:
+        enabled: 0
+        settings: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
