@@ -15,16 +15,22 @@ public class PauseScreen : MonoBehaviour {
 	[SerializeField]
 	private Button muteMusicButton =null;
 
-	[SerializeField]
+    [SerializeField]
+    private Button muteSfxButton = null;
+
+
+    [SerializeField]
 	private GameObject musicMutedIcon = null;
-	private GameObject sfxMutedIcon = null;
+    [SerializeField]
+    private GameObject sfxMutedIcon = null;
+
 	private bool isMusicOn = true;
 	private bool isSfxOn = true;
 
 	private void Start() {
 		restartButton.onClick.AddListener(RestartGame);
 		muteMusicButton.onClick.AddListener(ToggleMusic);
-		muteMusicButton.onClick.AddListener(ToggleSfx);
+        muteSfxButton.onClick.AddListener(ToggleSfx);
 		openPauseMenu.onClick.AddListener(OpenPauseMenu);
 		closePauseMenu.onClick.AddListener(ClosePauseMenu);
 		gameObject.SetActive(false);
@@ -33,7 +39,7 @@ public class PauseScreen : MonoBehaviour {
 	private void OnDestroy() {
 		restartButton.onClick.RemoveListener(RestartGame);
 		muteMusicButton.onClick.RemoveListener(ToggleMusic);
-		muteMusicButton.onClick.RemoveListener(ToggleSfx);
+        muteSfxButton.onClick.RemoveListener(ToggleSfx);
 		openPauseMenu.onClick.RemoveListener(OpenPauseMenu);
 		closePauseMenu.onClick.RemoveListener(ClosePauseMenu);
 	}

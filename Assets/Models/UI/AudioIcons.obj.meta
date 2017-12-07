@@ -1,18 +1,17 @@
 fileFormatVersion: 2
-guid: 772adeab5ef056948a35755a808ce983
-timeCreated: 1496764133
+guid: edd79e1dfdf88fa47a5e251b06c854f3
+timeCreated: 1512691815
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
+    100000: //RootNode
+    100002: default
+    400000: //RootNode
+    400002: default
     2300000: default
     3300000: default
     4300000: default
-    6400000: default
   materials:
     importMaterials: 0
     materialName: 0
@@ -62,8 +61,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-  importAnimation: 0
+    normalCalculationMode: 4
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
