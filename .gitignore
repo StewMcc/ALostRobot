@@ -22,7 +22,6 @@ ExportedObj/
 *.booproj
 *.svd
 
-
 # Unity3D generated meta files
 *.pidb.meta
 
@@ -62,10 +61,11 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData\.asset
 Assets/Wwise/Editor/ProjectData\.meta
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData\.asset\.meta
 
+## Wwise Profiling data
+*.prof
+
+
 # Mac stuff
 .DS_Store
 .bak
 .BAK
-
-
-
