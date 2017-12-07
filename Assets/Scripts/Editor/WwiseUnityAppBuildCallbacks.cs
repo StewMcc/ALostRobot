@@ -19,7 +19,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
     public void OnPreprocessBuild(BuildTarget target, string path) {
 
         PopulateSourceAndDestinationFolderPaths();
-        
+
         //Copy the soundbank from the Wwise project to the unity project (Inside the StreamingAssets folder as defined in Window->Wwise Settings)
         if (!AkUtilities.DirectoryCopy(sourceSoundBankFolder, 	//source folder
             destinationSoundBankFolder,                         //destination
@@ -47,8 +47,13 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         //get Wwise project file (.wproj) path
         string wwiseProjFile = Path.Combine(Application.dataPath, WwiseSetupWizard.Settings.WwiseProjectPath).Replace('/', '\\');
 
-        //get Wwise project root folder path
-        string wwiseProjectFolder = wwiseProjFile.Remove(wwiseProjFile.LastIndexOf(Path.DirectorySeparatorChar));
+        int removeIndex = wwiseProjFile.LastIndexOf(Path.DirectorySeparatorChar);
+        
+        string wwiseProjectFolder = wwiseProjFile;
+        if (removeIndex >= 0) {
+            //get Wwise project root folder path
+            wwiseProjectFolder = wwiseProjFile.Remove(wwiseProjFile.LastIndexOf(Path.DirectorySeparatorChar));
+        }
 
         //get Wwise platform string (the string isn't the same as unity for some platforms)
         string wwisePlatformString = UnityToWwisePlatformString(EditorUserBuildSettings.activeBuildTarget.ToString());
@@ -86,7 +91,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
     [MenuItem("Tools/TestTerminal")]
     private static string RetrieveCommitShortHash() {
         string output = "no-git";
-        
+
         ProcessStartInfo processInfo = new ProcessStartInfo("git", @"rev-parse --short HEAD");
         processInfo.CreateNoWindow = true;
         processInfo.UseShellExecute = false;
@@ -96,8 +101,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         process.StartInfo = processInfo;
         try {
             process.Start();
-        }
-        catch (System.Exception) {
+        } catch (System.Exception) {
             UnityEngine.Debug.Log("Current commit " + output);
             UnityEngine.Debug.LogError("Check Git is set-up correctly, required on PATH.\n");
             throw;
@@ -106,13 +110,13 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         output = process.StandardOutput.ReadToEnd();
         // clean up whitespace
         output = string.Join("", output.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
-                
+
         process.WaitForExit();
         process.Close();
 
         return output;
     }
-    
+
     private static void UpdateBundleVersion() {
         string currentVersion = PlayerSettings.bundleVersion;
         int major = Convert.ToInt32(currentVersion.Split('.')[0]);
@@ -121,8 +125,8 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         string oldCommit = currentVersion.Split('.')[3];
         string commit = RetrieveCommitShortHash();
 
-        
-        if(oldCommit != commit) {
+
+        if (oldCommit != commit) {
             build = 0;
         }
         build++;
