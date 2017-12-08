@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4636719160414062}
   - component: {fileID: 114474186557868274}
+  - component: {fileID: 114227145462816334}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -110,23 +111,6 @@ GameObject:
   - component: {fileID: 114125462560343178}
   m_Layer: 5
   m_Name: QuitButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &1457770659341816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4038556553467486}
-  - component: {fileID: 33572379851445698}
-  - component: {fileID: 23747960436679722}
-  m_Layer: 5
-  m_Name: PauseMenuNoAudio_default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,20 +230,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4636719160414062}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4038556553467486
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1457770659341816}
-  m_LocalRotation: {x: -0, y: -0.9659258, z: -0, w: 0.2588191}
-  m_LocalPosition: {x: 0, y: 6.699997, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children: []
-  m_Father: {fileID: 4636719160414062}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4325197198699216
 Transform:
@@ -272,7 +243,7 @@ Transform:
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 4636719160414062}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4395638466586754
 Transform:
@@ -285,7 +256,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4636719160414062}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4636719160414062
 Transform:
@@ -299,7 +270,6 @@ Transform:
   m_Children:
   - {fileID: 4777886964706428}
   - {fileID: 224060649002893814}
-  - {fileID: 4038556553467486}
   - {fileID: 4709399582700380}
   - {fileID: 4395638466586754}
   - {fileID: 4021878336579838}
@@ -318,7 +288,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4636719160414062}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4777886964706428
 Transform:
@@ -433,38 +403,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23747960436679722
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1457770659341816}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23834836151842476
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -536,13 +474,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305885407790640}
   m_Mesh: {fileID: 4300000, guid: 1dd809126fa56d946a3c66f55340923a, type: 3}
---- !u!33 &33572379851445698
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1457770659341816}
-  m_Mesh: {fileID: 4300000, guid: deb28d716e876354e89d6172078560ab, type: 3}
 --- !u!33 &33626105471007100
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -629,7 +560,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114040024340903466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114227145462816334}
+        m_MethodName: ToggleSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114125462560343178
@@ -700,6 +642,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114227145462816334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217405247007836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8b8e538c86f914fa90bf81509191ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMutedIcon: {fileID: 23907218798055186}
+  sfxMutedIcon: {fileID: 23834836151842476}
 --- !u!114 &114422590181239886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -757,10 +712,6 @@ MonoBehaviour:
   openPauseMenu: {fileID: 0}
   closePauseMenu: {fileID: 114664932068686514}
   restartButton: {fileID: 114125462560343178}
-  muteMusicButton: {fileID: 114499484614814874}
-  muteSfxButton: {fileID: 114091424862263540}
-  musicMutedIcon: {fileID: 1305885407790640}
-  sfxMutedIcon: {fileID: 1073317825170836}
 --- !u!114 &114499484614814874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -799,7 +750,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114800498102789258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114227145462816334}
+        m_MethodName: ToggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114627749171116776
