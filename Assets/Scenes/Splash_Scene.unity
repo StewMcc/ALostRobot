@@ -521,6 +521,26 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 266624360}
+    - target: {fileID: 114326305580675870, guid: 1e328012cd05b004e9ec175779b5387b,
+        type: 2}
+      propertyPath: nextScene
+      value: Scene_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114326305580675870, guid: 1e328012cd05b004e9ec175779b5387b,
+        type: 2}
+      propertyPath: loadingScene
+      value: LoadingSpinnerScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668608912564408, guid: 1e328012cd05b004e9ec175779b5387b,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668608912564408, guid: 1e328012cd05b004e9ec175779b5387b,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e328012cd05b004e9ec175779b5387b, type: 2}
   m_IsPrefabParent: 0
