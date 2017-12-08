@@ -41,6 +41,32 @@ namespace AK
         static const AkUniqueID TELEPORT = 530129416U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace MUSICAUDIOBUS
+        {
+            static const AkUniqueID GROUP = 2293803806U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DEFAULT = 782826392U;
+                static const AkUniqueID MUTED = 3791155954U;
+            } // namespace STATE
+        } // namespace MUSICAUDIOBUS
+
+        namespace SFXAMBIENCEBUS
+        {
+            static const AkUniqueID GROUP = 250260560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DEFAULT = 782826392U;
+                static const AkUniqueID MUTED = 3791155954U;
+            } // namespace STATE
+        } // namespace SFXAMBIENCEBUS
+
+    } // namespace STATES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
