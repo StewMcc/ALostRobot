@@ -25,6 +25,13 @@ public class SoundManager : Singleton<SoundManager> {
 
 		isMusicEnabled_ = (PlayerPrefs.GetInt(kMusicStateName, 1) == 1) ? true : false;
 		isSfxEnabled_ = (PlayerPrefs.GetInt(kSfxStateName, 1) == 1) ? true : false;
+
+		if (!isMusicEnabled_) {
+			SetState(kMusicStateName, kMuted);
+		}
+		if (!isSfxEnabled_) {
+			SetState(kSfxStateName, kMuted);
+		}
 	}
 	
 	private void OnDestroy() {
