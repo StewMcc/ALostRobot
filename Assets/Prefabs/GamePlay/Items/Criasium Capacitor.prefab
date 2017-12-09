@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4887947712083116}
   - component: {fileID: 33433823989278620}
   - component: {fileID: 23125762744368210}
-  - component: {fileID: 64657229832120198}
   - component: {fileID: 114552916428876982}
+  - component: {fileID: 135960341593254118}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -212,7 +212,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996120002971910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.3, y: 1, z: 82.2}
+  m_LocalPosition: {x: 55.4, y: 1, z: 27.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4887947712083116}
@@ -231,8 +231,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -263,8 +263,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -298,20 +298,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000220028187964}
-  m_Mesh: {fileID: 4300000, guid: e361a35c4ad48cd4cb50e9f3665c712b, type: 3}
---- !u!64 &64657229832120198
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000220028187964}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e361a35c4ad48cd4cb50e9f3665c712b, type: 3}
 --- !u!65 &65871033734800222
 BoxCollider:
@@ -526,6 +512,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135960341593254118
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000220028187964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!198 &198189217659864960
 ParticleSystem:
   m_ObjectHideFlags: 1
