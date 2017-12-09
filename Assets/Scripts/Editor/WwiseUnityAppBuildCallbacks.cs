@@ -115,17 +115,11 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
         string currentVersion = PlayerSettings.bundleVersion;
         int major = Convert.ToInt32(currentVersion.Split('.')[0]);
         int minor = Convert.ToInt32(currentVersion.Split('.')[1]);
-        int build = Convert.ToInt32(currentVersion.Split('.')[2]);
-        string oldCommit = currentVersion.Split('.')[3];
+        int patch = Convert.ToInt32(currentVersion.Split('.')[2]);
         string commit = RetrieveCommitShortHash();
 
+        PlayerSettings.bundleVersion = string.Format("{0}.{1}.{2}.{3}", major, minor, patch, commit);
 
-        if (oldCommit != commit) {
-            build = 0;
-        }
-        build++;
-        PlayerSettings.bundleVersion = string.Format("{0}.{1}.{2}.{3}", major, minor, build, commit);
-
-        UnityEngine.Debug.LogFormat("Updated Game Version: {0}.{1}.{2}.{3}", major, minor, build, commit);
+        UnityEngine.Debug.LogFormat("Updated Game Version: {0}.{1}.{2}.{3}", major, minor, patch, commit);
     }
 }
