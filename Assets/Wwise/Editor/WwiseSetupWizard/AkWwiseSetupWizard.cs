@@ -28,11 +28,6 @@ public class WwiseSetupWizard
 
     public static void RunModify()
     {
-        EditorApplication.delayCall += RunModifyImpl;
-    }
-
-    private static void RunModifyImpl()
-    {
         try
         {
             Debug.Log("WwiseUnity: Running modify setup...");
@@ -55,11 +50,6 @@ public class WwiseSetupWizard
     }
 
     public static void RunSetup()
-    {
-        EditorApplication.delayCall += RunSetupImpl;
-    }
-    
-    private static void RunSetupImpl()
     {
         try
         {
@@ -84,11 +74,6 @@ public class WwiseSetupWizard
 
     public static void RunDemoSceneSetup()
     {
-        EditorApplication.delayCall += RunDemoSceneSetupImpl;
-    }
-
-    private static void RunDemoSceneSetupImpl()
-    {
         try
         {
             Debug.Log("WwiseUnity: Running demo scene setup...");
@@ -112,17 +97,12 @@ public class WwiseSetupWizard
         }
     }
     
-    public static void RunMigrate()
-    {
-        EditorApplication.delayCall += RunMigrateImpl;
-    }
-
     private static void UpdateProgressBar(float progress)
     {
         EditorUtility.DisplayProgressBar("Wwise Integration", "Migration in progress - Please wait...", progress);
     }
 
-    private static void RunMigrateImpl()
+    public static void RunMigrate()
     {
         try
         {

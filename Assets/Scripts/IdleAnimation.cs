@@ -3,7 +3,6 @@
 /// <summary>
 /// PickUp Idle Animation script, gives nice rotation and scaling animation.
 /// </summary>
-[RequireComponent(typeof(MeshRenderer))]
 public class IdleAnimation : MonoBehaviour {
 
 	[SerializeField]

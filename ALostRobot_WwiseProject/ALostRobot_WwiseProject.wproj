@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="80" WwiseVersion="v2017.1.1" WwiseBuild="6340">
+<WwiseDocument Type="Project" SchemaVersion="80" WwiseVersion="v2017.1.3" WwiseBuild="6377">
 	<ProjectInfo>
 		<Project Name="ALostRobot_WwiseProject" ID="{3B7C05D3-BE04-4779-A384-CA21988D6D49}">
 			<Platforms>
 				<Platform Name="Android" ReferencePlatform="Android" ID="{16C08EE0-886D-4821-9F92-3A2259C31CE2}"/>
+				<Platform Name="iOS" ReferencePlatform="iOS" ID="{76F27F0D-55E6-4DD6-BD5C-A67FA51D6C64}"/>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{A109496C-1A47-4E44-A23C-23D2CBD0E565}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{7EBA4EA1-4F50-4B76-9E00-F232B6EBFFBA}"/>
 			</Platforms>
@@ -18,6 +19,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -25,6 +27,7 @@
 					<ValueList>
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
@@ -32,6 +35,7 @@
 					<ValueList>
 						<Value Platform="Android">256</Value>
 						<Value Platform="Windows">256</Value>
+						<Value Platform="iOS">256</Value>
 						<Value Platform="Mac">256</Value>
 					</ValueList>
 				</Property>
@@ -42,6 +46,7 @@
 					<ValueList>
 						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
@@ -49,6 +54,7 @@
 					<ValueList>
 						<Value Platform="Android">Copy Streamed Files</Value>
 						<Value Platform="Windows">Copy Streamed Files</Value>
+						<Value Platform="iOS">Copy Streamed Files</Value>
 						<Value Platform="Mac">Copy Streamed Files</Value>
 					</ValueList>
 				</Property>
@@ -56,6 +62,7 @@
 					<ValueList>
 						<Value Platform="Android">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 						<Value Platform="Windows">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="iOS">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 						<Value Platform="Mac">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 					</ValueList>
 				</Property>
@@ -63,6 +70,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -70,6 +78,7 @@
 					<ValueList>
 						<Value Platform="Android"></Value>
 						<Value Platform="Windows"></Value>
+						<Value Platform="iOS"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
@@ -77,6 +86,7 @@
 					<ValueList>
 						<Value Platform="Android">-80</Value>
 						<Value Platform="Windows">-80</Value>
+						<Value Platform="iOS">-80</Value>
 						<Value Platform="Mac">-80</Value>
 					</ValueList>
 				</Property>
