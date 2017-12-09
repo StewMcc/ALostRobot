@@ -1547,6 +1547,8 @@ class AkSoundEnginePINVOKE {
   public static extern int CSharp_LoadAndDecodeBank([MarshalAs(UnmanagedType.LPWStr)]string jarg1, bool jarg2, out uint jarg3);
   [DllImport("AkSoundEngine", EntryPoint="CSharp_LoadAndDecodeBankFromMemory")]
   public static extern int CSharp_LoadAndDecodeBankFromMemory(IntPtr jarg1, uint jarg2, bool jarg3, [MarshalAs(UnmanagedType.LPWStr)]string jarg4, bool jarg5, out uint jarg6);
+  [DllImport("AkSoundEngine", EntryPoint="CSharp_GetCurrentLanguage")]
+  public static extern IntPtr CSharp_GetCurrentLanguage();
   [DllImport("AkSoundEngine", EntryPoint="CSharp_UnloadFilePackage")]
   public static extern int CSharp_UnloadFilePackage(uint jarg1);
   [DllImport("AkSoundEngine", EntryPoint="CSharp_UnloadAllFilePackages")]

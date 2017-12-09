@@ -59,7 +59,7 @@ public class Room : MonoBehaviour {
 		}
 		if (isFixed) {
 			errorIcon.SetActive(false);
-			ChangeAllRenderersTextures(roomManager_.DefaultTexture());
+			ChangeAllRenderersTextures(roomManager_.DefaultMaterial());
 			if (fixedAmbient != "") {
 				SoundManager.PlayEvent(fixedAmbient, gameObject);
 			}
@@ -69,7 +69,7 @@ public class Room : MonoBehaviour {
 				SoundManager.PlayEvent(brokenAmbient, gameObject);
 			}
 			errorIcon.SetActive(true);
-			ChangeAllRenderersTextures(roomManager_.ErrorTexture());
+			ChangeAllRenderersTextures(roomManager_.ErrorMaterial());
 		}
 	}
 
@@ -102,7 +102,7 @@ public class Room : MonoBehaviour {
 			}
 			errorIcon.SetActive(true);
 
-			ChangeAllRenderersTextures(roomManager_.ErrorTexture());
+			ChangeAllRenderersTextures(roomManager_.ErrorMaterial());
 		}
 	}
 
@@ -127,20 +127,20 @@ public class Room : MonoBehaviour {
 	/// </summary>
 	private IEnumerator ShowSuccess() {
 
-		ChangeAllRenderersTextures(roomManager_.SuccessTexture());
+		ChangeAllRenderersTextures(roomManager_.SuccessMaterial());
 
 		yield return new WaitForSeconds(successDuration_);
 
-		ChangeAllRenderersTextures(roomManager_.DefaultTexture());
+		ChangeAllRenderersTextures(roomManager_.DefaultMaterial());
 
 		yield return null;
 	}
 
-	private void ChangeAllRenderersTextures(Texture newTexture) {
+	private void ChangeAllRenderersTextures(Material newTexture) {
 
 		if (roomMeshParent) {
 			foreach (Renderer rend in roomMeshParentRenderers_) {
-				rend.material.mainTexture = newTexture;
+				rend.material = newTexture;
 			}
 		}
 	}

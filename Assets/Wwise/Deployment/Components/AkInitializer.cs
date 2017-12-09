@@ -29,7 +29,7 @@ using UnityEditor;
 [RequireComponent(typeof(AkTerminator))]
 public class AkInitializer : MonoBehaviour
 {
-	public readonly static string c_DefaultBasePath = Path.Combine("Audio", "GeneratedSoundBanks");
+	public readonly static string c_DefaultBasePath = "Audio/GeneratedSoundBanks";
 	///Path for the soundbanks. This must contain one sub folder per platform, with the same as in the Wwise project.
 	public string basePath = c_DefaultBasePath;
 

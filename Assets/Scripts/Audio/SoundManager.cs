@@ -3,27 +3,49 @@
 
 /// <summary>
 /// Sets up basic Wwise settings, and exposes various controls for Wwise statically.
-/// Will stop all events, when destroyed. Use <seealso cref="DontDestroyOnLoad"/> 
-/// to esnure it is not destroyed uncessarily.
+/// Will stop all events, when destroyed. 
 /// </summary>
 public class SoundManager : Singleton<SoundManager> {
+	public const string kMusicStateName = "MusicAudioBus";
+	public const string kSfxStateName = "SfxAmbienceBus";
+	public const string kMuted = "Muted";
+	public const string kDefault = "Default";
 
-	private void Start() {
-		Initialise();
-	}
-
-	private void OnDestroy() {
-		StopAllEvents();
-	}
+	private bool isMusicEnabled_ = true;
+	private bool isSfxEnabled_ = true;
 
 	/// <summary>
 	/// Setup WWise and load Init Sound Bank.
 	/// </summary>
-	private void Initialise() {
+	private void Start() {
 		uint initBankID;
 
 		// Import Initialisation Soundbank
 		AkSoundEngine.LoadBank("Init", AkSoundEngine.AK_DEFAULT_POOL_ID, out initBankID);
+
+		isMusicEnabled_ = (PlayerPrefs.GetInt(kMusicStateName, 1) == 1) ? true : false;
+		isSfxEnabled_ = (PlayerPrefs.GetInt(kSfxStateName, 1) == 1) ? true : false;
+	}
+	
+	private void OnDestroy() {
+		StopAllEvents();
+
+		PlayerPrefs.SetInt(kMusicStateName, isMusicEnabled_ ? 1 : 0);
+		PlayerPrefs.SetInt(kSfxStateName, isSfxEnabled_ ? 1 : 0);
+	}
+
+	public static bool IsMusicEnabled() {
+		return instance.isMusicEnabled_;
+	}
+	public static bool IsSfxAmbienceEnabled() {
+		return instance.isSfxEnabled_;
+	}
+	public static void SetMusicEnabled(bool isEnabled) {
+		instance.isMusicEnabled_ = isEnabled;
+	}
+	public static void SetSfxAmbienceEnabled(bool isEnabled) {
+		instance.isSfxEnabled_ = isEnabled;
+		
 	}
 
 	/// <summary>
@@ -72,5 +94,14 @@ public class SoundManager : Singleton<SoundManager> {
 	/// <param name="rtpcValue"> Value to set to. </param>
 	public static void SetRTPC(string rtpcName, float rtpcValue) {
 		AkSoundEngine.SetRTPCValue(rtpcName, rtpcValue);
+	}
+
+	/// <summary>
+	/// Sets the state group to the state
+	/// </summary>
+	/// <param name="stateGroup"> StateGroup in which to change. </param>
+	/// <param name="stateName"> State to change to in stateGroup. </param>
+	public static void SetState(string stateGroup, string stateName) {
+		AkSoundEngine.SetState(stateGroup, stateName);
 	}
 }
