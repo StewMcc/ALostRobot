@@ -21,7 +21,7 @@ public class QuitGame : MonoBehaviour {
 		quitRenderer.enabled = false;
 		noQuitRenderer.enabled = true;
 		quitButton.enabled = false;
-		quitButton.image = null;
+		quitButton.targetGraphic.enabled = false;
 #endif
 	}
 
