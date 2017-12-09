@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{A4A958E0-86C6-43C1-ADA9-43C41C3AA034}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="MusicAudioBus" ID="{5173393E-87DD-4379-A02E-A727DA4750AF}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{A4319EA6-8679-4339-BCF4-EDC2A472FB0E}"/>
 						<State Name="Default" ID="{81060F6A-26DC-4F10-8F03-85A9380FDCB5}"/>
@@ -13,7 +16,7 @@
 						<Transition>
 							<StartState Name="Default" ID="{81060F6A-26DC-4F10-8F03-85A9380FDCB5}"/>
 							<EndState Name="Muted" ID="{8657529F-38AC-4A6B-9B82-0978EC3C2237}"/>
-							<Time>0.4</Time>
+							<Time>0</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
@@ -25,6 +28,9 @@
 					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="SfxAmbienceBus" ID="{86942D2D-D1A2-4826-B775-3B36D87A8585}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{B7D36128-C866-408F-A9D8-60D3736C0D4D}"/>
 						<State Name="Default" ID="{3D524B12-BCE1-49EC-8044-3244B3827BBD}"/>
@@ -34,7 +40,7 @@
 						<Transition>
 							<StartState Name="Default" ID="{3D524B12-BCE1-49EC-8044-3244B3827BBD}"/>
 							<EndState Name="Muted" ID="{AEE4E183-8C0A-46FB-B3F5-B3E64C6B8EE1}"/>
-							<Time>0.4</Time>
+							<Time>0</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
