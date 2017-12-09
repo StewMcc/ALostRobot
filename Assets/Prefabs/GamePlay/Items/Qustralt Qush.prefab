@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 4025359131623780}
   - component: {fileID: 33634413294478882}
   - component: {fileID: 23449205620278898}
-  - component: {fileID: 64024424314458012}
   - component: {fileID: 114864307652806220}
+  - component: {fileID: 135009142597698412}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150427940132806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.6, y: 1, z: -105.4}
+  m_LocalPosition: {x: -14.7, y: 1, z: -45.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4025359131623780}
@@ -231,8 +231,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -263,8 +263,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -298,20 +298,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1090717103945108}
-  m_Mesh: {fileID: 4300000, guid: d9a9be4c75b2f1a47888a1267437bdae, type: 3}
---- !u!64 &64024424314458012
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1090717103945108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d9a9be4c75b2f1a47888a1267437bdae, type: 3}
 --- !u!65 &65335350507295900
 BoxCollider:
@@ -514,6 +500,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Qustralt Qush
+--- !u!135 &135009142597698412
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090717103945108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 1.6, z: 0}
 --- !u!135 &135173786016020078
 SphereCollider:
   m_ObjectHideFlags: 1
