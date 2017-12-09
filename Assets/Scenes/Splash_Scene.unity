@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -710,7 +710,53 @@ Prefab:
       propertyPath: InitialModule.startLifetime.scalar
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23773919214286034, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23889739990727318, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23316098491112476, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23773919214286034, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23889739990727318, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23316098491112476, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199146538829990128, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 199505104195190968, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 199762720616345352, guid: 8a4ba9209866f6c4d87db5a1303e2a76,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 23316098491112476, guid: 8a4ba9209866f6c4d87db5a1303e2a76, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8a4ba9209866f6c4d87db5a1303e2a76, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1027500123
