@@ -29,6 +29,9 @@ public class SoundManager : Singleton<SoundManager> {
 	
 	private void OnDestroy() {
 		StopAllEvents();
+
+		PlayerPrefs.SetInt(kMusicStateName, isMusicEnabled_ ? 1 : 0);
+		PlayerPrefs.SetInt(kSfxStateName, isSfxEnabled_ ? 1 : 0);
 	}
 
 	public static bool IsMusicEnabled() {
@@ -39,11 +42,10 @@ public class SoundManager : Singleton<SoundManager> {
 	}
 	public static void SetMusicEnabled(bool isEnabled) {
 		instance.isMusicEnabled_ = isEnabled;
-		PlayerPrefs.SetInt(kMusicStateName, isEnabled ? 1 : 0);
 	}
 	public static void SetSfxAmbienceEnabled(bool isEnabled) {
 		instance.isSfxEnabled_ = isEnabled;
-		PlayerPrefs.SetInt(kSfxStateName, isEnabled ? 1 : 0);
+		
 	}
 
 	/// <summary>
