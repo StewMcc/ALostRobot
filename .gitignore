@@ -64,6 +64,8 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData\.asset\.meta
 ## Wwise Profiling data
 *.prof
 
+# Wwise Conversion detection cache files
+*.cache
 
 # Mac stuff
 .DS_Store
