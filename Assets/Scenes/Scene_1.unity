@@ -2737,16 +2737,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 198475527749292252, guid: 5845d8cfc40e142958d16d58c9a10ea1,
-        type: 2}
-      propertyPath: ColorModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198475527749292252, guid: 5845d8cfc40e142958d16d58c9a10ea1,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1854700532
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5845d8cfc40e142958d16d58c9a10ea1, type: 2}
   m_IsPrefabParent: 0
