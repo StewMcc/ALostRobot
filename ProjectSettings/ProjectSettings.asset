@@ -14,9 +14,9 @@ PlayerSettings:
   productName: ALostRobot
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.19215688, g: 0.19215688, b: 0.19215688, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.12941177, g: 0.11764706, b: 0.33333334, a: 1}
   m_ShowUnitySplashScreen: 1
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 0
   m_SplashScreenLogoStyle: 1
@@ -38,8 +38,6 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
-    duration: 2
   - logo: {fileID: 21300000, guid: 74cddb9df1da5cc429fcd0c7770041cc, type: 3}
     duration: 2
   - logo: {fileID: 21300000, guid: a71c8158ae30f1340a16429e8be63b84, type: 3}
@@ -127,7 +125,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.2.e25aea5
+  bundleVersion: 0.1.2.4ab7d34
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -228,8 +226,8 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Source/ALostRobot/Builds/user.keystore
-  AndroidKeyaliasName: user
+  AndroidKeystoreName: Builds/userkey.keystore
+  AndroidKeyaliasName: userkey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 0

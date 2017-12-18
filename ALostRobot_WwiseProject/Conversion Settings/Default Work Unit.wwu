@@ -7,9 +7,9 @@
 					<PropertyList>
 						<Property Name="Channels" Type="int32">
 							<ValueList>
-								<Value Platform="Android">4</Value>
+								<Value Platform="Android">0</Value>
 								<Value Platform="Windows">4</Value>
-								<Value Platform="iOS">4</Value>
+								<Value Platform="iOS">0</Value>
 								<Value Platform="Mac">4</Value>
 							</ValueList>
 						</Property>
@@ -39,9 +39,9 @@
 						</Property>
 						<Property Name="SampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Android">0</Value>
+								<Value Platform="Android">3</Value>
 								<Value Platform="Windows">0</Value>
-								<Value Platform="iOS">0</Value>
+								<Value Platform="iOS">3</Value>
 								<Value Platform="Mac">0</Value>
 							</ValueList>
 						</Property>
@@ -54,10 +54,73 @@
 							<ConversionPlugin Name="" ID="{9A5A3E22-983F-4A38-8D95-7FB03D39E846}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="iOS">
-							<ConversionPlugin Name="" ID="{26494BC0-E04D-4311-91EB-A148920A04CF}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{A935B274-4D30-449F-A3F2-1E96465DBD34}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Mac">
 							<ConversionPlugin Name="" ID="{799D0E16-B656-4BDB-9988-39E2577E5556}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						</ConversionPluginInfo>
+					</ConversionPluginInfoList>
+				</Conversion>
+				<Conversion Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}">
+					<PropertyList>
+						<Property Name="Channels" Type="int32">
+							<ValueList>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">4</Value>
+								<Value Platform="iOS">0</Value>
+								<Value Platform="Mac">4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="LRMix" Type="Real64">
+							<ValueList>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
+								<Value Platform="iOS">0</Value>
+								<Value Platform="Mac">0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSampleRate" Type="int32">
+							<ValueList>
+								<Value Platform="Android">36000</Value>
+								<Value Platform="Windows">44100</Value>
+								<Value Platform="iOS">36000</Value>
+								<Value Platform="Mac">44100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MinSampleRate" Type="int32">
+							<ValueList>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
+								<Value Platform="iOS">0</Value>
+								<Value Platform="Mac">0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SampleRate" Type="int32">
+							<ValueList>
+								<Value Platform="Android">1</Value>
+								<Value Platform="Windows">2</Value>
+								<Value Platform="iOS">1</Value>
+								<Value Platform="Mac">2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseDither" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ConversionPluginInfoList>
+						<ConversionPluginInfo Platform="Android">
+							<ConversionPlugin Name="" ID="{6074EBC6-7574-4E64-8E46-232065381B61}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						</ConversionPluginInfo>
+						<ConversionPluginInfo Platform="Windows">
+							<ConversionPlugin Name="" ID="{FF8320F3-57AB-4E43-B89C-4F3F643F03D7}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						</ConversionPluginInfo>
+						<ConversionPluginInfo Platform="iOS">
+							<ConversionPlugin Name="" ID="{91F8E4B1-0679-41CA-84F5-9F943D6984C7}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						</ConversionPluginInfo>
+						<ConversionPluginInfo Platform="Mac">
+							<ConversionPlugin Name="" ID="{E059131D-D96A-4AD1-A12B-8988B11BB5A1}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

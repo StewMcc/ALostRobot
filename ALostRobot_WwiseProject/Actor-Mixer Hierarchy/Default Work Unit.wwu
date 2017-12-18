@@ -44,8 +44,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_01" ID="{0B26F876-508E-44CE-B94F-6ED7D232F6B9}" ShortID="913408699">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.47916666666667E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="5.66666666666666E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0247916666666667"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0566666666666666"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_ROBOTIC_VOICE_01.wav</AudioFile>
@@ -67,8 +67,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_02" ID="{200A2D3B-F7D5-4806-8957-E10FF544D974}" ShortID="999974056">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.49047619047619E-02"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.09999999999998E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0449047619047619"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0409999999999998"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_ROBOTIC_VOICE_02.wav</AudioFile>
@@ -90,8 +90,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_03" ID="{6597F4C5-107B-4404-8649-DFD1576EA6BE}" ShortID="1065989457">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.22083333333334E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="5.78020833333333E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0522083333333334"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0578020833333333"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_ROBOTIC_VOICE_03.wav</AudioFile>
@@ -116,7 +116,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_04" ID="{58681339-1AA4-4F9F-B204-D3F281A63BE4}" ShortID="156102763">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="3.32916666666667E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0332916666666667"/>
 														<Property Name="TrimEnd" Type="Real64" Value="0.850895833333333"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -202,8 +202,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_03" ID="{974272D0-7801-43F9-88E2-8025FB89B29E}" ShortID="73000569">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.22083333333334E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="3.26302083333333E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0522083333333334"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0326302083333333"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.43071875"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -229,8 +229,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_03" ID="{546E0C47-D2BB-48AF-B5AB-4E363B38CEC0}" ShortID="918285317">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.22083333333334E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="8.76354166666666E-02"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0522083333333334"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0876354166666666"/>
 														<Property Name="TrimEnd" Type="Real64" Value="0.3691875"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -257,7 +257,7 @@
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_07" ID="{67959624-1AC4-46E7-AFF6-E75F92CF5794}" ShortID="2797430">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.035625"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="8.14285714285715E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0814285714285715"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.200517857142857"/>
 														<Property Name="TrimEnd" Type="Real64" Value="0.720642857142857"/>
 													</PropertyList>
@@ -285,7 +285,7 @@
 												<AudioFileSource Name="SFX_ROBOTIC_VOICE_07" ID="{49BD5C8E-F6D6-42FD-B893-B618B9F71B24}" ShortID="428682489">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.035625"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="8.14285714285715E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0814285714285715"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.183214285714286"/>
 														<Property Name="TrimEnd" Type="Real64" Value="0.855"/>
 													</PropertyList>
@@ -420,9 +420,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{95EBB50E-9D3A-4A4C-92D1-8691CD611275}" ShortID="330753283">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="7.46279761904762E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="5.44345238095238E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.00967261904762E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00746279761904762"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0544345238095238"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0100967261904762"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.254174107142857"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -445,9 +445,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{320F2C79-EB61-48E5-A468-8CFFA2E06905}" ShortID="234583049">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="6.9047619047619E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0069047619047619"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.066889880952381"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.42410714285714E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0142410714285714"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1.wav</AudioFile>
@@ -469,8 +469,8 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{501E9F68-6F7A-4D35-B245-D955C9818E57}" ShortID="161343791">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="4.12511135406544E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="9.75026320051831E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00412511135406544"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.00975026320051831"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.30075811872368"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -493,9 +493,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{7E4DC989-03F1-41FF-84B1-A7F6F14BF05C}" ShortID="719451603">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="2.27325275348235E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.08085570537739E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="3.26032302802073E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0227325275348235"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0308085570537739"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0326032302802073"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.245272007612569"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -518,9 +518,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{6C35ABC5-2D15-408C-8536-978210F2EE0F}" ShortID="907956858">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="2.45535714285714E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="1.39955357142857E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.44866071428571E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00245535714285714"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0139955357142857"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0144866071428571"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.196919642857143"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -543,9 +543,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{AAD58D71-A74F-45AB-A4FE-6445B0086284}" ShortID="940103110">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.12727010447036E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.11126548833819E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="7.66543671039844E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0112727010447036"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0311126548833819"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.00766543671039844"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.342690111758989"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -568,8 +568,8 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{8A0D3357-0456-4620-BB7F-7070502FB77C}" ShortID="605224782">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.63103336572724E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.26206673145448E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0163103336572724"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0326206673145448"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6.wav</AudioFile>
@@ -591,7 +591,7 @@
 															<ChildrenList>
 																<AudioFileSource Name="Robot_Movement_END_L" ID="{05C91AB4-D682-4F83-9C6A-1A2C229AF2D7}" ShortID="865596875">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.03856026785714E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0103856026785714"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.121165364583333"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.520145600818453"/>
 																	</PropertyList>
@@ -615,9 +615,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="Robot_Movement_START_L" ID="{18CDE3D4-123D-41B2-977B-926D7CD2A8E7}" ShortID="432756880">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.89333147321429E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0189333147321429"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.143051711309524"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="3.68147786458333E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0368147786458333"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.701584495907738"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -736,9 +736,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_0" ID="{4CE22D90-06A6-44B7-92BB-19E5AA308A91}" ShortID="700561763">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="7.46279761904762E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="5.44345238095238E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.00967261904762E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00746279761904762"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0544345238095238"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0100967261904762"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.254174107142857"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -764,9 +764,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1" ID="{6E615BB1-1635-4AF1-BDD9-B4A056100BB0}" ShortID="493816110">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="6.9047619047619E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0069047619047619"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.066889880952381"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.42410714285714E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0142410714285714"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_1.wav</AudioFile>
@@ -791,8 +791,8 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_2" ID="{1D281904-F643-4F0E-853D-CD6CBC9C3791}" ShortID="546840650">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="4.12511135406544E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="9.75026320051831E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00412511135406544"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.00975026320051831"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.30075811872368"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -818,9 +818,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_3" ID="{D789AFCC-0FE4-479C-86A1-116747CFD301}" ShortID="1055407361">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="2.27325275348235E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.08085570537739E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="3.26032302802073E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0227325275348235"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0308085570537739"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0326032302802073"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.245272007612569"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -846,9 +846,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_4" ID="{B67995BD-3627-4338-B3FB-A1846AC67E4A}" ShortID="94237963">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="2.45535714285714E-03"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="1.39955357142857E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="1.44866071428571E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.00245535714285714"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0139955357142857"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0144866071428571"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.196919642857143"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -874,9 +874,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_5" ID="{2CB27582-0D03-4167-907E-BD0084E0AB97}" ShortID="461412335">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.12727010447036E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.11126548833819E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="7.66543671039844E-03"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0112727010447036"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0311126548833819"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.00766543671039844"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.342690111758989"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -902,8 +902,8 @@
 															<ChildrenList>
 																<AudioFileSource Name="SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6" ID="{B3E7C338-C69D-4FFC-9937-55AD335BCC75}" ShortID="1003199864">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.63103336572724E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="3.26206673145448E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0163103336572724"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0326206673145448"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>SFX_SCI-FI_ROBOT_MOVEMENT_INOUT_6.wav</AudioFile>
@@ -928,7 +928,7 @@
 															<ChildrenList>
 																<AudioFileSource Name="Robot_Movement_END_L" ID="{7D1419AA-B103-46CA-B609-C342E34F163A}" ShortID="644733420">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.03856026785714E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0103856026785714"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.121165364583333"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.520145600818453"/>
 																	</PropertyList>
@@ -955,9 +955,9 @@
 															<ChildrenList>
 																<AudioFileSource Name="Robot_Movement_START_L" ID="{EB2CC161-380B-4FA3-92F7-FDB4ECD81817}" ShortID="181355808">
 																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="1.89333147321429E-02"/>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0189333147321429"/>
 																		<Property Name="FadeOutDuration" Type="Real64" Value="0.143051711309524"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="3.68147786458333E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0368147786458333"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="0.701584495907738"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -1022,7 +1022,71 @@
 								<ActorMixer Name="Water" ID="{0FCDB3B7-447A-4C91-B61D-2F4F44076986}" ShortID="95011588">
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+											<Custom>
+												<Conversion Name="Conversion Settings (Custom)" ID="{F21837FF-2F4C-4282-86B2-81A9A1A3F1E8}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Android">4</Value>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="iOS">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Android">0</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="iOS">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Android">0</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="iOS">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Android">0</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="iOS">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Android">0</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="iOS">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseDither" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Android">
+															<ConversionPlugin Name="" ID="{5B44C81F-5FF2-4448-AD16-4BD11A94C4F3}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{0CD698A2-61C3-4C5E-94D9-9C40C6C7B381}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="iOS">
+															<ConversionPlugin Name="" ID="{FA4EE9B4-71F5-4473-87D0-8029C68E9248}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{14E900B3-0014-49DF-8343-76FD6FAA170D}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
@@ -1046,7 +1110,71 @@
 													<ObjectRef Name="Landscape_Emitter_River" ID="{7F4ED8EE-72A5-4184-814F-2DF7020B3AC0}" WorkUnitID="{A3969B84-54AE-4144-B546-E4D8E06BA322}"/>
 												</Reference>
 												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+													<Custom CreatedFrom="{36362E01-744D-41F6-AE29-1C777AF4E97C}">
+														<Conversion Name="AmbientBackGround (Custom)" ID="{1CCBCF6C-6FA8-4235-A2F3-A037AF6D3346}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Android">0</Value>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="iOS">0</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Android">0</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="iOS">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Android">0</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="iOS">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Android">0</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="iOS">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Android">1</Value>
+																		<Value Platform="Windows">2</Value>
+																		<Value Platform="iOS">1</Value>
+																		<Value Platform="Mac">2</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="UseDither" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Android">
+																	<ConversionPlugin Name="" ID="{A895E844-A934-4B6B-8964-FC88A5BD78A7}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{B2B27B3E-3A58-4212-882C-C63549AD5D75}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="iOS">
+																	<ConversionPlugin Name="" ID="{816373A7-AB1D-4116-A05A-41F00E2D90E8}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{2CD2154B-7E68-48A5-993A-365BAF6969D6}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2495942C-A5B9-4415-A946-803B1F25675F}"/>
@@ -1054,6 +1182,14 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_RIVER-STREAM_01" ID="{9ADEFA79-0978-4E8E-8B40-531335D2675A}" ShortID="319493209">
+													<PropertyList>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_RIVER-STREAM_01.wav</AudioFile>
 												</AudioFileSource>
@@ -1108,6 +1244,14 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="SFX_WATER_AB" ID="{9EE21DC3-4635-403B-9DDF-90F75CBAB86E}" ShortID="987040243">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_WATER_AB.wav</AudioFile>
 														</AudioFileSource>
@@ -1134,6 +1278,14 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="SFX_WATER_XY" ID="{8556E40F-3CAF-46BA-9FC8-6ECBAAC37816}" ShortID="91939210">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_WATER_XY.wav</AudioFile>
 														</AudioFileSource>
@@ -1174,9 +1326,15 @@
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="1.03395400855655"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.54738741629464"/>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.304104120163691"/>
 														<Property Name="TrimEnd" Type="Real64" Value="54.0697125651042"/>
 													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Waterfall.wav</AudioFile>
 												</AudioFileSource>
@@ -1389,7 +1547,7 @@
 													<ChildrenList>
 														<AudioFileSource Name="ANIMALS_BIRD_TYPE_01_01" ID="{9EF3B1B6-2575-4084-862A-28449B762919}" ShortID="71526521">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="4.98214285714286E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0498214285714286"/>
 																<Property Name="TrimEnd" Type="Real64" Value="0.3255"/>
 															</PropertyList>
 															<Language>SFX</Language>
@@ -1424,8 +1582,8 @@
 													<ChildrenList>
 														<AudioFileSource Name="ANIMALS_BIRD_TYPE_01_01" ID="{0F886071-3EC3-4BD1-B06D-4701051528D9}" ShortID="686164481">
 															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="1.32857142857143E-02"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="4.98214285714286E-02"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0132857142857143"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0498214285714286"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimBegin" Type="Real64" Value="0.687535714285714"/>
 																<Property Name="TrimEnd" Type="Real64" Value="0.901767857142856"/>
@@ -1663,8 +1821,14 @@
 												<AudioFileSource Name="209339__porphyr__windy-autumn-forest-soundscape-2" ID="{C395094B-6394-454B-8A0B-1E66839F170C}" ShortID="896996557">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="1.00924607049851"/>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>209339__porphyr__windy-autumn-forest-soundscape-2.wav</AudioFile>
 												</AudioFileSource>
@@ -1918,6 +2082,14 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Ambience_Wind_layer_02" ID="{8FB2F5E2-5371-47C4-AA5E-BBA10B4FAB5D}" ShortID="164151252">
+													<PropertyList>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="AmbientBackGround" ID="{36362E01-744D-41F6-AE29-1C777AF4E97C}" WorkUnitID="{6C28020D-138C-45EB-8C98-EDDFAD0C7E87}"/>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>Ambience_Wind_layer_02.wav</AudioFile>
 												</AudioFileSource>
@@ -1928,11 +2100,8 @@
 										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
-										<BlendTrack Name="Wind-Intensity-Level" ID="{D388D057-03F2-492D-94E1-C9F238093212}" ShortID="231108466">
-											<ReferenceList/>
-										</BlendTrack>
+										<BlendTrack Name="Wind-Intensity-Level" ID="{D388D057-03F2-492D-94E1-C9F238093212}" ShortID="231108466"/>
 										<BlendTrack Name="Wind-Level" ID="{0D7E6358-BDD5-44BD-B2C2-C220F9D0C5A8}" ShortID="888991913">
-											<ReferenceList/>
 											<BlendTrackAssocList>
 												<BlendTrackAssoc>
 													<ItemRef Name="Wind" ID="{6992A298-1EA1-4B29-9C43-B8AB2476AED3}"/>
@@ -2001,7 +2170,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="SFX_TELEPORT_01_2" ID="{2FBD77EB-6619-450E-8997-5A139CE28E1D}" ShortID="1005330563">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="4.18846958705359E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0418846958705359"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>SFX_TELEPORT_01.2.wav</AudioFile>
@@ -2132,7 +2301,7 @@
 										<AudioFileSource Name="SFX_DOOR-HYDRAULIC" ID="{32668751-6CEA-4179-9CEE-287B321BE2C8}" ShortID="341277011">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.219122023809524"/>
-												<Property Name="TrimBegin" Type="Real64" Value="3.92113095238095E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0392113095238095"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.779613095238094"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2199,7 +2368,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="321215__hybrid-v__sci-fi-weapons-deploy" ID="{D09CF9D5-3C61-487C-89BA-A09F4153BE34}" ShortID="926608229">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="8.35176381663777E-02"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0835176381663777"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.633974798808412"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.364737185429728"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.45679216309539"/>
