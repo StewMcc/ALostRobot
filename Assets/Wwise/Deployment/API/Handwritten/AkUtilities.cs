@@ -205,6 +205,7 @@ public partial class AkUtilities
     // that is configured in the UnityWwise integration.
     public static void GenerateSoundbanks()
     {
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.1f); 
         WwiseSettings Settings = WwiseSettings.LoadSettings();
         string wwiseProjectFullPath = GetFullPath(Application.dataPath, Settings.WwiseProjectPath);
         
@@ -218,6 +219,7 @@ public partial class AkUtilities
         if (wwiseCli == null)
         {
             Debug.LogError("Couldn't locate WwiseCLI, unable to generate SoundBanks.");
+            UnityEditor.EditorUtility.ClearProgressBar(); 
             return;
         }
 
@@ -253,8 +255,9 @@ public partial class AkUtilities
         {
             Debug.LogError(message);
         }
-
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.8f); 
         AssetDatabase.Refresh();
+        UnityEditor.EditorUtility.ClearProgressBar(); 
     }
 
     // Reads the user settings (not the project settings) to check if there is an override currently defined for the soundbank generation folders.
