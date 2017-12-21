@@ -205,7 +205,7 @@ public partial class AkUtilities
     // that is configured in the UnityWwise integration.
     public static void GenerateSoundbanks()
     {
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.1f); 
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, loading settings...", 0.1f); 
         WwiseSettings Settings = WwiseSettings.LoadSettings();
         string wwiseProjectFullPath = GetFullPath(Application.dataPath, Settings.WwiseProjectPath);
         
@@ -236,7 +236,7 @@ public partial class AkUtilities
         
         arguments += " \"" + wwiseProjectFullPath + "\" -GenerateSoundBanks";
         
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.5f);
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI...", 0.5f);
         string output = ExecuteCommandLine(command, arguments);
 
         bool success = output.Contains("Process completed successfully.");
@@ -256,7 +256,7 @@ public partial class AkUtilities
         {
             Debug.LogError(message);
         }
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.9f);
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, saving and updating assets...", 0.9f);
         AssetDatabase.SaveAssets(); 
         AssetDatabase.Refresh();
         UnityEditor.EditorUtility.ClearProgressBar(); 
