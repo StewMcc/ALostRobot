@@ -236,6 +236,7 @@ public partial class AkUtilities
         
         arguments += " \"" + wwiseProjectFullPath + "\" -GenerateSoundBanks";
         
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.5f);
         string output = ExecuteCommandLine(command, arguments);
 
         bool success = output.Contains("Process completed successfully.");
@@ -255,7 +256,8 @@ public partial class AkUtilities
         {
             Debug.LogError(message);
         }
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.8f); 
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI", 0.9f);
+        AssetDatabase.SaveAssets(); 
         AssetDatabase.Refresh();
         UnityEditor.EditorUtility.ClearProgressBar(); 
     }
