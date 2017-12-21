@@ -52,7 +52,6 @@ internal class WwiseIDConverter : MonoBehaviour {
 
 	}
 
-	[MenuItem("Tools/Convert Wwise SoundBank IDs")]
 	public static void Convert() {
 
 		var inputFilePath = Application.dataPath +
