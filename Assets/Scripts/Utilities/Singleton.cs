@@ -16,8 +16,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
 		if (instance_ != null && instance_ != this) {
 			Destroy(gameObject);
 			Debug.Log("Destroying Duplicate Singleton");
-		}
-		else {
+		} else {
 			instance_ = GetComponent<T>();
 		}
 	}
