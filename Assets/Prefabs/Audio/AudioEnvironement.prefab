@@ -304,6 +304,7 @@ MonoBehaviour:
     valueGuid: 789bb60223a5284a917206217df96105
     ID: -239400236
   triggerEvent: 0
+  stopAllOtherEvents: 1
 --- !u!114 &114427013072520262
 MonoBehaviour:
   m_ObjectHideFlags: 1

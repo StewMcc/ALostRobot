@@ -40,7 +40,7 @@ public class CreditsRolling : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (isRollingCredits_) {
-			sceneCamera.transform.position = MathUtil.SmoothLerp(
+			sceneCamera.transform.position = LittleLot.MathUtilities.SmoothLerp(
 					startPosition_,
 					endPosition_,
 					startTime_,

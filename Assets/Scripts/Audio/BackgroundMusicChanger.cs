@@ -14,9 +14,6 @@ public class BackgroundMusicChanger : MonoBehaviour {
 	[SerializeField]
 	private bool stopAllOtherEvents = false;
 
-	[SerializeField]
-	private bool forceRestart = false;
-
 	private static uint currentBackgroundID = AkSoundEngine.AK_INVALID_PLAYING_ID;
 
 	private void Awake() {
@@ -45,10 +42,6 @@ public class BackgroundMusicChanger : MonoBehaviour {
 		}
 		if (stopAllOtherEvents) {
 			SoundManager.StopAllEvents();
-		}
-		// if its not already playing, and we aren't for restarting the background music.
-		if (currentBackgroundID != backgroundMusicEvent.ID || forceRestart) {
-			currentBackgroundID = backgroundMusicEvent.Post(gameObject);
 		}
 	}
 }
