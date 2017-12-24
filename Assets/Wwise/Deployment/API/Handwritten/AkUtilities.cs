@@ -16,7 +16,7 @@ public class WwiseSettings
 	public string WwiseProjectPath;
 	public string SoundbankPath;
     public bool CreateWwiseGlobal = true;
-    public bool CreateWwiseListener = true;
+    public bool CreateWwiseListener = false;
 	public bool ShowMissingRigidBodyWarning = true;
     public string WwiseInstallationPathWindows;
     public string WwiseInstallationPathMac;
@@ -205,6 +205,7 @@ public partial class AkUtilities
     // that is configured in the UnityWwise integration.
     public static void GenerateSoundbanks()
     {
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, loading settings...", 0.1f); 
         WwiseSettings Settings = WwiseSettings.LoadSettings();
         string wwiseProjectFullPath = GetFullPath(Application.dataPath, Settings.WwiseProjectPath);
         
@@ -218,6 +219,7 @@ public partial class AkUtilities
         if (wwiseCli == null)
         {
             Debug.LogError("Couldn't locate WwiseCLI, unable to generate SoundBanks.");
+            UnityEditor.EditorUtility.ClearProgressBar(); 
             return;
         }
 
@@ -234,6 +236,7 @@ public partial class AkUtilities
         
         arguments += " \"" + wwiseProjectFullPath + "\" -GenerateSoundBanks";
         
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI...", 0.5f);
         string output = ExecuteCommandLine(command, arguments);
 
         bool success = output.Contains("Process completed successfully.");
@@ -253,8 +256,10 @@ public partial class AkUtilities
         {
             Debug.LogError(message);
         }
-
+        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, saving and updating assets...", 0.9f);
+        AssetDatabase.SaveAssets(); 
         AssetDatabase.Refresh();
+        UnityEditor.EditorUtility.ClearProgressBar(); 
     }
 
     // Reads the user settings (not the project settings) to check if there is an override currently defined for the soundbank generation folders.

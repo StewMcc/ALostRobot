@@ -55,13 +55,13 @@ public class ServicePort : MonoBehaviour {
 
 	public void ShowUseIcon() {
 		useIcon.SetActive(true);
-		SoundManager.PlayEvent("Item_PopUp", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.ITEM_POPUP, gameObject);
 	}
 
 	public void HideUseIcon() {
 		if (useIcon.activeInHierarchy) {
 			useIcon.SetActive(false);
-			SoundManager.PlayEvent("Item_PopUp", gameObject);
+			SoundManager.PlayEvent(AKID.EVENTS.ITEM_POPUP, gameObject);
 		}
 	}
 

@@ -77,6 +77,7 @@ class AkWwisePicker : EditorWindow
             if (AkUtilities.IsSoundbankGenerationAvailable())
             {
                 AkUtilities.GenerateSoundbanks();
+                WwiseIDConverter.Convert();
             }
             else
             {

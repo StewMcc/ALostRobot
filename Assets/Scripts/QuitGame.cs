@@ -17,6 +17,8 @@ public class QuitGame : MonoBehaviour {
 #if UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
 		quitRenderer.enabled = true;
 		noQuitRenderer.enabled = false;
+		quitButton.enabled = true;
+		quitButton.targetGraphic.enabled = true;
 #else
 		quitRenderer.enabled = false;
 		noQuitRenderer.enabled = true;

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4990255695768558}
   - component: {fileID: 65016934550064418}
   - component: {fileID: 114081081700888774}
+  - component: {fileID: 114956304940103688}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -120,9 +121,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077176655450710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4, y: 0, z: -314.6}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.119999886, y: -0.07, z: -15.730001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4229425528160784}
   - {fileID: 4103671158122806}
@@ -140,8 +141,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 527284fbce4f84219ba0650aa665d60b, type: 2}
   m_StaticBatchInfo:
@@ -196,3 +197,23 @@ MonoBehaviour:
   transitionTime: 0.2
   openTransform: {fileID: 4335226931153360}
   closedTransform: {fileID: 4103671158122806}
+--- !u!114 &114956304940103688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077176655450710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

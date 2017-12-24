@@ -10,7 +10,7 @@ public class PauseScreen : MonoBehaviour {
 	private Button closePauseMenu = null;
 
 	[SerializeField]
-	private Button restartButton =null;
+	private Button restartButton = null;
 
 	private void Start() {
 		restartButton.onClick.AddListener(RestartGame);
@@ -28,7 +28,7 @@ public class PauseScreen : MonoBehaviour {
 	private void OpenPauseMenu() {
 		gameObject.SetActive(true);
 		UiEventManager.HideHud();
-		SoundManager.PlayEvent("Menu_Pause", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.MENU_PAUSE, gameObject);
 
 		Time.timeScale = 0;
 	}
@@ -36,7 +36,7 @@ public class PauseScreen : MonoBehaviour {
 	private void ClosePauseMenu() {
 		gameObject.SetActive(false);
 		UiEventManager.ShowHud();
-		SoundManager.PlayEvent("Menu_Resume", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.MENU_RESUME, gameObject);
 		Time.timeScale = 1;
 	}
 
