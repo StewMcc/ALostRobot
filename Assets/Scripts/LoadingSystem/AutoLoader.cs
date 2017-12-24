@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class AutoLoader : MonoBehaviour {
 	[SerializeField]
-	private string nextScene  = "Splash_Scene";
+	private string nextScene = "Splash_Scene";
 	[SerializeField]
 	private float delay = 2.0f;
 

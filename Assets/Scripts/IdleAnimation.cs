@@ -18,21 +18,21 @@ public class IdleAnimation : MonoBehaviour {
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to move to the target.")]
-	private float moveToTargetInterval =2.0f;
+	private float moveToTargetInterval = 2.0f;
 
 	[SerializeField]
 	private bool isScaling = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to scale to the targets scale.")]
-	private float scaleToTargetInterval =2.0f;
+	private float scaleToTargetInterval = 2.0f;
 
 	[SerializeField]
 	private bool isRotating = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to rotate to the targets rotation.")]
-	private float rotateToTargetInterval =2.0f;
+	private float rotateToTargetInterval = 2.0f;
 
 	private Vector3 pingPongMoveTo_;
 

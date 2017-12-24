@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Simple Debug menu that show when 5 fingers held down, or F12 pressed.
@@ -14,10 +13,10 @@ public class DebugUi : MonoBehaviour {
 	[SerializeField]
 	private GameObject debugPanel = null;
 
-    [SerializeField]
-    private Text version = null;
+	[SerializeField]
+	private Text version = null;
 
-    bool isPanelVisible_ = false;
+	bool isPanelVisible_ = false;
 
 	/// <summary>
 	/// Adds the listeners to the buttons.
@@ -25,8 +24,8 @@ public class DebugUi : MonoBehaviour {
 	private void Start() {
 		debugPanel.SetActive(false);
 
-        version.text = Application.version;
-    }
+		version.text = Application.version;
+	}
 
 	/// <summary>
 	/// When 5 fingers or f12 pressed, the debug panel becomes visible.
@@ -37,7 +36,7 @@ public class DebugUi : MonoBehaviour {
 			debugPanel.SetActive(true);
 		}
 	}
-	
+
 	/// <summary>
 	/// Close the debug panel.
 	/// </summary>

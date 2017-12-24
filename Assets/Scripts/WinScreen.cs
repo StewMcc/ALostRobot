@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class WinScreen : MonoBehaviour {
 
 	[SerializeField]
-	private Button restartButton =null;
+	private Button restartButton = null;
 
 	private void Start() {
 		EventManager.OnGameCompletion += ShowWinScreen;

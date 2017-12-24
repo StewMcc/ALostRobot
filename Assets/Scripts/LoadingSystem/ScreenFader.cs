@@ -39,8 +39,7 @@ public class ScreenFader : MonoBehaviour {
 			if (fadeOnAwake) {
 				StartCoroutine(FadeOut());
 			}
-		}
-		else {
+		} else {
 			// set alpha to min			
 			Color imageColor = screen_.color;
 			imageColor.a = minAlpha;

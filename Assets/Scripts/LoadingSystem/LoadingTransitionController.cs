@@ -49,8 +49,7 @@ public class LoadingTransitionController : Singleton<LoadingTransitionController
 	public static void AnimatedLoadSceneAsync(string sceneName, string loadingScene) {
 		try {
 			instance.StartCoroutine(instance.LoadSceneAsync(sceneName, loadingScene));
-		}
-		catch (System.Exception) {
+		} catch (System.Exception) {
 			Debug.Log("Start from Initial scene for animated loading screens.");
 			SceneManager.LoadSceneAsync(sceneName);
 		}

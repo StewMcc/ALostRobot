@@ -1,10 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 /// <summary>
 /// Controls the UI for the pickups and adds the pickup to the collided <seealso cref="RobotController"/>.
 /// 

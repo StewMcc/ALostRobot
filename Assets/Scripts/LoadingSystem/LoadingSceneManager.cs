@@ -1,5 +1,4 @@
-﻿using System.Collections;
-
+﻿
 using UnityEngine;
 
 /// <summary>
@@ -36,8 +35,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 	public static float EnterAnimationTime() {
 		if (instance.loadingAnimator) {
 			return instance.initialAnimationTime;
-		}
-		else {
+		} else {
 			return 0.0f;
 		}
 	}
@@ -50,8 +48,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager> {
 			// start the finish animation.
 			instance.loadingAnimator.SetBool("finishAnimation", true);
 			return instance.finishAnimationTime;
-		}
-		else {
+		} else {
 			return 0.0f;
 		}
 

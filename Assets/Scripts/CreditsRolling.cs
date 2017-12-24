@@ -2,7 +2,7 @@
 
 [System.Serializable]
 class MovingCameraPoints {
-	public Transform cameraPosition =null;
+	public Transform cameraPosition = null;
 	public float transitionTime = 12.0f;
 }
 
@@ -21,13 +21,13 @@ public class CreditsRolling : MonoBehaviour {
 	private Vector3 startPosition_ = Vector3.zero;
 	private Vector3 endPosition_ = Vector3.zero;
 
-	private float startTime_ =0;
+	private float startTime_ = 0;
 	private float transitionTime_ = 0;
 
 
 	private bool isRollingCredits_ = false;
 
-	private int currentCamera_ =0;
+	private int currentCamera_ = 0;
 
 	private void OnEnable() {
 		EventManager.OnGameCompletion += StartRollingCredits;
