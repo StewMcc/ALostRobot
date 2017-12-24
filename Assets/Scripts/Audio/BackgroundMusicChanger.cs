@@ -43,5 +43,6 @@ public class BackgroundMusicChanger : MonoBehaviour {
 		if (stopAllOtherEvents) {
 			SoundManager.StopAllEvents();
 		}
+		backgroundMusicEvent.Post(gameObject);
 	}
 }

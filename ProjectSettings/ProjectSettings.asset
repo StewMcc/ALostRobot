@@ -125,7 +125,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.2.4ab7d34
+  bundleVersion: 0.1.2.e4581ac
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -226,7 +226,7 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: Builds/userkey.keystore
+  AndroidKeystoreName: Builds/user.keystore
   AndroidKeyaliasName: userkey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
