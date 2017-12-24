@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 
-
 /// <summary>
 /// Sets up basic Wwise settings, and exposes various controls for Wwise statically.
 /// Will stop all events, when destroyed. 
 /// </summary>
 public class SoundManager : Singleton<SoundManager> {
-	public const string kMusicStateName = "MusicAudioBus";
-	public const string kSfxStateName = "SfxAmbienceBus";
-	public const string kMuted = "Muted";
-	public const string kDefault = "Default";
+	public enum TriggerEvent {
+		OnDestroy,
+		Start,
+		Awake,
+		None
+	}
+	private const string kMusicStateName = "MusicAudioBus";
+	private const string kSfxStateName = "SfxAmbienceBus";
 
 	private bool isMusicEnabled_ = true;
 	private bool isSfxEnabled_ = true;
+
 
 	/// <summary>
 	/// Setup WWise and load Init Sound Bank.
@@ -27,13 +31,13 @@ public class SoundManager : Singleton<SoundManager> {
 		isSfxEnabled_ = (PlayerPrefs.GetInt(kSfxStateName, 1) == 1) ? true : false;
 
 		if (!isMusicEnabled_) {
-			SetState(kMusicStateName, kMuted);
+			SetState(AKID.STATES.MUSICAUDIOBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.MUTED);
 		}
 		if (!isSfxEnabled_) {
-			SetState(kSfxStateName, kMuted);
+			SetState(AKID.STATES.SFXAMBIENCEBUS.GROUP, AKID.STATES.SFXAMBIENCEBUS.STATE.MUTED);
 		}
 	}
-	
+
 	private void OnDestroy() {
 		StopAllEvents();
 
@@ -47,32 +51,43 @@ public class SoundManager : Singleton<SoundManager> {
 	public static bool IsSfxAmbienceEnabled() {
 		return instance.isSfxEnabled_;
 	}
-	public static void SetMusicEnabled(bool isEnabled) {
-		instance.isMusicEnabled_ = isEnabled;
+
+	public static void ToggleSfx() {
+		if (instance.isSfxEnabled_) {
+			SetState(AKID.STATES.SFXAMBIENCEBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.MUTED);
+			instance.isSfxEnabled_ = false;
+		} else {
+			SetState(AKID.STATES.SFXAMBIENCEBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.DEFAULT);
+			instance.isSfxEnabled_ = true;
+		}
 	}
-	public static void SetSfxAmbienceEnabled(bool isEnabled) {
-		instance.isSfxEnabled_ = isEnabled;
-		
+
+	public static void ToggleMusic() {
+		if (instance.isMusicEnabled_) {
+			SetState(AKID.STATES.MUSICAUDIOBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.MUTED);
+			instance.isMusicEnabled_ = false;
+		} else {
+			SetState(AKID.STATES.MUSICAUDIOBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.DEFAULT);
+			instance.isMusicEnabled_ = true;
+		}
 	}
 
 	/// <summary>
 	/// Play Specific Event.
 	/// </summary>
-	/// <param name="eventName"> Name of the event to start playing. </param>	
+	/// <param name="eventID"> Name of the event to start playing. </param>	
 	/// <param name="go"> GameObject assosciated to the event. </param>
-	public static void PlayEvent(string eventName, GameObject go) {
-		AkSoundEngine.PostEvent(eventName, go);
+	public static void PlayEvent(uint eventID, GameObject go) {
+		AkSoundEngine.PostEvent(eventID, go);
 	}
 
 	/// <summary>
 	/// Stop Specific Event.
 	/// </summary>
-	/// <param name="eventName"> Name of the event to stop. </param>
+	/// <param name="eventID"> Name of the event to stop. </param>
 	/// <param name="fadeOut"> Fade out duration in MS. </param>
 	/// <param name="go"> GameObject assosciated to the event. </param>
-	public static void StopEvent(string eventName, int fadeOut, GameObject go) {
-		uint eventID;
-		eventID = AkSoundEngine.GetIDFromString(eventName);
+	public static void StopEvent(uint eventID, int fadeOut, GameObject go) {
 		AkSoundEngine.ExecuteActionOnEvent(eventID, AkActionOnEventType.AkActionOnEventType_Stop, go, fadeOut, AkCurveInterpolation.AkCurveInterpolation_Sine);
 	}
 
@@ -86,11 +101,11 @@ public class SoundManager : Singleton<SoundManager> {
 	/// <summary>
 	/// Switch States, sets the state of a switch group.
 	/// </summary>
-	/// <param name="switchName"> Name of the switch group. </param>
+	/// <param name="switchID"> Name of the switch group. </param>
 	/// <param name="switchState"> Name of the switch. </param>
 	/// /// <param name="go"> GameObject assosciated to the event. </param>
-	public static void SetSwitch(string switchName, string switchState, GameObject go) {
-		AkSoundEngine.SetSwitch(switchName, switchState, go);
+	public static void SetSwitch(uint switchID, uint switchState, GameObject go) {
+		AkSoundEngine.SetSwitch(switchID, switchState, go);
 	}
 
 	/// <summary>
@@ -99,16 +114,16 @@ public class SoundManager : Singleton<SoundManager> {
 	/// </summary>
 	/// <param name="rtpcName"> Name of the RTPC. </param>
 	/// <param name="rtpcValue"> Value to set to. </param>
-	public static void SetRTPC(string rtpcName, float rtpcValue) {
-		AkSoundEngine.SetRTPCValue(rtpcName, rtpcValue);
+	public static void SetRTPC(uint rtpcId, float rtpcValue) {
+		AkSoundEngine.SetRTPCValue(rtpcId, rtpcValue);
 	}
 
 	/// <summary>
 	/// Sets the state group to the state
 	/// </summary>
-	/// <param name="stateGroup"> StateGroup in which to change. </param>
-	/// <param name="stateName"> State to change to in stateGroup. </param>
-	public static void SetState(string stateGroup, string stateName) {
-		AkSoundEngine.SetState(stateGroup, stateName);
+	/// <param name="stateId"> StateGroup in which to change. </param>
+	/// <param name="state"> State to change to in stateGroup. </param>
+	public static void SetState(uint stateId, uint state) {
+		AkSoundEngine.SetState(stateId, state);
 	}
 }

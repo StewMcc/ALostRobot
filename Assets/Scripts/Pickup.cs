@@ -136,15 +136,14 @@ public class Pickup : MonoBehaviour {
 
 			pickupAnimation.ResumeAnimation();
 			dropEffect.Play();
-			SoundManager.PlayEvent("Item_PutDown", gameObject);
+			SoundManager.PlayEvent(AKID.EVENTS.ITEM_PUTDOWN, gameObject);
 			ShowGrabIcon();
 			isPickedUp_ = false;
+			transform.parent = null;
+			transform.localScale = initialScale_;
+		} else {
+			SoundManager.PlayEvent(AKID.EVENTS.ITEM_PORT_NEGATIVE, gameObject);
 		}
-		else {
-			SoundManager.PlayEvent("Item_Port_Negative", gameObject);
-		}
-		transform.parent = null;
-		transform.localScale = initialScale_;
 	}
 
 	/// <summary>
@@ -166,12 +165,12 @@ public class Pickup : MonoBehaviour {
 			pickupText.enabled = true;
 		}
 		grabIcon.SetActive(true);
-		SoundManager.PlayEvent("Item_PopUp", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.ITEM_POPUP, gameObject);
 	}
 
 	private void HideGrabIcon() {
 		grabIcon.SetActive(false);
-		SoundManager.PlayEvent("Item_PopUp", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.ITEM_POPUP, gameObject);
 	}
 
 	private void GrabPickup() {
