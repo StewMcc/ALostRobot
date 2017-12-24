@@ -126,7 +126,7 @@ public class Pickup : MonoBehaviour {
 	/// </summary>
 	public void Drop() {
 		// drop it if it can find a valid point on the navmesh
-		if (NavMeshUtil.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
+		if (LittleLot.NavMeshUtilities.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
 
 			transform.SetPositionAndRotation(droppedTargetPosition_, initialRotation_);
 

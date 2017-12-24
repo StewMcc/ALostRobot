@@ -63,7 +63,7 @@ public class CameraController : MonoBehaviour {
 				followSpeed
 			);
 		} else if (isMovingToDistressBeacon_) {
-			transform.position = MathUtil.SmoothLerp(
+			transform.position = LittleLot.MathUtilities.SmoothLerp(
 				lerpStartPosition_,
 				initialPosition_,
 				startTime_,

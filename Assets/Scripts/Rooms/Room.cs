@@ -36,11 +36,6 @@ public class Room : MonoBehaviour {
 	private Renderer[] roomMeshParentRenderers_ = null;
 	private float successDuration_ = 2.0f;
 
-	private void OnDestroy() {
-		ambientFixedEvent.Stop(gameObject);
-		ambientBrokenEvent.Stop(gameObject);
-	}
-
 	public bool IsFixed() {
 		return isFixed;
 	}

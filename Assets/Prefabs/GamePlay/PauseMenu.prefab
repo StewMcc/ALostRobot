@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 222147067877073808}
   - component: {fileID: 114627749171116776}
   - component: {fileID: 114125462560343178}
+  - component: {fileID: 114184276543180046}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -131,7 +132,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!1 &1710245045481340
 GameObject:
@@ -165,7 +166,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!1 &1803485371901380
 GameObject:
@@ -349,8 +350,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -381,8 +382,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -413,8 +414,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -445,8 +446,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -612,7 +613,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114627749171116776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114184276543180046}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114474186557868274}
+        m_MethodName: ClosePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114164376220800746
@@ -642,6 +665,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114184276543180046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361253092948862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7771099d9ee742ab9ef7b996ea1b4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Splash_Scene
+  loadingScene: LoadingSpinnerScene
+  useLoadingScene: 1
 --- !u!114 &114227145462816334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -667,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.409, g: 0.409, b: 0.409, a: 0.641}
+  m_Color: {r: 0.12941177, g: 0.11764706, b: 0.33333334, a: 0.6392157}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -711,7 +748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openPauseMenu: {fileID: 0}
   closePauseMenu: {fileID: 114664932068686514}
-  restartButton: {fileID: 114125462560343178}
 --- !u!114 &114499484614814874
 MonoBehaviour:
   m_ObjectHideFlags: 1
