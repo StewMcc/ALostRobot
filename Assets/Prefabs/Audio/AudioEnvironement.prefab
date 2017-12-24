@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964255896803408}
+  - component: {fileID: 114419312167630340}
   m_Layer: 0
   m_Name: AudioEnvironement
   m_TagString: Untagged
@@ -288,6 +289,21 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114419312167630340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021485571236308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64aa31b0ac674ea89beccac1600d73f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusicEvent:
+    valueGuid: 789bb60223a5284a917206217df96105
+    ID: -239400236
+  triggerEvent: 0
 --- !u!114 &114427013072520262
 MonoBehaviour:
   m_ObjectHideFlags: 1

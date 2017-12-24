@@ -21,20 +21,25 @@ public class Room : MonoBehaviour {
 	private bool isFixed = true;
 
 	[SerializeField]
-	string fixedAmbient = "";
+	private AK.Wwise.Event ambientFixedEvent;
 
 	[SerializeField]
-	string brokenAmbient = "";
+	private AK.Wwise.Event ambientBrokenEvent;
 
 	[Tooltip("Object that contains all meshes we wish to show error and success textures on.")]
 	[SerializeField]
-	private GameObject roomMeshParent =null;
+	private GameObject roomMeshParent = null;
 
 	private RoomManager roomManager_ = null;
 
 	private int roomId_ = -1;
 	private Renderer[] roomMeshParentRenderers_ = null;
 	private float successDuration_ = 2.0f;
+
+	private void OnDestroy() {
+		ambientFixedEvent.Stop(gameObject);
+		ambientBrokenEvent.Stop(gameObject);
+	}
 
 	public bool IsFixed() {
 		return isFixed;
@@ -60,14 +65,9 @@ public class Room : MonoBehaviour {
 		if (isFixed) {
 			errorIcon.SetActive(false);
 			ChangeAllRenderersTextures(roomManager_.DefaultMaterial());
-			if (fixedAmbient != "") {
-				SoundManager.PlayEvent(fixedAmbient, gameObject);
-			}
-		}
-		else {
-			if (brokenAmbient != "") {
-				SoundManager.PlayEvent(brokenAmbient, gameObject);
-			}
+			ambientFixedEvent.Post(gameObject);
+		} else {
+			ambientBrokenEvent.Post(gameObject);
 			errorIcon.SetActive(true);
 			ChangeAllRenderersTextures(roomManager_.ErrorMaterial());
 		}
@@ -75,17 +75,12 @@ public class Room : MonoBehaviour {
 
 	public void TryFix(Pickup item) {
 		if (item.CheckType() == correctItem) {
-			SoundManager.PlayEvent("Item_Port_Positive", gameObject);
-			if (fixedAmbient != "") {
-				SoundManager.PlayEvent(fixedAmbient, gameObject);
-			}
-			if (brokenAmbient != "") {
-				SoundManager.StopEvent(brokenAmbient, 100, gameObject);
-			}
+			SoundManager.PlayEvent(AKID.EVENTS.ITEM_PORT_POSITIVE, gameObject);
+			ambientFixedEvent.Post(gameObject);
+			ambientBrokenEvent.Stop(gameObject, 100);
 			Fix();
-		}
-		else {
-			SoundManager.PlayEvent("Item_Port_Negative", gameObject);
+		} else {
+			SoundManager.PlayEvent(AKID.EVENTS.ITEM_PORT_NEGATIVE, gameObject);
 			BreakOtherRooms();
 		}
 	}
@@ -93,15 +88,10 @@ public class Room : MonoBehaviour {
 	public void Break() {
 		if (isFixed) {
 			isFixed = false;
-			SoundManager.PlayEvent("Broken_Room", gameObject);
-			if (fixedAmbient != "") {
-				SoundManager.StopEvent(fixedAmbient, 100, gameObject);
-			}
-			if (brokenAmbient != "") {
-				SoundManager.PlayEvent(brokenAmbient, gameObject);
-			}
+			SoundManager.PlayEvent(AKID.EVENTS.BROKEN_ROOM, gameObject);
+			ambientFixedEvent.Stop(gameObject, 100);
+			ambientBrokenEvent.Post(gameObject);
 			errorIcon.SetActive(true);
-
 			ChangeAllRenderersTextures(roomManager_.ErrorMaterial());
 		}
 	}

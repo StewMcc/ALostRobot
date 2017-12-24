@@ -142,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4406328867226030}
   - component: {fileID: 114151198431099230}
+  - component: {fileID: 114062131925414590}
   m_Layer: 2
   m_Name: Room_Control_8
   m_TagString: Untagged
@@ -243,8 +244,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -275,8 +276,8 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 000c9daec349fad439bfcae805274780, type: 2}
   m_StaticBatchInfo:
@@ -359,6 +360,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 61, y: 99, z: 8.000004}
   m_Center: {x: -1.4999924, y: 65.5, z: 0.9999982}
+--- !u!114 &114062131925414590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678821113231474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114151198431099230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,8 +395,12 @@ MonoBehaviour:
   correctItem: 8
   roomName: Kreaston Kloset
   isFixed: 1
-  fixedAmbient: Landscape_Shuttle
-  brokenAmbient: 
+  ambientFixedEvent:
+    valueGuid: 2a8128bb9be51b4a92c72eb9120cac17
+    ID: -290900906
+  ambientBrokenEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
   roomMeshParent: {fileID: 0}
 --- !u!114 &114305586860244242
 MonoBehaviour:

@@ -16,7 +16,7 @@ public class WwiseSettings
 	public string WwiseProjectPath;
 	public string SoundbankPath;
     public bool CreateWwiseGlobal = true;
-    public bool CreateWwiseListener = true;
+    public bool CreateWwiseListener = false;
 	public bool ShowMissingRigidBodyWarning = true;
     public string WwiseInstallationPathWindows;
     public string WwiseInstallationPathMac;
