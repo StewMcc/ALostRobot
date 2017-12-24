@@ -35,7 +35,7 @@ public class DistressBeaconController : MonoBehaviour {
 
 		// stops all other music before starting the beam audio.
 		SoundManager.StopAllEvents();
-		SoundManager.PlayEvent("Sonar_Beam", gameObject);
+		SoundManager.PlayEvent(AKID.EVENTS.SONAR_BEAM, gameObject);
 
 		StartCoroutine(DelayedGameCompletion());
 	}
