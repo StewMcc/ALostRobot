@@ -4,7 +4,7 @@
 /// Sets up basic Wwise settings, and exposes various controls for Wwise statically.
 /// Will stop all events, when destroyed. 
 /// </summary>
-public class SoundManager : Singleton<SoundManager> {
+public class SoundManager : LittleLot.Singleton<SoundManager> {
 	public enum TriggerEvent {
 		OnDestroy,
 		Start,
@@ -46,29 +46,29 @@ public class SoundManager : Singleton<SoundManager> {
 	}
 
 	public static bool IsMusicEnabled() {
-		return instance.isMusicEnabled_;
+		return Instance.isMusicEnabled_;
 	}
 	public static bool IsSfxAmbienceEnabled() {
-		return instance.isSfxEnabled_;
+		return Instance.isSfxEnabled_;
 	}
 
 	public static void ToggleSfx() {
-		if (instance.isSfxEnabled_) {
+		if (Instance.isSfxEnabled_) {
 			SetState(AKID.STATES.SFXAMBIENCEBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.MUTED);
-			instance.isSfxEnabled_ = false;
+			Instance.isSfxEnabled_ = false;
 		} else {
 			SetState(AKID.STATES.SFXAMBIENCEBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.DEFAULT);
-			instance.isSfxEnabled_ = true;
+			Instance.isSfxEnabled_ = true;
 		}
 	}
 
 	public static void ToggleMusic() {
-		if (instance.isMusicEnabled_) {
+		if (Instance.isMusicEnabled_) {
 			SetState(AKID.STATES.MUSICAUDIOBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.MUTED);
-			instance.isMusicEnabled_ = false;
+			Instance.isMusicEnabled_ = false;
 		} else {
 			SetState(AKID.STATES.MUSICAUDIOBUS.GROUP, AKID.STATES.MUSICAUDIOBUS.STATE.DEFAULT);
-			instance.isMusicEnabled_ = true;
+			Instance.isMusicEnabled_ = true;
 		}
 	}
 

@@ -18,21 +18,21 @@ public class IdleAnimation : MonoBehaviour {
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to move to the target.")]
-	private float moveToTargetInterval =2.0f;
+	private float moveToTargetInterval = 2.0f;
 
 	[SerializeField]
 	private bool isScaling = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to scale to the targets scale.")]
-	private float scaleToTargetInterval =2.0f;
+	private float scaleToTargetInterval = 2.0f;
 
 	[SerializeField]
 	private bool isRotating = true;
 
 	[SerializeField]
 	[Tooltip("The amount of time in seconds it should take to rotate to the targets rotation.")]
-	private float rotateToTargetInterval =2.0f;
+	private float rotateToTargetInterval = 2.0f;
 
 	private Vector3 pingPongMoveTo_;
 
@@ -116,7 +116,7 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongMoveToTarget() {
-		transform.position = MathUtil.SmoothPingPongLerp(pingPongMoveFrom_, pingPongMoveTo_, moveToTargetInterval);
+		transform.position = LittleLot.MathUtilities.SmoothPingPongLerp(pingPongMoveFrom_, pingPongMoveTo_, moveToTargetInterval);
 	}
 
 	/// <summary>
@@ -124,7 +124,7 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongRotateToTarget() {
-		transform.rotation = Quaternion.Euler(MathUtil.SmoothPingPongLerp(pingPongRotateFrom_, pingPongRotateTo_, rotateToTargetInterval));
+		transform.rotation = Quaternion.Euler(LittleLot.MathUtilities.SmoothPingPongLerp(pingPongRotateFrom_, pingPongRotateTo_, rotateToTargetInterval));
 	}
 
 	/// <summary>
@@ -132,7 +132,7 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongScaleToTarget() {
-		transform.localScale = MathUtil.SmoothPingPongLerp(pingPongScaleFrom_, pingPongScaleTo_, scaleToTargetInterval);
+		transform.localScale = LittleLot.MathUtilities.SmoothPingPongLerp(pingPongScaleFrom_, pingPongScaleTo_, scaleToTargetInterval);
 	}
 
 }

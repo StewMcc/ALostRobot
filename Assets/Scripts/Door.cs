@@ -28,7 +28,7 @@ public class Door : MonoBehaviour {
 	void Update() {
 		if (isMoving_) {
 			// transition between the 2 positions.
-			doorModel.transform.position = MathUtil.SmoothLerp(
+			doorModel.transform.position = LittleLot.MathUtilities.SmoothLerp(
 				startPosition_,
 				endPosition_,
 				startTime_,
