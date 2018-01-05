@@ -9,20 +9,16 @@ public class PauseScreen : MonoBehaviour {
 	[SerializeField]
 	private Button closePauseMenu = null;
 
-	[SerializeField]
-	private Button restartButton = null;
-
 	private void Start() {
-		restartButton.onClick.AddListener(RestartGame);
 		openPauseMenu.onClick.AddListener(OpenPauseMenu);
 		closePauseMenu.onClick.AddListener(ClosePauseMenu);
 		gameObject.SetActive(false);
 	}
 
 	private void OnDestroy() {
-		restartButton.onClick.RemoveListener(RestartGame);
 		openPauseMenu.onClick.RemoveListener(OpenPauseMenu);
 		closePauseMenu.onClick.RemoveListener(ClosePauseMenu);
+		Time.timeScale = 1;
 	}
 
 	private void OpenPauseMenu() {
@@ -33,16 +29,11 @@ public class PauseScreen : MonoBehaviour {
 		Time.timeScale = 0;
 	}
 
-	private void ClosePauseMenu() {
+	public void ClosePauseMenu() {
 		gameObject.SetActive(false);
 		UiEventManager.ShowHud();
 		SoundManager.PlayEvent(AKID.EVENTS.MENU_RESUME, gameObject);
 		Time.timeScale = 1;
-	}
-
-	public void RestartGame() {
-		Time.timeScale = 1;
-		LoadingTransitionController.AnimatedLoadSceneAsync("Splash_Scene", "LoadingSpinnerScene");
 	}
 
 }

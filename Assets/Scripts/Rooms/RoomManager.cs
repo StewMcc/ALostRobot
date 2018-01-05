@@ -12,13 +12,13 @@ public class RoomManager : MonoBehaviour {
 	private Material errorMaterial = null;
 	[SerializeField]
 	private Material successMaterial = null;
-    
-    [SerializeField]
+
+	[SerializeField]
 	private int numberOfRoomsToBreak = 2;
 
 	private Room[] rooms_ = null;
 
-	private int maxAttempts_ =6;
+	private int maxAttempts_ = 6;
 
 	private void Start() {
 		rooms_ = GetComponentsInChildren<Room>();
