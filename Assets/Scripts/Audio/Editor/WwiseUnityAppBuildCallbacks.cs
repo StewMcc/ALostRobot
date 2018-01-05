@@ -38,6 +38,8 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
 		UnityEngine.Debug.Log("Deleting " + destinationSoundBankFolder);
 		//Delete the soundbank from the unity project so they don't get copied in the game folder of future builds
 		Directory.Delete(destinationSoundBankFolder, true);
+		// Delete meta file, stops error in unity.
+		File.Delete(destinationSoundBankFolder + ".meta");
 	}
 
 	private static void PopulateSourceAndDestinationFolderPaths() {
