@@ -430,6 +430,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198774349348878178}
   pickupType: 2
   pickupName: Nusuathil Node
+  notification:
+    notificationTitle: Discovered Nusuathil Node
+    iconSprite: {fileID: 0}
 --- !u!114 &114456949122999282
 MonoBehaviour:
   m_ObjectHideFlags: 1

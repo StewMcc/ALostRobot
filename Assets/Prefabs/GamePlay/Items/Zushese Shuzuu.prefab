@@ -440,6 +440,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198652570048481768}
   pickupType: 5
   pickupName: Zushese Shuzuu
+  notification:
+    notificationTitle: Discovered Zushese Shuzuu
+    iconSprite: {fileID: 0}
 --- !u!114 &114794194044253378
 MonoBehaviour:
   m_ObjectHideFlags: 1

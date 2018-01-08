@@ -69,6 +69,7 @@ public class Room : MonoBehaviour {
 	}
 
 	public void TryFix(Pickup item) {
+		GameNotificationHandler.SendGameNotification(item.GameNotificationData());
 		if (item.CheckType() == correctItem) {
 			SoundManager.PlayEvent(AKID.EVENTS.ITEM_PORT_POSITIVE, gameObject);
 			ambientFixedEvent.Post(gameObject);
