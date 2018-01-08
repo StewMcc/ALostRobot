@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12941177, g: 0.11764706, b: 0.33333334, a: 0.5019608}
+  m_Color: {r: 0.12941177, g: 0.11764706, b: 0.33333334, a: 0.877}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -159,8 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f30aaa780e6a64ea638915131d6f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeInTime: 0.5
   fadeOutTime: 0.5
-  minimumShowTime: 1.5
+  minimumShowTime: 4
   notification: {fileID: 114384345361903318}
 --- !u!114 &114945227281231084
 MonoBehaviour:

@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notification:
-    notificationTitle: Test Title 1
+    notificationTitle: Test Title
     iconSprite: {fileID: 21300000, guid: 4e89d9040056b4b1fac26d1445485996, type: 3}
 --- !u!114 &114306135886649430
 MonoBehaviour:
