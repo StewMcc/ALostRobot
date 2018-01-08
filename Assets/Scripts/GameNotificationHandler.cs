@@ -32,7 +32,7 @@ public class GameNotificationHandler : MonoBehaviour {
 	[SerializeField]
 	GameNotification notification;
 
-	private Queue<GameNotificationData> notificationBackLog = new Queue<GameNotificationData>();
+	private Queue<GameNotificationData> notificationBackLog_ = new Queue<GameNotificationData>();
 
 	/// <summary>
 	/// Called to send a notification to the GameNotification UI.
@@ -54,17 +54,21 @@ public class GameNotificationHandler : MonoBehaviour {
 
 	private void Update() {
 		if (notification.IsActive()) {
-			notification.FadeOut(Time.time, fadeInTime, minimumShowTime, fadeOutTime);
+			notification.UpdateState(Time.time, fadeInTime, minimumShowTime, fadeOutTime);
 		} else {
-			if (notificationBackLog.Count > 0) {
-				GameNotificationData notificationData = notificationBackLog.Dequeue();
+			if (notificationBackLog_.Count > 0) {
+				GameNotificationData notificationData = notificationBackLog_.Dequeue();
 				notification.InitGameNotification(notificationData, Time.time);
 			}
 		}
 	}
 
+	/// <summary>
+	/// Store Game Notification Data so can be processed when NotificationUi is ready.
+	/// </summary>
+	/// <param name="data"> New notification Data to display. </param>
 	private void ProcessGameNotification(GameNotificationData data) {
-		notificationBackLog.Enqueue(data);
+		notificationBackLog_.Enqueue(data);
 	}
 
 }
