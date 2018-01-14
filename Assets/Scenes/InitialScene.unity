@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Splash_Scene
-  loadingScene: LoadingSpinnerScene
-  useLoadingScene: 1
+  loadingScene: 
+  useLoadingScene: 0
   delay: 1.6
 --- !u!4 &204401083
 Transform:
@@ -400,7 +400,6 @@ MonoBehaviour:
     ID: -239400236
   triggerEvent: 1
   stopAllOtherEvents: 0
-  forceRestart: 0
 --- !u!20 &1078282284
 Camera:
   m_ObjectHideFlags: 0
