@@ -447,8 +447,12 @@ MonoBehaviour:
   correctItem: 2
   roomName: Nusluathil Nexus
   isFixed: 1
-  fixedAmbient: 
-  brokenAmbient: 
+  ambientFixedEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
+  ambientBrokenEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
   roomMeshParent: {fileID: 0}
 --- !u!114 &114417647511617938
 MonoBehaviour:

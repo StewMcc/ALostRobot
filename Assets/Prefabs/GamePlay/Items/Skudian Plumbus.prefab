@@ -329,6 +329,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198623646943941776}
   pickupType: 1
   pickupName: Skudian Plumbus
+  notification:
+    notificationTitle: Discovered Skudian Plumbus
+    iconSprite: {fileID: 0}
 --- !u!114 &114137020015428348
 MonoBehaviour:
   m_ObjectHideFlags: 1

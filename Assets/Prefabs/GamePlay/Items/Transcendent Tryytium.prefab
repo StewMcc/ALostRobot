@@ -486,6 +486,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198301955177686408}
   pickupType: 0
   pickupName: Transcendent Tryytium
+  notification:
+    notificationTitle: Discovered Transcendent Tryytium
+    iconSprite: {fileID: 0}
 --- !u!114 &114821380281791404
 MonoBehaviour:
   m_ObjectHideFlags: 1

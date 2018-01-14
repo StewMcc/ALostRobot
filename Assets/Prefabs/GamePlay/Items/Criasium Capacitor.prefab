@@ -370,6 +370,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198189217659864960}
   pickupType: 3
   pickupName: Criasium Capacitor
+  notification:
+    notificationTitle: Discovered Criasium Capacitor
+    iconSprite: {fileID: 0}
 --- !u!114 &114550074720486606
 MonoBehaviour:
   m_ObjectHideFlags: 1

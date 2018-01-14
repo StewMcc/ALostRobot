@@ -437,6 +437,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198712797961237970}
   pickupType: 6
   pickupName: Vufrum Voxel
+  notification:
+    notificationTitle: Discovered Vufrum Voxel
+    iconSprite: {fileID: 0}
 --- !u!114 &114754672731949320
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,6 +16,9 @@ public class RoomManager : MonoBehaviour {
 	[SerializeField]
 	private int numberOfRoomsToBreak = 2;
 
+	[SerializeField]
+	GameNotificationData roomBreakNotification;
+
 	private Room[] rooms_ = null;
 
 	private int maxAttempts_ = 6;
@@ -70,7 +73,6 @@ public class RoomManager : MonoBehaviour {
 			}
 			BreakRoom(roomToBreak);
 		}
-
 	}
 
 	/// <summary>
@@ -81,7 +83,16 @@ public class RoomManager : MonoBehaviour {
 	public bool BreakRoom(int roomNumber) {
 		// only breaks valid room numbers
 		if (roomNumber > 0 && roomNumber < rooms_.Length) {
+			if (rooms_[roomNumber].IsFixed()) {
+				// about to break a new room so notify user.
+				// fill in notification with room name and default sprite.
+				GameNotificationData data;
+				data.notificationTitle = rooms_[roomNumber].Name() + roomBreakNotification.notificationTitle;
+				data.iconSprite = roomBreakNotification.iconSprite;
+				GameNotificationHandler.SendGameNotification(data);
+			}
 			rooms_[roomNumber].Break();
+			
 			return true;
 		}
 		return false;

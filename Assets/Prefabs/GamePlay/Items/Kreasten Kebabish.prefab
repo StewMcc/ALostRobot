@@ -348,6 +348,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198242390730915392}
   pickupType: 8
   pickupName: Kreasten Kebabish
+  notification:
+    notificationTitle: Discovered Kreasten Kebabish
+    iconSprite: {fileID: 0}
 --- !u!114 &114076067642200126
 MonoBehaviour:
   m_ObjectHideFlags: 1
