@@ -362,6 +362,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198493932355779990}
   pickupType: 4
   pickupName: Ublyx Lexicon
+  notification:
+    notificationTitle: Discovered Ublyx Lexicon
+    iconSprite: {fileID: 0}
 --- !u!114 &114524854720240732
 MonoBehaviour:
   m_ObjectHideFlags: 1

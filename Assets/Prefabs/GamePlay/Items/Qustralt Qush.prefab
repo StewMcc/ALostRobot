@@ -407,6 +407,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198141564211938052}
   pickupType: 9
   pickupName: Qustralt Qush
+  notification:
+    notificationTitle: Discovered Qustralt Qush
+    iconSprite: {fileID: 0}
 --- !u!114 &114558584522170484
 MonoBehaviour:
   m_ObjectHideFlags: 1

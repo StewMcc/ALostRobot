@@ -543,8 +543,12 @@ MonoBehaviour:
   correctItem: 3
   roomName: Criasum Crank
   isFixed: 1
-  fixedAmbient: 
-  brokenAmbient: 
+  ambientFixedEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
+  ambientBrokenEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
   roomMeshParent: {fileID: 0}
 --- !u!222 &222622562738005140
 CanvasRenderer:

@@ -457,6 +457,9 @@ MonoBehaviour:
   dropEffect: {fileID: 198099286675877830}
   pickupType: 7
   pickupName: Eshian Schteel
+  notification:
+    notificationTitle: Discovered Eshian Schteel
+    iconSprite: {fileID: 0}
 --- !u!114 &114958825189312986
 MonoBehaviour:
   m_ObjectHideFlags: 1

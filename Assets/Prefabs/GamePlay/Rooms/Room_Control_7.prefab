@@ -386,8 +386,12 @@ MonoBehaviour:
   correctItem: 7
   roomName: Eshain Extractor
   isFixed: 1
-  fixedAmbient: 
-  brokenAmbient: 
+  ambientFixedEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
+  ambientBrokenEvent:
+    valueGuid: 00000000000000000000000000000000
+    ID: 0
   roomMeshParent: {fileID: 0}
 --- !u!114 &114120419852623864
 MonoBehaviour:

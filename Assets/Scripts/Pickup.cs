@@ -38,6 +38,9 @@ public class Pickup : MonoBehaviour {
 	[SerializeField]
 	private string pickupName = "DefaultName";
 
+	[SerializeField]
+	GameNotificationData notification;
+
 	private Vector3 respawnPosition_ = Vector3.zero;
 
 	private Quaternion initialRotation_;
@@ -101,6 +104,9 @@ public class Pickup : MonoBehaviour {
 		}
 	}
 
+	public GameNotificationData GameNotificationData() {
+		return notification;
+	}
 	public string Name() {
 		return pickupName;
 	}
