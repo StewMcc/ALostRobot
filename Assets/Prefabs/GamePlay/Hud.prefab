@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTime: 0.5
   fadeOutTime: 0.5
-  minimumShowTime: 4
+  minimumShowTime: 2
   notification: {fileID: 114226413009677752}
 --- !u!114 &114008527294229220
 MonoBehaviour:
@@ -685,7 +685,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
