@@ -1220,6 +1220,11 @@ Prefab:
       propertyPath: recallButton
       value: 
       objectReference: {fileID: 165912705}
+    - target: {fileID: 54824558815932210, guid: 57b0a0d3191521b4a873b9156d77a857,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b0a0d3191521b4a873b9156d77a857, type: 2}
   m_IsPrefabParent: 0
@@ -5170,10 +5175,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1114318444213198, guid: 36eb6933affc2ff4cb9dff02cf519314, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36eb6933affc2ff4cb9dff02cf519314, type: 2}
