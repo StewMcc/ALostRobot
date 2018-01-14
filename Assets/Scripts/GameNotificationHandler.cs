@@ -10,27 +10,21 @@ public struct GameNotificationData {
 
 public class GameNotificationHandler : MonoBehaviour {
 
-
 	public delegate void EventHandlerNotification(GameNotificationData data);
 	/// <summary>
 	/// Event to listen to for when a GameNotification as been sent.
 	/// </summary>
 	public static event EventHandlerNotification OnRecieveGameNotification;
 
-	[Tooltip("Fade in time for notifications in seconds")]
 	[SerializeField]
-	float fadeInTime = 0.5f;
-
-	[Tooltip("Fade out time for notifications in seconds")]
-	[SerializeField]
-	float fadeOutTime = 0.5f;
-
-	[Tooltip("Minimum Show Time for notifications in seconds")]
-	[SerializeField]
-	float minimumShowTime = 4.0f;
+	GameNotification notificationPrefab;
 
 	[SerializeField]
-	GameNotification notification;
+	int maxNotifications = 4;
+
+	GameNotification[] notifications;
+
+	int currentNotification_ = 0;
 
 	private Queue<GameNotificationData> notificationBackLog_ = new Queue<GameNotificationData>();
 
@@ -46,6 +40,11 @@ public class GameNotificationHandler : MonoBehaviour {
 
 	private void Start() {
 		OnRecieveGameNotification += ProcessGameNotification;
+		// Instantiate pool of notifications.
+		notifications = new GameNotification[maxNotifications];
+		for (int i = 0; i < maxNotifications; i++) {
+			notifications[i] = Instantiate(notificationPrefab, transform);
+		}
 	}
 
 	private void OnDestroy() {
@@ -53,12 +52,31 @@ public class GameNotificationHandler : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (notification.IsActive()) {
-			notification.UpdateState(Time.time, fadeInTime, minimumShowTime, fadeOutTime);
-		} else {
-			if (notificationBackLog_.Count > 0) {
-				GameNotificationData notificationData = notificationBackLog_.Dequeue();
-				notification.InitGameNotification(notificationData, Time.time);
+		float currentTime = Time.time;
+		for (int i = 0; i < maxNotifications; i++) {
+			if (notifications[i].IsActive()) {
+				notifications[i].UpdateState(currentTime);
+			} else {
+				if (!notifications[currentNotification_].IsMovingUp()) {
+					if (notificationBackLog_.Count > 0) {
+						GameNotificationData notificationData = notificationBackLog_.Dequeue();
+						notifications[i].InitGameNotification(notificationData, currentTime);
+						currentNotification_ = i;
+						MoveAllNotificationsUp(currentTime);
+					}
+				}
+			}
+		}
+	}
+
+	/// <summary>
+	/// MoveAll the notifications up one, creating space for a new notification.
+	/// </summary>
+	/// <param name="currentTime"> The time at which the Move started. </param>
+	private void MoveAllNotificationsUp(float currentTime) {
+		for (int i = 0; i < maxNotifications; i++) {
+			if (notifications[i].IsActive()) {
+				notifications[i].MoveUp(currentTime);
 			}
 		}
 	}
