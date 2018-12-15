@@ -222,6 +222,7 @@ public class AkWwiseTreeView : TreeViewControl
 			DDData.typeName = objType;
 
 			objectReferences[0] = DragDropHelperMonoScript;
+			GUIUtility.hotControl = 0;
 			DragAndDrop.objectReferences = objectReferences;
 			DragAndDrop.SetGenericData(AkDragDropHelper.DragDropIdentifier, DDData);
 			DragAndDrop.StartDrag("Dragging an AkObject");

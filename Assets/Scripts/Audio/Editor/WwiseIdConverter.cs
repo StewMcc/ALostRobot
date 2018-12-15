@@ -52,7 +52,8 @@ internal class WwiseIDConverter : MonoBehaviour {
 
 	}
 
-	public static void Convert() {
+    [UnityEditor.MenuItem("Assets/Wwise/Convert Wwise SoundBank IDs", false, (int)AkWwiseMenuOrder.ConvertIDs)]
+    public static void Convert() {
 
 		var inputFilePath = Application.dataPath +
 			Path.DirectorySeparatorChar + "StreamingAssets" +

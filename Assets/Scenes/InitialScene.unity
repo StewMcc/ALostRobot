@@ -329,6 +329,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114319025661107940, guid: 95f8b9f63f23f0448aef1a3947a795c6,
+        type: 2}
+      propertyPath: basePath
+      value: Audio\GeneratedSoundBanks
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95f8b9f63f23f0448aef1a3947a795c6, type: 2}
   m_IsPrefabParent: 0
