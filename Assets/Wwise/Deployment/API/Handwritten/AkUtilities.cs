@@ -16,7 +16,7 @@ public class WwiseSettings
 	public string WwiseProjectPath;
 	public string SoundbankPath;
     public bool CreateWwiseGlobal = true;
-    public bool CreateWwiseListener = false;
+    public bool CreateWwiseListener = true;
 	public bool ShowMissingRigidBodyWarning = true;
     public string WwiseInstallationPathWindows;
     public string WwiseInstallationPathMac;
@@ -107,8 +107,13 @@ public partial class AkUtilities
     // Unity platform enum to Wwise soundbank reference platform name mapping.
     private static IDictionary<BuildTarget, string[]> platformMapping = new Dictionary<BuildTarget, string[]>()
     {
-        { BuildTarget.StandaloneOSXUniversal, new string[] { "Mac" } },
+#if UNITY_2017_3_OR_NEWER
+		{ BuildTarget.StandaloneOSX, new string[] { "Mac" } },
+#else
+		{ BuildTarget.StandaloneOSXUniversal, new string[] { "Mac" } },
         { BuildTarget.StandaloneOSXIntel, new string[] { "Mac" } },
+        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
+#endif
         { BuildTarget.StandaloneWindows, new string[] { "Windows" } },
         // { BuildTarget.WebPlayer, null },
         // { BuildTarget.WebPlayerStreamed, null },
@@ -124,7 +129,6 @@ public partial class AkUtilities
         { BuildTarget.StandaloneLinux64, new string[] { "Linux" } },
         { BuildTarget.StandaloneLinuxUniversal, new string[] { "Linux" } },
         // { BuildTarget.WP8Player, null },
-        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
         // { BuildTarget.BlackBerry, null },
         // { BuildTarget.Tizen, null },
         { BuildTarget.PSP2, new string[] { "VitaHW", "VitaSW" } },
@@ -205,7 +209,6 @@ public partial class AkUtilities
     // that is configured in the UnityWwise integration.
     public static void GenerateSoundbanks()
     {
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, loading settings...", 0.1f); 
         WwiseSettings Settings = WwiseSettings.LoadSettings();
         string wwiseProjectFullPath = GetFullPath(Application.dataPath, Settings.WwiseProjectPath);
         
@@ -219,7 +222,6 @@ public partial class AkUtilities
         if (wwiseCli == null)
         {
             Debug.LogError("Couldn't locate WwiseCLI, unable to generate SoundBanks.");
-            UnityEditor.EditorUtility.ClearProgressBar(); 
             return;
         }
 
@@ -236,7 +238,6 @@ public partial class AkUtilities
         
         arguments += " \"" + wwiseProjectFullPath + "\" -GenerateSoundBanks";
         
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, via CLI...", 0.5f);
         string output = ExecuteCommandLine(command, arguments);
 
         bool success = output.Contains("Process completed successfully.");
@@ -256,10 +257,8 @@ public partial class AkUtilities
         {
             Debug.LogError(message);
         }
-        UnityEditor.EditorUtility.DisplayProgressBar("Wwise"," Generating Sound Banks, saving and updating assets...", 0.9f);
-        AssetDatabase.SaveAssets(); 
+
         AssetDatabase.Refresh();
-        UnityEditor.EditorUtility.ClearProgressBar(); 
     }
 
     // Reads the user settings (not the project settings) to check if there is an override currently defined for the soundbank generation folders.

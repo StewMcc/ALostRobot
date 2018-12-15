@@ -151,8 +151,12 @@ public class AkWwisePostImportCallbackSetup
 
 	private static void PostImportFunction()
 	{
-		EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
-		EditorApplication.delayCall += CheckPicker;
+#if UNITY_2018_1_OR_NEWER
+        EditorApplication.hierarchyChanged += CheckWwiseGlobalExistance;
+#else
+        EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
+#endif
+        EditorApplication.delayCall += CheckPicker;
 
 		if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
 		{
@@ -195,8 +199,6 @@ public class AkWwisePostImportCallbackSetup
 		// Start by checking if the integration supports the platform
 		switch (EditorUserBuildSettings.activeBuildTarget)
 		{
-			case BuildTarget.PSM:
-			case BuildTarget.SamsungTV:
 			case BuildTarget.Tizen:
 			case BuildTarget.WebGL:
 				Msg = "The Wwise Unity integration does not support this platform.";
