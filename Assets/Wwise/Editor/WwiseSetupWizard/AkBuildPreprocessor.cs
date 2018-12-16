@@ -40,7 +40,7 @@ public partial class AkBuildPreprocessor
 
 			case (UnityEditor.BuildTarget)39: // UnityEditor.BuildTarget.Lumin
 				return "Lumin";
-				
+
 			case UnityEditor.BuildTarget.PS4:
 				return "PS4";
 
@@ -124,6 +124,8 @@ public partial class AkBuildPreprocessor : UnityEditor.Build.IPreprocessBuild, U
 			return;
 
 		System.IO.Directory.Delete(destinationFolder, true);
+		// Delete meta file, stops error in unity.
+		System.IO.File.Delete(destinationFolder + ".meta");
 		UnityEngine.Debug.Log("WwiseUnity: Deleting streaming assets folder <" + destinationFolder + ">");
 	}
 
