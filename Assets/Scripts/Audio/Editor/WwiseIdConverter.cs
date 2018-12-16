@@ -1,15 +1,27 @@
-﻿// Based on https://gist.github.com/StewMcc/50576a0e471134f6658e463d17bff6ca
-using System.Collections;
+﻿
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+
 using UnityEditor;
+using UnityEditor.Build;
+
 using UnityEngine;
 
-internal class WwiseIDConverter : MonoBehaviour {
+/// <summary>
+/// Converts Wwise_Ids c++ file into c# without using python.
+/// Based on https://gist.github.com/StewMcc/50576a0e471134f6658e463d17bff6ca
+/// </summary>
+public class WwiseIDConverter : IPreprocessBuild {
 	private enum State {
 		Init,
 		Replacing,
+	}
+
+	public int callbackOrder { get { return 0; } }
+
+	public void OnPreprocessBuild(BuildTarget target, string path) {
+		Convert();
 	}
 
 	public static void Convert(string inputFilePath, string outputFilePath) {
