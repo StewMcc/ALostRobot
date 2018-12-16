@@ -5,62 +5,82 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-using System.IO;
-using System.Collections.Generic;
-
 public static class AkWwiseProjectInfo
 {
-    public static AkWwiseProjectData m_Data;
+	private const string DataFileName = "AkWwiseProjectData.asset";
+	private static string DataRelativeDirectory = System.IO.Path.Combine(System.IO.Path.Combine("Wwise", "Editor"), "ProjectData");
+	private static string DataRelativePath = System.IO.Path.Combine(DataRelativeDirectory, DataFileName);
+	private static string DataAssetPath = System.IO.Path.Combine("Assets", DataRelativePath);
 
-	private const string WwiseEditorProjectDataDirectory = "Wwise/Editor/ProjectData";
-	private const string AssetsWwiseProjectDataPath = "Assets/" + WwiseEditorProjectDataDirectory + "/AkWwiseProjectData.asset";
+	public static AkWwiseProjectData m_Data;
+
+	private static bool WwiseFolderExists()
+	{
+		return System.IO.Directory.Exists(System.IO.Path.Combine(UnityEngine.Application.dataPath, "Wwise"));
+	}
 
 	public static AkWwiseProjectData GetData()
-    {
-        if (m_Data == null && Directory.Exists(Path.Combine(Application.dataPath, "Wwise")))
-        {
+	{
+		if (m_Data == null && WwiseFolderExists())
+		{
 			try
 			{
-				m_Data = (AkWwiseProjectData)AssetDatabase.LoadAssetAtPath(AssetsWwiseProjectDataPath, typeof(AkWwiseProjectData));
+				m_Data = UnityEditor.AssetDatabase.LoadAssetAtPath<AkWwiseProjectData>(DataAssetPath);
 
 				if (m_Data == null)
 				{
-                    if (!Directory.Exists(Path.Combine(Application.dataPath, WwiseEditorProjectDataDirectory)))
-                    {
-                        Directory.CreateDirectory(Path.Combine(Application.dataPath, WwiseEditorProjectDataDirectory));
-                    }
+					var dataAbsolutePath = System.IO.Path.Combine(UnityEngine.Application.dataPath, DataRelativePath);
+					var dataExists = System.IO.File.Exists(dataAbsolutePath);
 
-					m_Data = ScriptableObject.CreateInstance<AkWwiseProjectData>();
-					string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(AssetsWwiseProjectDataPath);
-					AssetDatabase.CreateAsset(m_Data, assetPathAndName);
+					if (!dataExists)
+					{
+						var dataAbsoluteDirectory = System.IO.Path.Combine(UnityEngine.Application.dataPath, DataRelativeDirectory);
+						if (!System.IO.Directory.Exists(dataAbsoluteDirectory))
+							System.IO.Directory.CreateDirectory(dataAbsoluteDirectory);
+					}
+
+					m_Data = UnityEngine.ScriptableObject.CreateInstance<AkWwiseProjectData>();
+
+					if (dataExists)
+						UnityEngine.Debug.LogWarning("WwiseUnity: Unable to load asset at <" + dataAbsolutePath + ">.");
+					else
+						UnityEditor.AssetDatabase.CreateAsset(m_Data, DataAssetPath);
 				}
 			}
-			catch( Exception e )
+			catch (System.Exception e)
 			{
-				Debug.Log("WwiseUnity: Unable to load Wwise Data: " + e.ToString());
+				UnityEngine.Debug.LogError("WwiseUnity: Unable to load Wwise Data: " + e);
 			}
-        }
-		
-        return m_Data;
-    }
+		}
 
+		return m_Data;
+	}
 
-    public static bool Populate()
-    {
-		bool bDirty = false;
-        if (AkWwisePicker.WwiseProjectFound)
+	public static bool Populate()
+	{
+		var bDirty = false;
+		if (AkUtilities.IsWwiseProjectAvailable)
 		{
 			bDirty = AkWwiseWWUBuilder.Populate();
 			bDirty |= AkWwiseXMLBuilder.Populate();
-			if(bDirty)
-	        {            
-	    		EditorUtility.SetDirty(AkWwiseProjectInfo.GetData ());
+			if (bDirty)
+			{
+				UnityEditor.EditorUtility.SetDirty(GetData());
 			}
 		}
-        return bDirty;
-    }    
+
+		return bDirty;
+	}
+
+	public static void PopulateForMigration()
+	{
+		GetData().Reset();
+		var bDirty = AkWwiseWWUBuilder.Populate();
+		bDirty |= AkWwiseXMLBuilder.Populate();
+		if (bDirty)
+		{
+			UnityEditor.EditorUtility.SetDirty(GetData());
+		}
+	}
 }
 #endif

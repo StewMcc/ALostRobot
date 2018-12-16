@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114154321970305826}
   - component: {fileID: 114974920466995550}
   - component: {fileID: 114435176128718756}
+  - component: {fileID: 114894382337878332}
   m_Layer: 0
   m_Name: SplashDebugOverlay
   m_TagString: Untagged
@@ -219,7 +220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugPanel: {fileID: 1606382312516424}
-  version: {fileID: 114460609876983154}
 --- !u!114 &114460609876983154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,6 +305,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114894382337878332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546445227425550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9317992ea23d477f84018d4200b8b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gitInformation: {fileID: 11400000, guid: eb7e4c4de40f2bf4199e7d829b1644f0, type: 2}
+  displayGitCommit: {fileID: 114460609876983154}
 --- !u!114 &114974920466995550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,7 +451,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 320, y: 60}
+  m_SizeDelta: {x: 320, y: 480}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224781610881541580
 RectTransform:

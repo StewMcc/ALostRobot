@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" SchemaVersion="89">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{2495942C-A5B9-4415-A946-803B1F25675F}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
-						<Property Name="DivergenceCenter" Type="int32">
+						<Property Name="CenterPercentage" Type="int32">
 							<ValueList>
 								<Value>100</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{DADFF487-F5D7-4E8F-98FD-1FC8E8822216}" WorkUnitID="{4D75F505-4706-4908-B367-54D276A1481C}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Ambience_Bus" ID="{766711DE-C270-460F-ACDD-558C9F20B7E6}">
 							<PropertyList>
-								<Property Name="DivergenceCenter" Type="int32">
+								<Property Name="CenterPercentage" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
@@ -35,12 +40,16 @@
 											</PropertyList>
 										</State>
 									</CustomState>
+									<CustomState>
+										<StateRef Name="Default" ID="{3D524B12-BCE1-49EC-8044-3244B3827BBD}"/>
+										<State Name="" ID="{AB6A70DD-9271-4B78-AF5E-D0769122EDFC}" ShortID="388520841"/>
+									</CustomState>
 								</CustomStateList>
 							</StateInfo>
 						</Bus>
 						<Bus Name="Music_Bus" ID="{2920CCF1-5622-4DB6-B7A8-AD9FAFB7D856}">
 							<PropertyList>
-								<Property Name="DivergenceCenter" Type="int32">
+								<Property Name="CenterPercentage" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
@@ -61,12 +70,16 @@
 											</PropertyList>
 										</State>
 									</CustomState>
+									<CustomState>
+										<StateRef Name="Default" ID="{81060F6A-26DC-4F10-8F03-85A9380FDCB5}"/>
+										<State Name="" ID="{93939850-7DC8-4DE3-AF1E-2CAA4991DE24}" ShortID="400002170"/>
+									</CustomState>
 								</CustomStateList>
 							</StateInfo>
 						</Bus>
 						<Bus Name="SoundFX_Bus" ID="{38C02774-A1E4-49FE-9541-FD5EBADAB484}">
 							<PropertyList>
-								<Property Name="DivergenceCenter" Type="int32">
+								<Property Name="CenterPercentage" Type="int32">
 									<ValueList>
 										<Value>100</Value>
 									</ValueList>
@@ -87,6 +100,10 @@
 											</PropertyList>
 										</State>
 									</CustomState>
+									<CustomState>
+										<StateRef Name="Default" ID="{3D524B12-BCE1-49EC-8044-3244B3827BBD}"/>
+										<State Name="" ID="{B11A1E5E-530E-4CAF-A16A-199E4899B4C8}" ShortID="336872143"/>
+									</CustomState>
 								</CustomStateList>
 							</StateInfo>
 						</Bus>
@@ -94,14 +111,18 @@
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}">
 					<PropertyList>
-						<Property Name="DivergenceCenter" Type="int32">
+						<Property Name="CenterPercentage" Type="int32">
 							<ValueList>
 								<Value>100</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{DADFF487-F5D7-4E8F-98FD-1FC8E8822216}" WorkUnitID="{4D75F505-4706-4908-B367-54D276A1481C}"/>
+						</Reference>
+					</ReferenceList>
 				</Bus>
-				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

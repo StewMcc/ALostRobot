@@ -578,7 +578,7 @@ MonoBehaviour:
   title: {fileID: 114778919350770352}
   transitionUpTime: 1
   fadeOutTime: 0.5
-  minimumShowTime: 4
+  showTime: 4
 --- !u!114 &114577892493425316
 MonoBehaviour:
   m_ObjectHideFlags: 1

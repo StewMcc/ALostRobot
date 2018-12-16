@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114051819498828062}
   - component: {fileID: 114953057612935348}
   - component: {fileID: 114116931936101022}
+  - component: {fileID: 114299386090890804}
   m_Layer: 0
   m_Name: GameDebugOverlay
   m_TagString: Untagged
@@ -363,7 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugPanel: {fileID: 1300185388261704}
-  version: {fileID: 114786857095947706}
 --- !u!114 &114126897551901700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,6 +378,7 @@ MonoBehaviour:
   nextScene: Splash_Scene
   loadingScene: LoadingSpinnerScene
   useLoadingScene: 0
+  overrideMinTransitionDuration: -1
 --- !u!114 &114170156586034872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,6 +426,19 @@ MonoBehaviour:
   notification:
     notificationTitle: Test Title
     iconSprite: {fileID: 21300000, guid: 4e89d9040056b4b1fac26d1445485996, type: 3}
+--- !u!114 &114299386090890804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210146280208014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9317992ea23d477f84018d4200b8b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gitInformation: {fileID: 11400000, guid: eb7e4c4de40f2bf4199e7d829b1644f0, type: 2}
+  displayGitCommit: {fileID: 114786857095947706}
 --- !u!114 &114306135886649430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,6 +604,7 @@ MonoBehaviour:
   nextScene: Scene_1
   loadingScene: LoadingSpinnerScene
   useLoadingScene: 1
+  overrideMinTransitionDuration: -1
 --- !u!114 &114689901560226634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1136,7 +1151,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 320, y: 60}
+  m_SizeDelta: {x: 320, y: 480}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224421692011627092
 RectTransform:

@@ -5,41 +5,36 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-using System.Collections;
-using System.Reflection;
-
 public class DefaultHandles
 {
 	public static bool Hidden
 	{
 		get
 		{
-			Type type = typeof(Tools);
-			FieldInfo field = type.GetField("s_Hidden", BindingFlags.NonPublic | BindingFlags.Static);
-			return ((bool)field.GetValue(null));
+			var type = typeof(UnityEditor.Tools);
+			var field = type.GetField("s_Hidden",
+				System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+			return (bool) field.GetValue(null);
 		}
 		set
 		{
-			Type type = typeof(Tools);
-			FieldInfo field = type.GetField("s_Hidden", BindingFlags.NonPublic | BindingFlags.Static);
+			var type = typeof(UnityEditor.Tools);
+			var field = type.GetField("s_Hidden",
+				System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
 			field.SetValue(null, value);
 		}
 	}
 }
 
-[CanEditMultipleObjects]
-[CustomEditor(typeof(AkGameObj))]
-public class AkGameObjectInspector : Editor
+[UnityEditor.CanEditMultipleObjects]
+[UnityEditor.CustomEditor(typeof(AkGameObj))]
+public class AkGameObjectInspector : UnityEditor.Editor
 {
-	AkGameObj m_AkGameObject;
-	SerializedProperty listeners;
+	private bool hideDefaultHandle;
+	private UnityEditor.SerializedProperty listeners;
+	private AkGameObj m_AkGameObject;
 
-	bool hideDefaultHandle = false;
-
-	void OnEnable()
+	private void OnEnable()
 	{
 		m_AkGameObject = target as AkGameObj;
 		listeners = serializedObject.FindProperty("m_listeners");
@@ -47,7 +42,7 @@ public class AkGameObjectInspector : Editor
 		DefaultHandles.Hidden = hideDefaultHandle;
 	}
 
-	void OnDisable()
+	private void OnDisable()
 	{
 		DefaultHandles.Hidden = false;
 	}
@@ -59,64 +54,60 @@ public class AkGameObjectInspector : Editor
 		if (m_AkGameObject.m_positionOffsetData != null)
 		{
 			if (!m_AkGameObject.m_positionOffsetData.KeepMe)
-			{
 				m_AkGameObject.m_positionOffsetData = null;
-			}
 		}
 
-		AkGameObjPositionOffsetData positionOffsetData = m_AkGameObject.m_positionOffsetData;
-		Vector3 positionOffset = Vector3.zero;
+		var positionOffsetData = m_AkGameObject.m_positionOffsetData;
+		var positionOffset = UnityEngine.Vector3.zero;
 
-		EditorGUI.BeginChangeCheck();
+		UnityEditor.EditorGUI.BeginChangeCheck();
 
-		GUILayout.BeginVertical("Box");
-
-		bool applyPosOffset = EditorGUILayout.Toggle("Apply Position Offset:", positionOffsetData != null);
-
-		if (applyPosOffset != (positionOffsetData != null))
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
-			positionOffsetData = applyPosOffset ? new AkGameObjPositionOffsetData(true) : null;
-		}
+			var applyPosOffset = UnityEditor.EditorGUILayout.Toggle("Apply Position Offset:", positionOffsetData != null);
 
-		if (positionOffsetData != null)
-		{
-			positionOffset = EditorGUILayout.Vector3Field("Position Offset", positionOffsetData.positionOffset);
+			if (applyPosOffset != (positionOffsetData != null))
+				positionOffsetData = applyPosOffset ? new AkGameObjPositionOffsetData(true) : null;
 
-			GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
-
-			if (hideDefaultHandle)
+			if (positionOffsetData != null)
 			{
-				if (GUILayout.Button("Show Main Transform"))
+				positionOffset = UnityEditor.EditorGUILayout.Vector3Field("Position Offset", positionOffsetData.positionOffset);
+
+				UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
+
+				if (hideDefaultHandle)
 				{
-					hideDefaultHandle = false;
+					if (UnityEngine.GUILayout.Button("Show Main Transform"))
+					{
+						hideDefaultHandle = false;
+						DefaultHandles.Hidden = hideDefaultHandle;
+					}
+				}
+				else if (UnityEngine.GUILayout.Button("Hide Main Transform"))
+				{
+					hideDefaultHandle = true;
 					DefaultHandles.Hidden = hideDefaultHandle;
 				}
 			}
-			else if (GUILayout.Button("Hide Main Transform"))
+			else if (hideDefaultHandle)
 			{
-				hideDefaultHandle = true;
+				hideDefaultHandle = false;
 				DefaultHandles.Hidden = hideDefaultHandle;
 			}
 		}
-		else if (hideDefaultHandle)
+
+		UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
+
+		var isEnvironmentAware = m_AkGameObject.isEnvironmentAware;
+
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
-			hideDefaultHandle = false;
-			DefaultHandles.Hidden = hideDefaultHandle;
+			isEnvironmentAware = UnityEditor.EditorGUILayout.Toggle("Environment Aware:", isEnvironmentAware);
 		}
 
-		GUILayout.EndVertical();
-
-		GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
-
-		GUILayout.BeginVertical("Box");
-
-		bool isEnvironmentAware = EditorGUILayout.Toggle("Environment Aware:", m_AkGameObject.isEnvironmentAware);
-
-		GUILayout.EndVertical();
-
-		if (EditorGUI.EndChangeCheck())
+		if (UnityEditor.EditorGUI.EndChangeCheck())
 		{
-			Undo.RecordObject(target, "AkGameObj Parameter Change");
+			UnityEditor.Undo.RecordObject(target, "AkGameObj Parameter Change");
 
 			m_AkGameObject.m_positionOffsetData = positionOffsetData;
 
@@ -129,57 +120,55 @@ public class AkGameObjectInspector : Editor
 		if (isEnvironmentAware)
 			RigidbodyCheck(m_AkGameObject.gameObject);
 
-		GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
+		UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
 
-		GUILayout.BeginVertical("Box");
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
-			EditorGUI.BeginChangeCheck();
-			EditorGUILayout.PropertyField(listeners);
-			if (EditorGUI.EndChangeCheck())
+			UnityEditor.EditorGUI.BeginChangeCheck();
+			UnityEditor.EditorGUILayout.PropertyField(listeners);
+			if (UnityEditor.EditorGUI.EndChangeCheck())
 				serializedObject.ApplyModifiedProperties();
 		}
-		GUILayout.EndVertical();
 	}
 
-	public static void RigidbodyCheck(GameObject gameObject)
+	public static void RigidbodyCheck(UnityEngine.GameObject gameObject)
 	{
-		if (WwiseSetupWizard.Settings.ShowMissingRigidBodyWarning && gameObject.GetComponent<Rigidbody>() == null)
+		if (WwiseSetupWizard.Settings.ShowMissingRigidBodyWarning && gameObject.GetComponent<UnityEngine.Rigidbody>() == null)
 		{
-			GUILayout.Space(EditorGUIUtility.standardVerticalSpacing);
+			UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
 
-			GUILayout.BeginVertical("Box");
-
-			GUIStyle style = new GUIStyle();
-			style.normal.textColor = Color.red;
-			style.wordWrap = true;
-			GUILayout.Label("AkGameObj-AkEnvironment interactions require a Rigidbody component on the object or the environment.", style);
-			if (GUILayout.Button("Add Rigidbody"))
+			using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 			{
-				Rigidbody rb = Undo.AddComponent<Rigidbody>(gameObject);
-				rb.useGravity = false;
-				rb.isKinematic = true;
-			}
+				UnityEditor.EditorGUILayout.HelpBox(
+					"Interactions between AkGameObj and AkEnvironment or AkRoom require a Rigidbody component on the object or the environment/room.",
+					UnityEditor.MessageType.Warning);
 
-			GUILayout.EndVertical();
+				if (UnityEngine.GUILayout.Button("Add Rigidbody"))
+				{
+					var rb = UnityEditor.Undo.AddComponent<UnityEngine.Rigidbody>(gameObject);
+					rb.useGravity = false;
+					rb.isKinematic = true;
+				}
+			}
 		}
 	}
 
-	void OnSceneGUI()
+	private void OnSceneGUI()
 	{
 		if (m_AkGameObject.m_positionOffsetData == null)
 			return;
 
-		EditorGUI.BeginChangeCheck();
+		UnityEditor.EditorGUI.BeginChangeCheck();
 
 		// Transform local offset to world coordinate
-		Vector3 pos = m_AkGameObject.transform.TransformPoint(m_AkGameObject.m_positionOffsetData.positionOffset);
+		var pos = m_AkGameObject.transform.TransformPoint(m_AkGameObject.m_positionOffsetData.positionOffset);
 
 		// Get new handle position
-		pos = Handles.PositionHandle(pos, Quaternion.identity);
+		pos = UnityEditor.Handles.PositionHandle(pos, UnityEngine.Quaternion.identity);
 
-		if (EditorGUI.EndChangeCheck())
+		if (UnityEditor.EditorGUI.EndChangeCheck())
 		{
-			Undo.RecordObject(target, "Position Offset Change");
+			UnityEditor.Undo.RecordObject(target, "Position Offset Change");
 
 			// Transform world offset to local coordinate
 			m_AkGameObject.m_positionOffsetData.positionOffset = m_AkGameObject.transform.InverseTransformPoint(pos);
