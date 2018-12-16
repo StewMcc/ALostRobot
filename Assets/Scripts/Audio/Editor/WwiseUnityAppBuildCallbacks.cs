@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Diagnostics;
-using UnityEngine;
+﻿using System.IO;
+
 using UnityEditor;
 using UnityEditor.Build;
+
+using UnityEngine;
 
 public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
 
@@ -28,7 +28,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
 			UnityEngine.Debug.LogError("WwiseUnity: The soundbank folder for the " + target + " platform doesn't exist. Make sure it was generated in your Wwise project");
 		}
 
-		LittleLot.CommonGitCommands.UpdateBundleVersion();
+		WwiseIDConverter.Convert();
 	}
 
 	public void OnPostprocessBuild(BuildTarget target, string path) {

@@ -2,7 +2,7 @@
 
 /// <summary>
 /// Sets up basic Wwise settings, and exposes various controls for Wwise statically.
-/// Will stop all events, when destroyed. 
+/// Will stop all events, when destroyed.
 /// </summary>
 public class SoundManager : LittleLot.Singleton<SoundManager> {
 	public enum TriggerEvent {
@@ -38,11 +38,16 @@ public class SoundManager : LittleLot.Singleton<SoundManager> {
 		}
 	}
 
-	private void OnDestroy() {
-		StopAllEvents();
+	private new void OnDestroy() {
+		if (Instance == this) {
 
-		PlayerPrefs.SetInt(kMusicStateName, isMusicEnabled_ ? 1 : 0);
-		PlayerPrefs.SetInt(kSfxStateName, isSfxEnabled_ ? 1 : 0);
+			StopAllEvents();
+
+			PlayerPrefs.SetInt(kMusicStateName, isMusicEnabled_ ? 1 : 0);
+			PlayerPrefs.SetInt(kSfxStateName, isSfxEnabled_ ? 1 : 0);
+		}
+
+		base.OnDestroy();
 	}
 
 	public static bool IsMusicEnabled() {
@@ -75,7 +80,7 @@ public class SoundManager : LittleLot.Singleton<SoundManager> {
 	/// <summary>
 	/// Play Specific Event.
 	/// </summary>
-	/// <param name="eventID"> Name of the event to start playing. </param>	
+	/// <param name="eventID"> Name of the event to start playing. </param>
 	/// <param name="go"> GameObject assosciated to the event. </param>
 	public static void PlayEvent(uint eventID, GameObject go) {
 		AkSoundEngine.PostEvent(eventID, go);
