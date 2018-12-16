@@ -5,71 +5,75 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Threading;
-
-
-
 public class AkWwiseXMLWatcher
 {
-	private FileSystemWatcher XmlWatcher;
-	private string SoundBankFolder;
-	
-	private static AkWwiseXMLWatcher Instance = null;
-	
-	public static AkWwiseXMLWatcher GetInstance()
+	private static readonly AkWwiseXMLWatcher instance = new AkWwiseXMLWatcher();
+
+	private readonly string SoundBankFolder;
+	private readonly System.IO.FileSystemWatcher XmlWatcher;
+
+	private bool fireEvent = false;
+
+	public event System.Action XMLUpdated;
+
+	public static AkWwiseXMLWatcher Instance
 	{
-		if (Instance == null)
+		get
 		{
-			Instance = new AkWwiseXMLWatcher ();
+			return instance;
 		}
-		
-		return Instance;
 	}
-	
-	
+
+	static AkWwiseXMLWatcher()
+	{
+	}
+
 	private AkWwiseXMLWatcher()
 	{
-		XmlWatcher 			= new FileSystemWatcher ();
-		SoundBankFolder 	= AkBasePathGetter.GetSoundbankBasePath();
-		
+		XmlWatcher = new System.IO.FileSystemWatcher();
+		SoundBankFolder = AkBasePathGetter.GetSoundbankBasePath();
+
 		try
 		{
 			XmlWatcher.Path = SoundBankFolder;
-			XmlWatcher.NotifyFilter = NotifyFilters.LastWrite; 
-			
+			XmlWatcher.NotifyFilter = System.IO.NotifyFilters.LastWrite;
+
 			// Event handlers that are watching for specific event
-			XmlWatcher.Created += new FileSystemEventHandler(RaisePopulateFlag);
-			XmlWatcher.Changed += new FileSystemEventHandler(RaisePopulateFlag);
-			
+			XmlWatcher.Created += RaisePopulateFlag;
+			XmlWatcher.Changed += RaisePopulateFlag;
+
 			XmlWatcher.Filter = "*.xml";
 			XmlWatcher.IncludeSubdirectories = true;
+			XmlWatcher.EnableRaisingEvents = true;
 		}
-		catch( Exception )
+		catch (System.Exception)
 		{
 			// Deliberately left empty
 		}
-	}
-	
-	public void StartXMLWatcher()
-	{
-		XmlWatcher.EnableRaisingEvents = true; 
-	}
-	
-	public void StopXMLWatcher()
-	{
-		XmlWatcher.EnableRaisingEvents = false;
+
+		UnityEditor.EditorApplication.update += onEditorUpdate;
 	}
 
-	
-	void RaisePopulateFlag(object sender, FileSystemEventArgs e)
-	{	
+	void onEditorUpdate()
+	{
+		if (fireEvent)
+		{
+			AkWwiseXMLBuilder.Populate();
+
+			var callback = XMLUpdated;
+			if (callback != null)
+			{
+				callback();
+			}
+
+			fireEvent = false;
+		}
+	}
+
+	private void RaisePopulateFlag(object sender, System.IO.FileSystemEventArgs e)
+	{
 		// Signal the main thread it's time to populate (cannot run populate somewhere else than on main thread)
-		AkAmbientInspector.populateSoundBank = true;
+		fireEvent = true;
 	}
 }
 #endif

@@ -21,10 +21,10 @@ public class Room : MonoBehaviour {
 	private bool isFixed = true;
 
 	[SerializeField]
-	private AK.Wwise.Event ambientFixedEvent;
+	private AK.Wwise.Event ambientFixedEvent = null;
 
 	[SerializeField]
-	private AK.Wwise.Event ambientBrokenEvent;
+	private AK.Wwise.Event ambientBrokenEvent = null;
 
 	[Tooltip("Object that contains all meshes we wish to show error and success textures on.")]
 	[SerializeField]

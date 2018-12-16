@@ -116,7 +116,7 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongMoveToTarget() {
-		transform.position = LittleLot.MathUtilities.SmoothPingPongLerp(pingPongMoveFrom_, pingPongMoveTo_, moveToTargetInterval);
+		transform.position = LerpExtensions.SmoothPingPongLerp(pingPongMoveFrom_, pingPongMoveTo_, moveToTargetInterval);
 	}
 
 	/// <summary>
@@ -124,7 +124,7 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongRotateToTarget() {
-		transform.rotation = Quaternion.Euler(LittleLot.MathUtilities.SmoothPingPongLerp(pingPongRotateFrom_, pingPongRotateTo_, rotateToTargetInterval));
+		transform.rotation = Quaternion.Euler(LerpExtensions.SmoothPingPongLerp(pingPongRotateFrom_, pingPongRotateTo_, rotateToTargetInterval));
 	}
 
 	/// <summary>
@@ -132,7 +132,6 @@ public class IdleAnimation : MonoBehaviour {
 	/// Gives a nice dampened animation effect back and forth.
 	/// </summary>
 	private void PingPongScaleToTarget() {
-		transform.localScale = LittleLot.MathUtilities.SmoothPingPongLerp(pingPongScaleFrom_, pingPongScaleTo_, scaleToTargetInterval);
+		transform.localScale = LerpExtensions.SmoothPingPongLerp(pingPongScaleFrom_, pingPongScaleTo_, scaleToTargetInterval);
 	}
-
 }

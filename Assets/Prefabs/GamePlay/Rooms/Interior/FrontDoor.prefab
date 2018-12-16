@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4990255695768558}
   - component: {fileID: 65016934550064418}
   - component: {fileID: 114081081700888774}
-  - component: {fileID: 114956304940103688}
+  - component: {fileID: 114869416913894376}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -140,6 +140,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 2
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -155,6 +156,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -197,7 +199,7 @@ MonoBehaviour:
   transitionTime: 0.2
   openTransform: {fileID: 4335226931153360}
   closedTransform: {fileID: 4103671158122806}
---- !u!114 &114956304940103688
+--- !u!114 &114869416913894376
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -205,15 +207,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077176655450710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bf8cbd6f2549e04a85c856c22f0d608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 0
-  isStaticObject: 0
   m_listeners:
     initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1

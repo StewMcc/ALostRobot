@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Controls the UI for the pickups and adds the pickup to the collided <seealso cref="RobotController"/>.
-/// 
+///
 /// Best to duplicate one of the PickUp prefabs for all the connected UI etc.
 /// Will show the Grabicon with its Canvas/Button, when a robot is within the collider.
 /// Also allows the Pickup to be respawned and dropped, but would require it to also be removed from the robots inventory.
@@ -39,7 +39,7 @@ public class Pickup : MonoBehaviour {
 	private string pickupName = "DefaultName";
 
 	[SerializeField]
-	GameNotificationData notification;
+	GameNotificationData notification = new GameNotificationData();
 
 	private Vector3 respawnPosition_ = Vector3.zero;
 
@@ -128,11 +128,11 @@ public class Pickup : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Drops the item at a random position near the player on the NavMesh.	
+	/// Drops the item at a random position near the player on the NavMesh.
 	/// </summary>
 	public void Drop() {
 		// drop it if it can find a valid point on the navmesh
-		if (LittleLot.NavMeshUtilities.RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
+		if (RandomPointOnNavMesh(transform.position, 2, out droppedTargetPosition_)) {
 
 			transform.SetPositionAndRotation(droppedTargetPosition_, initialRotation_);
 
@@ -182,6 +182,27 @@ public class Pickup : MonoBehaviour {
 		if (robot_) {
 			robot_.AddPickup(this);
 		}
+	}
+
+	/// <summary>
+	/// Generates a random point on the navmesh within the radius around the centre.
+	/// </summary>
+	/// <param name="center"> Centre point to create sphere around. </param>
+	/// <param name="radius"> Radius of Sphere. </param>
+	/// <param name="result"> Resultant NavMesh Point found. Vector3.zero if not found. </param>
+	/// <param name="maxAttempts"> Maximum number of times to try and find a point default value 30. </param>
+	/// <returns> Whether or not a navmesh point was found. If false result is Vector3.zero (bad idea to use this) </returns>
+	public static bool RandomPointOnNavMesh(Vector3 center, float radius, out Vector3 result, int maxAttempts = 30) {
+		for (int i = 0; i < maxAttempts; i++) {
+			Vector3 randomPoint = center + Random.insideUnitSphere * radius;
+			UnityEngine.AI.NavMeshHit hit;
+			if (UnityEngine.AI.NavMesh.SamplePosition(randomPoint, out hit, 1.0f, UnityEngine.AI.NavMesh.AllAreas)) {
+				result = hit.position;
+				return true;
+			}
+		}
+		result = Vector3.zero;
+		return false;
 	}
 
 }

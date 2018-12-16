@@ -465,14 +465,14 @@ AnimationClip:
       attribute: 445950504
       script: {fileID: 0}
       typeID: 198
-      customType: 27
+      customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 2502887797
       attribute: 4243850697
       script: {fileID: 0}
       typeID: 198
-      customType: 27
+      customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 2502887797
@@ -514,14 +514,14 @@ AnimationClip:
       attribute: 4
       script: {fileID: 0}
       typeID: 4
-      customType: 14
+      customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 4136144858
       attribute: 4
       script: {fileID: 0}
       typeID: 4
-      customType: 14
+      customType: 4
       isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 2100000, guid: 9eead192037aa9c438970b5d5fbf901f, type: 2}

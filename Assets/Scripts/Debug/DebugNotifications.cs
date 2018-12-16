@@ -5,7 +5,7 @@ using UnityEngine;
 public class DebugNotifications : MonoBehaviour {
 
 	[SerializeField]
-	GameNotificationData notification;
+	GameNotificationData notification = new GameNotificationData();
 
 	private int notificationNumber_ = 0;
 
