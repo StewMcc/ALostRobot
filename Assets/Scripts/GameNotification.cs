@@ -89,7 +89,7 @@ public class GameNotification : MonoBehaviour {
 		}
 
 		if (isMovingUp_) {
-			transform.localPosition = LittleLot.MathUtilities.SmoothLerp(
+			transform.localPosition = LerpExtensions.SmoothLerp(
 				moveUpStartPosition_,
 				moveUpEndPosition_,
 				moveUpStartTime_,
