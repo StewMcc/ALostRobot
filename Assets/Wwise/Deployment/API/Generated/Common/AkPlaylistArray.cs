@@ -23,6 +23,11 @@ public class AkPlaylistArray : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkPlaylistArray() {
     Dispose();
   }
@@ -43,30 +48,30 @@ public class AkPlaylistArray : global::System.IDisposable {
   public AkPlaylistArray() : this(AkSoundEnginePINVOKE.CSharp_new_AkPlaylistArray(), true) {
   }
 
-  public Iterator Begin() {
-    Iterator ret = new Iterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Begin(swigCPtr), true);
+  public AkIterator Begin() {
+    AkIterator ret = new AkIterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Begin(swigCPtr), true);
     return ret;
   }
 
-  public Iterator End() {
-    Iterator ret = new Iterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_End(swigCPtr), true);
+  public AkIterator End() {
+    AkIterator ret = new AkIterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_End(swigCPtr), true);
     return ret;
   }
 
-  public Iterator FindEx(PlaylistItem in_Item) {
-    Iterator ret = new Iterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_FindEx(swigCPtr, PlaylistItem.getCPtr(in_Item)), true);
+  public AkIterator FindEx(AkPlaylistItem in_Item) {
+    AkIterator ret = new AkIterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_FindEx(swigCPtr, AkPlaylistItem.getCPtr(in_Item)), true);
     return ret;
   }
 
-  public Iterator Erase(Iterator in_rIter) {
-    Iterator ret = new Iterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Erase__SWIG_0(swigCPtr, Iterator.getCPtr(in_rIter)), true);
+  public AkIterator Erase(AkIterator in_rIter) {
+    AkIterator ret = new AkIterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Erase__SWIG_0(swigCPtr, AkIterator.getCPtr(in_rIter)), true);
     return ret;
   }
 
   public void Erase(uint in_uIndex) { AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Erase__SWIG_1(swigCPtr, in_uIndex); }
 
-  public Iterator EraseSwap(Iterator in_rIter) {
-    Iterator ret = new Iterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_EraseSwap(swigCPtr, Iterator.getCPtr(in_rIter)), true);
+  public AkIterator EraseSwap(AkIterator in_rIter) {
+    AkIterator ret = new AkIterator(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_EraseSwap(swigCPtr, AkIterator.getCPtr(in_rIter)), true);
     return ret;
   }
 
@@ -78,47 +83,53 @@ public class AkPlaylistArray : global::System.IDisposable {
 
   public uint Length() { return AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Length(swigCPtr); }
 
+  public AkPlaylistItem Data() {
+    global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Data(swigCPtr);
+    AkPlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkPlaylistItem(cPtr, false);
+    return ret;
+  }
+
   public bool IsEmpty() { return AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_IsEmpty(swigCPtr); }
 
-  public PlaylistItem Exists(PlaylistItem in_Item) {
-    global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Exists(swigCPtr, PlaylistItem.getCPtr(in_Item));
-    PlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new PlaylistItem(cPtr, false);
+  public AkPlaylistItem Exists(AkPlaylistItem in_Item) {
+    global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Exists(swigCPtr, AkPlaylistItem.getCPtr(in_Item));
+    AkPlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkPlaylistItem(cPtr, false);
     return ret;
   }
 
-  public PlaylistItem AddLast() {
+  public AkPlaylistItem AddLast() {
     global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_AddLast__SWIG_0(swigCPtr);
-    PlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new PlaylistItem(cPtr, false);
+    AkPlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkPlaylistItem(cPtr, false);
     return ret;
   }
 
-  public PlaylistItem AddLast(PlaylistItem in_rItem) {
-    global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_AddLast__SWIG_1(swigCPtr, PlaylistItem.getCPtr(in_rItem));
-    PlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new PlaylistItem(cPtr, false);
+  public AkPlaylistItem AddLast(AkPlaylistItem in_rItem) {
+    global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_AddLast__SWIG_1(swigCPtr, AkPlaylistItem.getCPtr(in_rItem));
+    AkPlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkPlaylistItem(cPtr, false);
     return ret;
   }
 
-  public PlaylistItem Last() {
-    PlaylistItem ret = new PlaylistItem(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Last(swigCPtr), false);
+  public AkPlaylistItem Last() {
+    AkPlaylistItem ret = new AkPlaylistItem(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Last(swigCPtr), false);
     return ret;
   }
 
   public void RemoveLast() { AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_RemoveLast(swigCPtr); }
 
-  public AKRESULT Remove(PlaylistItem in_rItem) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Remove(swigCPtr, PlaylistItem.getCPtr(in_rItem)); }
+  public AKRESULT Remove(AkPlaylistItem in_rItem) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Remove(swigCPtr, AkPlaylistItem.getCPtr(in_rItem)); }
 
-  public AKRESULT RemoveSwap(PlaylistItem in_rItem) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_RemoveSwap(swigCPtr, PlaylistItem.getCPtr(in_rItem)); }
+  public AKRESULT RemoveSwap(AkPlaylistItem in_rItem) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_RemoveSwap(swigCPtr, AkPlaylistItem.getCPtr(in_rItem)); }
 
   public void RemoveAll() { AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_RemoveAll(swigCPtr); }
 
-  public PlaylistItem ItemAtIndex(uint uiIndex) {
-    PlaylistItem ret = new PlaylistItem(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_ItemAtIndex(swigCPtr, uiIndex), false);
+  public AkPlaylistItem ItemAtIndex(uint uiIndex) {
+    AkPlaylistItem ret = new AkPlaylistItem(AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_ItemAtIndex(swigCPtr, uiIndex), false);
     return ret;
   }
 
-  public PlaylistItem Insert(uint in_uIndex) {
+  public AkPlaylistItem Insert(uint in_uIndex) {
     global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlaylistArray_Insert(swigCPtr, in_uIndex);
-    PlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new PlaylistItem(cPtr, false);
+    AkPlaylistItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkPlaylistItem(cPtr, false);
     return ret;
   }
 

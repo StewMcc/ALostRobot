@@ -121,9 +121,9 @@ GameObject:
   - component: {fileID: 54824558815932210}
   - component: {fileID: 195473776087720608}
   - component: {fileID: 95559933352979044}
-  - component: {fileID: 114786652279136882}
-  - component: {fileID: 114953734750672750}
   - component: {fileID: 114531791730286808}
+  - component: {fileID: 114576861239887638}
+  - component: {fileID: 114902248894224102}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Player
@@ -557,7 +557,7 @@ MonoBehaviour:
   recallButton: {fileID: 0}
   dustTrail: {fileID: 198516249697969754}
   teleporterAnimator: {fileID: 95559933352979044}
---- !u!114 &114786652279136882
+--- !u!114 &114576861239887638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -565,31 +565,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450268242836304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abbf725750a10f34b986df0974271ca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_listeners:
-    initialListenerList: []
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
---- !u!114 &114953734750672750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450268242836304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f691e5d9bd766648b2a25fbf25e679a, type: 3}
+  m_Script: {fileID: 11500000, guid: c46ae1678b9723c47acd709f89eac0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
+--- !u!114 &114902248894224102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450268242836304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf8cbd6f2549e04a85c856c22f0d608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!195 &195473776087720608
 NavMeshAgent:
   m_ObjectHideFlags: 1

@@ -23,6 +23,11 @@ public class AkVector : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkVector() {
     Dispose();
   }
@@ -39,6 +44,8 @@ public class AkVector : global::System.IDisposable {
       global::System.GC.SuppressFinalize(this);
     }
   }
+
+  public void Zero() { AkSoundEnginePINVOKE.CSharp_AkVector_Zero(swigCPtr); }
 
   public float X { set { AkSoundEnginePINVOKE.CSharp_AkVector_X_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkVector_X_get(swigCPtr); } 
   }

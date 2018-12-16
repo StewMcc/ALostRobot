@@ -23,6 +23,11 @@ public class AkOutputSettings : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkOutputSettings() {
     Dispose();
   }
@@ -40,6 +45,27 @@ public class AkOutputSettings : global::System.IDisposable {
     }
   }
 
+  public AkOutputSettings() : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings__SWIG_0(), true) {
+  }
+
+  public AkOutputSettings(string in_szDeviceShareSet, uint in_idDevice, AkChannelConfig in_channelConfig, AkPanningRule in_ePanning) : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings__SWIG_1(in_szDeviceShareSet, in_idDevice, AkChannelConfig.getCPtr(in_channelConfig), (int)in_ePanning), true) {
+  }
+
+  public AkOutputSettings(string in_szDeviceShareSet, uint in_idDevice, AkChannelConfig in_channelConfig) : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings__SWIG_2(in_szDeviceShareSet, in_idDevice, AkChannelConfig.getCPtr(in_channelConfig)), true) {
+  }
+
+  public AkOutputSettings(string in_szDeviceShareSet, uint in_idDevice) : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings__SWIG_3(in_szDeviceShareSet, in_idDevice), true) {
+  }
+
+  public AkOutputSettings(string in_szDeviceShareSet) : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings__SWIG_4(in_szDeviceShareSet), true) {
+  }
+
+  public uint audioDeviceShareset { set { AkSoundEnginePINVOKE.CSharp_AkOutputSettings_audioDeviceShareset_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkOutputSettings_audioDeviceShareset_get(swigCPtr); } 
+  }
+
+  public uint idDevice { set { AkSoundEnginePINVOKE.CSharp_AkOutputSettings_idDevice_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkOutputSettings_idDevice_get(swigCPtr); } 
+  }
+
   public AkPanningRule ePanningRule { set { AkSoundEnginePINVOKE.CSharp_AkOutputSettings_ePanningRule_set(swigCPtr, (int)value); }  get { return (AkPanningRule)AkSoundEnginePINVOKE.CSharp_AkOutputSettings_ePanningRule_get(swigCPtr); } 
   }
 
@@ -49,15 +75,6 @@ public class AkOutputSettings : global::System.IDisposable {
       AkChannelConfig ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkChannelConfig(cPtr, false);
       return ret;
     } 
-  }
-
-  public uint audioDeviceShareset { set { AkSoundEnginePINVOKE.CSharp_AkOutputSettings_audioDeviceShareset_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkOutputSettings_audioDeviceShareset_get(swigCPtr); } 
-  }
-
-  public AkBusHierarchyFlags outputHierarchy { set { AkSoundEnginePINVOKE.CSharp_AkOutputSettings_outputHierarchy_set(swigCPtr, (int)value); }  get { return (AkBusHierarchyFlags)AkSoundEnginePINVOKE.CSharp_AkOutputSettings_outputHierarchy_get(swigCPtr); } 
-  }
-
-  public AkOutputSettings() : this(AkSoundEnginePINVOKE.CSharp_new_AkOutputSettings(), true) {
   }
 
 }

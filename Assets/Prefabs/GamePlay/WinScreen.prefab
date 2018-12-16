@@ -157,6 +157,7 @@ MonoBehaviour:
   nextScene: Splash_Scene
   loadingScene: LoadingSpinnerScene
   useLoadingScene: 1
+  overrideMinTransitionDuration: -1
 --- !u!114 &114618860642498200
 MonoBehaviour:
   m_ObjectHideFlags: 1

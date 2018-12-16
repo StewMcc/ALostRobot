@@ -21,6 +21,11 @@ public class AkDynamicSequenceItemCallbackInfo : AkCallbackInfo {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal override void setCPtr(global::System.IntPtr cPtr) {
+    base.setCPtr(AkSoundEnginePINVOKE.CSharp_AkDynamicSequenceItemCallbackInfo_SWIGUpcast(cPtr));
+    swigCPtr = cPtr;
+  }
+
   ~AkDynamicSequenceItemCallbackInfo() {
     Dispose();
   }
