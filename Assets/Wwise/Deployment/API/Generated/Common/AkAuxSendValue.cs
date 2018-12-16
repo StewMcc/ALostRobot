@@ -23,6 +23,11 @@ public class AkAuxSendValue : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkAuxSendValue() {
     Dispose();
   }
@@ -47,6 +52,40 @@ public class AkAuxSendValue : global::System.IDisposable {
   }
 
   public float fControlValue { set { AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_fControlValue_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_fControlValue_get(swigCPtr); } 
+  }
+
+  public void Set(UnityEngine.GameObject listener, uint id, float value) {
+
+	var listener_id = AkSoundEngine.GetAkGameObjectID(listener);
+	AkSoundEngine.PreGameObjectAPICall(listener, listener_id);
+
+    { AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_Set(swigCPtr, listener_id, id, value); }
+  }
+
+  public bool IsSame(UnityEngine.GameObject listener, uint id) {
+
+	var listener_id = AkSoundEngine.GetAkGameObjectID(listener);
+	AkSoundEngine.PreGameObjectAPICall(listener, listener_id);
+
+    { return AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_IsSame(swigCPtr, listener_id, id); }
+  }
+
+  public static int GetSizeOf() { return AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_GetSizeOf(); }
+
+  public AKRESULT SetGameObjectAuxSendValues(UnityEngine.GameObject in_gameObjectID, uint in_uNumSendValues) {
+
+	var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+	AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+    { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_SetGameObjectAuxSendValues(swigCPtr, in_gameObjectID_id, in_uNumSendValues); }
+  }
+
+  public AKRESULT GetGameObjectAuxSendValues(UnityEngine.GameObject in_gameObjectID, ref uint io_ruNumSendValues) {
+
+	var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+	AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+    { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_GetGameObjectAuxSendValues(swigCPtr, in_gameObjectID_id, ref io_ruNumSendValues); }
   }
 
 }

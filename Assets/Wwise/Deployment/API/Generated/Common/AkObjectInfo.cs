@@ -23,6 +23,11 @@ public class AkObjectInfo : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkObjectInfo() {
     Dispose();
   }

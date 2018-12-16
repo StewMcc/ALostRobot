@@ -18,6 +18,18 @@ class AkSoundEnginePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AK_SOUNDBANK_VERSION_get")]
   public static extern uint CSharp_AK_SOUNDBANK_VERSION_get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerFrame_set")]
+  public static extern void CSharp_AkAudioSettings_uNumSamplesPerFrame_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerFrame_get")]
+  public static extern uint CSharp_AkAudioSettings_uNumSamplesPerFrame_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerSecond_set")]
+  public static extern void CSharp_AkAudioSettings_uNumSamplesPerSecond_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerSecond_get")]
+  public static extern uint CSharp_AkAudioSettings_uNumSamplesPerSecond_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkAudioSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkAudioSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAudioSettings")]
+  public static extern void CSharp_delete_AkAudioSettings(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_iExternalSrcCookie_set")]
   public static extern void CSharp_AkExternalSourceInfo_iExternalSrcCookie_set(global::System.IntPtr jarg1, uint jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_iExternalSrcCookie_get")]
@@ -29,7 +41,7 @@ class AkSoundEnginePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_szFile_set")]
   public static extern void CSharp_AkExternalSourceInfo_szFile_set(global::System.IntPtr jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_szFile_get")]
-  public static extern string CSharp_AkExternalSourceInfo_szFile_get(global::System.IntPtr jarg1);
+  public static extern global::System.IntPtr CSharp_AkExternalSourceInfo_szFile_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_pInMemory_set")]
   public static extern void CSharp_AkExternalSourceInfo_pInMemory_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkExternalSourceInfo_pInMemory_get")]
@@ -52,6 +64,8 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new_AkExternalSourceInfo__SWIG_3(uint jarg1, uint jarg2, uint jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkExternalSourceInfo")]
   public static extern void CSharp_delete_AkExternalSourceInfo(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVector_Zero")]
+  public static extern void CSharp_AkVector_Zero(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVector_X_set")]
   public static extern void CSharp_AkVector_X_set(global::System.IntPtr jarg1, float jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVector_X_get")]
@@ -126,6 +140,16 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkAuxSendValue_fControlValue_set(global::System.IntPtr jarg1, float jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_fControlValue_get")]
   public static extern float CSharp_AkAuxSendValue_fControlValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_Set")]
+  public static extern void CSharp_AkAuxSendValue_Set(global::System.IntPtr jarg1, ulong jarg2, uint jarg3, float jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_IsSame")]
+  public static extern bool CSharp_AkAuxSendValue_IsSame(global::System.IntPtr jarg1, ulong jarg2, uint jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_GetSizeOf")]
+  public static extern int CSharp_AkAuxSendValue_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_SetGameObjectAuxSendValues")]
+  public static extern int CSharp_AkAuxSendValue_SetGameObjectAuxSendValues(global::System.IntPtr jarg1, ulong jarg2, uint jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValue_GetGameObjectAuxSendValues")]
+  public static extern int CSharp_AkAuxSendValue_GetGameObjectAuxSendValues(global::System.IntPtr jarg1, ulong jarg2, ref uint jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAuxSendValue")]
   public static extern void CSharp_delete_AkAuxSendValue(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkRamp__SWIG_0")]
@@ -142,44 +166,6 @@ class AkSoundEnginePINVOKE {
   public static extern float CSharp_AkRamp_fNext_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkRamp")]
   public static extern void CSharp_delete_AkRamp(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_IsEqualTo")]
-  public static extern bool CSharp_WwiseObjectIDext_IsEqualTo(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_GetNodeType")]
-  public static extern int CSharp_WwiseObjectIDext_GetNodeType(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_id_set")]
-  public static extern void CSharp_WwiseObjectIDext_id_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_id_get")]
-  public static extern uint CSharp_WwiseObjectIDext_id_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_bIsBus_set")]
-  public static extern void CSharp_WwiseObjectIDext_bIsBus_set(global::System.IntPtr jarg1, bool jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectIDext_bIsBus_get")]
-  public static extern bool CSharp_WwiseObjectIDext_bIsBus_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_WwiseObjectIDext")]
-  public static extern global::System.IntPtr CSharp_new_WwiseObjectIDext();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_WwiseObjectIDext")]
-  public static extern void CSharp_delete_WwiseObjectIDext(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_WwiseObjectID__SWIG_0")]
-  public static extern global::System.IntPtr CSharp_new_WwiseObjectID__SWIG_0();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_WwiseObjectID__SWIG_1")]
-  public static extern global::System.IntPtr CSharp_new_WwiseObjectID__SWIG_1(uint jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_WwiseObjectID__SWIG_2")]
-  public static extern global::System.IntPtr CSharp_new_WwiseObjectID__SWIG_2(uint jarg1, bool jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_WwiseObjectID__SWIG_3")]
-  public static extern global::System.IntPtr CSharp_new_WwiseObjectID__SWIG_3(uint jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_WwiseObjectID")]
-  public static extern void CSharp_delete_WwiseObjectID(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_EnvelopePoint_uPosition_set")]
-  public static extern void CSharp_EnvelopePoint_uPosition_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_EnvelopePoint_uPosition_get")]
-  public static extern uint CSharp_EnvelopePoint_uPosition_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_EnvelopePoint_uAttenuation_set")]
-  public static extern void CSharp_EnvelopePoint_uAttenuation_set(global::System.IntPtr jarg1, ushort jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_EnvelopePoint_uAttenuation_get")]
-  public static extern ushort CSharp_EnvelopePoint_uAttenuation_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_EnvelopePoint")]
-  public static extern global::System.IntPtr CSharp_new_EnvelopePoint();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_EnvelopePoint")]
-  public static extern void CSharp_delete_EnvelopePoint(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AK_INT_get")]
   public static extern ushort CSharp_AK_INT_get();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AK_FLOAT_get")]
@@ -236,24 +222,24 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new_AkAudioFormat();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAudioFormat")]
   public static extern void CSharp_delete_AkAudioFormat(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_pItem_set")]
-  public static extern void CSharp_Iterator_pItem_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_pItem_get")]
-  public static extern global::System.IntPtr CSharp_Iterator_pItem_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_NextIter")]
-  public static extern global::System.IntPtr CSharp_Iterator_NextIter(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_PrevIter")]
-  public static extern global::System.IntPtr CSharp_Iterator_PrevIter(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_GetItem")]
-  public static extern global::System.IntPtr CSharp_Iterator_GetItem(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_IsEqualTo")]
-  public static extern bool CSharp_Iterator_IsEqualTo(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Iterator_IsDifferentFrom")]
-  public static extern bool CSharp_Iterator_IsDifferentFrom(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_Iterator")]
-  public static extern global::System.IntPtr CSharp_new_Iterator();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_Iterator")]
-  public static extern void CSharp_delete_Iterator(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_pItem_set")]
+  public static extern void CSharp_AkIterator_pItem_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_pItem_get")]
+  public static extern global::System.IntPtr CSharp_AkIterator_pItem_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_NextIter")]
+  public static extern global::System.IntPtr CSharp_AkIterator_NextIter(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_PrevIter")]
+  public static extern global::System.IntPtr CSharp_AkIterator_PrevIter(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_GetItem")]
+  public static extern global::System.IntPtr CSharp_AkIterator_GetItem(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_IsEqualTo")]
+  public static extern bool CSharp_AkIterator_IsEqualTo(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkIterator_IsDifferentFrom")]
+  public static extern bool CSharp_AkIterator_IsDifferentFrom(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkIterator")]
+  public static extern global::System.IntPtr CSharp_new_AkIterator();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkIterator")]
+  public static extern void CSharp_delete_AkIterator(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp__ArrayPoolDefault_Get")]
   public static extern int CSharp__ArrayPoolDefault_Get();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new__ArrayPoolDefault")]
@@ -266,30 +252,30 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new__ArrayPoolLEngineDefault();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete__ArrayPoolLEngineDefault")]
   public static extern void CSharp_delete__ArrayPoolLEngineDefault(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_PlaylistItem__SWIG_0")]
-  public static extern global::System.IntPtr CSharp_new_PlaylistItem__SWIG_0();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_PlaylistItem__SWIG_1")]
-  public static extern global::System.IntPtr CSharp_new_PlaylistItem__SWIG_1(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_PlaylistItem")]
-  public static extern void CSharp_delete_PlaylistItem(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_Assign")]
-  public static extern global::System.IntPtr CSharp_PlaylistItem_Assign(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_IsEqualTo")]
-  public static extern bool CSharp_PlaylistItem_IsEqualTo(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_SetExternalSources")]
-  public static extern int CSharp_PlaylistItem_SetExternalSources(global::System.IntPtr jarg1, uint jarg2, global::System.IntPtr jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_audioNodeID_set")]
-  public static extern void CSharp_PlaylistItem_audioNodeID_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_audioNodeID_get")]
-  public static extern uint CSharp_PlaylistItem_audioNodeID_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_msDelay_set")]
-  public static extern void CSharp_PlaylistItem_msDelay_set(global::System.IntPtr jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_msDelay_get")]
-  public static extern int CSharp_PlaylistItem_msDelay_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_pCustomInfo_set")]
-  public static extern void CSharp_PlaylistItem_pCustomInfo_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PlaylistItem_pCustomInfo_get")]
-  public static extern global::System.IntPtr CSharp_PlaylistItem_pCustomInfo_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPlaylistItem__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkPlaylistItem__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPlaylistItem__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkPlaylistItem__SWIG_1(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkPlaylistItem")]
+  public static extern void CSharp_delete_AkPlaylistItem(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_Assign")]
+  public static extern global::System.IntPtr CSharp_AkPlaylistItem_Assign(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_IsEqualTo")]
+  public static extern bool CSharp_AkPlaylistItem_IsEqualTo(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_SetExternalSources")]
+  public static extern int CSharp_AkPlaylistItem_SetExternalSources(global::System.IntPtr jarg1, uint jarg2, global::System.IntPtr jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_audioNodeID_set")]
+  public static extern void CSharp_AkPlaylistItem_audioNodeID_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_audioNodeID_get")]
+  public static extern uint CSharp_AkPlaylistItem_audioNodeID_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_msDelay_set")]
+  public static extern void CSharp_AkPlaylistItem_msDelay_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_msDelay_get")]
+  public static extern int CSharp_AkPlaylistItem_msDelay_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_pCustomInfo_set")]
+  public static extern void CSharp_AkPlaylistItem_pCustomInfo_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistItem_pCustomInfo_get")]
+  public static extern global::System.IntPtr CSharp_AkPlaylistItem_pCustomInfo_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPlaylistArray")]
   public static extern global::System.IntPtr CSharp_new_AkPlaylistArray();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkPlaylistArray")]
@@ -314,6 +300,8 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkPlaylistArray_Term(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistArray_Length")]
   public static extern uint CSharp_AkPlaylistArray_Length(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistArray_Data")]
+  public static extern global::System.IntPtr CSharp_AkPlaylistArray_Data(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistArray_IsEmpty")]
   public static extern bool CSharp_AkPlaylistArray_IsEmpty(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistArray_Exists")]
@@ -346,20 +334,20 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkPlaylistArray_Transfer(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylistArray_Copy")]
   public static extern int CSharp_AkPlaylistArray_Copy(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_Enqueue__SWIG_0")]
-  public static extern int CSharp_Playlist_Enqueue__SWIG_0(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4, uint jarg5, global::System.IntPtr jarg6);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_Enqueue__SWIG_1")]
-  public static extern int CSharp_Playlist_Enqueue__SWIG_1(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4, uint jarg5);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_Enqueue__SWIG_2")]
-  public static extern int CSharp_Playlist_Enqueue__SWIG_2(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_Enqueue__SWIG_3")]
-  public static extern int CSharp_Playlist_Enqueue__SWIG_3(global::System.IntPtr jarg1, uint jarg2, int jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_Enqueue__SWIG_4")]
-  public static extern int CSharp_Playlist_Enqueue__SWIG_4(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_Playlist")]
-  public static extern global::System.IntPtr CSharp_new_Playlist();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_Playlist")]
-  public static extern void CSharp_delete_Playlist(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_Enqueue__SWIG_0")]
+  public static extern int CSharp_AkPlaylist_Enqueue__SWIG_0(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4, uint jarg5, global::System.IntPtr jarg6);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_Enqueue__SWIG_1")]
+  public static extern int CSharp_AkPlaylist_Enqueue__SWIG_1(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4, uint jarg5);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_Enqueue__SWIG_2")]
+  public static extern int CSharp_AkPlaylist_Enqueue__SWIG_2(global::System.IntPtr jarg1, uint jarg2, int jarg3, global::System.IntPtr jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_Enqueue__SWIG_3")]
+  public static extern int CSharp_AkPlaylist_Enqueue__SWIG_3(global::System.IntPtr jarg1, uint jarg2, int jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_Enqueue__SWIG_4")]
+  public static extern int CSharp_AkPlaylist_Enqueue__SWIG_4(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPlaylist")]
+  public static extern global::System.IntPtr CSharp_new_AkPlaylist();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkPlaylist")]
+  public static extern void CSharp_delete_AkPlaylist(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_DynamicSequenceOpen__SWIG_0")]
   public static extern uint CSharp_DynamicSequenceOpen__SWIG_0(ulong jarg1, uint jarg2, global::System.IntPtr jarg3, global::System.IntPtr jarg4, int jarg5);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_DynamicSequenceOpen__SWIG_1")]
@@ -402,6 +390,24 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_DynamicSequenceLockPlaylist(uint jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_DynamicSequenceUnlockPlaylist")]
   public static extern int CSharp_DynamicSequenceUnlockPlaylist(uint jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkOutputSettings__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkOutputSettings__SWIG_1([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1, uint jarg2, global::System.IntPtr jarg3, int jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings__SWIG_2")]
+  public static extern global::System.IntPtr CSharp_new_AkOutputSettings__SWIG_2([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1, uint jarg2, global::System.IntPtr jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings__SWIG_3")]
+  public static extern global::System.IntPtr CSharp_new_AkOutputSettings__SWIG_3([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings__SWIG_4")]
+  public static extern global::System.IntPtr CSharp_new_AkOutputSettings__SWIG_4([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_audioDeviceShareset_set")]
+  public static extern void CSharp_AkOutputSettings_audioDeviceShareset_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_audioDeviceShareset_get")]
+  public static extern uint CSharp_AkOutputSettings_audioDeviceShareset_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_idDevice_set")]
+  public static extern void CSharp_AkOutputSettings_idDevice_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_idDevice_get")]
+  public static extern uint CSharp_AkOutputSettings_idDevice_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_ePanningRule_set")]
   public static extern void CSharp_AkOutputSettings_ePanningRule_set(global::System.IntPtr jarg1, int jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_ePanningRule_get")]
@@ -410,18 +416,16 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkOutputSettings_channelConfig_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_channelConfig_get")]
   public static extern global::System.IntPtr CSharp_AkOutputSettings_channelConfig_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_audioDeviceShareset_set")]
-  public static extern void CSharp_AkOutputSettings_audioDeviceShareset_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_audioDeviceShareset_get")]
-  public static extern uint CSharp_AkOutputSettings_audioDeviceShareset_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_outputHierarchy_set")]
-  public static extern void CSharp_AkOutputSettings_outputHierarchy_set(global::System.IntPtr jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkOutputSettings_outputHierarchy_get")]
-  public static extern int CSharp_AkOutputSettings_outputHierarchy_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkOutputSettings")]
-  public static extern global::System.IntPtr CSharp_new_AkOutputSettings();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkOutputSettings")]
   public static extern void CSharp_delete_AkOutputSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTaskContext_uIdxThread_set")]
+  public static extern void CSharp_AkTaskContext_uIdxThread_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTaskContext_uIdxThread_get")]
+  public static extern uint CSharp_AkTaskContext_uIdxThread_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkTaskContext")]
+  public static extern global::System.IntPtr CSharp_new_AkTaskContext();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkTaskContext")]
+  public static extern void CSharp_delete_AkTaskContext(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitSettings_pfnAssertHook_set")]
   public static extern void CSharp_AkInitSettings_pfnAssertHook_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitSettings_pfnAssertHook_get")]
@@ -486,6 +490,10 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkInitSettings_szPluginDLLPath_set(global::System.IntPtr jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitSettings_szPluginDLLPath_get")]
   public static extern global::System.IntPtr CSharp_AkInitSettings_szPluginDLLPath_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitSettings_eFloorPlane_set")]
+  public static extern void CSharp_AkInitSettings_eFloorPlane_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitSettings_eFloorPlane_get")]
+  public static extern int CSharp_AkInitSettings_eFloorPlane_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkInitSettings")]
   public static extern global::System.IntPtr CSharp_new_AkInitSettings();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkInitSettings")]
@@ -506,52 +514,30 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new_AkSourceSettings();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkSourceSettings")]
   public static extern void CSharp_delete_AkSourceSettings(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerFrame_set")]
-  public static extern void CSharp_AkAudioSettings_uNumSamplesPerFrame_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerFrame_get")]
-  public static extern uint CSharp_AkAudioSettings_uNumSamplesPerFrame_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerSecond_set")]
-  public static extern void CSharp_AkAudioSettings_uNumSamplesPerSecond_set(global::System.IntPtr jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSettings_uNumSamplesPerSecond_get")]
-  public static extern uint CSharp_AkAudioSettings_uNumSamplesPerSecond_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkAudioSettings")]
-  public static extern global::System.IntPtr CSharp_new_AkAudioSettings();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAudioSettings")]
-  public static extern void CSharp_delete_AkAudioSettings(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_IsInitialized")]
   public static extern bool CSharp_IsInitialized();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetAudioSettings")]
   public static extern int CSharp_GetAudioSettings(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerConfiguration__SWIG_0")]
-  public static extern global::System.IntPtr CSharp_GetSpeakerConfiguration__SWIG_0(int jarg1, uint jarg2);
+  public static extern global::System.IntPtr CSharp_GetSpeakerConfiguration__SWIG_0(ulong jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerConfiguration__SWIG_1")]
-  public static extern global::System.IntPtr CSharp_GetSpeakerConfiguration__SWIG_1(int jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerConfiguration__SWIG_2")]
-  public static extern global::System.IntPtr CSharp_GetSpeakerConfiguration__SWIG_2();
+  public static extern global::System.IntPtr CSharp_GetSpeakerConfiguration__SWIG_1();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetPanningRule__SWIG_0")]
-  public static extern int CSharp_GetPanningRule__SWIG_0(out int jarg1, int jarg2, uint jarg3);
+  public static extern int CSharp_GetPanningRule__SWIG_0(out int jarg1, ulong jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetPanningRule__SWIG_1")]
-  public static extern int CSharp_GetPanningRule__SWIG_1(out int jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetPanningRule__SWIG_2")]
-  public static extern int CSharp_GetPanningRule__SWIG_2(out int jarg1);
+  public static extern int CSharp_GetPanningRule__SWIG_1(out int jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPanningRule__SWIG_0")]
-  public static extern int CSharp_SetPanningRule__SWIG_0(int jarg1, int jarg2, uint jarg3);
+  public static extern int CSharp_SetPanningRule__SWIG_0(int jarg1, ulong jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPanningRule__SWIG_1")]
-  public static extern int CSharp_SetPanningRule__SWIG_1(int jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPanningRule__SWIG_2")]
-  public static extern int CSharp_SetPanningRule__SWIG_2(int jarg1);
+  public static extern int CSharp_SetPanningRule__SWIG_1(int jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerAngles__SWIG_0")]
-  public static extern int CSharp_GetSpeakerAngles__SWIG_0([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, ref uint jarg2, out float jarg3, int jarg4, uint jarg5);
+  public static extern int CSharp_GetSpeakerAngles__SWIG_0([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, ref uint jarg2, out float jarg3, ulong jarg4);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerAngles__SWIG_1")]
-  public static extern int CSharp_GetSpeakerAngles__SWIG_1([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, ref uint jarg2, out float jarg3, int jarg4);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSpeakerAngles__SWIG_2")]
-  public static extern int CSharp_GetSpeakerAngles__SWIG_2([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, ref uint jarg2, out float jarg3);
+  public static extern int CSharp_GetSpeakerAngles__SWIG_1([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, ref uint jarg2, out float jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetSpeakerAngles__SWIG_0")]
-  public static extern int CSharp_SetSpeakerAngles__SWIG_0([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, uint jarg2, float jarg3, int jarg4, uint jarg5);
+  public static extern int CSharp_SetSpeakerAngles__SWIG_0([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, uint jarg2, float jarg3, ulong jarg4);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetSpeakerAngles__SWIG_1")]
-  public static extern int CSharp_SetSpeakerAngles__SWIG_1([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, uint jarg2, float jarg3, int jarg4);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetSpeakerAngles__SWIG_2")]
-  public static extern int CSharp_SetSpeakerAngles__SWIG_2([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, uint jarg2, float jarg3);
+  public static extern int CSharp_SetSpeakerAngles__SWIG_1([global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg1, uint jarg2, float jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetVolumeThreshold")]
   public static extern int CSharp_SetVolumeThreshold(float jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetMaxNumVoicesLimit")]
@@ -766,14 +752,20 @@ class AkSoundEnginePINVOKE {
   public static extern int CSharp_PrepareGameSyncs__SWIG_2(int jarg1, int jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3, global::System.IntPtr jarg4, uint jarg5, global::System.IntPtr jarg6, global::System.IntPtr jarg7);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_PrepareGameSyncs__SWIG_3")]
   public static extern int CSharp_PrepareGameSyncs__SWIG_3(int jarg1, int jarg2, uint jarg3, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]uint[] jarg4, uint jarg5, global::System.IntPtr jarg6, global::System.IntPtr jarg7);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddListener")]
+  public static extern int CSharp_AddListener(ulong jarg1, ulong jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveListener")]
+  public static extern int CSharp_RemoveListener(ulong jarg1, ulong jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddDefaultListener")]
+  public static extern int CSharp_AddDefaultListener(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveDefaultListener")]
+  public static extern int CSharp_RemoveDefaultListener(ulong jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_ResetListenersToDefault")]
   public static extern int CSharp_ResetListenersToDefault(ulong jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetListenerSpatialization__SWIG_0")]
   public static extern int CSharp_SetListenerSpatialization__SWIG_0(ulong jarg1, bool jarg2, global::System.IntPtr jarg3, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg4);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetListenerSpatialization__SWIG_1")]
   public static extern int CSharp_SetListenerSpatialization__SWIG_1(ulong jarg1, bool jarg2, global::System.IntPtr jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetListenerPipeline")]
-  public static extern int CSharp_SetListenerPipeline(ulong jarg1, bool jarg2, bool jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetRTPCValue__SWIG_0")]
   public static extern int CSharp_SetRTPCValue__SWIG_0(uint jarg1, float jarg2, ulong jarg3, int jarg4, int jarg5, bool jarg6);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetRTPCValue__SWIG_1")]
@@ -874,10 +866,18 @@ class AkSoundEnginePINVOKE {
   public static extern int CSharp_StartProfilerCapture([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_StopProfilerCapture")]
   public static extern int CSharp_StopProfilerCapture();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveSecondaryOutput")]
-  public static extern int CSharp_RemoveSecondaryOutput(uint jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetSecondaryOutputVolume")]
-  public static extern int CSharp_SetSecondaryOutputVolume(uint jarg1, int jarg2, float jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveOutput")]
+  public static extern int CSharp_RemoveOutput(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetOutputID__SWIG_0")]
+  public static extern ulong CSharp_GetOutputID__SWIG_0(uint jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetOutputID__SWIG_1")]
+  public static extern ulong CSharp_GetOutputID__SWIG_1([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetBusDevice__SWIG_0")]
+  public static extern int CSharp_SetBusDevice__SWIG_0(uint jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetBusDevice__SWIG_1")]
+  public static extern int CSharp_SetBusDevice__SWIG_1([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetOutputVolume")]
+  public static extern int CSharp_SetOutputVolume(ulong jarg1, float jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Suspend__SWIG_0")]
   public static extern int CSharp_Suspend__SWIG_0(bool jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Suspend__SWIG_1")]
@@ -930,10 +930,172 @@ class AkSoundEnginePINVOKE {
   public static extern byte CSharp_AK_INVALID_MIDI_CHANNEL_get();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AK_INVALID_MIDI_NOTE_get")]
   public static extern byte CSharp_AK_INVALID_MIDI_NOTE_get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byChan_set")]
+  public static extern void CSharp_AkMIDIEvent_byChan_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byChan_get")]
+  public static extern byte CSharp_AkMIDIEvent_byChan_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tGen_byParam1_set")]
+  public static extern void CSharp_AkMIDIEvent_tGen_byParam1_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tGen_byParam1_get")]
+  public static extern byte CSharp_AkMIDIEvent_tGen_byParam1_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tGen_byParam2_set")]
+  public static extern void CSharp_AkMIDIEvent_tGen_byParam2_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tGen_byParam2_get")]
+  public static extern byte CSharp_AkMIDIEvent_tGen_byParam2_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tGen")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tGen();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tGen")]
+  public static extern void CSharp_delete_AkMIDIEvent_tGen(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteOnOff_byNote_set")]
+  public static extern void CSharp_AkMIDIEvent_tNoteOnOff_byNote_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteOnOff_byNote_get")]
+  public static extern byte CSharp_AkMIDIEvent_tNoteOnOff_byNote_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteOnOff_byVelocity_set")]
+  public static extern void CSharp_AkMIDIEvent_tNoteOnOff_byVelocity_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteOnOff_byVelocity_get")]
+  public static extern byte CSharp_AkMIDIEvent_tNoteOnOff_byVelocity_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tNoteOnOff")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tNoteOnOff();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tNoteOnOff")]
+  public static extern void CSharp_delete_AkMIDIEvent_tNoteOnOff(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tCc_byCc_set")]
+  public static extern void CSharp_AkMIDIEvent_tCc_byCc_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tCc_byCc_get")]
+  public static extern byte CSharp_AkMIDIEvent_tCc_byCc_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tCc_byValue_set")]
+  public static extern void CSharp_AkMIDIEvent_tCc_byValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tCc_byValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_tCc_byValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tCc")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tCc();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tCc")]
+  public static extern void CSharp_delete_AkMIDIEvent_tCc(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tPitchBend_byValueLsb_set")]
+  public static extern void CSharp_AkMIDIEvent_tPitchBend_byValueLsb_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tPitchBend_byValueLsb_get")]
+  public static extern byte CSharp_AkMIDIEvent_tPitchBend_byValueLsb_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tPitchBend_byValueMsb_set")]
+  public static extern void CSharp_AkMIDIEvent_tPitchBend_byValueMsb_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tPitchBend_byValueMsb_get")]
+  public static extern byte CSharp_AkMIDIEvent_tPitchBend_byValueMsb_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tPitchBend")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tPitchBend();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tPitchBend")]
+  public static extern void CSharp_delete_AkMIDIEvent_tPitchBend(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteAftertouch_byNote_set")]
+  public static extern void CSharp_AkMIDIEvent_tNoteAftertouch_byNote_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteAftertouch_byNote_get")]
+  public static extern byte CSharp_AkMIDIEvent_tNoteAftertouch_byNote_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteAftertouch_byValue_set")]
+  public static extern void CSharp_AkMIDIEvent_tNoteAftertouch_byValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tNoteAftertouch_byValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_tNoteAftertouch_byValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tNoteAftertouch")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tNoteAftertouch();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tNoteAftertouch")]
+  public static extern void CSharp_delete_AkMIDIEvent_tNoteAftertouch(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tChanAftertouch_byValue_set")]
+  public static extern void CSharp_AkMIDIEvent_tChanAftertouch_byValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tChanAftertouch_byValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_tChanAftertouch_byValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tChanAftertouch")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tChanAftertouch();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tChanAftertouch")]
+  public static extern void CSharp_delete_AkMIDIEvent_tChanAftertouch(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tProgramChange_byProgramNum_set")]
+  public static extern void CSharp_AkMIDIEvent_tProgramChange_byProgramNum_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_tProgramChange_byProgramNum_get")]
+  public static extern byte CSharp_AkMIDIEvent_tProgramChange_byProgramNum_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent_tProgramChange")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent_tProgramChange();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent_tProgramChange")]
+  public static extern void CSharp_delete_AkMIDIEvent_tProgramChange(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_Gen_set")]
+  public static extern void CSharp_AkMIDIEvent_Gen_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_Gen_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_Gen_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_Cc_set")]
+  public static extern void CSharp_AkMIDIEvent_Cc_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_Cc_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_Cc_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_NoteOnOff_set")]
+  public static extern void CSharp_AkMIDIEvent_NoteOnOff_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_NoteOnOff_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_NoteOnOff_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_PitchBend_set")]
+  public static extern void CSharp_AkMIDIEvent_PitchBend_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_PitchBend_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_PitchBend_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_NoteAftertouch_set")]
+  public static extern void CSharp_AkMIDIEvent_NoteAftertouch_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_NoteAftertouch_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_NoteAftertouch_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_ChanAftertouch_set")]
+  public static extern void CSharp_AkMIDIEvent_ChanAftertouch_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_ChanAftertouch_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_ChanAftertouch_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_ProgramChange_set")]
+  public static extern void CSharp_AkMIDIEvent_ProgramChange_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_ProgramChange_get")]
+  public static extern global::System.IntPtr CSharp_AkMIDIEvent_ProgramChange_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byType_set")]
+  public static extern void CSharp_AkMIDIEvent_byType_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byType_get")]
+  public static extern int CSharp_AkMIDIEvent_byType_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byOnOffNote_set")]
+  public static extern void CSharp_AkMIDIEvent_byOnOffNote_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byOnOffNote_get")]
+  public static extern byte CSharp_AkMIDIEvent_byOnOffNote_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byVelocity_set")]
+  public static extern void CSharp_AkMIDIEvent_byVelocity_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byVelocity_get")]
+  public static extern byte CSharp_AkMIDIEvent_byVelocity_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byCc_set")]
+  public static extern void CSharp_AkMIDIEvent_byCc_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byCc_get")]
+  public static extern int CSharp_AkMIDIEvent_byCc_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byCcValue_set")]
+  public static extern void CSharp_AkMIDIEvent_byCcValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byCcValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_byCcValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byValueLsb_set")]
+  public static extern void CSharp_AkMIDIEvent_byValueLsb_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byValueLsb_get")]
+  public static extern byte CSharp_AkMIDIEvent_byValueLsb_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byValueMsb_set")]
+  public static extern void CSharp_AkMIDIEvent_byValueMsb_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byValueMsb_get")]
+  public static extern byte CSharp_AkMIDIEvent_byValueMsb_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byAftertouchNote_set")]
+  public static extern void CSharp_AkMIDIEvent_byAftertouchNote_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byAftertouchNote_get")]
+  public static extern byte CSharp_AkMIDIEvent_byAftertouchNote_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byNoteAftertouchValue_set")]
+  public static extern void CSharp_AkMIDIEvent_byNoteAftertouchValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byNoteAftertouchValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_byNoteAftertouchValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byChanAftertouchValue_set")]
+  public static extern void CSharp_AkMIDIEvent_byChanAftertouchValue_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byChanAftertouchValue_get")]
+  public static extern byte CSharp_AkMIDIEvent_byChanAftertouchValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byProgramNum_set")]
+  public static extern void CSharp_AkMIDIEvent_byProgramNum_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEvent_byProgramNum_get")]
+  public static extern byte CSharp_AkMIDIEvent_byProgramNum_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIEvent")]
+  public static extern global::System.IntPtr CSharp_new_AkMIDIEvent();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIEvent")]
+  public static extern void CSharp_delete_AkMIDIEvent(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_uOffset_set")]
   public static extern void CSharp_AkMIDIPost_uOffset_set(global::System.IntPtr jarg1, uint jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_uOffset_get")]
   public static extern uint CSharp_AkMIDIPost_uOffset_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_PostOnEvent")]
+  public static extern int CSharp_AkMIDIPost_PostOnEvent(global::System.IntPtr jarg1, uint jarg2, ulong jarg3, uint jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_Clone")]
+  public static extern void CSharp_AkMIDIPost_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_GetSizeOf")]
+  public static extern int CSharp_AkMIDIPost_GetSizeOf();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkMIDIPost")]
   public static extern global::System.IntPtr CSharp_new_AkMIDIPost();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkMIDIPost")]
@@ -990,20 +1152,20 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new_AkEventCallbackInfo();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkEventCallbackInfo")]
   public static extern void CSharp_delete_AkEventCallbackInfo(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byType_get")]
-  public static extern byte CSharp_AkMIDIEventCallbackInfo_byType_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byChan_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byChan_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byParam1_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byParam1_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byParam2_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byParam2_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byType_get")]
+  public static extern int CSharp_AkMIDIEventCallbackInfo_byType_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byOnOffNote_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byOnOffNote_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byVelocity_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byVelocity_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byCc_get")]
-  public static extern byte CSharp_AkMIDIEventCallbackInfo_byCc_get(global::System.IntPtr jarg1);
+  public static extern int CSharp_AkMIDIEventCallbackInfo_byCc_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byCcValue_get")]
   public static extern byte CSharp_AkMIDIEventCallbackInfo_byCcValue_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_byValueLsb_get")]
@@ -1190,18 +1352,18 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkPositioningInfo_pannerType_set(global::System.IntPtr jarg1, int jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_pannerType_get")]
   public static extern int CSharp_AkPositioningInfo_pannerType_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_posSourceType_set")]
-  public static extern void CSharp_AkPositioningInfo_posSourceType_set(global::System.IntPtr jarg1, int jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_posSourceType_get")]
-  public static extern int CSharp_AkPositioningInfo_posSourceType_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUpdateEachFrame_set")]
-  public static extern void CSharp_AkPositioningInfo_bUpdateEachFrame_set(global::System.IntPtr jarg1, bool jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUpdateEachFrame_get")]
-  public static extern bool CSharp_AkPositioningInfo_bUpdateEachFrame_get(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUseSpatialization_set")]
-  public static extern void CSharp_AkPositioningInfo_bUseSpatialization_set(global::System.IntPtr jarg1, bool jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUseSpatialization_get")]
-  public static extern bool CSharp_AkPositioningInfo_bUseSpatialization_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_e3dPositioningType_set")]
+  public static extern void CSharp_AkPositioningInfo_e3dPositioningType_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_e3dPositioningType_get")]
+  public static extern int CSharp_AkPositioningInfo_e3dPositioningType_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bHoldEmitterPosAndOrient_set")]
+  public static extern void CSharp_AkPositioningInfo_bHoldEmitterPosAndOrient_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bHoldEmitterPosAndOrient_get")]
+  public static extern bool CSharp_AkPositioningInfo_bHoldEmitterPosAndOrient_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_e3DSpatializationMode_set")]
+  public static extern void CSharp_AkPositioningInfo_e3DSpatializationMode_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_e3DSpatializationMode_get")]
+  public static extern int CSharp_AkPositioningInfo_e3DSpatializationMode_get(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUseAttenuation_set")]
   public static extern void CSharp_AkPositioningInfo_bUseAttenuation_set(global::System.IntPtr jarg1, bool jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPositioningInfo_bUseAttenuation_get")]
@@ -1380,18 +1542,378 @@ class AkSoundEnginePINVOKE {
   public static extern bool CSharp_AkChannelConfig_IsChannelConfigSupported(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkChannelConfig")]
   public static extern void CSharp_delete_AkChannelConfig(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddPlayerMotionDevice__SWIG_0")]
-  public static extern int CSharp_AddPlayerMotionDevice__SWIG_0(byte jarg1, uint jarg2, uint jarg3, global::System.IntPtr jarg4, uint jarg5);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddPlayerMotionDevice__SWIG_1")]
-  public static extern int CSharp_AddPlayerMotionDevice__SWIG_1(byte jarg1, uint jarg2, uint jarg3, global::System.IntPtr jarg4);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddPlayerMotionDevice__SWIG_2")]
-  public static extern int CSharp_AddPlayerMotionDevice__SWIG_2(byte jarg1, uint jarg2, uint jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemovePlayerMotionDevice")]
-  public static extern void CSharp_RemovePlayerMotionDevice(byte jarg1, uint jarg2, uint jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPlayerListener")]
-  public static extern void CSharp_SetPlayerListener(byte jarg1, ulong jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPlayerVolume")]
-  public static extern void CSharp_SetPlayerVolume(byte jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkImageSourceParams__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkImageSourceParams__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkImageSourceParams__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkImageSourceParams__SWIG_1(global::System.IntPtr jarg1, float jarg2, float jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_sourcePosition_set")]
+  public static extern void CSharp_AkImageSourceParams_sourcePosition_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_sourcePosition_get")]
+  public static extern global::System.IntPtr CSharp_AkImageSourceParams_sourcePosition_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fDistanceScalingFactor_set")]
+  public static extern void CSharp_AkImageSourceParams_fDistanceScalingFactor_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fDistanceScalingFactor_get")]
+  public static extern float CSharp_AkImageSourceParams_fDistanceScalingFactor_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fLevel_set")]
+  public static extern void CSharp_AkImageSourceParams_fLevel_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fLevel_get")]
+  public static extern float CSharp_AkImageSourceParams_fLevel_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fDiffraction_set")]
+  public static extern void CSharp_AkImageSourceParams_fDiffraction_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_fDiffraction_get")]
+  public static extern float CSharp_AkImageSourceParams_fDiffraction_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_bDiffractedEmitterSide_set")]
+  public static extern void CSharp_AkImageSourceParams_bDiffractedEmitterSide_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_bDiffractedEmitterSide_get")]
+  public static extern bool CSharp_AkImageSourceParams_bDiffractedEmitterSide_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_bDiffractedListenerSide_set")]
+  public static extern void CSharp_AkImageSourceParams_bDiffractedListenerSide_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceParams_bDiffractedListenerSide_get")]
+  public static extern bool CSharp_AkImageSourceParams_bDiffractedListenerSide_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkImageSourceParams")]
+  public static extern void CSharp_delete_AkImageSourceParams(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_kDefaultMaxPathLength_get")]
+  public static extern float CSharp_kDefaultMaxPathLength_get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_kMaxDiffraction_get")]
+  public static extern float CSharp_kMaxDiffraction_get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_g_SpatialAudioPoolId_set")]
+  public static extern void CSharp_g_SpatialAudioPoolId_set(int jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_g_SpatialAudioPoolId_get")]
+  public static extern int CSharp_g_SpatialAudioPoolId_get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp__ArrayPoolSpatialAudio_Get")]
+  public static extern int CSharp__ArrayPoolSpatialAudio_Get();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new__ArrayPoolSpatialAudio")]
+  public static extern global::System.IntPtr CSharp_new__ArrayPoolSpatialAudio();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete__ArrayPoolSpatialAudio")]
+  public static extern void CSharp_delete__ArrayPoolSpatialAudio(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkSpatialAudioInitSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkSpatialAudioInitSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uPoolID_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_uPoolID_set(global::System.IntPtr jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uPoolID_get")]
+  public static extern int CSharp_AkSpatialAudioInitSettings_uPoolID_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uPoolSize_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_uPoolSize_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uPoolSize_get")]
+  public static extern uint CSharp_AkSpatialAudioInitSettings_uPoolSize_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uMaxSoundPropagationDepth_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_uMaxSoundPropagationDepth_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uMaxSoundPropagationDepth_get")]
+  public static extern uint CSharp_AkSpatialAudioInitSettings_uMaxSoundPropagationDepth_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uDiffractionFlags_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_uDiffractionFlags_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_uDiffractionFlags_get")]
+  public static extern uint CSharp_AkSpatialAudioInitSettings_uDiffractionFlags_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_fDiffractionShadowAttenFactor_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_fDiffractionShadowAttenFactor_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_fDiffractionShadowAttenFactor_get")]
+  public static extern float CSharp_AkSpatialAudioInitSettings_fDiffractionShadowAttenFactor_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_fDiffractionShadowDegrees_set")]
+  public static extern void CSharp_AkSpatialAudioInitSettings_fDiffractionShadowDegrees_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkSpatialAudioInitSettings_fDiffractionShadowDegrees_get")]
+  public static extern float CSharp_AkSpatialAudioInitSettings_fDiffractionShadowDegrees_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkSpatialAudioInitSettings")]
+  public static extern void CSharp_delete_AkSpatialAudioInitSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkImageSourceSettings__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkImageSourceSettings__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkImageSourceSettings__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkImageSourceSettings__SWIG_1(global::System.IntPtr jarg1, float jarg2, float jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkImageSourceSettings")]
+  public static extern void CSharp_delete_AkImageSourceSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceSettings_SetOneTexture")]
+  public static extern void CSharp_AkImageSourceSettings_SetOneTexture(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceSettings_SetName")]
+  public static extern void CSharp_AkImageSourceSettings_SetName(global::System.IntPtr jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceSettings_params__set")]
+  public static extern void CSharp_AkImageSourceSettings_params__set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkImageSourceSettings_params__get")]
+  public static extern global::System.IntPtr CSharp_AkImageSourceSettings_params__get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkEmitterSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkEmitterSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectAuxBusID_set")]
+  public static extern void CSharp_AkEmitterSettings_reflectAuxBusID_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectAuxBusID_get")]
+  public static extern uint CSharp_AkEmitterSettings_reflectAuxBusID_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionMaxPathLength_set")]
+  public static extern void CSharp_AkEmitterSettings_reflectionMaxPathLength_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionMaxPathLength_get")]
+  public static extern float CSharp_AkEmitterSettings_reflectionMaxPathLength_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionsAuxBusGain_set")]
+  public static extern void CSharp_AkEmitterSettings_reflectionsAuxBusGain_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionsAuxBusGain_get")]
+  public static extern float CSharp_AkEmitterSettings_reflectionsAuxBusGain_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionsOrder_set")]
+  public static extern void CSharp_AkEmitterSettings_reflectionsOrder_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectionsOrder_get")]
+  public static extern uint CSharp_AkEmitterSettings_reflectionsOrder_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectorFilterMask_set")]
+  public static extern void CSharp_AkEmitterSettings_reflectorFilterMask_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_reflectorFilterMask_get")]
+  public static extern uint CSharp_AkEmitterSettings_reflectorFilterMask_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_roomReverbAuxBusGain_set")]
+  public static extern void CSharp_AkEmitterSettings_roomReverbAuxBusGain_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_roomReverbAuxBusGain_get")]
+  public static extern float CSharp_AkEmitterSettings_roomReverbAuxBusGain_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxEdges_set")]
+  public static extern void CSharp_AkEmitterSettings_diffractionMaxEdges_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxEdges_get")]
+  public static extern uint CSharp_AkEmitterSettings_diffractionMaxEdges_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxPaths_set")]
+  public static extern void CSharp_AkEmitterSettings_diffractionMaxPaths_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxPaths_get")]
+  public static extern uint CSharp_AkEmitterSettings_diffractionMaxPaths_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxPathLength_set")]
+  public static extern void CSharp_AkEmitterSettings_diffractionMaxPathLength_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_diffractionMaxPathLength_get")]
+  public static extern float CSharp_AkEmitterSettings_diffractionMaxPathLength_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_useImageSources_set")]
+  public static extern void CSharp_AkEmitterSettings_useImageSources_set(global::System.IntPtr jarg1, byte jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEmitterSettings_useImageSources_get")]
+  public static extern byte CSharp_AkEmitterSettings_useImageSources_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkEmitterSettings")]
+  public static extern void CSharp_delete_AkEmitterSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkVertex__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkVertex__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkVertex__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkVertex__SWIG_1(float jarg1, float jarg2, float jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_X_set")]
+  public static extern void CSharp_AkVertex_X_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_X_get")]
+  public static extern float CSharp_AkVertex_X_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Y_set")]
+  public static extern void CSharp_AkVertex_Y_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Y_get")]
+  public static extern float CSharp_AkVertex_Y_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Z_set")]
+  public static extern void CSharp_AkVertex_Z_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Z_get")]
+  public static extern float CSharp_AkVertex_Z_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Clear")]
+  public static extern void CSharp_AkVertex_Clear(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_GetSizeOf")]
+  public static extern int CSharp_AkVertex_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkVertex_Clone")]
+  public static extern void CSharp_AkVertex_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkVertex")]
+  public static extern void CSharp_delete_AkVertex(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkTriangle__SWIG_0")]
+  public static extern global::System.IntPtr CSharp_new_AkTriangle__SWIG_0();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkTriangle__SWIG_1")]
+  public static extern global::System.IntPtr CSharp_new_AkTriangle__SWIG_1(ushort jarg1, ushort jarg2, ushort jarg3, ushort jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point0_set")]
+  public static extern void CSharp_AkTriangle_point0_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point0_get")]
+  public static extern ushort CSharp_AkTriangle_point0_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point1_set")]
+  public static extern void CSharp_AkTriangle_point1_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point1_get")]
+  public static extern ushort CSharp_AkTriangle_point1_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point2_set")]
+  public static extern void CSharp_AkTriangle_point2_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_point2_get")]
+  public static extern ushort CSharp_AkTriangle_point2_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_surface_set")]
+  public static extern void CSharp_AkTriangle_surface_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_surface_get")]
+  public static extern ushort CSharp_AkTriangle_surface_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_Clear")]
+  public static extern void CSharp_AkTriangle_Clear(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_GetSizeOf")]
+  public static extern int CSharp_AkTriangle_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkTriangle_Clone")]
+  public static extern void CSharp_AkTriangle_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkTriangle")]
+  public static extern void CSharp_delete_AkTriangle(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkAcousticSurface")]
+  public static extern global::System.IntPtr CSharp_new_AkAcousticSurface();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_textureID_set")]
+  public static extern void CSharp_AkAcousticSurface_textureID_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_textureID_get")]
+  public static extern uint CSharp_AkAcousticSurface_textureID_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_reflectorChannelMask_set")]
+  public static extern void CSharp_AkAcousticSurface_reflectorChannelMask_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_reflectorChannelMask_get")]
+  public static extern uint CSharp_AkAcousticSurface_reflectorChannelMask_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_strName_set")]
+  public static extern void CSharp_AkAcousticSurface_strName_set(global::System.IntPtr jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_strName_get")]
+  public static extern global::System.IntPtr CSharp_AkAcousticSurface_strName_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_Clear")]
+  public static extern void CSharp_AkAcousticSurface_Clear(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_DeleteName")]
+  public static extern void CSharp_AkAcousticSurface_DeleteName(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_GetSizeOf")]
+  public static extern int CSharp_AkAcousticSurface_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAcousticSurface_Clone")]
+  public static extern void CSharp_AkAcousticSurface_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAcousticSurface")]
+  public static extern void CSharp_delete_AkAcousticSurface(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_imageSource_set")]
+  public static extern void CSharp_AkReflectionPathInfo_imageSource_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_imageSource_get")]
+  public static extern global::System.IntPtr CSharp_AkReflectionPathInfo_imageSource_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_numPathPoints_set")]
+  public static extern void CSharp_AkReflectionPathInfo_numPathPoints_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_numPathPoints_get")]
+  public static extern uint CSharp_AkReflectionPathInfo_numPathPoints_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_numReflections_set")]
+  public static extern void CSharp_AkReflectionPathInfo_numReflections_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_numReflections_get")]
+  public static extern uint CSharp_AkReflectionPathInfo_numReflections_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_occlusionPoint_set")]
+  public static extern void CSharp_AkReflectionPathInfo_occlusionPoint_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_occlusionPoint_get")]
+  public static extern global::System.IntPtr CSharp_AkReflectionPathInfo_occlusionPoint_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_level_set")]
+  public static extern void CSharp_AkReflectionPathInfo_level_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_level_get")]
+  public static extern float CSharp_AkReflectionPathInfo_level_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_isOccluded_set")]
+  public static extern void CSharp_AkReflectionPathInfo_isOccluded_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_isOccluded_get")]
+  public static extern bool CSharp_AkReflectionPathInfo_isOccluded_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_GetSizeOf")]
+  public static extern int CSharp_AkReflectionPathInfo_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_GetPathPoint")]
+  public static extern global::System.IntPtr CSharp_AkReflectionPathInfo_GetPathPoint(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_GetAcousticSurface")]
+  public static extern global::System.IntPtr CSharp_AkReflectionPathInfo_GetAcousticSurface(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_GetDiffraction")]
+  public static extern float CSharp_AkReflectionPathInfo_GetDiffraction(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkReflectionPathInfo_Clone")]
+  public static extern void CSharp_AkReflectionPathInfo_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkReflectionPathInfo")]
+  public static extern global::System.IntPtr CSharp_new_AkReflectionPathInfo();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkReflectionPathInfo")]
+  public static extern void CSharp_delete_AkReflectionPathInfo(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_virtualPos_set")]
+  public static extern void CSharp_AkDiffractionPathInfo_virtualPos_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_virtualPos_get")]
+  public static extern global::System.IntPtr CSharp_AkDiffractionPathInfo_virtualPos_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_nodeCount_set")]
+  public static extern void CSharp_AkDiffractionPathInfo_nodeCount_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_nodeCount_get")]
+  public static extern uint CSharp_AkDiffractionPathInfo_nodeCount_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_diffraction_set")]
+  public static extern void CSharp_AkDiffractionPathInfo_diffraction_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_diffraction_get")]
+  public static extern float CSharp_AkDiffractionPathInfo_diffraction_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_totLength_set")]
+  public static extern void CSharp_AkDiffractionPathInfo_totLength_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_totLength_get")]
+  public static extern float CSharp_AkDiffractionPathInfo_totLength_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_obstructionValue_set")]
+  public static extern void CSharp_AkDiffractionPathInfo_obstructionValue_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_obstructionValue_get")]
+  public static extern float CSharp_AkDiffractionPathInfo_obstructionValue_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_GetSizeOf")]
+  public static extern int CSharp_AkDiffractionPathInfo_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_GetNodes")]
+  public static extern global::System.IntPtr CSharp_AkDiffractionPathInfo_GetNodes(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_GetAngles")]
+  public static extern float CSharp_AkDiffractionPathInfo_GetAngles(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkDiffractionPathInfo_Clone")]
+  public static extern void CSharp_AkDiffractionPathInfo_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkDiffractionPathInfo")]
+  public static extern global::System.IntPtr CSharp_new_AkDiffractionPathInfo();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkDiffractionPathInfo")]
+  public static extern void CSharp_delete_AkDiffractionPathInfo(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_nodePoint_set")]
+  public static extern void CSharp_AkPropagationPathInfo_nodePoint_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_nodePoint_get")]
+  public static extern global::System.IntPtr CSharp_AkPropagationPathInfo_nodePoint_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_numNodes_set")]
+  public static extern void CSharp_AkPropagationPathInfo_numNodes_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_numNodes_get")]
+  public static extern uint CSharp_AkPropagationPathInfo_numNodes_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_length_set")]
+  public static extern void CSharp_AkPropagationPathInfo_length_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_length_get")]
+  public static extern float CSharp_AkPropagationPathInfo_length_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_gain_set")]
+  public static extern void CSharp_AkPropagationPathInfo_gain_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_gain_get")]
+  public static extern float CSharp_AkPropagationPathInfo_gain_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_dryDiffraction_set")]
+  public static extern void CSharp_AkPropagationPathInfo_dryDiffraction_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_dryDiffraction_get")]
+  public static extern float CSharp_AkPropagationPathInfo_dryDiffraction_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_wetDiffraction_set")]
+  public static extern void CSharp_AkPropagationPathInfo_wetDiffraction_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_wetDiffraction_get")]
+  public static extern float CSharp_AkPropagationPathInfo_wetDiffraction_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_GetSizeOf")]
+  public static extern int CSharp_AkPropagationPathInfo_GetSizeOf();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_GetNodePoint")]
+  public static extern global::System.IntPtr CSharp_AkPropagationPathInfo_GetNodePoint(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPropagationPathInfo_Clone")]
+  public static extern void CSharp_AkPropagationPathInfo_Clone(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPropagationPathInfo")]
+  public static extern global::System.IntPtr CSharp_new_AkPropagationPathInfo();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkPropagationPathInfo")]
+  public static extern void CSharp_delete_AkPropagationPathInfo(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkRoomParams")]
+  public static extern global::System.IntPtr CSharp_new_AkRoomParams();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_Up_set")]
+  public static extern void CSharp_AkRoomParams_Up_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_Up_get")]
+  public static extern global::System.IntPtr CSharp_AkRoomParams_Up_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_Front_set")]
+  public static extern void CSharp_AkRoomParams_Front_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_Front_get")]
+  public static extern global::System.IntPtr CSharp_AkRoomParams_Front_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_ReverbAuxBus_set")]
+  public static extern void CSharp_AkRoomParams_ReverbAuxBus_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_ReverbAuxBus_get")]
+  public static extern uint CSharp_AkRoomParams_ReverbAuxBus_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_ReverbLevel_set")]
+  public static extern void CSharp_AkRoomParams_ReverbLevel_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_ReverbLevel_get")]
+  public static extern float CSharp_AkRoomParams_ReverbLevel_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_WallOcclusion_set")]
+  public static extern void CSharp_AkRoomParams_WallOcclusion_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_WallOcclusion_get")]
+  public static extern float CSharp_AkRoomParams_WallOcclusion_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_RoomGameObj_AuxSendLevelToSelf_set")]
+  public static extern void CSharp_AkRoomParams_RoomGameObj_AuxSendLevelToSelf_set(global::System.IntPtr jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_RoomGameObj_AuxSendLevelToSelf_get")]
+  public static extern float CSharp_AkRoomParams_RoomGameObj_AuxSendLevelToSelf_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_RoomGameObj_KeepRegistered_set")]
+  public static extern void CSharp_AkRoomParams_RoomGameObj_KeepRegistered_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkRoomParams_RoomGameObj_KeepRegistered_get")]
+  public static extern bool CSharp_AkRoomParams_RoomGameObj_KeepRegistered_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkRoomParams")]
+  public static extern void CSharp_delete_AkRoomParams(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetPoolID")]
+  public static extern int CSharp_GetPoolID();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RegisterEmitter")]
+  public static extern int CSharp_RegisterEmitter(ulong jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_UnregisterEmitter")]
+  public static extern int CSharp_UnregisterEmitter(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetEmitterAuxSendValues")]
+  public static extern int CSharp_SetEmitterAuxSendValues(ulong jarg1, global::System.IntPtr jarg2, uint jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetImageSource__SWIG_0")]
+  public static extern int CSharp_SetImageSource__SWIG_0(uint jarg1, global::System.IntPtr jarg2, uint jarg3, ulong jarg4, ulong jarg5);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetImageSource__SWIG_1")]
+  public static extern int CSharp_SetImageSource__SWIG_1(uint jarg1, global::System.IntPtr jarg2, uint jarg3, ulong jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveImageSource__SWIG_0")]
+  public static extern int CSharp_RemoveImageSource__SWIG_0(uint jarg1, uint jarg2, ulong jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveImageSource__SWIG_1")]
+  public static extern int CSharp_RemoveImageSource__SWIG_1(uint jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveGeometry")]
+  public static extern int CSharp_RemoveGeometry(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_QueryReflectionPaths")]
+  public static extern int CSharp_QueryReflectionPaths(ulong jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, global::System.IntPtr jarg4, out uint jarg5);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemoveRoom")]
+  public static extern int CSharp_RemoveRoom(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RemovePortal")]
+  public static extern int CSharp_RemovePortal(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetGameObjectInRoom")]
+  public static extern int CSharp_SetGameObjectInRoom(ulong jarg1, ulong jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetEmitterObstructionAndOcclusion")]
+  public static extern int CSharp_SetEmitterObstructionAndOcclusion(ulong jarg1, float jarg2, float jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetPortalObstructionAndOcclusion")]
+  public static extern int CSharp_SetPortalObstructionAndOcclusion(ulong jarg1, float jarg2, float jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSessionProperties_eCategory_set")]
   public static extern void CSharp_AkAudioSessionProperties_eCategory_set(global::System.IntPtr jarg1, int jarg2);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAudioSessionProperties_eCategory_get")]
@@ -1524,16 +2046,106 @@ class AkSoundEnginePINVOKE {
   public static extern global::System.IntPtr CSharp_new_AkThreadProperties();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkThreadProperties")]
   public static extern void CSharp_delete_AkThreadProperties(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValueProxy_Set")]
-  public static extern void CSharp_AkAuxSendValueProxy_Set(global::System.IntPtr jarg1, ulong jarg2, uint jarg3, float jarg4);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValueProxy_IsSame")]
-  public static extern bool CSharp_AkAuxSendValueProxy_IsSame(global::System.IntPtr jarg1, ulong jarg2, uint jarg3);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValueProxy_GetSizeOf")]
-  public static extern int CSharp_AkAuxSendValueProxy_GetSizeOf();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkAuxSendValueProxy")]
-  public static extern void CSharp_delete_AkAuxSendValueProxy(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetErrorLogger__SWIG_0")]
+  public static extern void CSharp_SetErrorLogger__SWIG_0(AkLogger.ErrorLoggerInteropDelegate jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetErrorLogger__SWIG_1")]
+  public static extern void CSharp_SetErrorLogger__SWIG_1();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetAudioInputCallbacks")]
+  public static extern void CSharp_SetAudioInputCallbacks(AkAudioInputManager.AudioSamplesInteropDelegate jarg1, AkAudioInputManager.AudioFormatInteropDelegate jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_listenerPos_set")]
+  public static extern void CSharp_AkPathParams_listenerPos_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_listenerPos_get")]
+  public static extern global::System.IntPtr CSharp_AkPathParams_listenerPos_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_emitterPos_set")]
+  public static extern void CSharp_AkPathParams_emitterPos_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_emitterPos_get")]
+  public static extern global::System.IntPtr CSharp_AkPathParams_emitterPos_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_numValidPaths_set")]
+  public static extern void CSharp_AkPathParams_numValidPaths_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPathParams_numValidPaths_get")]
+  public static extern uint CSharp_AkPathParams_numValidPaths_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkPathParams")]
+  public static extern global::System.IntPtr CSharp_new_AkPathParams();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkPathParams")]
+  public static extern void CSharp_delete_AkPathParams(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkUnityPlatformSpecificSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkUnityPlatformSpecificSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkUnityPlatformSpecificSettings")]
+  public static extern void CSharp_delete_AkUnityPlatformSpecificSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkCommunicationSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkCommunicationSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uPoolSize_set")]
+  public static extern void CSharp_AkCommunicationSettings_uPoolSize_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uPoolSize_get")]
+  public static extern uint CSharp_AkCommunicationSettings_uPoolSize_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uDiscoveryBroadcastPort_set")]
+  public static extern void CSharp_AkCommunicationSettings_uDiscoveryBroadcastPort_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uDiscoveryBroadcastPort_get")]
+  public static extern ushort CSharp_AkCommunicationSettings_uDiscoveryBroadcastPort_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uCommandPort_set")]
+  public static extern void CSharp_AkCommunicationSettings_uCommandPort_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uCommandPort_get")]
+  public static extern ushort CSharp_AkCommunicationSettings_uCommandPort_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uNotificationPort_set")]
+  public static extern void CSharp_AkCommunicationSettings_uNotificationPort_set(global::System.IntPtr jarg1, ushort jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_uNotificationPort_get")]
+  public static extern ushort CSharp_AkCommunicationSettings_uNotificationPort_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_bInitSystemLib_set")]
+  public static extern void CSharp_AkCommunicationSettings_bInitSystemLib_set(global::System.IntPtr jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_bInitSystemLib_get")]
+  public static extern bool CSharp_AkCommunicationSettings_bInitSystemLib_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_szAppNetworkName_set")]
+  public static extern void CSharp_AkCommunicationSettings_szAppNetworkName_set(global::System.IntPtr jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkCommunicationSettings_szAppNetworkName_get")]
+  public static extern global::System.IntPtr CSharp_AkCommunicationSettings_szAppNetworkName_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkCommunicationSettings")]
+  public static extern void CSharp_delete_AkCommunicationSettings(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_new_AkInitializationSettings")]
+  public static extern global::System.IntPtr CSharp_new_AkInitializationSettings();
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_memSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_memSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_memSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_memSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_streamMgrSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_streamMgrSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_streamMgrSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_streamMgrSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_deviceSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_deviceSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_deviceSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_deviceSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_initSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_initSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_initSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_initSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_platformSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_platformSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_platformSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_platformSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_musicSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_musicSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_musicSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_musicSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_preparePoolSize_set")]
+  public static extern void CSharp_AkInitializationSettings_preparePoolSize_set(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_preparePoolSize_get")]
+  public static extern uint CSharp_AkInitializationSettings_preparePoolSize_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_communicationSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_communicationSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_communicationSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_communicationSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_unityPlatformSpecificSettings_set")]
+  public static extern void CSharp_AkInitializationSettings_unityPlatformSpecificSettings_set(global::System.IntPtr jarg1, global::System.IntPtr jarg2);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkInitializationSettings_unityPlatformSpecificSettings_get")]
+  public static extern global::System.IntPtr CSharp_AkInitializationSettings_unityPlatformSpecificSettings_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_delete_AkInitializationSettings")]
+  public static extern void CSharp_delete_AkInitializationSettings(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Init")]
-  public static extern int CSharp_Init(global::System.IntPtr jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, global::System.IntPtr jarg4, global::System.IntPtr jarg5, global::System.IntPtr jarg6, uint jarg7);
+  public static extern int CSharp_Init(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_InitSpatialAudio")]
+  public static extern int CSharp_InitSpatialAudio(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_InitCommunication")]
+  public static extern int CSharp_InitCommunication(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Term")]
   public static extern void CSharp_Term();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RegisterGameObjInternal")]
@@ -1572,8 +2184,8 @@ class AkSoundEnginePINVOKE {
   public static extern int CSharp_SetListeners(ulong jarg1, ulong[] jarg2, uint jarg3);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetDefaultListeners")]
   public static extern int CSharp_SetDefaultListeners(ulong[] jarg1, uint jarg2);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddSecondaryOutput")]
-  public static extern int CSharp_AddSecondaryOutput(uint jarg1, int jarg2, ulong[] jarg3, uint jarg4, uint jarg5, uint jarg6);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AddOutput")]
+  public static extern int CSharp_AddOutput(global::System.IntPtr jarg1, out ulong jarg2, ulong[] jarg3, uint jarg4);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetDefaultStreamSettings")]
   public static extern void CSharp_GetDefaultStreamSettings(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetDefaultDeviceSettings")]
@@ -1588,10 +2200,26 @@ class AkSoundEnginePINVOKE {
   public static extern uint CSharp_GetMajorMinorVersion();
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_GetSubminorBuildVersion")]
   public static extern uint CSharp_GetSubminorBuildVersion();
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_WwiseObjectID_SWIGUpcast")]
-  public static extern global::System.IntPtr CSharp_WwiseObjectID_SWIGUpcast(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_Playlist_SWIGUpcast")]
-  public static extern global::System.IntPtr CSharp_Playlist_SWIGUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_QueryIndirectPaths")]
+  public static extern int CSharp_QueryIndirectPaths(ulong jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, uint jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_QuerySoundPropagationPaths")]
+  public static extern int CSharp_QuerySoundPropagationPaths(ulong jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, uint jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_QueryDiffractionPaths")]
+  public static extern int CSharp_QueryDiffractionPaths(ulong jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, uint jarg4);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetRoomPortal")]
+  public static extern int CSharp_SetRoomPortal(ulong jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3, bool jarg4, ulong jarg5, ulong jarg6);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetRoom")]
+  public static extern int CSharp_SetRoom(ulong jarg1, global::System.IntPtr jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string jarg3);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_RegisterSpatialAudioListener")]
+  public static extern int CSharp_RegisterSpatialAudioListener(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_UnregisterSpatialAudioListener")]
+  public static extern int CSharp_UnregisterSpatialAudioListener(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_SetGeometry")]
+  public static extern int CSharp_SetGeometry(ulong jarg1, global::System.IntPtr jarg2, uint jarg3, global::System.IntPtr jarg4, uint jarg5, global::System.IntPtr jarg6, uint jarg7, bool jarg8, bool jarg9);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkPlaylist_SWIGUpcast")]
+  public static extern global::System.IntPtr CSharp_AkPlaylist_SWIGUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIPost_SWIGUpcast")]
+  public static extern global::System.IntPtr CSharp_AkMIDIPost_SWIGUpcast(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkEventCallbackInfo_SWIGUpcast")]
   public static extern global::System.IntPtr CSharp_AkEventCallbackInfo_SWIGUpcast(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMIDIEventCallbackInfo_SWIGUpcast")]
@@ -1605,7 +2233,5 @@ class AkSoundEnginePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMusicSyncCallbackInfo_SWIGUpcast")]
   public static extern global::System.IntPtr CSharp_AkMusicSyncCallbackInfo_SWIGUpcast(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkMusicPlaylistCallbackInfo_SWIGUpcast")]
-  public static extern global::System.IntPtr CSharp_AkMusicPlaylistCallbackInfo_SWIGUpcast(global::System.IntPtr jarg1);
-  [global::System.Runtime.InteropServices.DllImport("__Internal", EntryPoint="CSharp_AkAuxSendValueProxy_SWIGUpcast")]
-  public static extern global::System.IntPtr CSharp_AkAuxSendValueProxy_SWIGUpcast(global::System.IntPtr jarg1);}
+  public static extern global::System.IntPtr CSharp_AkMusicPlaylistCallbackInfo_SWIGUpcast(global::System.IntPtr jarg1);}
 #endif // #if UNITY_IOS && ! UNITY_EDITOR

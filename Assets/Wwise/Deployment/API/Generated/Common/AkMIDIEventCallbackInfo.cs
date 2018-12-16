@@ -21,6 +21,11 @@ public class AkMIDIEventCallbackInfo : AkEventCallbackInfo {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal override void setCPtr(global::System.IntPtr cPtr) {
+    base.setCPtr(AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_SWIGUpcast(cPtr));
+    swigCPtr = cPtr;
+  }
+
   ~AkMIDIEventCallbackInfo() {
     Dispose();
   }
@@ -39,9 +44,6 @@ public class AkMIDIEventCallbackInfo : AkEventCallbackInfo {
     }
   }
 
-  public byte byType { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byType_get(swigCPtr); } 
-  }
-
   public byte byChan { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byChan_get(swigCPtr); } 
   }
 
@@ -51,13 +53,16 @@ public class AkMIDIEventCallbackInfo : AkEventCallbackInfo {
   public byte byParam2 { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byParam2_get(swigCPtr); } 
   }
 
+  public AkMIDIEventTypes byType { get { return (AkMIDIEventTypes)AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byType_get(swigCPtr); } 
+  }
+
   public byte byOnOffNote { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byOnOffNote_get(swigCPtr); } 
   }
 
   public byte byVelocity { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byVelocity_get(swigCPtr); } 
   }
 
-  public byte byCc { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byCc_get(swigCPtr); } 
+  public AkMIDICcTypes byCc { get { return (AkMIDICcTypes)AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byCc_get(swigCPtr); } 
   }
 
   public byte byCcValue { get { return AkSoundEnginePINVOKE.CSharp_AkMIDIEventCallbackInfo_byCcValue_get(swigCPtr); } 

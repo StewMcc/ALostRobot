@@ -71,5 +71,11 @@
         public const uint SOUNDFX_BUS = 2206267635U;
     } // public class BUSSES
 
+    public class AUDIO_DEVICES
+    {
+        public const uint NO_OUTPUT = 2317455096U;
+        public const uint SYSTEM = 3859886410U;
+    } // public class AUDIO_DEVICES
+
 }// namespace AKID
 

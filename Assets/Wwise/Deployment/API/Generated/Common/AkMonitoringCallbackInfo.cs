@@ -23,6 +23,11 @@ public class AkMonitoringCallbackInfo : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkMonitoringCallbackInfo() {
     Dispose();
   }
@@ -40,10 +45,10 @@ public class AkMonitoringCallbackInfo : global::System.IDisposable {
     }
   }
 
-  public ErrorCode errorCode { get { return (ErrorCode)AkSoundEnginePINVOKE.CSharp_AkMonitoringCallbackInfo_errorCode_get(swigCPtr); } 
+  public AkMonitorErrorCode errorCode { get { return (AkMonitorErrorCode)AkSoundEnginePINVOKE.CSharp_AkMonitoringCallbackInfo_errorCode_get(swigCPtr); } 
   }
 
-  public ErrorLevel errorLevel { get { return (ErrorLevel)AkSoundEnginePINVOKE.CSharp_AkMonitoringCallbackInfo_errorLevel_get(swigCPtr); } 
+  public AkMonitorErrorLevel errorLevel { get { return (AkMonitorErrorLevel)AkSoundEnginePINVOKE.CSharp_AkMonitoringCallbackInfo_errorLevel_get(swigCPtr); } 
   }
 
   public uint playingID { get { return AkSoundEnginePINVOKE.CSharp_AkMonitoringCallbackInfo_playingID_get(swigCPtr); } 

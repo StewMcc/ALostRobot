@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" SchemaVersion="89">
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{B2704A02-21C8-40CB-84CD-A86AB62DCA36}" PersistMode="Standalone">
 			<ChildrenList>

@@ -21,6 +21,11 @@ public class AkEventCallbackInfo : AkCallbackInfo {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal override void setCPtr(global::System.IntPtr cPtr) {
+    base.setCPtr(AkSoundEnginePINVOKE.CSharp_AkEventCallbackInfo_SWIGUpcast(cPtr));
+    swigCPtr = cPtr;
+  }
+
   ~AkEventCallbackInfo() {
     Dispose();
   }

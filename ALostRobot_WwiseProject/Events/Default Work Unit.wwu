@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" SchemaVersion="80">
+<WwiseDocument Type="WorkUnit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" SchemaVersion="89">
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{FAD2F690-59F8-456F-BF28-34CD478DCB38}" PersistMode="Standalone">
 			<ChildrenList>
@@ -12,7 +12,7 @@
 										<Action Name="" ID="{0152CE4E-D196-4C4E-80A6-7B5A646672FA}" ShortID="196409628">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
-												<Property Name="FadeCurve" Type="int16" Value="3"/>
+												<Property Name="FadeInCurve" Type="int16" Value="3"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -23,7 +23,7 @@
 										<Action Name="" ID="{27F8EFE9-4D86-4BD0-8AB6-E62BECAC761D}" ShortID="66558207">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
-												<Property Name="FadeCurve" Type="int16" Value="5"/>
+												<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.25"/>
 											</PropertyList>
 											<ReferenceList>
@@ -49,7 +49,7 @@
 										<Action Name="" ID="{1ABEA88D-8681-48C7-80A5-68B975AEA4BC}" ShortID="818734884">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
-												<Property Name="FadeCurve" Type="int16" Value="1"/>
+												<Property Name="FadeInCurve" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -60,7 +60,7 @@
 										<Action Name="" ID="{2161D298-AC60-46DE-B712-B7463BF1BED2}" ShortID="460517271">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
-												<Property Name="FadeCurve" Type="int16" Value="3"/>
+												<Property Name="FadeInCurve" Type="int16" Value="3"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 											</PropertyList>
 											<ReferenceList>
@@ -117,7 +117,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 										<Property Name="Delay" Type="Real64" Value="1"/>
-										<Property Name="FadeCurve" Type="int16" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -193,7 +193,7 @@
 								<Action Name="" ID="{44A781B6-2592-4227-BE68-0545020F0CE6}" ShortID="903470882">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="FadeCurve" Type="int16" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
@@ -209,7 +209,7 @@
 								<Action Name="" ID="{42680900-AA98-4704-922E-F42FD6DD8B26}" ShortID="475152550">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="FadeCurve" Type="int16" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="3"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>

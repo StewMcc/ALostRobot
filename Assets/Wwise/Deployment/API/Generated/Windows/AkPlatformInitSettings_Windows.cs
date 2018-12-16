@@ -23,6 +23,11 @@ public class AkPlatformInitSettings : global::System.IDisposable {
     return (obj == null) ? global::System.IntPtr.Zero : obj.swigCPtr;
   }
 
+  internal virtual void setCPtr(global::System.IntPtr cPtr) {
+    Dispose();
+    swigCPtr = cPtr;
+  }
+
   ~AkPlatformInitSettings() {
     Dispose();
   }
@@ -80,9 +85,6 @@ public class AkPlatformInitSettings : global::System.IDisposable {
   }
 
   public bool bGlobalFocus { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_bGlobalFocus_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_bGlobalFocus_get(swigCPtr); } 
-  }
-
-  public uint idAudioDevice { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_idAudioDevice_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_idAudioDevice_get(swigCPtr); } 
   }
 
   public AkPlatformInitSettings() : this(AkSoundEnginePINVOKE.CSharp_new_AkPlatformInitSettings(), true) {
