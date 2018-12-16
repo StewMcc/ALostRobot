@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Controls the UI for the pickups and adds the pickup to the collided <seealso cref="RobotController"/>.
-/// 
+///
 /// Best to duplicate one of the PickUp prefabs for all the connected UI etc.
 /// Will show the Grabicon with its Canvas/Button, when a robot is within the collider.
 /// Also allows the Pickup to be respawned and dropped, but would require it to also be removed from the robots inventory.
@@ -39,7 +39,7 @@ public class Pickup : MonoBehaviour {
 	private string pickupName = "DefaultName";
 
 	[SerializeField]
-	GameNotificationData notification;
+	GameNotificationData notification = new GameNotificationData();
 
 	private Vector3 respawnPosition_ = Vector3.zero;
 
@@ -128,7 +128,7 @@ public class Pickup : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Drops the item at a random position near the player on the NavMesh.	
+	/// Drops the item at a random position near the player on the NavMesh.
 	/// </summary>
 	public void Drop() {
 		// drop it if it can find a valid point on the navmesh

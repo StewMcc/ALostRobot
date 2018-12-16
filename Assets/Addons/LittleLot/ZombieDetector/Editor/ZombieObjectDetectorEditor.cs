@@ -51,7 +51,7 @@ namespace LittleLot {
 		public override void OnInspectorGUI() {
 			serializedZombieDetector_.Update();
 
-			loggingOptions_.intValue = (int)(ZombieObjectDetector.LoggingOptions)EditorGUILayout.EnumMaskField("Logging Options", (ZombieObjectDetector.LoggingOptions)loggingOptions_.intValue);
+			loggingOptions_.intValue = (int)(ZombieObjectDetector.LoggingOptions)EditorGUILayout.EnumFlagsField("Logging Options", (ZombieObjectDetector.LoggingOptions)loggingOptions_.intValue);
 
 			EditorGUILayout.PropertyField(logTag_);
 
