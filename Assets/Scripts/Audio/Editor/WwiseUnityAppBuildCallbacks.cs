@@ -65,9 +65,7 @@ public class WwiseUnityAppBuildCallbacks : IPreprocessBuild, IPostprocessBuild {
 		if (unityPlatormString == BuildTarget.StandaloneWindows.ToString() ||
 			unityPlatormString == BuildTarget.StandaloneWindows64.ToString()) {
 			return "Windows";
-		} else if (unityPlatormString == BuildTarget.StandaloneOSXIntel.ToString() ||
-				  unityPlatormString == BuildTarget.StandaloneOSXIntel64.ToString() ||
-				  unityPlatormString == BuildTarget.StandaloneOSXUniversal.ToString()) {
+		} else if (unityPlatormString == BuildTarget.StandaloneOSX.ToString()) {
 			return "Mac";
 		} else if (unityPlatormString == BuildTarget.iOS.ToString()) {
 			return "iOS";

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StaticStarField : MonoBehaviour {
 
 	[SerializeField]
-	private ParticleSystem starFieldParticles;
+	private ParticleSystem starFieldParticles = null;
 
 	[SerializeField]
 	int numberToEmit = 1000;

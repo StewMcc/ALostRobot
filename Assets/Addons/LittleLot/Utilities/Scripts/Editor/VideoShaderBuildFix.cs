@@ -37,9 +37,7 @@ namespace LittleLot {
 				RemovePlatformVideoDecodeShader(alwaysIncludedShaders, kVideoDecoderOsx);
 			}
 
-			if ((buildTarget == BuildTarget.StandaloneOSXIntel) ||
-				(buildTarget == BuildTarget.StandaloneOSXIntel64) ||
-				(buildTarget == BuildTarget.StandaloneOSXUniversal)) {
+			if (buildTarget == BuildTarget.StandaloneOSX) {
 
 				Debug.Log("Adding " + kVideoDecoderAndroid);
 				AddPlatformVideoDecodeShader(alwaysIncludedShaders, kVideoDecoderOsx);

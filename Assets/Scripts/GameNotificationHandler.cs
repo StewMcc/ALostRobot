@@ -17,7 +17,7 @@ public class GameNotificationHandler : MonoBehaviour {
 	public static event EventHandlerNotification OnRecieveGameNotification;
 
 	[SerializeField]
-	GameNotification notificationPrefab;
+	GameNotification notificationPrefab = null;
 
 	[SerializeField]
 	int maxNotifications = 4;

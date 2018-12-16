@@ -17,7 +17,7 @@ public class RoomManager : MonoBehaviour {
 	private int numberOfRoomsToBreak = 2;
 
 	[SerializeField]
-	GameNotificationData roomBreakNotification;
+	GameNotificationData roomBreakNotification = new GameNotificationData();
 
 	private Room[] rooms_ = null;
 
@@ -53,7 +53,7 @@ public class RoomManager : MonoBehaviour {
 
 	/// <summary>
 	/// The Room manager picks a random room to break.
-	/// 
+	///
 	/// Will not break room 0, or <seealso cref="callingRoomNumber"/>.
 	/// </summary>
 	/// <param name="callingRoomNumber"> The room id it is being called from, i.e. room not worth breaking again.</param>
@@ -92,7 +92,7 @@ public class RoomManager : MonoBehaviour {
 				GameNotificationHandler.SendGameNotification(data);
 			}
 			rooms_[roomNumber].Break();
-			
+
 			return true;
 		}
 		return false;

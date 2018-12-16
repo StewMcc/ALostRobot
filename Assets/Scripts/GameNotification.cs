@@ -4,13 +4,13 @@ using UnityEngine.UI;
 public class GameNotification : MonoBehaviour {
 
 	[SerializeField]
-	CanvasGroup notificationGroup;
+	CanvasGroup notificationGroup = null;
 
 	[SerializeField]
-	Image iconImage;
+	Image iconImage = null;
 
 	[SerializeField]
-	Text title;
+	Text title = null;
 
 	[SerializeField]
 	float transitionUpTime = 1.0f;
@@ -54,7 +54,7 @@ public class GameNotification : MonoBehaviour {
 		iconImage.sprite = data.iconSprite;
 
 		Color imageColor = iconImage.color;
-		// Set image alpha to 0 if no sprite. 
+		// Set image alpha to 0 if no sprite.
 		if (iconImage.sprite) {
 			imageColor.a = 1.0f;
 		} else {

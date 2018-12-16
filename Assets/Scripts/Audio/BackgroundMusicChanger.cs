@@ -6,7 +6,7 @@
 public class BackgroundMusicChanger : MonoBehaviour {
 
 	[SerializeField]
-	private AK.Wwise.Event backgroundMusicEvent;
+	private AK.Wwise.Event backgroundMusicEvent = null;
 
 	[SerializeField]
 	private SoundManager.TriggerEvent triggerEvent = SoundManager.TriggerEvent.None;
