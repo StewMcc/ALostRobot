@@ -1,8 +1,8 @@
 # A Lost Robot
 Moray Game Jam 2017 - A Game About A Lost Robot
 Requires:
- - Unity 2017.1.2f1
- - Wwise 2017.1.3.6377.812
+ - Unity 2017.4.17f1
+ - Wwise 2018.1.4.6807
 ## Code
  - Josh Hale
  - Stewart McCready
@@ -16,9 +16,9 @@ Requires:
 
 You will need to point it towards the correct version of Wwise
  - Edit -> Wwise Settings...
- - Modify `Wwise Installation Path` to point at your Wwise 2017.1.3.6377 install directory
+ - Modify `Wwise Installation Path` to point at your Wwise 2018.1.4.6807 install directory
 
-Once hooked up, open the Wwise Picker `Window -> Wwise Picker` click refresh project, and then generate Sound banks. Now the project will be ready to play in editor. When you build our already setup pre/post hooks will import the sound banks for the correct platforms. We currently support iOS, Android, OSX, and Windows. It will also update the app version to the current git commit.
+Once hooked up, open the Wwise Picker `Window -> Wwise Picker` click refresh project, and then generate Sound banks. Now the project will be ready to play in editor. When you build our already setup pre/post hooks will import the sound banks for the correct platforms. We currently support iOS, Android, OSX, and Windows.
 
 # Debug Ui
 Whilst in the game press F12 or touch 5 fingers on the screen to bring up the debug Ui. This gives some handy buttons for fake winning etc.
