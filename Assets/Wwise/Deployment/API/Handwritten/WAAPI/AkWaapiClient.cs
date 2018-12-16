@@ -203,13 +203,19 @@ public class AkWaapiClient
 	static AkWaapiClient()
 	{
 		UnityEditor.EditorApplication.update += ProcessCallbacks;
-		AkWaapiClient_PINVOKE.SetWampEventCallback(InternalWampEventCallback);
+
 		UnityEditor.Compilation.CompilationPipeline.assemblyCompilationStarted += CompileStarted;
+
+		UnityEditor.Compilation.CompilationPipeline.assemblyCompilationFinished += CompileFinished;
 	}
 
 	private static void CompileStarted(string s)
 	{
 		UnityEditor.EditorApplication.update -= ProcessCallbacks;
+	}
+
+	private static void CompileFinished(string s, UnityEditor.Compilation.CompilerMessage[] message) {
+		AkWaapiClient_PINVOKE.SetWampEventCallback(InternalWampEventCallback);
 	}
 
 	~AkWaapiClient()
