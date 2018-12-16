@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a4a66a905da4f8fbd5fde56e55bfad, type: 3}
   m_Name: GitInformation
   m_EditorClassIdentifier: 
-  currentGitCommitHash_: 416baeb
-  currentGitBranch_: lts_support
+  currentGitCommitHash_: aca9960
+  currentGitBranch_: master
