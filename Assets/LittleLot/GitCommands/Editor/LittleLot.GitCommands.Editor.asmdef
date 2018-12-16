@@ -1,0 +1,10 @@
+{
+	"name": "LittleLot.GitCommands.Editor",
+	"references": [
+		"LittleLot"
+	],
+	"includePlatforms": [
+		"Editor"
+	],
+	"excludePlatforms": []
+}

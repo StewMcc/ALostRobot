@@ -61,7 +61,7 @@ internal class WwiseIDConverter : MonoBehaviour {
 			Path.DirectorySeparatorChar + "GeneratedSoundBanks" +
 			Path.DirectorySeparatorChar + "Wwise_IDs.h";
 		var outputFilePath = Application.dataPath +
-			Path.DirectorySeparatorChar + "Scripts" +
+			Path.DirectorySeparatorChar + "Scripts/Audio" +
 			Path.DirectorySeparatorChar + "Wwise_IDs.cs";
 
 		try {

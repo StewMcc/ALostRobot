@@ -130,7 +130,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.3.8f2bd0d
+  bundleVersion: 0.1.3
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -253,7 +253,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: Builds/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeyaliasName: user
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
