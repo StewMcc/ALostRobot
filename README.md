@@ -22,9 +22,3 @@ Once hooked up, open the Wwise Picker `Window -> Wwise Picker` click refresh pro
 
 # Debug Ui
 Whilst in the game press F12 or touch 5 fingers on the screen to bring up the debug Ui. This gives some handy buttons for fake winning etc.
-
-## Note
-This repo uses [git-lfs](https://git-lfs.github.com/) for large files therefore Githubs Download Zip button won't produce a usable download. 
-If you are using 'Github for windows' or 'Gitkraken' download via cloning will work fine and pull all the required files from the github lfs server.
-There are precompiled versions of the game in the releases tab. 
-
